@@ -1,0 +1,44 @@
+
+# Beads / Dolt files (added by bd init)
+.dolt/
+*.db
+.beads-credential-key
+.beads/proxieddb/
+*.gate.lock*
+
+# 1C skills
+.v8-project.json
+build/
+base/
+*.epf
+*.erf
+*.log
+
+# AI tool service dirs
+.agents/
+.aider/
+.claude/
+.codex/
+.copilot-plugin/
+.cursor/
+.junie/
+.kilocode/
+.kiro/
+.windsurf/
+.aider.conf.yml
+GEMINI.md
+
+# Local development pipeline (agentrunner ar): kept on disk, never committed
+.beads/
+.github/copilot-instructions.md
+.gitattributes
+.v8-project.example.json
+AGENTS.md
+CLAUDE.md
+ar.cmd
+docs/
+pipeline/
+wt/
+
+# 1C dump noise (regenerated on dump)
+ConfigDumpInfo.xml
