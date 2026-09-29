@@ -12,7 +12,7 @@
     "max_steps": 20,
     "max_actions": 10,
     "max_action_sum": 100000,
-    "autonomy_mode": "Спрашивать",
+    "autonomy_mode": "Ручной",
     "tools": [
       {"name": "buh_list_unpaid_invoices", "enabled": true, "required": true},
       {"name": "get_invoice_reminder_history", "enabled": true, "required": true},
