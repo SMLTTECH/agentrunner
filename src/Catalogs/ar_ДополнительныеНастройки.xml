@@ -346,7 +346,7 @@
 						<v8:Type>xs:boolean</v8:Type>
 						<v8:Type>xs:dateTime</v8:Type>
 						<v8:Type>xs:decimal</v8:Type>
-						<v8:TypeSet>cfg:AnyIBRef</v8:TypeSet>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
 						<v8:NumberQualifiers>
 							<v8:Digits>15</v8:Digits>
 							<v8:FractionDigits>2</v8:FractionDigits>
@@ -580,7 +580,7 @@
 								<v8:Type>xs:boolean</v8:Type>
 								<v8:Type>xs:dateTime</v8:Type>
 								<v8:Type>xs:decimal</v8:Type>
-								<v8:TypeSet>cfg:AnyIBRef</v8:TypeSet>
+								<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
 								<v8:NumberQualifiers>
 									<v8:Digits>15</v8:Digits>
 									<v8:FractionDigits>2</v8:FractionDigits>
