@@ -7,7 +7,9 @@
 		</v8:item>
 	</Title>
 	<AutoTitle>false</AutoTitle>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
@@ -15,6 +17,7 @@
 	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаОбщийПериод" id="204">
+			<Visible>false</Visible>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -73,8 +76,14 @@
 					<ChildItems>
 						<UsualGroup name="ГруппаБыстрыеРежимы" id="1">
 							<Group>Horizontal</Group>
+							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаБыстрыеРежимыРасширеннаяПодсказка" id="2"/>
 							<ChildItems>
+								<Button name="КнопкаРежимВсе" id="7">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.УстановитьРежимВсе</CommandName>
+									<ExtendedTooltip name="КнопкаРежимВсеРасширеннаяПодсказка" id="8"/>
+								</Button>
 								<Button name="КнопкаРежимРаботают" id="3">
 									<Type>UsualButton</Type>
 									<CommandName>Form.Command.УстановитьРежимРаботают</CommandName>
@@ -84,11 +93,6 @@
 									<Type>UsualButton</Type>
 									<CommandName>Form.Command.УстановитьРежимТребуютВнимания</CommandName>
 									<ExtendedTooltip name="КнопкаРежимТребуютВниманияРасширеннаяПодсказка" id="6"/>
-								</Button>
-								<Button name="КнопкаРежимВсе" id="7">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.УстановитьРежимВсе</CommandName>
-									<ExtendedTooltip name="КнопкаРежимВсеРасширеннаяПодсказка" id="8"/>
 								</Button>
 								<CheckBoxField name="АвтообновлениеВключено" id="9">
 									<DataPath>АвтообновлениеВключено</DataPath>
@@ -124,10 +128,12 @@
 							<Group>Vertical</Group>
 							<Behavior>Collapsible</Behavior>
 							<Collapsed>true</Collapsed>
+							<Representation>None</Representation>
 							<ExtendedTooltip name="ГруппаОтборРасширеннаяПодсказка" id="15"/>
 							<ChildItems>
 								<UsualGroup name="ГруппаОтборСтрока1" id="16">
 									<Group>Horizontal</Group>
+									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаОтборСтрока1РасширеннаяПодсказка" id="17"/>
 									<ChildItems>
 										<InputField name="ОтборПериодС" id="18">
@@ -192,6 +198,7 @@
 								</UsualGroup>
 								<UsualGroup name="ГруппаОтборСтрока2" id="30">
 									<Group>Horizontal</Group>
+									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаОтборСтрока2РасширеннаяПодсказка" id="31"/>
 									<ChildItems>
 										<InputField name="ОтборТриггер" id="32">
@@ -310,6 +317,8 @@
 						</UsualGroup>
 						<UsualGroup name="ГруппаСводка" id="53">
 							<Group>Horizontal</Group>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>#DEDEDE</BackColor>
 							<ExtendedTooltip name="ГруппаСводкаРасширеннаяПодсказка" id="54"/>
 							<ChildItems>
 								<LabelField name="СводкаРаботаютПоле" id="55">
@@ -340,44 +349,76 @@
 						</UsualGroup>
 						<UsualGroup name="ГруппаКомандыСтроки" id="100">
 							<ExtendedTooltip name="ГруппаКомандыСтрокиРасширеннаяПодсказка" id="101"/>
+						</UsualGroup>
+						<CommandBar name="ГруппаПанель" id="290">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа панель</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа панель</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаПанельРасширеннаяПодсказка" id="291"/>
 							<ChildItems>
 								<Button name="КнопкаОткрытьЗапуск" id="102">
-									<Type>UsualButton</Type>
+									<Type>CommandBarButton</Type>
 									<CommandName>Form.Command.ОткрытьЗапуск</CommandName>
 									<ExtendedTooltip name="КнопкаОткрытьЗапускРасширеннаяПодсказка" id="103"/>
 								</Button>
 								<Button name="КнопкаОстановитьЗапуск" id="104">
-									<Type>UsualButton</Type>
+									<Type>CommandBarButton</Type>
 									<CommandName>Form.Command.ОстановитьЗапуск</CommandName>
 									<ExtendedTooltip name="КнопкаОстановитьЗапускРасширеннаяПодсказка" id="105"/>
 								</Button>
 								<Button name="КнопкаВозобновитьЗапуск" id="106">
-									<Type>UsualButton</Type>
+									<Type>CommandBarButton</Type>
 									<CommandName>Form.Command.ВозобновитьЗапуск</CommandName>
 									<ExtendedTooltip name="КнопкаВозобновитьЗапускРасширеннаяПодсказка" id="107"/>
 								</Button>
 								<Button name="КнопкаОткрытьОчередьПодтверждений" id="108">
-									<Type>UsualButton</Type>
+									<Type>CommandBarButton</Type>
 									<CommandName>Form.Command.ОткрытьОчередьПодтверждений</CommandName>
 									<ExtendedTooltip name="КнопкаОткрытьОчередьПодтвержденийРасширеннаяПодсказка" id="109"/>
 								</Button>
-								<Button name="КнопкаОткрытьАгента" id="110">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.ОткрытьАгента</CommandName>
-									<ExtendedTooltip name="КнопкаОткрытьАгентаРасширеннаяПодсказка" id="111"/>
-								</Button>
-								<Button name="КнопкаОткрытьПользователя" id="112">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.ОткрытьПользователя</CommandName>
-									<ExtendedTooltip name="КнопкаОткрытьПользователяРасширеннаяПодсказка" id="113"/>
-								</Button>
 								<Button name="КнопкаПоказатьСозданныеОбъекты" id="114">
-									<Type>UsualButton</Type>
+									<Type>CommandBarButton</Type>
 									<CommandName>Form.Command.ПоказатьСозданныеОбъекты</CommandName>
 									<ExtendedTooltip name="КнопкаПоказатьСозданныеОбъектыРасширеннаяПодсказка" id="115"/>
 								</Button>
+								<Popup name="ГруппаДополнительно" id="292">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительно</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа дополнительно</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаДополнительноРасширеннаяПодсказка" id="293"/>
+									<ChildItems>
+										<Button name="КнопкаОткрытьПользователя" id="112">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ОткрытьПользователя</CommandName>
+											<ExtendedTooltip name="КнопкаОткрытьПользователяРасширеннаяПодсказка" id="113"/>
+										</Button>
+										<Button name="КнопкаОткрытьАгента" id="110">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ОткрытьАгента</CommandName>
+											<ExtendedTooltip name="КнопкаОткрытьАгентаРасширеннаяПодсказка" id="111"/>
+										</Button>
+									</ChildItems>
+								</Popup>
 							</ChildItems>
-						</UsualGroup>
+						</CommandBar>
 						<Table name="СписокЗапусков" id="67">
 							<CommandBarLocation>None</CommandBarLocation>
 							<HeightInTableRows>15</HeightInTableRows>
@@ -562,21 +603,34 @@
 					</Title>
 					<ExtendedTooltip name="СтраницаАгентыРасширеннаяПодсказка" id="213"/>
 					<ChildItems>
-						<UsualGroup name="ГруппаКомандыСтрокиАгенты" id="214">
-							<ExtendedTooltip name="ГруппаКомандыСтрокиАгентыРасширеннаяПодсказка" id="215"/>
+						<CommandBar name="ГруппаКомандыСтрокиАгенты" id="294">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команды строки агенты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команды строки агенты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<CommandSource>Item.СписокАгентов</CommandSource>
+							<ExtendedTooltip name="ГруппаКомандыСтрокиАгентыРасширеннаяПодсказка" id="295"/>
 							<ChildItems>
 								<Button name="КнопкаОткрытьАгентаАгенты" id="216">
-									<Type>UsualButton</Type>
+									<Type>CommandBarButton</Type>
 									<CommandName>Form.Command.ОткрытьАгентаАгенты</CommandName>
 									<ExtendedTooltip name="КнопкаОткрытьАгентаАгентыРасширеннаяПодсказка" id="217"/>
 								</Button>
 								<Button name="КнопкаОткрытьПрофилиАгента" id="218">
-									<Type>UsualButton</Type>
+									<Type>CommandBarButton</Type>
 									<CommandName>Form.Command.ОткрытьПрофилиАгента</CommandName>
 									<ExtendedTooltip name="КнопкаОткрытьПрофилиАгентаРасширеннаяПодсказка" id="219"/>
 								</Button>
 							</ChildItems>
-						</UsualGroup>
+						</CommandBar>
 						<Table name="СписокАгентов" id="220">
 							<CommandBarLocation>None</CommandBarLocation>
 							<HeightInTableRows>15</HeightInTableRows>
@@ -1114,7 +1168,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Сводка завершено</v8:content>
+					<v8:content>Завершено</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1130,7 +1184,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Сводка работают поле</v8:content>
+					<v8:content>Работают</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1145,7 +1199,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Сводка ждут оператора поле</v8:content>
+					<v8:content>Ждут оператора</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1160,7 +1214,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Сводка ошибок за сутки поле</v8:content>
+					<v8:content>Ошибок за сутки</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1175,7 +1229,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Сводка завершено поле</v8:content>
+					<v8:content>Завершено</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1527,6 +1581,10 @@
 					<v8:content>Обновить</v8:content>
 				</v8:item>
 			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ОбновитьВыполнить</Action>
 		</Command>
 		<Command name="УстановитьРежимРаботают" id="144">
@@ -1572,7 +1630,12 @@
 					<v8:content>Остановить</v8:content>
 				</v8:item>
 			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Stop</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ОстановитьЗапускВыполнить</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 		<Command name="ВозобновитьЗапуск" id="149">
 			<Title>
@@ -1581,7 +1644,12 @@
 					<v8:content>Возобновить</v8:content>
 				</v8:item>
 			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.BusinessProcessStart</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ВозобновитьЗапускВыполнить</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 		<Command name="ОткрытьОчередьПодтверждений" id="150">
 			<Title>
@@ -1614,10 +1682,21 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Показать созданные объекты</v8:content>
+					<v8:content>Созданные объекты</v8:content>
 				</v8:item>
 			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать созданные объекты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ListViewModeList</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ПоказатьСозданныеОбъектыВыполнить</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 		<Command name="ОткрытьАгентаАгенты" id="260">
 			<Title>
