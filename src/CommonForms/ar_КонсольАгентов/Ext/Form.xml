@@ -324,24 +324,28 @@
 								<LabelField name="СводкаРаботаютПоле" id="55">
 									<DataPath>СводкаРаботаютПоле</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
 									<ContextMenu name="СводкаРаботаютПолеКонтекстноеМеню" id="56"/>
 									<ExtendedTooltip name="СводкаРаботаютПолеРасширеннаяПодсказка" id="57"/>
 								</LabelField>
 								<LabelField name="СводкаЖдутОператораПоле" id="58">
 									<DataPath>СводкаЖдутОператораПоле</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
 									<ContextMenu name="СводкаЖдутОператораПолеКонтекстноеМеню" id="59"/>
 									<ExtendedTooltip name="СводкаЖдутОператораПолеРасширеннаяПодсказка" id="60"/>
 								</LabelField>
 								<LabelField name="СводкаОшибокЗаСуткиПоле" id="61">
 									<DataPath>СводкаОшибокЗаСуткиПоле</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
 									<ContextMenu name="СводкаОшибокЗаСуткиПолеКонтекстноеМеню" id="62"/>
 									<ExtendedTooltip name="СводкаОшибокЗаСуткиПолеРасширеннаяПодсказка" id="63"/>
 								</LabelField>
 								<LabelField name="СводкаЗавершеноПоле" id="64">
 									<DataPath>СводкаЗавершеноПоле</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
 									<ContextMenu name="СводкаЗавершеноПолеКонтекстноеМеню" id="65"/>
 									<ExtendedTooltip name="СводкаЗавершеноПолеРасширеннаяПодсказка" id="66"/>
 								</LabelField>
@@ -585,6 +589,7 @@
 						<LabelField name="СтрокаЗдоровьяПоле" id="97">
 							<DataPath>СтрокаЗдоровьяПоле</DataPath>
 							<ReadOnly>true</ReadOnly>
+							<TitleLocation>None</TitleLocation>
 							<ContextMenu name="СтрокаЗдоровьяПолеКонтекстноеМеню" id="98"/>
 							<ExtendedTooltip name="СтрокаЗдоровьяПолеРасширеннаяПодсказка" id="99"/>
 						</LabelField>
