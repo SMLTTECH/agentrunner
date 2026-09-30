@@ -427,6 +427,7 @@
 							<CommandBarLocation>None</CommandBarLocation>
 							<HeightInTableRows>15</HeightInTableRows>
 							<DataPath>СписокЗапусков</DataPath>
+							<ReadOnly>true</ReadOnly>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="СписокЗапусковКонтекстноеМеню" id="68"/>
 							<AutoCommandBar name="СписокЗапусковКоманднаяПанель" id="69"/>
@@ -621,7 +622,6 @@
 									<v8:content>Группа команды строки агенты</v8:content>
 								</v8:item>
 							</ToolTip>
-							<CommandSource>Item.СписокАгентов</CommandSource>
 							<ExtendedTooltip name="ГруппаКомандыСтрокиАгентыРасширеннаяПодсказка" id="295"/>
 							<ChildItems>
 								<Button name="КнопкаОткрытьАгентаАгенты" id="216">
@@ -640,6 +640,7 @@
 							<CommandBarLocation>None</CommandBarLocation>
 							<HeightInTableRows>15</HeightInTableRows>
 							<DataPath>СписокАгентов</DataPath>
+							<ReadOnly>true</ReadOnly>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="СписокАгентовКонтекстноеМеню" id="221"/>
 							<AutoCommandBar name="СписокАгентовКоманднаяПанель" id="222"/>
