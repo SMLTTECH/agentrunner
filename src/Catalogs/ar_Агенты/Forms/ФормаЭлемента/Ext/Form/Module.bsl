@@ -1965,8 +1965,12 @@
 				|en='Keep dialog context between runs (sessions with TTL from settings). Without the flag every run starts from scratch.'"))
 		+ СтрокаПоля(НСтр("ru='Планировать работу'; en='Plan work'"),
 			Переключатель("plan_work", Объект.ar_ПланироватьРаботу),
-			НСтр("ru='Агент объявляет и сопровождает план работы (список этапов) через инструмент update_plan на многоэтапных задачах. Если заполнен шаблон плана - план при старте заполняется из шаблона без обращения к модели. По умолчанию выключено.';
-				|en='The agent declares and maintains a work plan (list of stages) via the update_plan tool on multi-step tasks. If the plan template is filled, the plan is initialized from the template at run start without a model call. Disabled by default.'"))
+			НСтр("ru='Агент объявляет и сопровождает план работы (список этапов) через инструмент update_plan
+				|на многоэтапных задачах. Если заполнен шаблон плана - план при старте заполняется из шаблона
+				|без обращения к модели. По умолчанию выключено.';
+				|en='The agent declares and maintains a work plan (list of stages) via the update_plan tool
+				|on multi-step tasks. If the plan template is filled, the plan is initialized from the template
+				|at run start without a model call. Disabled by default.'"))
 		+ "</div>"
 		+ "<div class=""ar-card""><h2>" + ar_ЭкранироватьHTML(НСтр("ru='Токен агента'; en='Agent token'")) + "</h2>"
 		+ "<div class=""ar-token-row"">" + СтатусТокена + КнопкаТокена + "</div>"
