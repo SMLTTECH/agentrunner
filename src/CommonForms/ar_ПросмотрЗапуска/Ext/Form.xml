@@ -174,7 +174,7 @@
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Декорация heartbeat</v8:content>
+									<v8:content>Пульс</v8:content>
 								</v8:item>
 							</Title>
 							<ContextMenu name="ДекорацияПульсКонтекстноеМеню" id="33"/>
@@ -204,7 +204,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Показать Prompt</v8:content>
+									<v8:content>Показать промпт</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>en</v8:lang>
@@ -454,7 +454,7 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Tool Call</v8:content>
+											<v8:content>Вызов инструмента</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>en</v8:lang>
@@ -1202,7 +1202,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Шапка last heartbeat</v8:content>
+					<v8:content>Шапка последний пульс</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1216,7 +1216,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Шапка heartbeat активен</v8:content>
+					<v8:content>Шапка пульс активен</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1829,7 +1829,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Показать Prompt</v8:content>
+					<v8:content>Показать промпт</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
