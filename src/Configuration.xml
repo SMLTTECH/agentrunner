@@ -165,6 +165,7 @@
 			<CommonModule>ar_ПрофилиИмпорт</CommonModule>
 			<CommonModule>ar_ИнструментыПереопределяемый</CommonModule>
 			<CommonModule>ar_Настройки</CommonModule>
+			<CommonModule>ar_НастройкиПовтИсп</CommonModule>
 			<CommonModule>ar_ПодтверждениеПредставление</CommonModule>
 			<CommonModule>ar_ИнструментыПакеты</CommonModule>
 			<CommonModule>ar_ИнструментыПлагинВызов</CommonModule>

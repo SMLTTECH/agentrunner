@@ -57,6 +57,16 @@
 					<ContextMenu name="ar_ВключеноКонтекстноеМеню" id="13"/>
 					<ExtendedTooltip name="ar_ВключеноРасширеннаяПодсказка" id="14"/>
 				</CheckBoxField>
+				<InputField name="ar_Ответственный" id="45">
+					<DataPath>Объект.ar_Ответственный</DataPath>
+					<ContextMenu name="ar_ОтветственныйКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ar_ОтветственныйРасширеннаяПодсказка" id="47"/>
+				</InputField>
+				<InputField name="ar_ДатаИзменения" id="48">
+					<DataPath>Объект.ar_ДатаИзменения</DataPath>
+					<ContextMenu name="ar_ДатаИзмененияКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ar_ДатаИзмененияРасширеннаяПодсказка" id="50"/>
+				</InputField>
 				<RadioButtonField name="ВидНастройки" id="15">
 					<DataPath>ВидНастройки</DataPath>
 					<Title>
@@ -71,7 +81,7 @@
 					</Title>
 					<TitleLocation>None</TitleLocation>
 					<RadioButtonType>RadioButtons</RadioButtonType>
-					<ColumnsCount>2</ColumnsCount>
+					<ColumnsCount>3</ColumnsCount>
 					<ChoiceList>
 						<xr:Item>
 							<xr:Presentation/>
@@ -105,6 +115,23 @@
 									</v8:item>
 								</Presentation>
 								<Value xsi:type="xs:string">Список</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Соответствие (ключ-значение)</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Key-value map</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Соответствие</Value>
 							</xr:Value>
 						</xr:Item>
 					</ChoiceList>
@@ -246,6 +273,84 @@
 					<ContextMenu name="ar_ЗначенияВключеноКонтекстноеМеню" id="39"/>
 					<ExtendedTooltip name="ar_ЗначенияВключеноРасширеннаяПодсказка" id="40"/>
 				</CheckBoxField>
+			</ChildItems>
+		</Table>
+		<Table name="ar_Соответствие" id="51">
+			<DataPath>Объект.ar_Соответствие</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ar_СоответствиеКонтекстноеМеню" id="52"/>
+			<AutoCommandBar name="ar_СоответствиеКоманднаяПанель" id="53"/>
+			<ExtendedTooltip name="ar_СоответствиеРасширеннаяПодсказка" id="54"/>
+			<SearchStringAddition name="ar_СоответствиеСтрокаПоиска" id="55">
+				<AdditionSource>
+					<Item>ar_Соответствие</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ar_СоответствиеСтрокаПоискаКонтекстноеМеню" id="56"/>
+				<ExtendedTooltip name="ar_СоответствиеСтрокаПоискаРасширеннаяПодсказка" id="57"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ar_СоответствиеСостояниеПросмотра" id="58">
+				<AdditionSource>
+					<Item>ar_Соответствие</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ar_СоответствиеСостояниеПросмотраКонтекстноеМеню" id="59"/>
+				<ExtendedTooltip name="ar_СоответствиеСостояниеПросмотраРасширеннаяПодсказка" id="60"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ar_СоответствиеУправлениеПоиском" id="61">
+				<AdditionSource>
+					<Item>ar_Соответствие</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ar_СоответствиеУправлениеПоискомКонтекстноеМеню" id="62"/>
+				<ExtendedTooltip name="ar_СоответствиеУправлениеПоискомРасширеннаяПодсказка" id="63"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ar_СоответствиеКлюч" id="64">
+					<DataPath>Объект.ar_Соответствие.ar_Ключ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Key</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ar_СоответствиеКлючКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="ar_СоответствиеКлючРасширеннаяПодсказка" id="66"/>
+				</InputField>
+				<InputField name="ar_СоответствиеЗначение" id="67">
+					<DataPath>Объект.ar_Соответствие.ar_Значение</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Value</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ar_СоответствиеЗначениеКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="ar_СоответствиеЗначениеРасширеннаяПодсказка" id="69"/>
+				</InputField>
+				<InputField name="ar_СоответствиеЗначениеСтрока" id="70">
+					<DataPath>Объект.ar_Соответствие.ar_ЗначениеСтрока</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение (строка)</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Value (string)</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ar_СоответствиеЗначениеСтрокаКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="ar_СоответствиеЗначениеСтрокаРасширеннаяПодсказка" id="72"/>
+				</InputField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
