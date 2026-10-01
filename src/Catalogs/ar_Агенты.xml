@@ -981,11 +981,11 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Если включено — агент объявляет и сопровождает план работы (список этапов) через tool update_plan на многоэтапных задачах. По умолчанию выключено.</v8:content>
+							<v8:content>Если включено — агент объявляет и сопровождает план работы (список этапов) через инструмент update_plan на многоэтапных задачах. Если заполнен шаблон плана — план при старте заполняется из шаблона без обращения к модели. По умолчанию выключено.</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>If enabled, the agent declares and maintains a work plan (list of stages) via the update_plan tool on multi-step tasks. Disabled by default.</v8:content>
+							<v8:content>If enabled, the agent declares and maintains a work plan (list of stages) via the update_plan tool on multi-step tasks. If the plan template is filled, the plan is initialized from the template at run start without a model call. Disabled by default.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -996,6 +996,63 @@
 					<MaxValue xsi:nil="true"/>
 					<FillFromFillingValue>false</FillFromFillingValue>
 					<FillValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Use>ForItem</Use>
+					<Indexing>DontIndex</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="edc36731-9275-4fe4-9d09-a6574bef64a4">
+				<Properties>
+					<Name>ar_ШаблонПлана</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон плана</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Plan template</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Необязательно. Один пункт на строку, не более 12 пунктов по 150 символов. При старте запуска план заполняется этими пунктами без обращения к модели; агент отмечает их выполнение и вправе изменить план. Действует при включённом флажке «Планировать работу».</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Optional. One item per line, up to 12 items of 150 characters each. At run start the plan is filled with these items without a model call; the agent marks their completion and may change the plan. Applies only when the "Plan work" flag is enabled.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>true</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>false</FillFromFillingValue>
+					<FillValue xsi:type="xs:string"/>
 					<FillChecking>DontCheck</FillChecking>
 					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 					<ChoiceParameterLinks/>
