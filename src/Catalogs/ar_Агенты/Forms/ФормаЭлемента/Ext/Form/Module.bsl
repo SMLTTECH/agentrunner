@@ -2008,8 +2008,14 @@
 		+ "</div>"
 		+ "<div class=""ar-card""><h2>" + ar_ЭкранироватьHTML(НСтр("ru='Шаблон плана'; en='Plan template'")) + "</h2>"
 		+ "<div class=""ar-note"">" + ar_ЭкранироватьHTML(
-			НСтр("ru='Необязательно. Один пункт на строку, не более 12 пунктов по 150 символов. При старте запуска план заполняется этими пунктами без обращения к модели; агент отмечает их выполнение и вправе изменить план. Действует при включённом флажке «Планировать работу».';
-				|en='Optional. One item per line, up to 12 items of 150 characters each. At run start the plan is filled with these items without a model call; the agent marks their completion and may change the plan. Applies only when the ""Plan work"" flag is enabled.'")) + "</div>"
+			НСтр("ru='Необязательно. Один пункт на строку, не более 12 пунктов по 150 символов.
+				|При старте запуска план заполняется этими пунктами без обращения к модели;
+				|агент отмечает их выполнение и вправе изменить план. Действует при включённом
+				|флажке «Планировать работу».';
+				|en='Optional. One item per line, up to 12 items of 150 characters each.
+				|At run start the plan is filled with these items without a model call;
+				|the agent marks their completion and may change the plan. Applies only
+				|when the ""Plan work"" flag is enabled.'")) + "</div>"
 		+ ПредупреждениеШаблона
 		+ "<textarea id=""fld_plan_template"" class=""ar-textarea ar-textarea-instr"" rows=""6"""
 		+ ?(ТолькоПросмотр, " readonly", "") + ">"
