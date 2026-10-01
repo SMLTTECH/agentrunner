@@ -79,21 +79,79 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаБыстрыеРежимыРасширеннаяПодсказка" id="2"/>
 							<ChildItems>
-								<Button name="КнопкаРежимВсе" id="7">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.УстановитьРежимВсе</CommandName>
-									<ExtendedTooltip name="КнопкаРежимВсеРасширеннаяПодсказка" id="8"/>
-								</Button>
-								<Button name="КнопкаРежимРаботают" id="3">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.УстановитьРежимРаботают</CommandName>
-									<ExtendedTooltip name="КнопкаРежимРаботаютРасширеннаяПодсказка" id="4"/>
-								</Button>
-								<Button name="КнопкаРежимТребуютВнимания" id="5">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.УстановитьРежимТребуютВнимания</CommandName>
-									<ExtendedTooltip name="КнопкаРежимТребуютВниманияРасширеннаяПодсказка" id="6"/>
-								</Button>
+								<RadioButtonField name="ОтборРежимБыстрый" id="296">
+									<DataPath>ОтборРежимБыстрый</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Быстрый отбор</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Quick filter</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Tumbler</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Все</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>All</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string"/>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Сейчас работают</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Running now</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Работают</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Требуют внимания</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Need attention</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ТребуютВнимания</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ОтборРежимБыстрыйКонтекстноеМеню" id="297"/>
+									<ExtendedTooltip name="ОтборРежимБыстрыйРасширеннаяПодсказка" id="298"/>
+									<Events>
+										<Event name="OnChange">ОтборРежимБыстрыйПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
 								<CheckBoxField name="АвтообновлениеВключено" id="9">
 									<DataPath>АвтообновлениеВключено</DataPath>
 									<Title>
@@ -325,6 +383,8 @@
 									<DataPath>СводкаРаботаютПоле</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<TitleLocation>None</TitleLocation>
+									<Width>18</Width>
+									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СводкаРаботаютПолеКонтекстноеМеню" id="56"/>
 									<ExtendedTooltip name="СводкаРаботаютПолеРасширеннаяПодсказка" id="57"/>
 								</LabelField>
@@ -332,6 +392,8 @@
 									<DataPath>СводкаЖдутОператораПоле</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<TitleLocation>None</TitleLocation>
+									<Width>28</Width>
+									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СводкаЖдутОператораПолеКонтекстноеМеню" id="59"/>
 									<ExtendedTooltip name="СводкаЖдутОператораПолеРасширеннаяПодсказка" id="60"/>
 								</LabelField>
@@ -339,6 +401,8 @@
 									<DataPath>СводкаОшибокЗаСуткиПоле</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<TitleLocation>None</TitleLocation>
+									<Width>26</Width>
+									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СводкаОшибокЗаСуткиПолеКонтекстноеМеню" id="62"/>
 									<ExtendedTooltip name="СводкаОшибокЗаСуткиПолеРасширеннаяПодсказка" id="63"/>
 								</LabelField>
@@ -346,13 +410,12 @@
 									<DataPath>СводкаЗавершеноПоле</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<TitleLocation>None</TitleLocation>
+									<Width>18</Width>
+									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СводкаЗавершеноПолеКонтекстноеМеню" id="65"/>
 									<ExtendedTooltip name="СводкаЗавершеноПолеРасширеннаяПодсказка" id="66"/>
 								</LabelField>
 							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="ГруппаКомандыСтроки" id="100">
-							<ExtendedTooltip name="ГруппаКомандыСтрокиРасширеннаяПодсказка" id="101"/>
 						</UsualGroup>
 						<CommandBar name="ГруппаПанель" id="290">
 							<Title>
@@ -470,6 +533,7 @@
 											<v8:content>Агент</v8:content>
 										</v8:item>
 									</Title>
+									<Width>18</Width>
 									<ContextMenu name="СписокЗапусковПредставлениеАгентаКонтекстноеМеню" id="74"/>
 									<ExtendedTooltip name="СписокЗапусковПредставлениеАгентаРасширеннаяПодсказка" id="75"/>
 								</InputField>
@@ -482,6 +546,8 @@
 											<v8:content>Статус</v8:content>
 										</v8:item>
 									</Title>
+									<Width>13</Width>
+									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СписокЗапусковСтатусКонтекстноеМеню" id="77"/>
 									<ExtendedTooltip name="СписокЗапусковСтатусРасширеннаяПодсказка" id="78"/>
 								</InputField>
@@ -494,6 +560,8 @@
 											<v8:content>Ответственный</v8:content>
 										</v8:item>
 									</Title>
+									<Width>14</Width>
+									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СписокЗапусковПредставлениеПользователяКонтекстноеМеню" id="80"/>
 									<ExtendedTooltip name="СписокЗапусковПредставлениеПользователяРасширеннаяПодсказка" id="81"/>
 								</InputField>
@@ -506,6 +574,8 @@
 											<v8:content>Старт</v8:content>
 										</v8:item>
 									</Title>
+									<Width>14</Width>
+									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СписокЗапусковСтартовалВКонтекстноеМеню" id="83"/>
 									<ExtendedTooltip name="СписокЗапусковСтартовалВРасширеннаяПодсказка" id="84"/>
 								</InputField>
@@ -518,6 +588,8 @@
 											<v8:content>Длительность</v8:content>
 										</v8:item>
 									</Title>
+									<Width>22</Width>
+									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СписокЗапусковПредставлениеДлительностиКонтекстноеМеню" id="86"/>
 									<ExtendedTooltip name="СписокЗапусковПредставлениеДлительностиРасширеннаяПодсказка" id="87"/>
 								</InputField>
@@ -530,6 +602,8 @@
 											<v8:content>Шагов</v8:content>
 										</v8:item>
 									</Title>
+									<Width>6</Width>
+									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СписокЗапусковШаговВсегоКонтекстноеМеню" id="89"/>
 									<ExtendedTooltip name="СписокЗапусковШаговВсегоРасширеннаяПодсказка" id="90"/>
 								</InputField>
@@ -546,6 +620,7 @@
 											<v8:content>Stage</v8:content>
 										</v8:item>
 									</Title>
+									<Width>22</Width>
 									<ContextMenu name="СписокЗапусковТекстЭтапаКонтекстноеМеню" id="267"/>
 									<ExtendedTooltip name="СписокЗапусковТекстЭтапаРасширеннаяПодсказка" id="268"/>
 								</InputField>
@@ -558,6 +633,8 @@
 											<v8:content>Триггер</v8:content>
 										</v8:item>
 									</Title>
+									<Width>10</Width>
+									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СписокЗапусковТриггерКонтекстноеМеню" id="92"/>
 									<ExtendedTooltip name="СписокЗапусковТриггерРасширеннаяПодсказка" id="93"/>
 								</InputField>
@@ -570,6 +647,8 @@
 											<v8:content>Живость</v8:content>
 										</v8:item>
 									</Title>
+									<Width>12</Width>
+									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СписокЗапусковЖивостьТекстКонтекстноеМеню" id="95"/>
 									<ExtendedTooltip name="СписокЗапусковЖивостьТекстРасширеннаяПодсказка" id="96"/>
 								</InputField>
@@ -582,6 +661,8 @@
 											<v8:content>Повтор</v8:content>
 										</v8:item>
 									</Title>
+									<Width>12</Width>
+									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СписокЗапусковТекстОжиданияПовтораКонтекстноеМеню" id="264"/>
 									<ExtendedTooltip name="СписокЗапусковТекстОжиданияПовтораРасширеннаяПодсказка" id="265"/>
 								</InputField>
@@ -915,7 +996,7 @@
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
-							<v8:Length>30</v8:Length>
+							<v8:Length>60</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
 					</Type>
@@ -1460,14 +1541,20 @@
 					<dcsset:item>
 						<dcsset:field>СписокЗапусковЖивостьТекст</dcsset:field>
 					</dcsset:item>
-				</dcsset:selection>
-				<dcsset:filter>
-					<dcsset:item xsi:type="dcsset:FilterItemComparison">
-						<dcsset:left xsi:type="dcscor:Field">СписокЗапусков.ГруппаСтатуса</dcsset:left>
-						<dcsset:comparisonType>Equal</dcsset:comparisonType>
-						<dcsset:right xsi:type="xs:string">ЖдётОператора</dcsset:right>
+					<dcsset:item>
+						<dcsset:field>СписокЗапусковТекстЭтапа</dcsset:field>
 					</dcsset:item>
-				</dcsset:filter>
+					<dcsset:item>
+						<dcsset:field>СписокЗапусковТекстОжиданияПовтора</dcsset:field>
+					</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СписокЗапусков.ГруппаСтатуса</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">ЖдётОператора</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
@@ -1501,14 +1588,20 @@
 					<dcsset:item>
 						<dcsset:field>СписокЗапусковЖивостьТекст</dcsset:field>
 					</dcsset:item>
-				</dcsset:selection>
-				<dcsset:filter>
-					<dcsset:item xsi:type="dcsset:FilterItemComparison">
-						<dcsset:left xsi:type="dcscor:Field">СписокЗапусков.ГруппаСтатуса</dcsset:left>
-						<dcsset:comparisonType>Equal</dcsset:comparisonType>
-						<dcsset:right xsi:type="xs:string">Ошибка</dcsset:right>
+					<dcsset:item>
+						<dcsset:field>СписокЗапусковТекстЭтапа</dcsset:field>
 					</dcsset:item>
-				</dcsset:filter>
+					<dcsset:item>
+						<dcsset:field>СписокЗапусковТекстОжиданияПовтора</dcsset:field>
+					</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СписокЗапусков.ГруппаСтатуса</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Ошибка</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
@@ -1542,14 +1635,20 @@
 					<dcsset:item>
 						<dcsset:field>СписокЗапусковЖивостьТекст</dcsset:field>
 					</dcsset:item>
-				</dcsset:selection>
-				<dcsset:filter>
-					<dcsset:item xsi:type="dcsset:FilterItemComparison">
-						<dcsset:left xsi:type="dcscor:Field">СписокЗапусков.ГруппаСтатуса</dcsset:left>
-						<dcsset:comparisonType>Equal</dcsset:comparisonType>
-						<dcsset:right xsi:type="xs:string">Завершено</dcsset:right>
+					<dcsset:item>
+						<dcsset:field>СписокЗапусковТекстЭтапа</dcsset:field>
 					</dcsset:item>
-				</dcsset:filter>
+					<dcsset:item>
+						<dcsset:field>СписокЗапусковТекстОжиданияПовтора</dcsset:field>
+					</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СписокЗапусков.ГруппаСтатуса</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Завершено</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветТекста</dcscor:parameter>
@@ -1592,33 +1691,6 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ОбновитьВыполнить</Action>
-		</Command>
-		<Command name="УстановитьРежимРаботают" id="144">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Сейчас работают</v8:content>
-				</v8:item>
-			</Title>
-			<Action>УстановитьРежимРаботаютВыполнить</Action>
-		</Command>
-		<Command name="УстановитьРежимТребуютВнимания" id="145">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Требуют внимания</v8:content>
-				</v8:item>
-			</Title>
-			<Action>УстановитьРежимТребуютВниманияВыполнить</Action>
-		</Command>
-		<Command name="УстановитьРежимВсе" id="146">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Все</v8:content>
-				</v8:item>
-			</Title>
-			<Action>УстановитьРежимВсеВыполнить</Action>
 		</Command>
 		<Command name="ОткрытьЗапуск" id="147">
 			<Title>
