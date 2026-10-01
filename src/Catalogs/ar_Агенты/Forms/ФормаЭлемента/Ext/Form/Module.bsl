@@ -254,6 +254,7 @@
 		Иды.Добавить("sel_autonomy");
 	ИначеЕсли Вкладка = "instr" Тогда
 		Иды.Добавить("fld_instruction");
+		Иды.Добавить("fld_plan_template");
 	ИначеЕсли Вкладка = "llm" Тогда
 		Иды.Добавить("fld_model");
 		Иды.Добавить("fld_temp");
@@ -1037,6 +1038,8 @@
 			УстановитьРежимАвтономии(Значение);
 		ИначеЕсли Ид = "fld_instruction" Тогда
 			УстановитьСтроку(Объект, "ar_Инструкция", Значение);
+		ИначеЕсли Ид = "fld_plan_template" Тогда
+			УстановитьСтроку(Объект, "ar_ШаблонПлана", Значение);
 		ИначеЕсли Ид = "fld_model" Тогда
 			УстановитьСтроку(Объект, "ar_Модель", Значение);
 		ИначеЕсли Ид = "fld_temp" Тогда
@@ -1962,8 +1965,8 @@
 				|en='Keep dialog context between runs (sessions with TTL from settings). Without the flag every run starts from scratch.'"))
 		+ СтрокаПоля(НСтр("ru='Планировать работу'; en='Plan work'"),
 			Переключатель("plan_work", Объект.ar_ПланироватьРаботу),
-			НСтр("ru='Агент объявляет и сопровождает план работы (список этапов) через tool update_plan на многоэтапных задачах. По умолчанию выключено.';
-				|en='The agent declares and maintains a work plan (list of stages) via the update_plan tool on multi-step tasks. Disabled by default.'"))
+			НСтр("ru='Агент объявляет и сопровождает план работы (список этапов) через инструмент update_plan на многоэтапных задачах. Если заполнен шаблон плана - план при старте заполняется из шаблона без обращения к модели. По умолчанию выключено.';
+				|en='The agent declares and maintains a work plan (list of stages) via the update_plan tool on multi-step tasks. If the plan template is filled, the plan is initialized from the template at run start without a model call. Disabled by default.'"))
 		+ "</div>"
 		+ "<div class=""ar-card""><h2>" + ar_ЭкранироватьHTML(НСтр("ru='Токен агента'; en='Agent token'")) + "</h2>"
 		+ "<div class=""ar-token-row"">" + СтатусТокена + КнопкаТокена + "</div>"
@@ -1979,6 +1982,17 @@
 &НаСервере
 Функция HTMLСекцияИнструкция()
 
+	// Шаблон действует только под включённым флажком «Планировать работу»
+	// (см. ar_RuntimeЦикл: пункты берутся из ДанныеАгента.ПунктыШаблонаПлана,
+	// который пуст при выключенном флажке) - заполненный шаблон без флажка
+	// предупреждаем, а не прячем: оператор должен видеть, почему план не стартует.
+	ПредупреждениеШаблона = "";
+	Если Не ПустаяСтрока(Объект.ar_ШаблонПлана) И Не Объект.ar_ПланироватьРаботу Тогда
+		ПредупреждениеШаблона = "<div class=""ar-note ar-note-warn"">" + ar_ЭкранироватьHTML(
+			НСтр("ru='Шаблон не применяется: флажок «Планировать работу» выключен.';
+				|en='The template is not applied: the ""Plan work"" flag is disabled.'")) + "</div>";
+	КонецЕсли;
+
 	Возврат
 		"<div class=""ar-card"">"
 		+ "<div class=""ar-card-head"">"
@@ -1991,6 +2005,15 @@
 		+ "<textarea id=""fld_instruction"" class=""ar-textarea ar-textarea-instr"" rows=""14"""
 		+ ?(ТолькоПросмотр, " readonly", "") + ">"
 		+ ar_ЭкранироватьHTML(Объект.ar_Инструкция) + "</textarea>"
+		+ "</div>"
+		+ "<div class=""ar-card""><h2>" + ar_ЭкранироватьHTML(НСтр("ru='Шаблон плана'; en='Plan template'")) + "</h2>"
+		+ "<div class=""ar-note"">" + ar_ЭкранироватьHTML(
+			НСтр("ru='Необязательно. Один пункт на строку, не более 12 пунктов по 150 символов. При старте запуска план заполняется этими пунктами без обращения к модели; агент отмечает их выполнение и вправе изменить план. Действует при включённом флажке «Планировать работу».';
+				|en='Optional. One item per line, up to 12 items of 150 characters each. At run start the plan is filled with these items without a model call; the agent marks their completion and may change the plan. Applies only when the ""Plan work"" flag is enabled.'")) + "</div>"
+		+ ПредупреждениеШаблона
+		+ "<textarea id=""fld_plan_template"" class=""ar-textarea ar-textarea-instr"" rows=""6"""
+		+ ?(ТолькоПросмотр, " readonly", "") + ">"
+		+ ar_ЭкранироватьHTML(Объект.ar_ШаблонПлана) + "</textarea>"
 		+ "</div>"
 		+ "<div class=""ar-card""><h2>" + ar_ЭкранироватьHTML(НСтр("ru='Превью'; en='Preview'")) + "</h2>"
 		+ "<div class=""ar-md-preview"">" + МаркdownВHTML(Объект.ar_Инструкция) + "</div>"
