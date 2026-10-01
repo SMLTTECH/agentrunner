@@ -990,7 +990,7 @@
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
-							<v8:Length>30</v8:Length>
+							<v8:Length>60</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
 					</Type>
@@ -1532,23 +1532,23 @@
 					<dcsset:item>
 						<dcsset:field>СписокЗапусковТриггер</dcsset:field>
 					</dcsset:item>
-						<dcsset:item>
-							<dcsset:field>СписокЗапусковЖивостьТекст</dcsset:field>
-						</dcsset:item>
-						<dcsset:item>
-							<dcsset:field>СписокЗапусковТекстЭтапа</dcsset:field>
-						</dcsset:item>
-						<dcsset:item>
-							<dcsset:field>СписокЗапусковТекстОжиданияПовтора</dcsset:field>
-						</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>СписокЗапусковЖивостьТекст</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>СписокЗапусковТекстЭтапа</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>СписокЗапусковТекстОжиданияПовтора</dcsset:field>
+					</dcsset:item>
 					</dcsset:selection>
 					<dcsset:filter>
 						<dcsset:item xsi:type="dcsset:FilterItemComparison">
 							<dcsset:left xsi:type="dcscor:Field">СписокЗапусков.ГруппаСтатуса</dcsset:left>
 							<dcsset:comparisonType>Equal</dcsset:comparisonType>
 							<dcsset:right xsi:type="xs:string">ЖдётОператора</dcsset:right>
-					</dcsset:item>
-				</dcsset:filter>
+						</dcsset:item>
+					</dcsset:filter>
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
@@ -1579,23 +1579,23 @@
 					<dcsset:item>
 						<dcsset:field>СписокЗапусковТриггер</dcsset:field>
 					</dcsset:item>
-						<dcsset:item>
-							<dcsset:field>СписокЗапусковЖивостьТекст</dcsset:field>
-						</dcsset:item>
-						<dcsset:item>
-							<dcsset:field>СписокЗапусковТекстЭтапа</dcsset:field>
-						</dcsset:item>
-						<dcsset:item>
-							<dcsset:field>СписокЗапусковТекстОжиданияПовтора</dcsset:field>
-						</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>СписокЗапусковЖивостьТекст</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>СписокЗапусковТекстЭтапа</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>СписокЗапусковТекстОжиданияПовтора</dcsset:field>
+					</dcsset:item>
 					</dcsset:selection>
 					<dcsset:filter>
 						<dcsset:item xsi:type="dcsset:FilterItemComparison">
 							<dcsset:left xsi:type="dcscor:Field">СписокЗапусков.ГруппаСтатуса</dcsset:left>
 							<dcsset:comparisonType>Equal</dcsset:comparisonType>
 							<dcsset:right xsi:type="xs:string">Ошибка</dcsset:right>
-					</dcsset:item>
-				</dcsset:filter>
+						</dcsset:item>
+					</dcsset:filter>
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
@@ -1626,23 +1626,23 @@
 					<dcsset:item>
 						<dcsset:field>СписокЗапусковТриггер</dcsset:field>
 					</dcsset:item>
-						<dcsset:item>
-							<dcsset:field>СписокЗапусковЖивостьТекст</dcsset:field>
-						</dcsset:item>
-						<dcsset:item>
-							<dcsset:field>СписокЗапусковТекстЭтапа</dcsset:field>
-						</dcsset:item>
-						<dcsset:item>
-							<dcsset:field>СписокЗапусковТекстОжиданияПовтора</dcsset:field>
-						</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>СписокЗапусковЖивостьТекст</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>СписокЗапусковТекстЭтапа</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>СписокЗапусковТекстОжиданияПовтора</dcsset:field>
+					</dcsset:item>
 					</dcsset:selection>
 					<dcsset:filter>
 						<dcsset:item xsi:type="dcsset:FilterItemComparison">
 							<dcsset:left xsi:type="dcscor:Field">СписокЗапусков.ГруппаСтатуса</dcsset:left>
 							<dcsset:comparisonType>Equal</dcsset:comparisonType>
 							<dcsset:right xsi:type="xs:string">Завершено</dcsset:right>
-					</dcsset:item>
-				</dcsset:filter>
+						</dcsset:item>
+					</dcsset:filter>
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветТекста</dcscor:parameter>
