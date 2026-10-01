@@ -104,6 +104,16 @@
 					<ContextMenu name="ar_ВключеноКонтекстноеМеню" id="19"/>
 					<ExtendedTooltip name="ar_ВключеноРасширеннаяПодсказка" id="20"/>
 				</CheckBoxField>
+				<InputField name="ar_Ответственный" id="34">
+					<DataPath>Список.ar_Ответственный</DataPath>
+					<ContextMenu name="ar_ОтветственныйКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ar_ОтветственныйРасширеннаяПодсказка" id="36"/>
+				</InputField>
+				<InputField name="ar_ДатаИзменения" id="37">
+					<DataPath>Список.ar_ДатаИзменения</DataPath>
+					<ContextMenu name="ar_ДатаИзмененияКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ar_ДатаИзмененияРасширеннаяПодсказка" id="39"/>
+				</InputField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
