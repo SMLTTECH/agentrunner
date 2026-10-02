@@ -1,0 +1,27 @@
+{
+    "ДымовыеТесты": {
+        "Использовать": true,
+        "ОткрытиеФорм": { "Использовать": true }
+    },
+    "filter": {
+        "extensions": ["Smoke"],
+        "modules": [],
+        "tests": [],
+        "suites": [],
+        "tags": [],
+        "contexts": null
+    },
+    "reports": [
+        { "format": "jUnit", "path": "Q:\\ba\\YAxUnit\\reports\\smoke-junit.xml" },
+        { "format": "JSON", "path": "Q:\\ba\\YAxUnit\\reports\\smoke-report.json" }
+    ],
+    "closeAfterTests": true,
+    "showReport": false,
+    "exitCode": "Q:\\ba\\YAxUnit\\reports\\smoke-exitcode.txt",
+    "logging": {
+        "file": "Q:\\ba\\YAxUnit\\reports\\smoke-tests.log",
+        "console": false,
+        "enable": true,
+        "level": "info"
+    }
+}
