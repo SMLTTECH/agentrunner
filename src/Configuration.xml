@@ -180,6 +180,7 @@
 			<CommonModule>ar_ПланЗапуска</CommonModule>
 			<CommonModule>ar_ИнструментыПлан</CommonModule>
 			<CommonModule>ar_ТестыPLAN</CommonModule>
+			<CommonModule>ar_ДиалогиСервер</CommonModule>
 			<HTTPService>ar_AgentsAPI</HTTPService>
 			<HTTPService>ar_RunsAPI</HTTPService>
 			<HTTPService>ar_HealthAPI</HTTPService>
@@ -262,6 +263,10 @@
 			<Enum>ar_РольОтветственного</Enum>
 			<Enum>ar_ВердиктНадзора</Enum>
 			<Enum>ar_КаналУведомления</Enum>
+			<Enum>ar_ВидыДиалогов</Enum>
+			<Enum>ar_СостоянияДиалогов</Enum>
+			<Enum>ar_ОснованияУчастияВДиалоге</Enum>
+			<Enum>ar_ВидыСообщенийДиалога</Enum>
 			<DataProcessor>ar_ТестЦикла</DataProcessor>
 			<DataProcessor>ar_ПресетыВстроенные</DataProcessor>
 			<DataProcessor>ar_ТестТулов</DataProcessor>
