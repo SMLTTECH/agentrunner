@@ -579,34 +579,34 @@
 		ОписанияРЗ = Новый Массив;
 		ОписанияРЗ.Добавить(ОписаниеРЗ(
 			"ar_ПланировщикАгентов",
-			НСтр("ru='Планировщик агентов AgentRunner'; en='AgentRunner Scheduler'")));
+			НСтр("ru='AgentRunner Планировщик агентов'; en='AgentRunner Scheduler'")));
 		ОписанияРЗ.Добавить(ОписаниеРЗ(
 			"ar_ВозобновлениеПослеApproval",
-			НСтр("ru='Возобновление агентов после подтверждения'; en='AgentRunner Resume After Approval'")));
+			НСтр("ru='AgentRunner Возобновление агентов после подтверждения'; en='AgentRunner Resume After Approval'")));
 		ОписанияРЗ.Добавить(ОписаниеРЗ(
 			"ar_АвтовозобновлениеЗапусков",
-			НСтр("ru='Автовозобновление запусков AgentRunner'; en='AgentRunner Run Auto-Resume'")));
+			НСтр("ru='AgentRunner Автовозобновление запусков'; en='AgentRunner Run Auto-Resume'")));
 		ОписанияРЗ.Добавить(ОписаниеРЗ(
 			"ar_ОчисткаЗависших",
-			НСтр("ru='Очистка зависших запусков AgentRunner'; en='AgentRunner Stale Run Cleanup'")));
+			НСтр("ru='AgentRunner Очистка зависших запусков'; en='AgentRunner Stale Run Cleanup'")));
 		ОписанияРЗ.Добавить(ОписаниеРЗ(
 			"ar_РотацияСессий",
-			НСтр("ru='Ротация сессий AgentRunner'; en='AgentRunner Session Rotation'")));
+			НСтр("ru='AgentRunner Ротация сессий'; en='AgentRunner Session Rotation'")));
 		ОписанияРЗ.Добавить(ОписаниеРЗ(
 			"ar_ОбработчикУпоминаний",
-			НСтр("ru='Обработчик упоминаний AgentRunner'; en='AgentRunner Mention Handler'")));
+			НСтр("ru='AgentRunner Обработка упоминаний'; en='AgentRunner Mention Handler'")));
 		ОписанияРЗ.Добавить(ОписаниеРЗ(
 			"ar_КомпакцияAudit",
-			НСтр("ru='Компакция аудита AgentRunner'; en='AgentRunner Audit Compaction'")));
+			НСтр("ru='AgentRunner Сжатие аудита'; en='AgentRunner Audit Compaction'")));
 		ОписанияРЗ.Добавить(ОписаниеРЗ(
 			"ar_ОбновлениеПамятиAuto",
-			НСтр("ru='Обновление памяти агентов AgentRunner (авто)'; en='AgentRunner Auto Memory Update'")));
+			НСтр("ru='AgentRunner Автообновление памяти агентов'; en='AgentRunner Auto Memory Update'")));
 		ОписанияРЗ.Добавить(ОписаниеРЗ(
 			"ar_ОпросПодписокАгентов",
-			НСтр("ru='Опрос подписок агентов AgentRunner'; en='AgentRunner Agent Subscription Poll'")));
+			НСтр("ru='AgentRunner Опрос подписок агентов'; en='AgentRunner Agent Subscription Poll'")));
 		ОписанияРЗ.Добавить(ОписаниеРЗ(
 			"ar_ПроверкаВерсии",
-			НСтр("ru='Проверка версии AgentRunner'; en='AgentRunner Version Check'")));
+			НСтр("ru='AgentRunner Проверка версии'; en='AgentRunner Version Check'")));
 
 		Для Каждого Описание Из ОписанияРЗ Цикл
 			Результат.Добавить(ДиагностикаОдногоРЗ(Описание.Имя, Описание.Синоним, ПорогСек));

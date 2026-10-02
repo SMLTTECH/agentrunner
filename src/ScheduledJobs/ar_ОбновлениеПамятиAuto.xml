@@ -6,7 +6,7 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Обновление памяти агентов AgentRunner (авто)</v8:content>
+					<v8:content>AgentRunner Автообновление памяти агентов</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -15,7 +15,7 @@
 			</Synonym>
 			<Comment/>
 			<MethodName>CommonModule.ar_Планировщик.ОбработатьОбновлениеПамятиAuto</MethodName>
-			<Description>AgentRunner Auto Memory Update</Description>
+			<Description>AgentRunner Автообновление памяти агентов</Description>
 			<Key>ar_ОбновлениеПамятиAuto</Key>
 			<Use>true</Use>
 			<Predefined>true</Predefined>

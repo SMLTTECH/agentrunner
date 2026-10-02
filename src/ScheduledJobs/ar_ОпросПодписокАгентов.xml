@@ -6,7 +6,7 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Опрос подписок агентов AgentRunner</v8:content>
+					<v8:content>AgentRunner Опрос подписок агентов</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -15,7 +15,7 @@
 			</Synonym>
 			<Comment/>
 			<MethodName>CommonModule.ar_Планировщик.ОбработатьОпросПодписок</MethodName>
-			<Description>AgentRunner Agent Subscription Poll</Description>
+			<Description>AgentRunner Опрос подписок агентов</Description>
 			<Key>ar_ОпросПодписокАгентов</Key>
 			<Use>true</Use>
 			<Predefined>true</Predefined>
