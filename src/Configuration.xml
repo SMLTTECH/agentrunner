@@ -87,7 +87,6 @@
 		<ChildObjects>
 			<SessionParameter>ТекущийПользователь</SessionParameter>
 			<CommonModule>ПодключаемыеКомандыПереопределяемый</CommonModule>
-			<DefinedType>ar_ПредметДиалога</DefinedType>
 			<Language>Русский</Language>
 			<Subsystem>ar_AgentRunner</Subsystem>
 			<CommonPicture>ar_Логотип</CommonPicture>

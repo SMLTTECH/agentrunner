@@ -679,7 +679,7 @@
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:TypeSet>cfg:DefinedType.ar_ПредметДиалога</v8:TypeSet>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
