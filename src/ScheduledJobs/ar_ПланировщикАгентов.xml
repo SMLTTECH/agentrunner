@@ -6,7 +6,7 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Планировщик агентов AgentRunner</v8:content>
+					<v8:content>AgentRunner Планировщик агентов</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -15,7 +15,7 @@
 			</Synonym>
 			<Comment/>
 			<MethodName>CommonModule.ar_Планировщик.ОбработатьПланировщик</MethodName>
-			<Description>Планировщик агентов AgentRunner</Description>
+			<Description>AgentRunner Планировщик агентов</Description>
 			<Key>ar_ПланировщикАгентов</Key>
 			<Use>true</Use>
 			<Predefined>true</Predefined>

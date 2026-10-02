@@ -6,7 +6,7 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Ротация сессий AgentRunner</v8:content>
+					<v8:content>AgentRunner Ротация сессий</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -15,7 +15,7 @@
 			</Synonym>
 			<Comment/>
 			<MethodName>CommonModule.ar_Планировщик.ОбработатьРотациюСессий</MethodName>
-			<Description>AgentRunner Session Rotation</Description>
+			<Description>AgentRunner Ротация сессий</Description>
 			<Key>ar_РотацияСессий</Key>
 			<Use>true</Use>
 			<Predefined>true</Predefined>

@@ -6,7 +6,7 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Очистка зависших запусков AgentRunner</v8:content>
+					<v8:content>AgentRunner Очистка зависших запусков</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -15,7 +15,7 @@
 			</Synonym>
 			<Comment/>
 			<MethodName>CommonModule.ar_Планировщик.ОбработатьОчисткуЗависших</MethodName>
-			<Description>Очистка зависших запусков AgentRunner</Description>
+			<Description>AgentRunner Очистка зависших запусков</Description>
 			<Key>ar_ОчисткаЗависших</Key>
 			<Use>true</Use>
 			<Predefined>true</Predefined>

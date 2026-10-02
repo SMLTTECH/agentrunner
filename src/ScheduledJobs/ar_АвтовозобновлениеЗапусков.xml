@@ -6,7 +6,7 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Автовозобновление запусков AgentRunner</v8:content>
+					<v8:content>AgentRunner Автовозобновление запусков</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -15,7 +15,7 @@
 			</Synonym>
 			<Comment/>
 			<MethodName>CommonModule.ar_Планировщик.ОбработатьАвтовозобновление</MethodName>
-			<Description>Автовозобновление запусков AgentRunner</Description>
+			<Description>AgentRunner Автовозобновление запусков</Description>
 			<Key>ar_АвтовозобновлениеЗапусков</Key>
 			<Use>true</Use>
 			<Predefined>true</Predefined>

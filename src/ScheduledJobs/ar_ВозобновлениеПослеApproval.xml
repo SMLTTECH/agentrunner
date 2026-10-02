@@ -6,7 +6,7 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Возобновление агентов после подтверждения</v8:content>
+					<v8:content>AgentRunner Возобновление агентов после подтверждения</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -15,7 +15,7 @@
 			</Synonym>
 			<Comment/>
 			<MethodName>CommonModule.ar_Планировщик.ОбработатьВозобновление</MethodName>
-			<Description>Возобновление агентов после подтверждения</Description>
+			<Description>AgentRunner Возобновление агентов после подтверждения</Description>
 			<Key>ar_ВозобновлениеПослеApproval</Key>
 			<Use>true</Use>
 			<Predefined>true</Predefined>
