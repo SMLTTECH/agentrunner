@@ -284,10 +284,10 @@
 			<InformationRegister>ar_ХранилищеСекретов</InformationRegister>
 			<InformationRegister>ar_ПереопределенияОбъектов</InformationRegister>
 			<InformationRegister>ar_СлужебныйЛог</InformationRegister>
-			<InformationRegister>ar_СообщенияДиалога</InformationRegister>
 			<InformationRegister>ar_ПрофильКонфигурации</InformationRegister>
 			<InformationRegister>ar_Адаптеры</InformationRegister>
 			<InformationRegister>ar_ПакетыИнструментов</InformationRegister>
+			<InformationRegister>ar_ЛентаДиалога</InformationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

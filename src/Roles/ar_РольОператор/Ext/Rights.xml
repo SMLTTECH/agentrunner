@@ -243,7 +243,7 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ar_СообщенияДиалога</name>
+		<name>InformationRegister.ar_ЛентаДиалога</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
