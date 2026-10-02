@@ -533,7 +533,7 @@
 											<v8:content>Агент</v8:content>
 										</v8:item>
 									</Title>
-									<Width>12</Width>
+									<Width>11</Width>
 									<ContextMenu name="СписокЗапусковПредставлениеАгентаКонтекстноеМеню" id="74"/>
 									<ExtendedTooltip name="СписокЗапусковПредставлениеАгентаРасширеннаяПодсказка" id="75"/>
 								</InputField>
@@ -546,7 +546,7 @@
 											<v8:content>Статус</v8:content>
 										</v8:item>
 									</Title>
-									<Width>11</Width>
+									<Width>10</Width>
 									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СписокЗапусковСтатусКонтекстноеМеню" id="77"/>
 									<ExtendedTooltip name="СписокЗапусковСтатусРасширеннаяПодсказка" id="78"/>
@@ -560,7 +560,7 @@
 											<v8:content>Ответственный</v8:content>
 										</v8:item>
 									</Title>
-									<Width>9</Width>
+									<Width>8</Width>
 									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СписокЗапусковПредставлениеПользователяКонтекстноеМеню" id="80"/>
 									<ExtendedTooltip name="СписокЗапусковПредставлениеПользователяРасширеннаяПодсказка" id="81"/>
@@ -574,7 +574,7 @@
 											<v8:content>Старт</v8:content>
 										</v8:item>
 									</Title>
-									<Width>13</Width>
+									<Width>12</Width>
 									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СписокЗапусковСтартовалВКонтекстноеМеню" id="83"/>
 									<ExtendedTooltip name="СписокЗапусковСтартовалВРасширеннаяПодсказка" id="84"/>
@@ -588,7 +588,7 @@
 											<v8:content>Длительность</v8:content>
 										</v8:item>
 									</Title>
-									<Width>32</Width>
+									<Width>28</Width>
 									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СписокЗапусковПредставлениеДлительностиКонтекстноеМеню" id="86"/>
 									<ExtendedTooltip name="СписокЗапусковПредставлениеДлительностиРасширеннаяПодсказка" id="87"/>
@@ -602,7 +602,7 @@
 											<v8:content>Шагов</v8:content>
 										</v8:item>
 									</Title>
-									<Width>5</Width>
+									<Width>4</Width>
 									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СписокЗапусковШаговВсегоКонтекстноеМеню" id="89"/>
 									<ExtendedTooltip name="СписокЗапусковШаговВсегоРасширеннаяПодсказка" id="90"/>
@@ -633,7 +633,7 @@
 											<v8:content>Триггер</v8:content>
 										</v8:item>
 									</Title>
-									<Width>9</Width>
+									<Width>8</Width>
 									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СписокЗапусковТриггерКонтекстноеМеню" id="92"/>
 									<ExtendedTooltip name="СписокЗапусковТриггерРасширеннаяПодсказка" id="93"/>
@@ -647,7 +647,7 @@
 											<v8:content>Живость</v8:content>
 										</v8:item>
 									</Title>
-									<Width>10</Width>
+									<Width>9</Width>
 									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СписокЗапусковЖивостьТекстКонтекстноеМеню" id="95"/>
 									<ExtendedTooltip name="СписокЗапусковЖивостьТекстРасширеннаяПодсказка" id="96"/>
@@ -661,7 +661,7 @@
 											<v8:content>Повтор</v8:content>
 										</v8:item>
 									</Title>
-									<Width>10</Width>
+									<Width>9</Width>
 									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СписокЗапусковТекстОжиданияПовтораКонтекстноеМеню" id="264"/>
 									<ExtendedTooltip name="СписокЗапусковТекстОжиданияПовтораРасширеннаяПодсказка" id="265"/>
