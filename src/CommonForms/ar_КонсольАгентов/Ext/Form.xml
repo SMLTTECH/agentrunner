@@ -546,7 +546,7 @@
 											<v8:content>Статус</v8:content>
 										</v8:item>
 									</Title>
-									<Width>10</Width>
+									<Width>9</Width>
 									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СписокЗапусковСтатусКонтекстноеМеню" id="77"/>
 									<ExtendedTooltip name="СписокЗапусковСтатусРасширеннаяПодсказка" id="78"/>
@@ -588,7 +588,7 @@
 											<v8:content>Длительность</v8:content>
 										</v8:item>
 									</Title>
-									<Width>28</Width>
+									<Width>32</Width>
 									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СписокЗапусковПредставлениеДлительностиКонтекстноеМеню" id="86"/>
 									<ExtendedTooltip name="СписокЗапусковПредставлениеДлительностиРасширеннаяПодсказка" id="87"/>
@@ -647,7 +647,7 @@
 											<v8:content>Живость</v8:content>
 										</v8:item>
 									</Title>
-									<Width>9</Width>
+									<Width>8</Width>
 									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СписокЗапусковЖивостьТекстКонтекстноеМеню" id="95"/>
 									<ExtendedTooltip name="СписокЗапусковЖивостьТекстРасширеннаяПодсказка" id="96"/>
