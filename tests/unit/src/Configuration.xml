@@ -213,6 +213,31 @@
 			<CommonModule>ЮТЧитательСлужебный</CommonModule>
 			<CommonModule>ЮТЧитательСлужебныйВызовСервера</CommonModule>
 			<CommonModule>ЮТЧитательСлужебныйКлиент</CommonModule>
+			<CommonModule>ОМ_ar_ТестовыеДанные</CommonModule>
+			<CommonModule>ОМ_ar_RuntimeЦикл</CommonModule>
+			<CommonModule>ОМ_ar_ПравилаДвижок</CommonModule>
+			<CommonModule>ОМ_ar_ПравилаAllowDeny</CommonModule>
+			<CommonModule>ОМ_ar_PermissionЛимиты</CommonModule>
+			<CommonModule>ОМ_ar_ПравилаРоли</CommonModule>
+			<CommonModule>ОМ_ar_ИнструментыПравилаДоступа</CommonModule>
+			<CommonModule>ОМ_ar_Подтверждение</CommonModule>
+			<CommonModule>ОМ_ar_ИнструментыДиспетчер</CommonModule>
+			<CommonModule>ОМ_ar_LLMДиспетчер</CommonModule>
+			<CommonModule>ОМ_ar_LLMКонтракт</CommonModule>
+			<CommonModule>ОМ_ar_RuntimeПарсер</CommonModule>
+			<CommonModule>ОМ_ar_LLMКомпакция</CommonModule>
+			<CommonModule>ОМ_ar_Токены</CommonModule>
+			<CommonModule>ОМ_ar_RuntimeКонтекст</CommonModule>
+			<CommonModule>ОМ_ar_RuntimeЗапуск</CommonModule>
+			<CommonModule>ОМ_ar_AuditЗапуски</CommonModule>
+			<CommonModule>ОМ_ar_Планировщик</CommonModule>
+			<CommonModule>ОМ_ar_Расписание</CommonModule>
+			<CommonModule>ОМ_ar_Утилиты</CommonModule>
+			<CommonModule>ОМ_ar_Секреты</CommonModule>
+			<CommonModule>ОМ_ar_Константы</CommonModule>
+			<CommonModule>ОМ_ar_JSON</CommonModule>
+			<CommonModule>ОМ_ar_ПланЗапуска</CommonModule>
+			<CommonModule>ОМ_ar_Надзор</CommonModule>
 			<DataProcessor>ЮТHTTPServiceRequest</DataProcessor>
 			<DataProcessor>ЮТHTTPОтвет</DataProcessor>
 			<DataProcessor>ЮТHTTPСервисЗапрос</DataProcessor>
