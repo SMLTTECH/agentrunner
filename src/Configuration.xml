@@ -85,10 +85,14 @@
 			<InterfaceCompatibilityMode>TaxiEnableVersion8_2</InterfaceCompatibilityMode>
 		</Properties>
 		<ChildObjects>
+			<SessionParameter>ТекущийПользователь</SessionParameter>
+			<CommonModule>ПодключаемыеКомандыПереопределяемый</CommonModule>
+			<DefinedType>ar_ПредметДиалога</DefinedType>
 			<Language>Русский</Language>
 			<Subsystem>ar_AgentRunner</Subsystem>
 			<CommonPicture>ar_Логотип</CommonPicture>
 			<Role>ar_РольАдмин</Role>
+			<Role>ar_БазовыеПрава</Role>
 			<Role>ar_РольЧитатель</Role>
 			<Role>ar_РольОператор</Role>
 			<Role>ar_РольОчисткаAudit</Role>

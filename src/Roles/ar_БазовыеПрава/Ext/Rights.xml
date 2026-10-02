@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights" version="2.20">
+	<setForNewObjects>false</setForNewObjects>
+	<setForAttributesByDefault>true</setForAttributesByDefault>
+	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
+	<object>
+		<name>Catalog.ar_Диалоги</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ТекущийПользователь = Значение(Справочник.Пользователи.ПустаяСсылка) #Тогда
+ТекущаяТаблица ГДЕ ЛОЖЬ
+#Иначе
+ТекущаяТаблица ГДЕ ИСТИНА В
+(
+ВЫБРАТЬ ПЕРВЫЕ 1 ИСТИНА
+ИЗ Справочник.ar_Диалоги.ar_Участники КАК Участники
+ГДЕ Участники.Ссылка = ТекущаяТаблица.Ссылка
+И Участники.ar_Пользователь = &amp;ТекущийПользователь
+)
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ar_Диалоги.Command.МоиВопросы</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Subsystem.ar_AgentRunner</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+</Rights>
