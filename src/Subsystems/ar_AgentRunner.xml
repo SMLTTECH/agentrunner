@@ -21,6 +21,7 @@
 			<Content>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ar_КонсольАгентов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ar_Диалог</xr:Item>
+			<xr:Item xsi:type="xr:MDObjectRef">Catalog.ar_Диалоги.Command.МоиВопросы</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects>
