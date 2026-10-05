@@ -55,7 +55,7 @@
 			<ConfigurationExtensionCompatibilityMode>Version8_3_10</ConfigurationExtensionCompatibilityMode>
 			<ScriptVariant>Russian</ScriptVariant>
 			<Vendor/>
-			<Version>0.2.1</Version>
+			<Version>0.2.2</Version>
 			<BriefInformation/>
 			<DetailedInformation/>
 			<Copyright/>
@@ -66,6 +66,8 @@
 			<Subsystem>ДТ_ЮТПодключаемыеМодули</Subsystem>
 			<CommonTemplate>ДТОткрытиеФормТипыТестов</CommonTemplate>
 			<CommonModule>ДТОткрытиеФорм</CommonModule>
+			<CommonModule>ДТОткрытиеФормРасширения</CommonModule>
+			<CommonModule>ДТОткрытиеФормРасширенияСлужебныйВызовСервера</CommonModule>
 			<CommonModule>ДТОткрытиеФормСлужебныйВызовСервера</CommonModule>
 			<CommonModule>ДТОткрытиеФормСлужебныйКлиентСервер</CommonModule>
 		</ChildObjects>
