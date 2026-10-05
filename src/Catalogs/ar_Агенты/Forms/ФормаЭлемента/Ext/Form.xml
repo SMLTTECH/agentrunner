@@ -29,6 +29,23 @@
 				<Event name="OnClick">ПолеHTMLАгентПриНажатии</Event>
 			</Events>
 		</HTMLDocumentField>
+		<InputField name="СрокОтветаЧасов" id="29">
+			<DataPath>Объект.ar_СрокОтветаЧасов</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок ответа, часов (0 - 24)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Answer deadline, hours (0 - 24)</v8:content>
+				</v8:item>
+			</Title>
+			<Width>10</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="СрокОтветаЧасовКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="СрокОтветаЧасовРасширеннаяПодсказка" id="31"/>
+		</InputField>
 		<Table name="ТаблицаПравилДоступа" id="4">
 			<Visible>false</Visible>
 			<DataPath>Объект.ar_ПравилаДоступаИнструментов</DataPath>

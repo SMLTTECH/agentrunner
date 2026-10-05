@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Диалог</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Dialog</v8:content>
+		</v8:item>
+	</Title>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>true</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip/>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПредмет" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа предмет</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip/>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="ГруппаПредметРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<InputField name="ПредставлениеПредмета" id="5">
+							<DataPath>Объект.ar_ПредставлениеПредмета</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Предмет</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Subject</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>40</MaxWidth>
+							<ExtendedTooltip name="ПредставлениеПредметаРасширеннаяПодсказка" id="6"/>
+										<ContextMenu name="ПредставлениеПредметаКонтекстноеМеню" id="28"/>
+				</InputField>
+						<Button name="ПерейтиКПредмету" id="7">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПерейтиКПредмету</CommandName>
+							<ExtendedTooltip name="ПерейтиКПредметуРасширеннаяПодсказка" id="8"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="Состояние" id="9">
+					<DataPath>Объект.ar_Состояние</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>State</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="10"/>
+								<ContextMenu name="СостояниеКонтекстноеМеню" id="29"/>
+				</InputField>
+				<InputField name="ОтветитьДо" id="11">
+					<DataPath>Объект.ar_ОтветитьДо</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответить до</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Answer before</v8:content>
+						</v8:item>
+					</Title>
+					<Width>16</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy HH:mm</v8:content>
+						</v8:item>
+					</Format>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy HH:mm</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ExtendedTooltip name="ОтветитьДоРасширеннаяПодсказка" id="12"/>
+								<ContextMenu name="ОтветитьДоКонтекстноеМеню" id="30"/>
+				</InputField>
+				<InputField name="Агент" id="13">
+					<DataPath>Объект.ar_Агент</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ExtendedTooltip name="АгентРасширеннаяПодсказка" id="14"/>
+								<ContextMenu name="АгентКонтекстноеМеню" id="31"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<HTMLDocumentField name="ЛентаHTML" id="15">
+			<DataPath>ЛентаHTML</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<TitleLocation>None</TitleLocation>
+			<VerticalStretch>true</VerticalStretch>
+			<ExtendedTooltip name="ЛентаHTMLРасширеннаяПодсказка" id="16"/>
+		</HTMLDocumentField>
+		<UsualGroup name="ГруппаОтвета" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reply</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip/>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаОтветаРасширеннаяПодсказка" id="18"/>
+			<ChildItems>
+				<InputField name="ТекстОтвета" id="19">
+					<DataPath>ТекстОтвета</DataPath>
+					<MultiLine>true</MultiLine>
+					<Height>3</Height>
+					<ChoiceListButton>true</ChoiceListButton>
+					<ExtendedTooltip name="ТекстОтветаРасширеннаяПодсказка" id="20"/>
+								<ContextMenu name="ТекстОтветаКонтекстноеМеню" id="32"/>
+				</InputField>
+				<Button name="Отправить" id="21">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОтправитьСообщение</CommandName>
+					<ExtendedTooltip name="ОтправитьРасширеннаяПодсказка" id="22"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="23">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ar_Диалоги</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЛентаHTML" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лента</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Feed</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредметДиалога" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предмет диалога</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстОтвета" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сообщение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Message</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОтправитьСообщение" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить сообщение в диалог</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтправитьСообщение</Action>
+		</Command>
+		<Command name="ПерейтиКПредмету" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть предмет диалога</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПерейтиКПредмету</Action>
+		</Command>
+	</Commands>
+</Form>

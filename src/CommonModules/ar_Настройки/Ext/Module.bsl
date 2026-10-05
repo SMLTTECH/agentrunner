@@ -235,6 +235,12 @@
 		НСтр("ru = 'Список организаций (Справочник.Организации), по которым агент проверяет неоплаченные счета покупателей (tool list_unpaid_invoices). Заполните табличную часть значений и включите настройку - иначе, если в базе несколько организаций, tool вернёт ошибку organization_scope_not_configured.';
 			|en = 'List of organizations (Catalog.Организации) the agent checks for unpaid customer invoices (list_unpaid_invoices tool). Fill in the values table and enable the setting - otherwise, if the database has multiple organizations, the tool returns organization_scope_not_configured.'")));
 
+	ТиповыеНастройки.Добавить(Новый Структура("Ключ, Наименование, Описание",
+		"ОбъектыСДиалогомИИ",
+		НСтр("ru = 'Объекты с диалогом с AI'; en = 'Objects with AI dialog'"),
+		НСтр("ru = 'Объекты (справочники и документы), в формах которых показывается команда «Диалог с AI». Элемент списка - ссылка на ИдентификаторыОбъектовМетаданных либо строка полного имени вида «Справочник.Контрагенты». Пустой или выключенный список - команда не показывается нигде. Внимание: состав команд кэшируется на сеанс - изменение действует в НОВЫХ сеансах.';
+			|en = 'Objects (catalogs and documents) whose forms show the «Dialog with AI» command. A list item is a reference to ИдентификаторыОбъектовМетаданных or a full-name string like «Справочник.Контрагенты». An empty or disabled list hides the command everywhere. Note: the command set is cached per session - changes apply to NEW sessions.'")));
+
 	Возврат ТиповыеНастройки;
 
 КонецФункции

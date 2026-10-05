@@ -243,7 +243,7 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ar_СообщенияДиалога</name>
+		<name>InformationRegister.ar_ЛентаДиалога</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -261,6 +261,13 @@
 		<name>Constant.ar_ОбщийСистемныйPrompt</name>
 		<right>
 			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ar_Диалоги.Command.МоиВопросы</name>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
