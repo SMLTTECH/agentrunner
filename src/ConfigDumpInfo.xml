@@ -296,7 +296,7 @@
 		<Metadata name="CommonModule.ar_LLMLocalCompatible" id="382318a8-85f7-4edc-ae94-6c115e0ab98b" configVersion="fc995d6bfa2eda46e82130c64ac7e12dd5e887ad"/>
 		<Metadata name="CommonModule.ar_LLMLocalCompatible.Module" id="382318a8-85f7-4edc-ae94-6c115e0ab98b.0" configVersion="b2e2efd78ab6326e7daf857500f935503e5ddfda"/>
 		<Metadata name="CommonModule.ar_LLMMock" id="b1c2d3e4-0000-0000-0000-000000000011" configVersion="5f5aa5815f3b6ba242896007d0e76fa96fa5a4e5"/>
-		<Metadata name="CommonModule.ar_LLMMock.Module" id="b1c2d3e4-0000-0000-0000-000000000011.0" configVersion="f063db08c273a4f5dc875a35fb6b4d81ad27fb54"/>
+		<Metadata name="CommonModule.ar_LLMMock.Module" id="b1c2d3e4-0000-0000-0000-000000000011.0" configVersion="5596f8ba88b0010275148f242401f1d862241791"/>
 		<Metadata name="CommonModule.ar_LLMOpenAI" id="912303f0-a8b8-484d-b83b-224e52294f01" configVersion="45342b2f758f3a743ab35e776e847d4e2a0e6f18"/>
 		<Metadata name="CommonModule.ar_LLMOpenAI.Module" id="912303f0-a8b8-484d-b83b-224e52294f01.0" configVersion="2921a9559b5ba244604c2a587b349b03de3aed3e"/>
 		<Metadata name="CommonModule.ar_LLMYandexGPT" id="7782d7ca-1076-49a3-8aad-1c9972e0e0e1" configVersion="c2ea623909fa41f6559c4a9da17e60f3ecef07a9"/>
