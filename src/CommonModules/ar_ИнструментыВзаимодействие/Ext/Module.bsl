@@ -603,7 +603,7 @@
 		+ " is required); ""initiator"" - the run initiator.'");
 	ОписаниеРеквизитаПредмета = НСтр(
 		"ru='Имя реквизита предмета с пользователем (только для recipient=""subject_attribute"")';"
-		+ "en='Name of the subject attribute holding a user (only for recipient=""subject_attribute""'");
+		+ "en='Name of the subject attribute holding a user (only for recipient=""subject_attribute"")'");
 
 	Свойства = Новый Структура;
 	Свойства.Вставить("question", СтрокаСвойствоManifest(ОписаниеВопроса));

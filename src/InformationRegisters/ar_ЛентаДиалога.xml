@@ -180,7 +180,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ar_момент</v8:content>
+							<v8:content>Момент</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -222,7 +222,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ar_вид сообщения</v8:content>
+							<v8:content>Вид сообщения</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -261,7 +261,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ar_текст</v8:content>
+							<v8:content>Текст</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -304,7 +304,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ar_автор</v8:content>
+							<v8:content>Автор</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -343,7 +343,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ar_запуск</v8:content>
+							<v8:content>Запуск</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -386,7 +386,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ar_идентификатор вопроса</v8:content>
+							<v8:content>Идентификатор вопроса</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -429,7 +429,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ar_подсказка</v8:content>
+							<v8:content>Подсказка</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -472,7 +472,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ar_варианты ответа</v8:content>
+							<v8:content>Варианты ответа</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -515,7 +515,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ar_ответ выбран из вариантов</v8:content>
+							<v8:content>Ответ выбран из вариантов</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -554,7 +554,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ar_ожидает обработки</v8:content>
+							<v8:content>Ожидает обработки</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -593,7 +593,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ar_диалог</v8:content>
+							<v8:content>Диалог</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -636,7 +636,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ar_номер</v8:content>
+							<v8:content>Номер</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
