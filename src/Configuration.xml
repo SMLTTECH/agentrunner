@@ -184,6 +184,8 @@
 			<CommonModule>ar_ИнструментыПлан</CommonModule>
 			<CommonModule>ar_ТестыPLAN</CommonModule>
 			<CommonModule>ar_ДиалогиСервер</CommonModule>
+			<CommonModule>ar_ПредметыАгентов</CommonModule>
+			<CommonModule>ar_ДиспетчерОчереди</CommonModule>
 			<HTTPService>ar_AgentsAPI</HTTPService>
 			<HTTPService>ar_RunsAPI</HTTPService>
 			<HTTPService>ar_HealthAPI</HTTPService>
@@ -288,6 +290,7 @@
 			<InformationRegister>ar_Адаптеры</InformationRegister>
 			<InformationRegister>ar_ПакетыИнструментов</InformationRegister>
 			<InformationRegister>ar_ЛентаДиалога</InformationRegister>
+			<InformationRegister>ar_ПредметыАгентов</InformationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
