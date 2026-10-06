@@ -2149,7 +2149,8 @@
 			+ СсылкаДействие("add-tools", "", НСтр("ru='+ Добавить из реестра'; en='+ Add from registry'"), "ar-btn")
 			+ СсылкаДействие("import-preset", "", НСтр("ru='Импорт пресета'; en='Import preset'"), "ar-btn ar-btn-small")
 			+ СсылкаДействие("export-preset", "", НСтр("ru='Экспорт пресета'; en='Export preset'"), "ar-btn ar-btn-small")
-			+ СсылкаДействие("export-agent-preset", "", НСтр("ru='Сохранить как пресет агента'; en='Save as agent preset'"), "ar-btn ar-btn-small");
+			+ СсылкаДействие("export-agent-preset", "",
+				НСтр("ru='Сохранить как пресет агента'; en='Save as agent preset'"), "ar-btn ar-btn-small");
 	КонецЕсли;
 
 	Возврат
