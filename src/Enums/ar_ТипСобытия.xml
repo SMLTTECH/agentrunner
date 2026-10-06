@@ -690,6 +690,30 @@
 					<Comment>PLAN-10: Фиксируется на трёх моментах жизненного цикла ожидания события (PLAN-11/12/13), различаемых полем code в Payload: wait_started - запуск ушёл в PausedForEvent; wait_resumed - наступление события разбудило запуск (PLAN-12); wait_expired - истёк дедлайн ar_ОжиданиеДо без наступления события (PLAN-13). Payload: {code, object_type, filter}.</Comment>
 				</Properties>
 			</EnumValue>
+			<EnumValue uuid="9d34d67b-445e-4e93-a708-88caed878abf">
+				<Properties>
+					<Name>ЗахватВзят</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Захват взят</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="786143cd-998c-4891-bc55-bd6df2912a8c">
+				<Properties>
+					<Name>ЗахватСнят</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Захват снят</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
 		</ChildObjects>
 	</Enum>
 </MetaDataObject>
