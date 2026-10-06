@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
 	<Title>
 		<v8:item>
@@ -870,6 +870,345 @@
 				</Page>
 			</ChildItems>
 		</Pages>
+				<Page name="СтраницаЗахваты" id="386">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Захваты и очередь</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Captures and queue</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаЗахватыРасширеннаяПодсказка" id="387"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЗахватыПанель" id="388">
+							<Group>Horizontal</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗахватыПанельРасширеннаяПодсказка" id="389"/>
+							<ChildItems>
+								<InputField name="ОтборЗахватов" id="390">
+									<DataPath>ОтборЗахватов</DataPath>
+																		<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Показать</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Show</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="391КонтекстноеМеню" id="391"/>
+									<ExtendedTooltip name="ОтборЗахватовРасширеннаяПодсказка" id="392"/>
+								<Events>
+									<Event name="OnChange">ОтборЗахватовПриИзменении</Event>
+								</Events>
+								</InputField>
+								<Button name="КнопкаОткрытьПредмет" id="393">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ОткрытьПредмет</CommandName>
+									<ExtendedTooltip name="КнопкаОткрытьПредметРасширеннаяПодсказка" id="394"/>
+								</Button>
+								<Button name="КнопкаОткрытьЗапускЗахвата" id="395">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ОткрытьЗапускЗахвата</CommandName>
+									<ExtendedTooltip name="КнопкаОткрытьЗапускЗахватаРасширеннаяПодсказка" id="396"/>
+								</Button>
+								<Button name="КнопкаСнятьЗахват" id="397">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.СнятьЗахват</CommandName>
+									<ExtendedTooltip name="КнопкаСнятьЗахватРасширеннаяПодсказка" id="398"/>
+								</Button>
+								<Button name="КнопкаСброситьСбои" id="399">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.СброситьСбои</CommandName>
+									<ExtendedTooltip name="КнопкаСброситьСбоиРасширеннаяПодсказка" id="400"/>
+								</Button>
+								<Button name="КнопкаИсторияПоДокументу" id="401">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ИсторияПоДокументу</CommandName>
+									<ExtendedTooltip name="КнопкаИсторияПоДокументуРасширеннаяПодсказка" id="402"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОчередьАгентов" id="403">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Очередь агентов</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Agents queue</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаОчередьАгентовРасширеннаяПодсказка" id="404"/>
+							<ChildItems>
+								<InputField name="ТаблицаОчередиАгент" id="368">
+									<DataPath>ТаблицаОчереди.ПредставлениеАгента</DataPath>
+																		<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Агент</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Agent</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТаблицаОчередиАгентКонтекстноеМеню" id="369"/>
+									<ExtendedTooltip name="ТаблицаОчередиАгентРасширеннаяПодсказка" id="370"/>
+								</InputField>
+								<InputField name="ТаблицаОчередиПакет" id="371">
+									<DataPath>ТаблицаОчереди.ПакетИсточник</DataPath>
+																		<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пакет</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Package</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТаблицаОчередиПакетКонтекстноеМеню" id="372"/>
+									<ExtendedTooltip name="ТаблицаОчередиПакетРасширеннаяПодсказка" id="373"/>
+								</InputField>
+								<InputField name="ТаблицаОчередиЗанятоСлотов" id="374">
+									<DataPath>ТаблицаОчереди.ЗанятоСлотов</DataPath>
+																		<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Занято слотов</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Slots used</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТаблицаОчередиЗанятоСлотовКонтекстноеМеню" id="375"/>
+									<ExtendedTooltip name="ТаблицаОчередиЗанятоСлотовРасширеннаяПодсказка" id="376"/>
+								</InputField>
+								<InputField name="ТаблицаОчередиЛимитЗапусков" id="377">
+									<DataPath>ТаблицаОчереди.ЛимитЗапусков</DataPath>
+																		<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Лимит</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Limit</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТаблицаОчередиЛимитЗапусковКонтекстноеМеню" id="378"/>
+									<ExtendedTooltip name="ТаблицаОчередиЛимитЗапусковРасширеннаяПодсказка" id="379"/>
+								</InputField>
+								<InputField name="ТаблицаОчередиПоследнийТик" id="380">
+									<DataPath>ТаблицаОчереди.ПоследнийТикМомент</DataPath>
+																		<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Последний тик</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Last tick</v8:content>
+										</v8:item>
+									</Title>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='dd.MM HH:mm'</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="ТаблицаОчередиПоследнийТикКонтекстноеМеню" id="381"/>
+									<ExtendedTooltip name="ТаблицаОчередиПоследнийТикРасширеннаяПодсказка" id="382"/>
+								</InputField>
+								<InputField name="ТаблицаОчередиИтогТика" id="383">
+									<DataPath>ТаблицаОчереди.ПоследнийТикТекст</DataPath>
+																		<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Итог тика</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Tick summary</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТаблицаОчередиИтогТикаКонтекстноеМеню" id="384"/>
+									<ExtendedTooltip name="ТаблицаОчередиИтогТикаРасширеннаяПодсказка" id="385"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+								<Table name="ТаблицаЗахватов" id="405">
+									<CommandBarLocation>None</CommandBarLocation>
+									<HeightInTableRows>12</HeightInTableRows>
+									<DataPath>ТаблицаЗахватов</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТаблицаЗахватовКонтекстноеМеню" id="406"/>
+									<AutoCommandBar name="ТаблицаЗахватовКоманднаяПанель" id="407"/>
+									<ExtendedTooltip name="ТаблицаЗахватовРасширеннаяПодсказка" id="408"/>
+									<SearchStringAddition name="ТаблицаЗахватовСтрокаПоиска" id="409">
+										<AdditionSource>
+											<Item>ТаблицаЗахватов</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаЗахватовСтрокаПоискаКонтекстноеМеню" id="410"/>
+										<ExtendedTooltip name="ТаблицаЗахватовСтрокаПоискаРасширеннаяПодсказка" id="411"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТаблицаЗахватовСостояниеПросмотра" id="412">
+										<AdditionSource>
+											<Item>ТаблицаЗахватов</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаЗахватовСостояниеПросмотраКонтекстноеМеню" id="413"/>
+										<ExtendedTooltip name="ТаблицаЗахватовСостояниеПросмотраРасширеннаяПодсказка" id="414"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТаблицаЗахватовУправлениеПоиском" id="415">
+										<AdditionSource>
+											<Item>ТаблицаЗахватов</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаЗахватовУправлениеПоискомКонтекстноеМеню" id="416"/>
+										<ExtendedTooltip name="ТаблицаЗахватовУправлениеПоискомРасширеннаяПодсказка" id="417"/>
+									</SearchControlAddition>
+									<ChildItems>
+								<InputField name="ТаблицаЗахватовАгент" id="344">
+									<DataPath>ТаблицаЗахватов.АгентРеф</DataPath>
+																		<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Агент</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Agent</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТаблицаЗахватовАгентКонтекстноеМеню" id="345"/>
+									<ExtendedTooltip name="ТаблицаЗахватовАгентРасширеннаяПодсказка" id="346"/>
+								</InputField>
+								<InputField name="ТаблицаЗахватовПредмет" id="347">
+									<DataPath>ТаблицаЗахватов.ПредставлениеПредмета</DataPath>
+																		<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Предмет</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Subject</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТаблицаЗахватовПредметКонтекстноеМеню" id="348"/>
+									<ExtendedTooltip name="ТаблицаЗахватовПредметРасширеннаяПодсказка" id="349"/>
+								</InputField>
+								<InputField name="ТаблицаЗахватовЗапуск" id="350">
+									<DataPath>ТаблицаЗахватов.Запуск</DataPath>
+																		<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Запуск</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Run</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТаблицаЗахватовЗапускКонтекстноеМеню" id="351"/>
+									<ExtendedTooltip name="ТаблицаЗахватовЗапускРасширеннаяПодсказка" id="352"/>
+								</InputField>
+								<InputField name="ТаблицаЗахватовЗахвачен" id="353">
+									<DataPath>ТаблицаЗахватов.Захвачен</DataPath>
+																		<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Захвачен</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Captured at</v8:content>
+										</v8:item>
+									</Title>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='dd.MM.yyyy HH:mm'</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="ТаблицаЗахватовЗахваченКонтекстноеМеню" id="354"/>
+									<ExtendedTooltip name="ТаблицаЗахватовЗахваченРасширеннаяПодсказка" id="355"/>
+								</InputField>
+								<InputField name="ТаблицаЗахватовТриггер" id="356">
+									<DataPath>ТаблицаЗахватов.Триггер</DataPath>
+																		<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Триггер</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Trigger</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТаблицаЗахватовТриггерКонтекстноеМеню" id="357"/>
+									<ExtendedTooltip name="ТаблицаЗахватовТриггерРасширеннаяПодсказка" id="358"/>
+								</InputField>
+								<InputField name="ТаблицаЗахватовСбоевПодряд" id="359">
+									<DataPath>ТаблицаЗахватов.СбоевПодряд</DataPath>
+																		<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сбоев подряд</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Failures in a row</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТаблицаЗахватовСбоевПодрядКонтекстноеМеню" id="360"/>
+									<ExtendedTooltip name="ТаблицаЗахватовСбоевПодрядРасширеннаяПодсказка" id="361"/>
+								</InputField>
+								<InputField name="ТаблицаЗахватовИсключён" id="362">
+									<DataPath>ТаблицаЗахватов.Исключён</DataPath>
+																		<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исключён</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Excluded</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТаблицаЗахватовИсключёнКонтекстноеМеню" id="363"/>
+									<ExtendedTooltip name="ТаблицаЗахватовИсключёнРасширеннаяПодсказка" id="364"/>
+								</InputField>
+								<InputField name="ТаблицаЗахватовПоследняяПричина" id="365">
+									<DataPath>ТаблицаЗахватов.ПоследняяПричина</DataPath>
+																		<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Последняя причина</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Last reason</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТаблицаЗахватовПоследняяПричинаКонтекстноеМеню" id="366"/>
+									<ExtendedTooltip name="ТаблицаЗахватовПоследняяПричинаРасширеннаяПодсказка" id="367"/>
+								</InputField>
+									</ChildItems>
+								</Table>
+					</ChildItems>
+				</Page>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="СписокЗапусков" id="100">
@@ -1514,6 +1853,182 @@
 				<v8:Type>cfg:EnumRef.ar_СтатусЗапуска</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="ТаблицаЗахватов" id="320">
+						<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица захватов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Captures table</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+			<Column name="АгентРеф" id="321">
+				<Type>
+					<v8:Type>cfg:CatalogRef.ar_Агенты</v8:Type>
+				</Type>
+			</Column>
+			<Column name="ПредставлениеПредмета" id="322">
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>200</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+			</Column>
+			<Column name="ПредметРеф" id="323">
+				<Type>
+					<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+				</Type>
+			</Column>
+			<Column name="Запуск" id="324">
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>36</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+			</Column>
+			<Column name="Захвачен" id="325">
+				<Type>
+					<v8:Type>xs:dateTime</v8:Type>
+				</Type>
+			</Column>
+			<Column name="Триггер" id="326">
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>50</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+			</Column>
+			<Column name="СбоевПодряд" id="327">
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>3</v8:Digits>
+						<v8:FractionDigits>0</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+			</Column>
+			<Column name="Исключён" id="328">
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+			</Column>
+			<Column name="ПоследняяПричина" id="329">
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>50</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+			</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТаблицаОчереди" id="330">
+						<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очередь агентов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Agents queue</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+			<Column name="АгентРеф" id="331">
+				<Type>
+					<v8:Type>cfg:CatalogRef.ar_Агенты</v8:Type>
+				</Type>
+			</Column>
+			<Column name="ПредставлениеАгента" id="332">
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>150</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+			</Column>
+			<Column name="ПакетИсточник" id="333">
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>100</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+			</Column>
+			<Column name="ЛимитЗапусков" id="334">
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>3</v8:Digits>
+						<v8:FractionDigits>0</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+			</Column>
+			<Column name="ЗанятоСлотов" id="335">
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>3</v8:Digits>
+						<v8:FractionDigits>0</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+			</Column>
+			<Column name="ПоследнийТикМомент" id="336">
+				<Type>
+					<v8:Type>xs:dateTime</v8:Type>
+				</Type>
+			</Column>
+			<Column name="ПоследнийТикТекст" id="337">
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>500</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+			</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ОтборЗахватов" id="338">
+						<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>20</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -1793,6 +2308,71 @@
 				</v8:item>
 			</Title>
 			<Action>ОткрытьПрофилиАгентаВыполнить</Action>
+		</Command>
+		<Command name="СнятьЗахват" id="339">
+						<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять захват</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Release capture</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СнятьЗахватВыполнить</Action>
+		</Command>
+		<Command name="СброситьСбои" id="340">
+						<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сбросить сбои</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reset failures</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СброситьСбоиВыполнить</Action>
+		</Command>
+		<Command name="ИсторияПоДокументу" id="341">
+						<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История по документу</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Subject history</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИсторияПоДокументуВыполнить</Action>
+		</Command>
+		<Command name="ОткрытьПредмет" id="342">
+						<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть предмет</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open subject</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьПредметВыполнить</Action>
+		</Command>
+		<Command name="ОткрытьЗапускЗахвата" id="343">
+						<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть запуск</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open run</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьЗапускЗахватаВыполнить</Action>
 		</Command>
 	</Commands>
 </Form>
