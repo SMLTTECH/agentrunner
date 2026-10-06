@@ -46,6 +46,44 @@
 			<ContextMenu name="СрокОтветаЧасовКонтекстноеМеню" id="30"/>
 			<ExtendedTooltip name="СрокОтветаЧасовРасширеннаяПодсказка" id="31"/>
 		</InputField>
+		<UsualGroup name="ГруппаОчередь" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очередь</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Queue</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаОчередьРасширеннаяПодсказка" id="33"/>
+			<ChildItems>
+				<CheckBoxField name="ar_БратьИзОчередиПакета" id="34">
+					<DataPath>Объект.ar_БратьИзОчередиПакета</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ar_БратьИзОчередиПакетаКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ar_БратьИзОчередиПакетаРасширеннаяПодсказка" id="36"/>
+					<Events>
+						<Event name="OnChange">ar_БратьИзОчередиПакетаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="ar_ПакетИсточник" id="37">
+					<DataPath>Объект.ar_ПакетИсточник</DataPath>
+					<ContextMenu name="ar_ПакетИсточникКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ar_ПакетИсточникРасширеннаяПодсказка" id="39"/>
+				</InputField>
+				<InputField name="ar_МаксПараллельныхЗапусков" id="40">
+					<DataPath>Объект.ar_МаксПараллельныхЗапусков</DataPath>
+					<Width>10</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ar_МаксПараллельныхЗапусковКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ar_МаксПараллельныхЗапусковРасширеннаяПодсказка" id="42"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<Table name="ТаблицаПравилДоступа" id="4">
 			<Visible>false</Visible>
 			<DataPath>Объект.ar_ПравилаДоступаИнструментов</DataPath>
