@@ -238,8 +238,15 @@
 	ТиповыеНастройки.Добавить(Новый Структура("Ключ, Наименование, Описание",
 		"ОбъектыСДиалогомИИ",
 		НСтр("ru = 'Объекты с диалогом с AI'; en = 'Objects with AI dialog'"),
-		НСтр("ru = 'Объекты (справочники и документы), в формах которых показывается команда «Диалог с AI». Элемент списка - ссылка на ИдентификаторыОбъектовМетаданных либо строка полного имени вида «Справочник.Контрагенты». Пустой или выключенный список - команда не показывается нигде. Внимание: состав команд кэшируется на сеанс - изменение действует в НОВЫХ сеансах.';
-			|en = 'Objects (catalogs and documents) whose forms show the «Dialog with AI» command. A list item is a reference to ИдентификаторыОбъектовМетаданных or a full-name string like «Справочник.Контрагенты». An empty or disabled list hides the command everywhere. Note: the command set is cached per session - changes apply to NEW sessions.'")));
+		НСтр("ru = 'Объекты (справочники и документы), в формах которых показывается команда «Диалог с AI».
+			|Элемент списка - строка полного имени вида «Справочник.Контрагенты». Команда показывается
+			|только для объектов определяемого типа ar_ПрикладнойОбъект. Пустой или выключенный список -
+			|команда не показывается нигде. Внимание: состав команд кэшируется на сеанс - изменение
+			|действует в НОВЫХ сеансах.';
+			|en = 'Objects (catalogs and documents) whose forms show the «Dialog with AI» command.
+			|A list item is a full-name string like «Справочник.Контрагенты». The command is shown only
+			|for objects of the defined type ar_ПрикладнойОбъект. An empty or disabled list hides the
+			|command everywhere. Note: the command set is cached per session - changes apply to NEW sessions.'")));
 
 	Возврат ТиповыеНастройки;
 
