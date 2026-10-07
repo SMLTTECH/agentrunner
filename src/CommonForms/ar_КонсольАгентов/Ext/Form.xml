@@ -899,7 +899,7 @@
 											<v8:content>Show</v8:content>
 										</v8:item>
 									</Title>
-									<ContextMenu name="391КонтекстноеМеню" id="391"/>
+									<ContextMenu name="ОтборЗахватовКонтекстноеМеню" id="391"/>
 									<ExtendedTooltip name="ОтборЗахватовРасширеннаяПодсказка" id="392"/>
 								<Events>
 									<Event name="OnChange">ОтборЗахватовПриИзменении</Event>
