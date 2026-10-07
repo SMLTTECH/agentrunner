@@ -1038,11 +1038,11 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Необязательно. Один пункт на строку, не более 12 пунктов по 150 символов. При старте запуска план заполняется этими пунктами без обращения к модели; агент отмечает их выполнение и вправе изменить план. Действует при включённом флажке «Планировать работу».</v8:content>
+							<v8:content>Необязательно. Один пункт на строку: «Заголовок | инструмент1, инструмент2 | Инструкция шага». Разделитель «|», вторая и третья части необязательны, не более 12 пунктов по 150 символов (инструкция до 500). Пункт со списком инструментов — обязательный: он закрывается успешным вызовом одного из них (или пропуском через update_plan с причиной); итог и следующие шаги не принимаются, пока шаг не закрыт. Пункт без списка — необязательный. При старте запуска план заполняется этими пунктами без обращения к модели. Действует при включённом флажке «Планировать работу».</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>Optional. One item per line, up to 12 items of 150 characters each. At run start the plan is filled with these items without a model call; the agent marks their completion and may change the plan. Applies only when the "Plan work" flag is enabled.</v8:content>
+							<v8:content>Optional. One item per line: "Title | tool1, tool2 | Step instruction". Separator is "|", the second and third parts are optional, up to 12 items of 150 characters each (instruction up to 500). An item with a tool list is mandatory: it is closed by a successful call of one of them (or skipped via update_plan with a reason); the final answer and later steps are not accepted until it is closed. An item without a list is optional. At run start the plan is filled with these items without a model call. Applies only when the "Plan work" flag is enabled.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
