@@ -924,6 +924,11 @@
 									<CommandName>Form.Command.СброситьСбои</CommandName>
 									<ExtendedTooltip name="КнопкаСброситьСбоиРасширеннаяПодсказка" id="400"/>
 								</Button>
+								<Button name="КнопкаСнятьОтложение" id="430">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.СнятьОтложение</CommandName>
+									<ExtendedTooltip name="КнопкаСнятьОтложениеРасширеннаяПодсказка" id="431"/>
+								</Button>
 								<Button name="КнопкаИсторияПоДокументу" id="401">
 									<Type>UsualButton</Type>
 									<CommandName>Form.Command.ИсторияПоДокументу</CommandName>
@@ -1202,6 +1207,51 @@
 									</Title>
 									<ContextMenu name="ТаблицаЗахватовПоследняяПричинаКонтекстноеМеню" id="366"/>
 									<ExtendedTooltip name="ТаблицаЗахватовПоследняяПричинаРасширеннаяПодсказка" id="367"/>
+								</InputField>
+								<InputField name="ТаблицаЗахватовОтложен" id="421">
+									<DataPath>ТаблицаЗахватов.Отложен</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отложен</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Deferred</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТаблицаЗахватовОтложенКонтекстноеМеню" id="422"/>
+									<ExtendedTooltip name="ТаблицаЗахватовОтложенРасширеннаяПодсказка" id="423"/>
+								</InputField>
+								<InputField name="ТаблицаЗахватовОтложенВ" id="424">
+									<DataPath>ТаблицаЗахватов.ОтложенВ</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отложен в</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Deferred at</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТаблицаЗахватовОтложенВКонтекстноеМеню" id="425"/>
+									<ExtendedTooltip name="ТаблицаЗахватовОтложенВРасширеннаяПодсказка" id="426"/>
+								</InputField>
+								<InputField name="ТаблицаЗахватовОтложенПричина" id="427">
+									<DataPath>ТаблицаЗахватов.ОтложенПричина</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Причина отложения</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Deferral reason</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТаблицаЗахватовОтложенПричинаКонтекстноеМеню" id="428"/>
+									<ExtendedTooltip name="ТаблицаЗахватовОтложенПричинаРасширеннаяПодсказка" id="429"/>
 								</InputField>
 									</ChildItems>
 								</Table>
@@ -1936,6 +1986,28 @@
 					</v8:StringQualifiers>
 				</Type>
 			</Column>
+			<Column name="Отложен" id="418">
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+			</Column>
+			<Column name="ОтложенВ" id="419">
+				<Type>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>DateTime</v8:DateFractions>
+					</v8:DateQualifiers>
+				</Type>
+			</Column>
+			<Column name="ОтложенПричина" id="420">
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>500</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+			</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="ТаблицаОчереди" id="330">
@@ -2375,6 +2447,19 @@
 				</v8:item>
 			</Title>
 			<Action>ОткрытьЗапускЗахватаВыполнить</Action>
+		</Command>
+		<Command name="СнятьОтложение" id="432">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять отложение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Clear deferral</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СнятьОтложениеВыполнить</Action>
 		</Command>
 	</Commands>
 </Form>
