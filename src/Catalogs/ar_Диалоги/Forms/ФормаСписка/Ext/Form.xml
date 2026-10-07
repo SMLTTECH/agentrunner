@@ -10,9 +10,7 @@
 			<v8:content>Dialogs</v8:content>
 		</v8:item>
 	</Title>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<Autofill>true</Autofill>
-	</AutoCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
@@ -20,7 +18,6 @@
 		<Table name="Список" id="1">
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
-			<DefaultCommand>true</DefaultCommand>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
@@ -29,6 +26,18 @@
 			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
 			<AutoRefresh>true</AutoRefresh>
 			<AutoRefreshPeriod>30</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 			<ContextMenu name="СписокКонтекстноеМеню" id="52"/>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="2">
 				<Autofill>false</Autofill>
@@ -76,9 +85,9 @@
 						</v8:item>
 					</Title>
 					<Width>40</Width>
+					<ContextMenu name="ДиалогКонтекстноеМеню" id="45"/>
 					<ExtendedTooltip name="ДиалогРасширеннаяПодсказка" id="15"/>
-									<ContextMenu name="ДиалогКонтекстноеМеню" id="45"/>
-					</InputField>
+				</InputField>
 				<InputField name="ПредставлениеПредмета" id="17">
 					<DataPath>Список.ar_ПредставлениеПредмета</DataPath>
 					<ReadOnly>true</ReadOnly>
@@ -93,21 +102,21 @@
 						</v8:item>
 					</Title>
 					<Width>30</Width>
+					<ContextMenu name="ПредставлениеПредметаКонтекстноеМеню" id="46"/>
 					<ExtendedTooltip name="ПредставлениеПредметаРасширеннаяПодсказка" id="18"/>
-									<ContextMenu name="ПредставлениеПредметаКонтекстноеМеню" id="46"/>
-					</InputField>
+				</InputField>
 				<InputField name="Агент" id="20">
 					<DataPath>Список.ar_Агент</DataPath>
 					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="АгентКонтекстноеМеню" id="47"/>
 					<ExtendedTooltip name="АгентРасширеннаяПодсказка" id="21"/>
-									<ContextMenu name="АгентКонтекстноеМеню" id="47"/>
-					</InputField>
+				</InputField>
 				<InputField name="Состояние" id="23">
 					<DataPath>Список.ar_Состояние</DataPath>
 					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="СостояниеКонтекстноеМеню" id="48"/>
 					<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="24"/>
-									<ContextMenu name="СостояниеКонтекстноеМеню" id="48"/>
-					</InputField>
+				</InputField>
 				<InputField name="ОтветитьДо" id="26">
 					<DataPath>Список.ar_ОтветитьДо</DataPath>
 					<ReadOnly>true</ReadOnly>
@@ -127,9 +136,9 @@
 							<v8:content>ДФ=dd.MM.yyyy HH:mm</v8:content>
 						</v8:item>
 					</Format>
+					<ContextMenu name="ОтветитьДоКонтекстноеМеню" id="49"/>
 					<ExtendedTooltip name="ОтветитьДоРасширеннаяПодсказка" id="27"/>
-									<ContextMenu name="ОтветитьДоКонтекстноеМеню" id="49"/>
-					</InputField>
+				</InputField>
 				<InputField name="Обновлён" id="29">
 					<DataPath>Список.ar_Обновлён</DataPath>
 					<ReadOnly>true</ReadOnly>
@@ -149,9 +158,9 @@
 							<v8:content>ДФ=dd.MM.yyyy HH:mm</v8:content>
 						</v8:item>
 					</Format>
+					<ContextMenu name="ОбновлёнКонтекстноеМеню" id="50"/>
 					<ExtendedTooltip name="ОбновлёнРасширеннаяПодсказка" id="30"/>
-									<ContextMenu name="ОбновлёнКонтекстноеМеню" id="50"/>
-					</InputField>
+				</InputField>
 			</ChildItems>
 		</Table>
 		<UsualGroup name="ГруппаПросмотра" id="31">
@@ -161,7 +170,6 @@
 					<v8:content>Диалог</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip/>
 			<Group>Vertical</Group>
 			<Behavior>Usual</Behavior>
 			<ExtendedTooltip name="ГруппаПросмотраРасширеннаяПодсказка" id="32"/>
@@ -170,7 +178,7 @@
 					<DataPath>ЛентаHTML</DataPath>
 					<ReadOnly>true</ReadOnly>
 					<TitleLocation>None</TitleLocation>
-					<VerticalStretch>true</VerticalStretch>
+					<ContextMenu name="ЛентаHTMLКонтекстноеМеню" id="53"/>
 					<ExtendedTooltip name="ЛентаHTMLРасширеннаяПодсказка" id="34"/>
 				</HTMLDocumentField>
 				<UsualGroup name="ГруппаОтвета" id="35">
@@ -184,19 +192,18 @@
 							<v8:content>Reply</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip/>
 					<Group>Horizontal</Group>
 					<Behavior>Usual</Behavior>
 					<ExtendedTooltip name="ГруппаОтветаРасширеннаяПодсказка" id="36"/>
 					<ChildItems>
 						<InputField name="ТекстОтвета" id="37">
 							<DataPath>ТекстОтвета</DataPath>
-							<MultiLine>true</MultiLine>
 							<Height>2</Height>
+							<MultiLine>true</MultiLine>
 							<ChoiceListButton>true</ChoiceListButton>
+							<ContextMenu name="ТекстОтветаКонтекстноеМеню" id="51"/>
 							<ExtendedTooltip name="ТекстОтветаРасширеннаяПодсказка" id="38"/>
-											<ContextMenu name="ТекстОтветаКонтекстноеМеню" id="51"/>
-					</InputField>
+						</InputField>
 						<Button name="Отправить" id="39">
 							<Type>UsualButton</Type>
 							<CommandName>Form.Command.ОтправитьСообщение</CommandName>
@@ -255,14 +262,14 @@
 					</dcsset:filter>
 					<dcsset:order>
 						<dcsset:item xsi:type="dcsset:OrderItemField">
-							<dcsset:viewMode>Normal</dcsset:viewMode>
 							<dcsset:field>ОжидаетПервым</dcsset:field>
 							<dcsset:orderType>Asc</dcsset:orderType>
+							<dcsset:viewMode>Normal</dcsset:viewMode>
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:OrderItemField">
-							<dcsset:viewMode>Normal</dcsset:viewMode>
 							<dcsset:field>ar_Обновлён</dcsset:field>
 							<dcsset:orderType>Desc</dcsset:orderType>
+							<dcsset:viewMode>Normal</dcsset:viewMode>
 						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>

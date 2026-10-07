@@ -85,11 +85,10 @@
 			<InterfaceCompatibilityMode>TaxiEnableVersion8_2</InterfaceCompatibilityMode>
 		</Properties>
 		<ChildObjects>
-			<SessionParameter>ТекущийПользователь</SessionParameter>
-			<CommonModule>ПодключаемыеКомандыПереопределяемый</CommonModule>
 			<Language>Русский</Language>
 			<Subsystem>ar_AgentRunner</Subsystem>
 			<CommonPicture>ar_Логотип</CommonPicture>
+			<SessionParameter>ТекущийПользователь</SessionParameter>
 			<Role>ar_РольАдмин</Role>
 			<Role>ar_БазовыеПрава</Role>
 			<Role>ar_РольЧитатель</Role>
@@ -101,6 +100,7 @@
 			<CommonTemplate>ar_Профиль_УТ11</CommonTemplate>
 			<CommonTemplate>ar_Профиль_ERP2</CommonTemplate>
 			<CommonTemplate>ar_Инструкция_РазработкаTool</CommonTemplate>
+			<CommonModule>ПодключаемыеКомандыПереопределяемый</CommonModule>
 			<CommonModule>ar_Подтверждение</CommonModule>
 			<CommonModule>ar_AuditДействия</CommonModule>
 			<CommonModule>ar_AuditЗапуски</CommonModule>
@@ -200,6 +200,7 @@
 			<ScheduledJob>ar_ОбновлениеПамятиAuto</ScheduledJob>
 			<ScheduledJob>ar_ОпросПодписокАгентов</ScheduledJob>
 			<ScheduledJob>ar_ПроверкаВерсии</ScheduledJob>
+			<DefinedType>ar_ПрикладнойОбъект</DefinedType>
 			<Constant>ar_ТаймаутLLMПоУмолчанию</Constant>
 			<Constant>ar_МаксШаговПоУмолчанию</Constant>
 			<Constant>ar_ApprovalExpirationЧасов</Constant>
@@ -256,6 +257,11 @@
 			<Catalog>ar_ДополнительныеНастройки</Catalog>
 			<Catalog>ar_КатегорииИнструментов</Catalog>
 			<Catalog>ar_ПрофилиЗапуска</Catalog>
+			<Catalog>Контрагенты</Catalog>
+			<Catalog>Организации</Catalog>
+			<Catalog>БанковскиеСчета</Catalog>
+			<Catalog>Пользователи</Catalog>
+			<Document>бит_мдм_ЗаявкаНаИзменение</Document>
 			<Enum>ar_УровеньРиска</Enum>
 			<Enum>ar_РежимАвтономии</Enum>
 			<Enum>ar_СтатусЗапуска</Enum>

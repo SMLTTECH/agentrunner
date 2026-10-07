@@ -7,6 +7,7 @@
 		</v8:item>
 	</Title>
 	<AutoTitle>false</AutoTitle>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
 		<UsualGroup name="ГруппаШапка" id="1">
@@ -40,8 +41,8 @@
 				</InputField>
 				<InputField name="ar_JSON" id="14">
 					<DataPath>Объект.ar_JSON</DataPath>
-					<MultiLine>true</MultiLine>
 					<Height>15</Height>
+					<MultiLine>true</MultiLine>
 					<ContextMenu name="ar_JSONКонтекстноеМеню" id="15"/>
 					<ExtendedTooltip name="ar_JSONРасширеннаяПодсказка" id="16"/>
 				</InputField>

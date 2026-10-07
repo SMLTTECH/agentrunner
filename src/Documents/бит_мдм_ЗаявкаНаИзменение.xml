@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Document uuid="e075639d-c886-4384-b3fd-b42098a0b6ad">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentObject.бит_мдм_ЗаявкаНаИзменение" category="Object">
+				<xr:TypeId>743d832a-2f6e-4186-bfa7-599917650a82</xr:TypeId>
+				<xr:ValueId>defeb757-0e15-4174-9195-361ac3e18a9a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentRef.бит_мдм_ЗаявкаНаИзменение" category="Ref">
+				<xr:TypeId>153d0f7a-fe7c-465e-a05f-3633c58e13b3</xr:TypeId>
+				<xr:ValueId>e4ce405f-cf36-46fe-9d8b-99cf23f44c1f</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentSelection.бит_мдм_ЗаявкаНаИзменение" category="Selection">
+				<xr:TypeId>23336fab-6710-4656-a840-9690d2c3e173</xr:TypeId>
+				<xr:ValueId>1a2b0992-3814-4eae-8e9d-63c91a98c46d</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentList.бит_мдм_ЗаявкаНаИзменение" category="List">
+				<xr:TypeId>b0fe75b6-cb0f-4d16-ba80-454a21eb4881</xr:TypeId>
+				<xr:ValueId>3776154b-aebd-4caa-9230-5cf9e9fbf814</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentManager.бит_мдм_ЗаявкаНаИзменение" category="Manager">
+				<xr:TypeId>c2434254-3095-461d-9d3e-cba97235e2f5</xr:TypeId>
+				<xr:ValueId>9b6e7068-fbad-4447-89eb-b2e9ae9f1e41</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>бит_мдм_ЗаявкаНаИзменение</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>5cfcd4d2-19b6-45d4-88b2-c090e2a757c3</ExtendedConfigurationObject>
+			<RegisterRecords/>
+		</Properties>
+		<ChildObjects/>
+	</Document>
+</MetaDataObject>

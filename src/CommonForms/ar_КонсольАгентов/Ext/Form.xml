@@ -488,9 +488,9 @@
 						</CommandBar>
 						<Table name="СписокЗапусков" id="67">
 							<CommandBarLocation>None</CommandBarLocation>
+							<ReadOnly>true</ReadOnly>
 							<HeightInTableRows>15</HeightInTableRows>
 							<DataPath>СписокЗапусков</DataPath>
-							<ReadOnly>true</ReadOnly>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="СписокЗапусковКонтекстноеМеню" id="68"/>
 							<AutoCommandBar name="СписокЗапусковКоманднаяПанель" id="69"/>
@@ -719,9 +719,9 @@
 						</CommandBar>
 						<Table name="СписокАгентов" id="220">
 							<CommandBarLocation>None</CommandBarLocation>
+							<ReadOnly>true</ReadOnly>
 							<HeightInTableRows>15</HeightInTableRows>
 							<DataPath>СписокАгентов</DataPath>
-							<ReadOnly>true</ReadOnly>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="СписокАгентовКонтекстноеМеню" id="221"/>
 							<AutoCommandBar name="СписокАгентовКоманднаяПанель" id="222"/>
@@ -888,7 +888,7 @@
 							<ChildItems>
 								<InputField name="ОтборЗахватов" id="390">
 									<DataPath>ОтборЗахватов</DataPath>
-																		<Title>
+									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Показать</v8:content>
@@ -900,9 +900,9 @@
 									</Title>
 									<ContextMenu name="ОтборЗахватовКонтекстноеМеню" id="391"/>
 									<ExtendedTooltip name="ОтборЗахватовРасширеннаяПодсказка" id="392"/>
-								<Events>
-									<Event name="OnChange">ОтборЗахватовПриИзменении</Event>
-								</Events>
+									<Events>
+										<Event name="OnChange">ОтборЗахватовПриИзменении</Event>
+									</Events>
 								</InputField>
 								<Button name="КнопкаОткрытьПредмет" id="393">
 									<Type>UsualButton</Type>
@@ -952,7 +952,7 @@
 							<ChildItems>
 								<InputField name="ТаблицаОчередиАгент" id="368">
 									<DataPath>ТаблицаОчереди.ПредставлениеАгента</DataPath>
-																		<Title>
+									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Агент</v8:content>
@@ -967,7 +967,7 @@
 								</InputField>
 								<InputField name="ТаблицаОчередиПакет" id="371">
 									<DataPath>ТаблицаОчереди.ПакетИсточник</DataPath>
-																		<Title>
+									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Пакет</v8:content>
@@ -982,7 +982,7 @@
 								</InputField>
 								<InputField name="ТаблицаОчередиЗанятоСлотов" id="374">
 									<DataPath>ТаблицаОчереди.ЗанятоСлотов</DataPath>
-																		<Title>
+									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Занято слотов</v8:content>
@@ -997,7 +997,7 @@
 								</InputField>
 								<InputField name="ТаблицаОчередиЛимитЗапусков" id="377">
 									<DataPath>ТаблицаОчереди.ЛимитЗапусков</DataPath>
-																		<Title>
+									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Лимит</v8:content>
@@ -1012,7 +1012,7 @@
 								</InputField>
 								<InputField name="ТаблицаОчередиПоследнийТик" id="380">
 									<DataPath>ТаблицаОчереди.ПоследнийТикМомент</DataPath>
-																		<Title>
+									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Последний тик</v8:content>
@@ -1033,7 +1033,7 @@
 								</InputField>
 								<InputField name="ТаблицаОчередиИтогТика" id="383">
 									<DataPath>ТаблицаОчереди.ПоследнийТикТекст</DataPath>
-																		<Title>
+									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Итог тика</v8:content>
@@ -1048,43 +1048,43 @@
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
-								<Table name="ТаблицаЗахватов" id="405">
-									<CommandBarLocation>None</CommandBarLocation>
-									<HeightInTableRows>12</HeightInTableRows>
-									<DataPath>ТаблицаЗахватов</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<RowFilter xsi:nil="true"/>
-									<ContextMenu name="ТаблицаЗахватовКонтекстноеМеню" id="406"/>
-									<AutoCommandBar name="ТаблицаЗахватовКоманднаяПанель" id="407"/>
-									<ExtendedTooltip name="ТаблицаЗахватовРасширеннаяПодсказка" id="408"/>
-									<SearchStringAddition name="ТаблицаЗахватовСтрокаПоиска" id="409">
-										<AdditionSource>
-											<Item>ТаблицаЗахватов</Item>
-											<Type>SearchStringRepresentation</Type>
-										</AdditionSource>
-										<ContextMenu name="ТаблицаЗахватовСтрокаПоискаКонтекстноеМеню" id="410"/>
-										<ExtendedTooltip name="ТаблицаЗахватовСтрокаПоискаРасширеннаяПодсказка" id="411"/>
-									</SearchStringAddition>
-									<ViewStatusAddition name="ТаблицаЗахватовСостояниеПросмотра" id="412">
-										<AdditionSource>
-											<Item>ТаблицаЗахватов</Item>
-											<Type>ViewStatusRepresentation</Type>
-										</AdditionSource>
-										<ContextMenu name="ТаблицаЗахватовСостояниеПросмотраКонтекстноеМеню" id="413"/>
-										<ExtendedTooltip name="ТаблицаЗахватовСостояниеПросмотраРасширеннаяПодсказка" id="414"/>
-									</ViewStatusAddition>
-									<SearchControlAddition name="ТаблицаЗахватовУправлениеПоиском" id="415">
-										<AdditionSource>
-											<Item>ТаблицаЗахватов</Item>
-											<Type>SearchControl</Type>
-										</AdditionSource>
-										<ContextMenu name="ТаблицаЗахватовУправлениеПоискомКонтекстноеМеню" id="416"/>
-										<ExtendedTooltip name="ТаблицаЗахватовУправлениеПоискомРасширеннаяПодсказка" id="417"/>
-									</SearchControlAddition>
-									<ChildItems>
+						<Table name="ТаблицаЗахватов" id="405">
+							<CommandBarLocation>None</CommandBarLocation>
+							<ReadOnly>true</ReadOnly>
+							<HeightInTableRows>12</HeightInTableRows>
+							<DataPath>ТаблицаЗахватов</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаЗахватовКонтекстноеМеню" id="406"/>
+							<AutoCommandBar name="ТаблицаЗахватовКоманднаяПанель" id="407"/>
+							<ExtendedTooltip name="ТаблицаЗахватовРасширеннаяПодсказка" id="408"/>
+							<SearchStringAddition name="ТаблицаЗахватовСтрокаПоиска" id="409">
+								<AdditionSource>
+									<Item>ТаблицаЗахватов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаЗахватовСтрокаПоискаКонтекстноеМеню" id="410"/>
+								<ExtendedTooltip name="ТаблицаЗахватовСтрокаПоискаРасширеннаяПодсказка" id="411"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаЗахватовСостояниеПросмотра" id="412">
+								<AdditionSource>
+									<Item>ТаблицаЗахватов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаЗахватовСостояниеПросмотраКонтекстноеМеню" id="413"/>
+								<ExtendedTooltip name="ТаблицаЗахватовСостояниеПросмотраРасширеннаяПодсказка" id="414"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаЗахватовУправлениеПоиском" id="415">
+								<AdditionSource>
+									<Item>ТаблицаЗахватов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаЗахватовУправлениеПоискомКонтекстноеМеню" id="416"/>
+								<ExtendedTooltip name="ТаблицаЗахватовУправлениеПоискомРасширеннаяПодсказка" id="417"/>
+							</SearchControlAddition>
+							<ChildItems>
 								<InputField name="ТаблицаЗахватовАгент" id="344">
 									<DataPath>ТаблицаЗахватов.АгентРеф</DataPath>
-																		<Title>
+									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Агент</v8:content>
@@ -1099,7 +1099,7 @@
 								</InputField>
 								<InputField name="ТаблицаЗахватовПредмет" id="347">
 									<DataPath>ТаблицаЗахватов.ПредставлениеПредмета</DataPath>
-																		<Title>
+									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Предмет</v8:content>
@@ -1114,7 +1114,7 @@
 								</InputField>
 								<InputField name="ТаблицаЗахватовЗапуск" id="350">
 									<DataPath>ТаблицаЗахватов.Запуск</DataPath>
-																		<Title>
+									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Запуск</v8:content>
@@ -1129,7 +1129,7 @@
 								</InputField>
 								<InputField name="ТаблицаЗахватовЗахвачен" id="353">
 									<DataPath>ТаблицаЗахватов.Захвачен</DataPath>
-																		<Title>
+									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Захвачен</v8:content>
@@ -1150,7 +1150,7 @@
 								</InputField>
 								<InputField name="ТаблицаЗахватовТриггер" id="356">
 									<DataPath>ТаблицаЗахватов.Триггер</DataPath>
-																		<Title>
+									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Триггер</v8:content>
@@ -1165,7 +1165,7 @@
 								</InputField>
 								<InputField name="ТаблицаЗахватовСбоевПодряд" id="359">
 									<DataPath>ТаблицаЗахватов.СбоевПодряд</DataPath>
-																		<Title>
+									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Сбоев подряд</v8:content>
@@ -1180,7 +1180,7 @@
 								</InputField>
 								<InputField name="ТаблицаЗахватовИсключён" id="362">
 									<DataPath>ТаблицаЗахватов.Исключён</DataPath>
-																		<Title>
+									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Исключён</v8:content>
@@ -1195,7 +1195,7 @@
 								</InputField>
 								<InputField name="ТаблицаЗахватовПоследняяПричина" id="365">
 									<DataPath>ТаблицаЗахватов.ПоследняяПричина</DataPath>
-																		<Title>
+									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Последняя причина</v8:content>
@@ -1253,14 +1253,12 @@
 									<ContextMenu name="ТаблицаЗахватовОтложенПричинаКонтекстноеМеню" id="428"/>
 									<ExtendedTooltip name="ТаблицаЗахватовОтложенПричинаРасширеннаяПодсказка" id="429"/>
 								</InputField>
-									</ChildItems>
-								</Table>
+							</ChildItems>
+						</Table>
 					</ChildItems>
 				</Page>
 			</ChildItems>
-
 		</Pages>
-
 	</ChildItems>
 	<Attributes>
 		<Attribute name="СписокЗапусков" id="100">
@@ -1906,7 +1904,7 @@
 			</Type>
 		</Attribute>
 		<Attribute name="ТаблицаЗахватов" id="320">
-						<Title>
+			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Таблица захватов</v8:content>
@@ -1920,98 +1918,101 @@
 				<v8:Type>v8:ValueTable</v8:Type>
 			</Type>
 			<Columns>
-			<Column name="АгентРеф" id="321">
-				<Type>
-					<v8:Type>cfg:CatalogRef.ar_Агенты</v8:Type>
-				</Type>
-			</Column>
-			<Column name="ПредставлениеПредмета" id="322">
-				<Type>
-					<v8:Type>xs:string</v8:Type>
-					<v8:StringQualifiers>
-						<v8:Length>200</v8:Length>
-						<v8:AllowedLength>Variable</v8:AllowedLength>
-					</v8:StringQualifiers>
-				</Type>
-			</Column>
-			<Column name="ПредметРеф" id="323">
-				<Type>
-					<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
-				</Type>
-			</Column>
-			<Column name="Запуск" id="324">
-				<Type>
-					<v8:Type>xs:string</v8:Type>
-					<v8:StringQualifiers>
-						<v8:Length>36</v8:Length>
-						<v8:AllowedLength>Variable</v8:AllowedLength>
-					</v8:StringQualifiers>
-				</Type>
-			</Column>
-			<Column name="Захвачен" id="325">
-				<Type>
-					<v8:Type>xs:dateTime</v8:Type>
-				</Type>
-			</Column>
-			<Column name="Триггер" id="326">
-				<Type>
-					<v8:Type>xs:string</v8:Type>
-					<v8:StringQualifiers>
-						<v8:Length>50</v8:Length>
-						<v8:AllowedLength>Variable</v8:AllowedLength>
-					</v8:StringQualifiers>
-				</Type>
-			</Column>
-			<Column name="СбоевПодряд" id="327">
-				<Type>
-					<v8:Type>xs:decimal</v8:Type>
-					<v8:NumberQualifiers>
-						<v8:Digits>3</v8:Digits>
-						<v8:FractionDigits>0</v8:FractionDigits>
-						<v8:AllowedSign>Any</v8:AllowedSign>
-					</v8:NumberQualifiers>
-				</Type>
-			</Column>
-			<Column name="Исключён" id="328">
-				<Type>
-					<v8:Type>xs:boolean</v8:Type>
-				</Type>
-			</Column>
-			<Column name="ПоследняяПричина" id="329">
-				<Type>
-					<v8:Type>xs:string</v8:Type>
-					<v8:StringQualifiers>
-						<v8:Length>50</v8:Length>
-						<v8:AllowedLength>Variable</v8:AllowedLength>
-					</v8:StringQualifiers>
-				</Type>
-			</Column>
-			<Column name="Отложен" id="418">
-				<Type>
-					<v8:Type>xs:boolean</v8:Type>
-				</Type>
-			</Column>
-			<Column name="ОтложенВ" id="419">
-				<Type>
-					<v8:Type>xs:dateTime</v8:Type>
-					<v8:DateQualifiers>
-						<v8:DateFractions>DateTime</v8:DateFractions>
-					</v8:DateQualifiers>
-				</Type>
-			</Column>
-			<Column name="ОтложенПричина" id="420">
-				<Type>
-					<v8:Type>xs:string</v8:Type>
-					<v8:StringQualifiers>
-						<v8:Length>500</v8:Length>
-						<v8:AllowedLength>Variable</v8:AllowedLength>
-					</v8:StringQualifiers>
-				</Type>
-			</Column>
+				<Column name="АгентРеф" id="321">
+					<Type>
+						<v8:Type>cfg:CatalogRef.ar_Агенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеПредмета" id="322">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредметРеф" id="323">
+					<Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Запуск" id="324">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Захвачен" id="325">
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Триггер" id="326">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СбоевПодряд" id="327">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Исключён" id="328">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПоследняяПричина" id="329">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Отложен" id="418">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ОтложенВ" id="419">
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОтложенПричина" id="420">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="ТаблицаОчереди" id="330">
-						<Title>
+			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Очередь агентов</v8:content>
@@ -2025,67 +2026,70 @@
 				<v8:Type>v8:ValueTable</v8:Type>
 			</Type>
 			<Columns>
-			<Column name="АгентРеф" id="331">
-				<Type>
-					<v8:Type>cfg:CatalogRef.ar_Агенты</v8:Type>
-				</Type>
-			</Column>
-			<Column name="ПредставлениеАгента" id="332">
-				<Type>
-					<v8:Type>xs:string</v8:Type>
-					<v8:StringQualifiers>
-						<v8:Length>150</v8:Length>
-						<v8:AllowedLength>Variable</v8:AllowedLength>
-					</v8:StringQualifiers>
-				</Type>
-			</Column>
-			<Column name="ПакетИсточник" id="333">
-				<Type>
-					<v8:Type>xs:string</v8:Type>
-					<v8:StringQualifiers>
-						<v8:Length>100</v8:Length>
-						<v8:AllowedLength>Variable</v8:AllowedLength>
-					</v8:StringQualifiers>
-				</Type>
-			</Column>
-			<Column name="ЛимитЗапусков" id="334">
-				<Type>
-					<v8:Type>xs:decimal</v8:Type>
-					<v8:NumberQualifiers>
-						<v8:Digits>3</v8:Digits>
-						<v8:FractionDigits>0</v8:FractionDigits>
-						<v8:AllowedSign>Any</v8:AllowedSign>
-					</v8:NumberQualifiers>
-				</Type>
-			</Column>
-			<Column name="ЗанятоСлотов" id="335">
-				<Type>
-					<v8:Type>xs:decimal</v8:Type>
-					<v8:NumberQualifiers>
-						<v8:Digits>3</v8:Digits>
-						<v8:FractionDigits>0</v8:FractionDigits>
-						<v8:AllowedSign>Any</v8:AllowedSign>
-					</v8:NumberQualifiers>
-				</Type>
-			</Column>
-			<Column name="ПоследнийТикМомент" id="336">
-				<Type>
-					<v8:Type>xs:dateTime</v8:Type>
-				</Type>
-			</Column>
-			<Column name="ПоследнийТикТекст" id="337">
-				<Type>
-					<v8:Type>xs:string</v8:Type>
-					<v8:StringQualifiers>
-						<v8:Length>500</v8:Length>
-						<v8:AllowedLength>Variable</v8:AllowedLength>
-					</v8:StringQualifiers>
-				</Type>
-			</Column>
+				<Column name="АгентРеф" id="331">
+					<Type>
+						<v8:Type>cfg:CatalogRef.ar_Агенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеАгента" id="332">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПакетИсточник" id="333">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЛимитЗапусков" id="334">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗанятоСлотов" id="335">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПоследнийТикМомент" id="336">
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПоследнийТикТекст" id="337">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="ОтборЗахватов" id="338">
-						<Title>
+			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Показать</v8:content>
@@ -2097,10 +2101,10 @@
 			</Title>
 			<Type>
 				<v8:Type>xs:string</v8:Type>
-					<v8:StringQualifiers>
-						<v8:Length>20</v8:Length>
-						<v8:AllowedLength>Variable</v8:AllowedLength>
-					</v8:StringQualifiers>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
@@ -2136,14 +2140,14 @@
 					<dcsset:item>
 						<dcsset:field>СписокЗапусковТекстОжиданияПовтора</dcsset:field>
 					</dcsset:item>
-					</dcsset:selection>
-					<dcsset:filter>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">СписокЗапусков.ГруппаСтатуса</dcsset:left>
-							<dcsset:comparisonType>Equal</dcsset:comparisonType>
-							<dcsset:right xsi:type="xs:string">ЖдётОператора</dcsset:right>
-						</dcsset:item>
-					</dcsset:filter>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СписокЗапусков.ГруппаСтатуса</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">ЖдётОператора</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
@@ -2183,14 +2187,14 @@
 					<dcsset:item>
 						<dcsset:field>СписокЗапусковТекстОжиданияПовтора</dcsset:field>
 					</dcsset:item>
-					</dcsset:selection>
-					<dcsset:filter>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">СписокЗапусков.ГруппаСтатуса</dcsset:left>
-							<dcsset:comparisonType>Equal</dcsset:comparisonType>
-							<dcsset:right xsi:type="xs:string">Ошибка</dcsset:right>
-						</dcsset:item>
-					</dcsset:filter>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СписокЗапусков.ГруппаСтатуса</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">Ошибка</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
@@ -2230,14 +2234,14 @@
 					<dcsset:item>
 						<dcsset:field>СписокЗапусковТекстОжиданияПовтора</dcsset:field>
 					</dcsset:item>
-					</dcsset:selection>
-					<dcsset:filter>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">СписокЗапусков.ГруппаСтатуса</dcsset:left>
-							<dcsset:comparisonType>Equal</dcsset:comparisonType>
-							<dcsset:right xsi:type="xs:string">Завершено</dcsset:right>
-						</dcsset:item>
-					</dcsset:filter>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СписокЗапусков.ГруппаСтатуса</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">Завершено</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветТекста</dcscor:parameter>
@@ -2384,7 +2388,7 @@
 			<Action>ОткрытьПрофилиАгентаВыполнить</Action>
 		</Command>
 		<Command name="СнятьЗахват" id="339">
-						<Title>
+			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Снять захват</v8:content>
@@ -2397,7 +2401,7 @@
 			<Action>СнятьЗахватВыполнить</Action>
 		</Command>
 		<Command name="СброситьСбои" id="340">
-						<Title>
+			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Сбросить сбои</v8:content>
@@ -2410,7 +2414,7 @@
 			<Action>СброситьСбоиВыполнить</Action>
 		</Command>
 		<Command name="ИсторияПоДокументу" id="341">
-						<Title>
+			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>История по документу</v8:content>
@@ -2423,7 +2427,7 @@
 			<Action>ИсторияПоДокументуВыполнить</Action>
 		</Command>
 		<Command name="ОткрытьПредмет" id="342">
-						<Title>
+			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Открыть предмет</v8:content>
@@ -2436,7 +2440,7 @@
 			<Action>ОткрытьПредметВыполнить</Action>
 		</Command>
 		<Command name="ОткрытьЗапускЗахвата" id="343">
-						<Title>
+			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Открыть запуск</v8:content>

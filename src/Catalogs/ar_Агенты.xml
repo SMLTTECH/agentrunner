@@ -1070,7 +1070,8 @@
 			</Attribute>
 			<Attribute uuid="2001575c-f556-470c-966a-5cd60b067134">
 				<Properties>
-					<Name>ar_СрокОтветаЧасов</Name><Synonym>
+					<Name>ar_СрокОтветаЧасов</Name>
+					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Срок ответа (часов)</v8:content>
@@ -1116,15 +1117,15 @@
 				<Properties>
 					<Name>ar_БратьИзОчередиПакета</Name>
 					<Synonym>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Брать задачи из очереди пакета</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>en</v8:lang>
-						<v8:content>Take tasks from package queue</v8:content>
-					</v8:item>
-				</Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Брать задачи из очереди пакета</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Take tasks from package queue</v8:content>
+						</v8:item>
+					</Synonym>
 					<Comment/>
 					<Type>
 						<v8:Type>xs:boolean</v8:Type>
@@ -1160,15 +1161,15 @@
 				<Properties>
 					<Name>ar_ПакетИсточник</Name>
 					<Synonym>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Пакет-источник очереди</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>en</v8:lang>
-						<v8:content>Queue source package</v8:content>
-					</v8:item>
-				</Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пакет-источник очереди</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Queue source package</v8:content>
+						</v8:item>
+					</Synonym>
 					<Comment/>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
@@ -1208,15 +1209,15 @@
 				<Properties>
 					<Name>ar_МаксПараллельныхЗапусков</Name>
 					<Synonym>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Параллельных запусков</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>en</v8:lang>
-						<v8:content>Max parallel runs</v8:content>
-					</v8:item>
-				</Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параллельных запусков</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Max parallel runs</v8:content>
+						</v8:item>
+					</Synonym>
 					<Comment/>
 					<Type>
 						<v8:Type>xs:decimal</v8:Type>
