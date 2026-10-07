@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Пресеты</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="1">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКодНаименование" id="3">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКодНаименованиеРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<InputField name="Наименование" id="5">
+							<DataPath>Объект.Description</DataPath>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="7"/>
+						</InputField>
+						<InputField name="Код" id="8">
+							<DataPath>Объект.Code</DataPath>
+							<ContextMenu name="КодКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="КодРасширеннаяПодсказка" id="10"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="ar_Имя" id="11">
+					<DataPath>Объект.ar_Имя</DataPath>
+					<ContextMenu name="ar_ИмяКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ar_ИмяРасширеннаяПодсказка" id="13"/>
+				</InputField>
+				<InputField name="ar_JSON" id="14">
+					<DataPath>Объект.ar_JSON</DataPath>
+					<MultiLine>true</MultiLine>
+					<Height>15</Height>
+					<ContextMenu name="ar_JSONКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ar_JSONРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<InputField name="ar_Автор" id="17">
+					<DataPath>Объект.ar_Автор</DataPath>
+					<ContextMenu name="ar_АвторКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ar_АвторРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="ar_Версия" id="20">
+					<DataPath>Объект.ar_Версия</DataPath>
+					<ContextMenu name="ar_ВерсияКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ar_ВерсияРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="ar_Категория" id="23">
+					<DataPath>Объект.ar_Категория</DataPath>
+					<ContextMenu name="ar_КатегорияКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ar_КатегорияРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="ar_ИконкаИмя" id="26">
+					<DataPath>Объект.ar_ИконкаИмя</DataPath>
+					<ContextMenu name="ar_ИконкаИмяКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ar_ИконкаИмяРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="ar_ИсточникРасширение" id="29">
+					<DataPath>Объект.ar_ИсточникРасширение</DataPath>
+					<ContextMenu name="ar_ИсточникРасширениеКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ar_ИсточникРасширениеРасширеннаяПодсказка" id="31"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДополнительныеРеквизиты" id="32">
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаДополнительныеРеквизитыРасширеннаяПодсказка" id="33"/>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="34">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ar_Пресеты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>
