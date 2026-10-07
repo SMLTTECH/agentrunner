@@ -869,8 +869,7 @@
 					</ChildItems>
 				</Page>
 			</ChildItems>
-		</Pages>
-				<Page name="СтраницаЗахваты" id="386">
+		<Page name="СтраницаЗахваты" id="386">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1209,6 +1208,8 @@
 								</Table>
 					</ChildItems>
 				</Page>
+		</Pages>
+
 	</ChildItems>
 	<Attributes>
 		<Attribute name="СписокЗапусков" id="100">
