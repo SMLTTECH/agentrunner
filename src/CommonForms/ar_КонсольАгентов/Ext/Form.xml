@@ -868,8 +868,7 @@
 						</Table>
 					</ChildItems>
 				</Page>
-			</ChildItems>
-		<Page name="СтраницаЗахваты" id="386">
+				<Page name="СтраницаЗахваты" id="386">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1208,6 +1207,8 @@
 								</Table>
 					</ChildItems>
 				</Page>
+			</ChildItems>
+
 		</Pages>
 
 	</ChildItems>
