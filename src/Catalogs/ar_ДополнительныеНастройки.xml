@@ -291,7 +291,6 @@
 					<xr:FillValue xsi:nil="true"/>
 					<xr:Mask/>
 					<xr:ChoiceParameters/>
-					<xr:Indexing>Index</xr:Indexing>
 				</xr:StandardAttribute>
 			</StandardAttributes>
 			<Characteristics/>
