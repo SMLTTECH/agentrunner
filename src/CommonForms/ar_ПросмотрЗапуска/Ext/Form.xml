@@ -190,6 +190,25 @@
 							<ContextMenu name="ДекорацияЕстьСнимокКонтекстноеМеню" id="36"/>
 							<ExtendedTooltip name="ДекорацияЕстьСнимокРасширеннаяПодсказка" id="37"/>
 						</LabelDecoration>
+						<InputField name="ФильтрТипаСобытияПоле" id="227">
+							<DataPath>ФильтрТипаСобытия</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тип события</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Event type</v8:content>
+								</v8:item>
+							</Title>
+							<DropListButton>true</DropListButton>
+							<ContextMenu name="ФильтрТипаСобытияПолеКонтекстноеМеню" id="228"/>
+							<ExtendedTooltip name="ФильтрТипаСобытияПолеРасширеннаяПодсказка" id="229"/>
+							<Events>
+								<Event name="OnChange">ФильтрТипаСобытияПриИзменении</Event>
+							</Events>
+						</InputField>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаКнопкиШапки" id="38">
@@ -197,6 +216,21 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаКнопкиШапкиРасширеннаяПодсказка" id="39"/>
 					<ChildItems>
+						<Button name="КнопкаОбновитьЗапуск" id="225">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ar_Обновить</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Обновить</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Refresh</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КнопкаОбновитьЗапускРасширеннаяПодсказка" id="226"/>
+						</Button>
 						<Button name="КнопкаПоказатьПромпт" id="40">
 							<Type>UsualButton</Type>
 							<Visible>false</Visible>
@@ -1274,6 +1308,32 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="ШапкаСтатусФинальный" id="230">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка статус финальный</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФильтрТипаСобытия" id="231">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фильтр типа события</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>30</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 		<Attribute name="ЗначениеПрочерк" id="115">
 			<Title>
 				<v8:item>
@@ -1902,6 +1962,19 @@
 		</ConditionalAppearance>
 	</Attributes>
 	<Commands>
+		<Command name="ar_Обновить" id="224">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Refresh</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ar_Обновить</Action>
+		</Command>
 		<Command name="ar_ПоказатьПромпт" id="134">
 			<Title>
 				<v8:item>
