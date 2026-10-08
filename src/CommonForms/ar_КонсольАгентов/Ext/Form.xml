@@ -457,6 +457,16 @@
 									<CommandName>Form.Command.ПоказатьСозданныеОбъекты</CommandName>
 									<ExtendedTooltip name="КнопкаПоказатьСозданныеОбъектыРасширеннаяПодсказка" id="115"/>
 								</Button>
+								<Button name="КнопкаПоказатьЛогЗапуска" id="433">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ПоказатьЛогЗапуска</CommandName>
+									<ExtendedTooltip name="КнопкаПоказатьЛогЗапускаРасширеннаяПодсказка" id="434"/>
+								</Button>
+								<Button name="КнопкаВыгрузитьЛогЗапуска" id="435">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ВыгрузитьЛогЗапуска</CommandName>
+									<ExtendedTooltip name="КнопкаВыгрузитьЛогЗапускаРасширеннаяПодсказка" id="436"/>
+								</Button>
 								<Popup name="ГруппаДополнительно" id="292">
 									<Title>
 										<v8:item>
@@ -2368,6 +2378,44 @@
 			</Picture>
 			<Action>ПоказатьСозданныеОбъектыВыполнить</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПоказатьЛогЗапуска" id="437">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать лог</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show log</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Полный лог выбранного запуска: события, диалог, tools, ошибки журнала регистрации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьЛогЗапускаВыполнить</Action>
+		</Command>
+		<Command name="ВыгрузитьЛогЗапуска" id="438">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить лог</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Export log</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить полный лог выбранного запуска в JSON-файл для разбора в другой базе</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьЛогЗапускаВыполнить</Action>
 		</Command>
 		<Command name="ОткрытьАгентаАгенты" id="260">
 			<Title>
