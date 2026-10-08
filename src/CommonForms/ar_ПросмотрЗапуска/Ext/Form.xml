@@ -516,6 +516,7 @@
 										</InputField>
 										<InputField name="ДетальИнструментСсылкаНаРезультат" id="95">
 											<DataPath>ДетальИнструментСсылкаНаРезультат</DataPath>
+											<Visible>false</Visible>
 											<ReadOnly>true</ReadOnly>
 											<Title>
 												<v8:item>
@@ -530,6 +531,56 @@
 											<ContextMenu name="ДетальИнструментСсылкаНаРезультатКонтекстноеМеню" id="96"/>
 											<ExtendedTooltip name="ДетальИнструментСсылкаНаРезультатРасширеннаяПодсказка" id="97"/>
 										</InputField>
+										<InputField name="ДетальИнструментОтвет" id="216">
+											<DataPath>ДетальИнструментОтвет</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ответ инструмента</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Tool response</v8:content>
+												</v8:item>
+											</Title>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Height>8</Height>
+											<MultiLine>true</MultiLine>
+											<ContextMenu name="ДетальИнструментОтветКонтекстноеМеню" id="217"/>
+											<ExtendedTooltip name="ДетальИнструментОтветРасширеннаяПодсказка" id="218"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияНетОтветаИнструмента" id="219">
+											<Visible>false</Visible>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ответ не сохранён (запуск до версии с хранением ответов)</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Response was not saved (run created before response storage)</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияНетОтветаИнструментаКонтекстноеМеню" id="220"/>
+											<ExtendedTooltip name="ДекорацияНетОтветаИнструментаРасширеннаяПодсказка" id="221"/>
+										</LabelDecoration>
+										<Button name="КнопкаОткрытьОтветПолностью" id="222">
+											<Type>UsualButton</Type>
+											<Enabled>false</Enabled>
+											<CommandName>Form.Command.ar_ОткрытьОтветПолностью</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Открыть ответ полностью</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Open Full Response</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="КнопкаОткрытьОтветПолностьюРасширеннаяПодсказка" id="223"/>
+										</Button>
 										<InputField name="ДетальИнструментКемПодтверждено" id="98">
 											<DataPath>ДетальИнструментКемПодтверждено</DataPath>
 											<ReadOnly>true</ReadOnly>
@@ -1486,6 +1537,32 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ДетальИнструментОтвет" id="140">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Деталь tool ответ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДетальИнструментЕстьОтвет" id="141">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Деталь tool есть ответ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 		<Attribute name="План" id="139">
 			<Type>
 				<v8:Type>v8:ValueTable</v8:Type>
@@ -1837,6 +1914,19 @@
 				</v8:item>
 			</Title>
 			<Action>ar_ПоказатьПромпт</Action>
+		</Command>
+		<Command name="ar_ОткрытьОтветПолностью" id="138">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть ответ полностью</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open Full Response</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ar_ОткрытьОтветПолностью</Action>
 		</Command>
 		<Command name="ar_Возобновить" id="135">
 			<Title>
