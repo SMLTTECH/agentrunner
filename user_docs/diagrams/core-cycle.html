@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Один шаг цикла агента: от контекста до ответа</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper: #f5f5f5; --color-ink: #2d3142; --color-muted: #4f5d75; --color-accent: #eb6c36;
+      --font-sans: 'Geist', system-ui, sans-serif;
+      --font-serif: 'Instrument Serif', 'Noto Serif', serif;
+      --font-mono: 'Geist Mono', ui-monospace, monospace;
+    }
+    body { font-family: var(--font-sans); background: var(--color-paper); color: var(--color-ink);
+      min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 1200px; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-family: var(--font-mono); font-size: 0.66rem; font-weight: 500; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.5rem; }
+    h1 { font-family: var(--font-serif); font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem); font-weight: 400;
+      letter-spacing: -0.02em; line-height: 1.15; color: var(--color-ink); margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 1028px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Блок-схема · Цикл агента</p>
+    <h1>Один шаг цикла агента: от контекста до ответа</h1>
+    <div class="diagram-container">
+      <svg viewBox="0 0 1028 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="core-cycle-title core-cycle-desc">
+        <title id="core-cycle-title">Один шаг цикла агента: от контекста до ответа</title>
+        <desc id="core-cycle-desc">Блок-схема шага цикла агента: сборка контекста, вызов модели, проверка прав на каждый вызов инструмента и три исхода — выполнить, поставить на подтверждение или отказать.</desc>
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+          <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#eb6c36"/></marker>
+          <marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2e5aa8"/></marker>
+        </defs>
+        <rect width="100%" height="100%" fill="#f5f5f5"/>
+        <path d="M216,132 H272" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M456,132 H540" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M740,132 H812" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M640,176 V256" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M540,300 H456" fill="none" stroke="#eb6c36" stroke-width="1.4" marker-end="url(#arrow-accent)"/>
+        <path d="M640,344 V408" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M740,300 H812" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M272,300 H124" fill="none" stroke="#4f5d75" stroke-width="1.2"/>
+        <path d="M124,300 V168" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M904,336 V512 Q904,520 896,520 H132 Q124,520 124,512 V300" fill="none" stroke="#4f5d75" stroke-width="1.2"/>
+        <circle cx="124" cy="300" r="4" fill="#2d3142"/>
+        <rect x="223" y="111" width="42" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="244" y="120" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">промпт</text>
+        <rect x="462" y="111" width="72" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="498" y="120" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">ответ модели</text>
+        <rect x="763" y="111" width="27" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="776" y="120" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">нет</text>
+        <rect x="642" y="213" width="22" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="648" y="222" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="start">да</text>
+        <rect x="470" y="279" width="57" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="498" y="288" fill="#eb6c36" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">разрешено</text>
+        <rect x="642" y="371" width="76" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="648" y="380" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="start">нужно решение</text>
+        <rect x="748" y="279" width="57" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="776" y="288" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">запрещено</text>
+        <rect x="126" y="231" width="101" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="132" y="240" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="start">результат, шаг + 1</text>
+        <rect x="32" y="96" width="184" height="72" rx="6" fill="#f5f5f5"/>
+        <rect x="32" y="96" width="184" height="72" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="40" y="102" width="28" height="12" rx="2" fill="transparent" stroke="#2d3142" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="54" y="111" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">ШАГ</text>
+        <text x="124.0" y="132" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Собрать контекст</text>
+        <text x="124.0" y="146" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">ar_RuntimeКонтекст</text>
+        <text x="124.0" y="158" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">промпт · память · tools</text>
+        <rect x="272" y="96" width="184" height="72" rx="6" fill="#f5f5f5"/>
+        <rect x="272" y="96" width="184" height="72" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="280" y="102" width="28" height="12" rx="2" fill="transparent" stroke="#2d3142" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="294" y="111" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">LLM</text>
+        <text x="364.0" y="132" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Вызов модели</text>
+        <text x="364.0" y="146" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">ar_LLMДиспетчер</text>
+        <text x="364.0" y="158" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">повторы · резервный</text>
+        <polygon points="640,88.0 740.0,132 640,176.0 540.0,132" fill="#f5f5f5"/>
+        <polygon points="640,88.0 740.0,132 640,176.0 540.0,132" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <text x="640" y="130" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Есть вызовы?</text>
+        <text x="640" y="145" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">ar_RuntimeПарсер</text>
+        <rect x="812" y="100" width="184" height="64" rx="20" fill="#f5f5f5"/>
+        <rect x="812" y="100" width="184" height="64" rx="20" fill="rgba(79,93,117,0.10)" stroke="#7a8399" stroke-width="1"/>
+        <text x="904.0" y="130.0" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Ответ готов</text>
+        <text x="904.0" y="145.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">запуск «Завершён»</text>
+        <polygon points="640,256.0 740.0,300 640,344.0 540.0,300" fill="#f5f5f5"/>
+        <polygon points="640,256.0 740.0,300 640,344.0 540.0,300" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1"/>
+        <text x="640" y="298" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Права вызова</text>
+        <text x="640" y="313" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">ar_ПравилаДвижок</text>
+        <rect x="272" y="264" width="184" height="72" rx="6" fill="#f5f5f5"/>
+        <rect x="272" y="264" width="184" height="72" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="280" y="270" width="37" height="12" rx="2" fill="transparent" stroke="#2d3142" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="298" y="279" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">ИНСТР</text>
+        <text x="364.0" y="300" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Вызвать инструмент</text>
+        <text x="364.0" y="314" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">ar_ИнструментыДиспетчер</text>
+        <text x="364.0" y="326" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">результат в контекст</text>
+        <rect x="548" y="408" width="184" height="72" rx="6" fill="#f5f5f5"/>
+        <rect x="548" y="408" width="184" height="72" rx="6" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="1"/>
+        <rect x="556" y="414" width="48" height="12" rx="2" fill="transparent" stroke="#4f5d75" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="580" y="423" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">ОЧЕРЕДЬ</text>
+        <text x="640.0" y="444" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">На подтверждение</text>
+        <text x="640.0" y="458" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">ar_Подтверждение</text>
+        <text x="640.0" y="470" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">пауза после шага</text>
+        <rect x="812" y="264" width="184" height="72" rx="6" fill="#f5f5f5"/>
+        <rect x="812" y="264" width="184" height="72" rx="6" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+        <rect x="820" y="270" width="37" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.30)" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="838" y="279" fill="#7a8399" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">ОТКАЗ</text>
+        <text x="904.0" y="300" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Отказ как ответ</text>
+        <text x="904.0" y="314" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">модель видит причину</text>
+        <line x1="32" y1="548" x2="996" y2="548" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+        <text x="32" y="564" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" letter-spacing="0.18em">ОБОЗНАЧЕНИЯ</text>
+        <rect x="32" y="576" width="14" height="10" rx="2" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <text x="52" y="585" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Шаг цикла</text>
+        <rect x="144" y="576" width="14" height="10" rx="2" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="1"/>
+        <text x="164" y="585" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Очередь и пауза</text>
+        <rect x="292" y="576" width="14" height="10" rx="2" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+        <text x="312" y="585" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Отказ</text>
+        <line x1="376" y1="581" x2="404" y2="581" stroke="#eb6c36" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
+        <text x="412" y="585" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Обычный путь вызова</text>
+        <line x1="548" y1="581" x2="576" y2="581" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <text x="584" y="585" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Переход</text>
+
+      </svg>
+    </div>
+  </div>
+</body>
+</html>
