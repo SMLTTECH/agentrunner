@@ -86,16 +86,21 @@
 		<CommandBar name="КоманднаяПанельПресетов" id="12">
 			<ExtendedTooltip name="КоманднаяПанельПресетовРасширеннаяПодсказка" id="43"/>
 			<ChildItems>
-				<Button name="КнопкаИмпорт" id="13">
+				<Button name="КнопкаСоздатьАгента" id="13">
 					<Type>CommandBarButton</Type>
 					<DefaultButton>true</DefaultButton>
-					<CommandName>Form.Command.ИмпортироватьПресет</CommandName>
-					<ExtendedTooltip name="КнопкаИмпортРасширеннаяПодсказка" id="14"/>
+					<CommandName>Form.Command.СоздатьАгента</CommandName>
+					<ExtendedTooltip name="КнопкаСоздатьАгентаРасширеннаяПодсказка" id="14"/>
 				</Button>
 				<Button name="КнопкаОткрыть" id="15">
 					<Type>CommandBarButton</Type>
 					<CommandName>Form.Command.ОткрытьКарточкуПресета</CommandName>
 					<ExtendedTooltip name="КнопкаОткрытьРасширеннаяПодсказка" id="16"/>
+				</Button>
+				<Button name="КнопкаЗагрузитьИзФайла" id="67">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ЗагрузитьИзФайла</CommandName>
+					<ExtendedTooltip name="КнопкаЗагрузитьИзФайлаРасширеннаяПодсказка" id="68"/>
 				</Button>
 				<Button name="КнопкаОбновить" id="17">
 					<Type>CommandBarButton</Type>
@@ -439,18 +444,18 @@
 		</Attribute>
 	</Attributes>
 	<Commands>
-		<Command name="ИмпортироватьПресет" id="64">
+		<Command name="СоздатьАгента" id="64">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Импортировать</v8:content>
+					<v8:content>Создать агента</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Import</v8:content>
+					<v8:content>Create agent</v8:content>
 				</v8:item>
 			</Title>
-			<Action>ИмпортироватьПресет</Action>
+			<Action>СоздатьАгента</Action>
 		</Command>
 		<Command name="ОткрытьКарточкуПресета" id="65">
 			<Title>
@@ -464,6 +469,19 @@
 				</v8:item>
 			</Title>
 			<Action>ОткрытьКарточкуПресета</Action>
+		</Command>
+		<Command name="ЗагрузитьИзФайла" id="69">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из файла</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Load from file</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗагрузитьИзФайла</Action>
 		</Command>
 		<Command name="ОбновитьСписок" id="66">
 			<Title>

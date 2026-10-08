@@ -3,11 +3,11 @@
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
-			<v8:content>Что увидит LLM</v8:content>
+			<v8:content>Промпт</v8:content>
 		</v8:item>
 		<v8:item>
 			<v8:lang>en</v8:lang>
-			<v8:content>What LLM will see</v8:content>
+			<v8:content>Prompt</v8:content>
 		</v8:item>
 	</Title>
 	<AutoTitle>false</AutoTitle>
@@ -134,7 +134,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Текст prompt</v8:content>
+					<v8:content>Текст промпта</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -153,7 +153,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Системный prompt</v8:content>
+					<v8:content>Системный промпт</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
