@@ -54,7 +54,7 @@
 			<DefaultRoles>
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ar_РольЧитатель</xr:Item>
 			</DefaultRoles>
-			<Vendor>Александр Барабанов</Vendor>
+			<Vendor>Samolet</Vendor>
 			<Version>0.1.0.440</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation>
@@ -67,7 +67,7 @@
 			<Copyright>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Copyright Александр Барабанов</v8:content>
+					<v8:content>Copyright Samolet</v8:content>
 				</v8:item>
 			</Copyright>
 			<VendorInformationAddress>

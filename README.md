@@ -133,9 +133,9 @@
 
 ## Лицензия
 
-**MIT License** — см. [LICENSE](LICENSE) и [NOTICE](NOTICE).
+**GNU General Public License v3.0 (GPLv3)** — см. [LICENSE](LICENSE) и [NOTICE](NOTICE).
 
 Платформа «1С:Предприятие» и БСП принадлежат ООО «1С», в состав дистрибутива
 не входят и требуют отдельной лицензии.
 
-Copyright © 2026 Александр Барабанов
+Copyright © 2026 Samolet
