@@ -132,21 +132,25 @@
 				</CheckBoxField>
 				<InputField name="ar_Версия" id="24">
 					<DataPath>Список.ar_Версия</DataPath>
+					<Visible>false</Visible>
 					<ContextMenu name="ar_ВерсияКонтекстноеМеню" id="25"/>
 					<ExtendedTooltip name="ar_ВерсияРасширеннаяПодсказка" id="26"/>
 				</InputField>
 				<InputField name="ar_ИсточникРасширение" id="27">
 					<DataPath>Список.ar_ИсточникРасширение</DataPath>
+					<Visible>false</Visible>
 					<ContextMenu name="ar_ИсточникРасширениеКонтекстноеМеню" id="28"/>
 					<ExtendedTooltip name="ar_ИсточникРасширениеРасширеннаяПодсказка" id="29"/>
 				</InputField>
 				<InputField name="ar_ИсточникТип" id="49">
 					<DataPath>Список.ar_ИсточникТип</DataPath>
+					<Visible>false</Visible>
 					<ContextMenu name="ar_ИсточникТипКонтекстноеМеню" id="50"/>
 					<ExtendedTooltip name="ar_ИсточникТипРасширеннаяПодсказка" id="51"/>
 				</InputField>
 				<InputField name="ar_ИдентификаторПакета" id="52">
 					<DataPath>Список.ar_ИдентификаторПакета</DataPath>
+					<Visible>false</Visible>
 					<ContextMenu name="ar_ИдентификаторПакетаКонтекстноеМеню" id="53"/>
 					<ExtendedTooltip name="ar_ИдентификаторПакетаРасширеннаяПодсказка" id="54"/>
 				</InputField>
@@ -159,6 +163,7 @@
 				</CheckBoxField>
 				<InputField name="ar_ПоддерживаемыеКонфигурации" id="55">
 					<DataPath>Список.ar_ПоддерживаемыеКонфигурации</DataPath>
+					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -174,6 +179,7 @@
 				</InputField>
 				<InputField name="ar_МинВерсияКонфигурации" id="58">
 					<DataPath>Список.ar_МинВерсияКонфигурации</DataPath>
+					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -189,6 +195,7 @@
 				</InputField>
 				<InputField name="ar_МаксВерсияКонфигурации" id="61">
 					<DataPath>Список.ar_МаксВерсияКонфигурации</DataPath>
+					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>

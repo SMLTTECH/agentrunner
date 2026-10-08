@@ -24,6 +24,22 @@
 				<CommandName>Form.Command.ar_УстановитьПакет</CommandName>
 				<ExtendedTooltip name="КнопкаУстановитьПакетРасширеннаяПодсказка" id="4"/>
 			</Button>
+			<Button name="КнопкаОбновитьИзФайла" id="59">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ar_ОбновитьИзФайла</CommandName>
+				<ExtendedTooltip name="КнопкаОбновитьИзФайлаРасширеннаяПодсказка" id="60">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Открыть карточку обработки пакета и после закрытия переподтвердить его</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Open the package processor card and reconfirm the package after it is closed</v8:content>
+						</v8:item>
+					</Title>
+				</ExtendedTooltip>
+			</Button>
 			<Button name="КнопкаОтключитьПакет" id="5">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.ar_ОтключитьПакет</CommandName>
@@ -104,6 +120,16 @@
 			<ChildItems>
 				<InputField name="ar_Пространство" id="22">
 					<DataPath>Список.ar_Namespace</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код пакета</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Package code</v8:content>
+						</v8:item>
+					</Title>
 					<ContextMenu name="ar_ПространствоКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="ar_ПространствоРасширеннаяПодсказка" id="24"/>
 				</InputField>
@@ -223,6 +249,19 @@
 				</v8:item>
 			</Title>
 			<Action>ar_УстановитьПакет</Action>
+		</Command>
+		<Command name="ar_ОбновитьИзФайла" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить из файла</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update from file</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ar_ОбновитьИзФайла</Action>
 		</Command>
 		<Command name="ar_ОтключитьПакет" id="54">
 			<Title>
