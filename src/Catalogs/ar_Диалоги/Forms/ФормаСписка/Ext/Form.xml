@@ -15,6 +15,32 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
+		<LabelDecoration name="НадписьОтбораПоПредмету" id="54">
+			<Visible>false</Visible>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Диалоги по объекту</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Dialogs on the object</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="НадписьОтбораПоПредметуКонтекстноеМеню" id="55"/>
+			<ExtendedTooltip name="НадписьОтбораПоПредметуРасширеннаяПодсказка" id="56"/>
+		</LabelDecoration>
+		<CommandBar name="КоманднаяПанельДиалогов" id="57">
+			<ExtendedTooltip name="КоманднаяПанельДиалоговРасширеннаяПодсказка" id="58"/>
+			<ChildItems>
+				<Button name="КнопкаНачатьДиалог" id="59">
+					<Type>CommandBarButton</Type>
+					<Visible>false</Visible>
+					<CommandName>Form.Command.НачатьДиалог</CommandName>
+					<ExtendedTooltip name="КнопкаНачатьДиалогРасширеннаяПодсказка" id="60"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
 		<Table name="Список" id="1">
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
@@ -74,6 +100,7 @@
 				<InputField name="Диалог" id="14">
 					<DataPath>Список.Description</DataPath>
 					<ReadOnly>true</ReadOnly>
+					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -226,10 +253,19 @@
 				<QueryText>ВЫБРАТЬ
 	Диалоги.Ссылка КАК Ссылка,
 	Диалоги.Наименование КАК Description,
-	Диалоги.ar_ПредставлениеПредмета КАК ar_ПредставлениеПредмета,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(Диалоги.ar_ПредставлениеПредмета, "") = ""
+				И НЕ Диалоги.ar_Предмет ЕСТЬ NULL
+			ТОГДА &amp;ТекстУдаленногоПредмета
+		ИНАЧЕ Диалоги.ar_ПредставлениеПредмета
+	КОНЕЦ КАК ar_ПредставлениеПредмета,
 	Диалоги.ar_Агент КАК ar_Агент,
 	Диалоги.ar_Состояние КАК ar_Состояние,
-	Диалоги.ar_ОтветитьДо КАК ar_ОтветитьДо,
+	ВЫБОР
+		КОГДА Диалоги.ar_Состояние = ЗНАЧЕНИЕ(Перечисление.ar_СостоянияДиалогов.ОжидаетОтвета)
+			ТОГДА Диалоги.ar_ОтветитьДо
+		ИНАЧЕ NULL
+	КОНЕЦ КАК ar_ОтветитьДо,
 	Диалоги.ar_Обновлён КАК ar_Обновлён,
 	ВЫБОР
 		КОГДА Диалоги.ar_Состояние = ЗНАЧЕНИЕ(Перечисление.ar_СостоянияДиалогов.ОжидаетОтвета)
@@ -322,8 +358,38 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+	<Attribute name="ПредметОтбора" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предмет отбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ar_ПрикладнойОбъект</v8:TypeSet>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
+		<Command name="НачатьДиалог" id="61">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начать диалог</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Start dialog</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начать диалог с агентом по объекту</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НачатьДиалог</Action>
+		</Command>
 		<Command name="ОтправитьСообщение" id="44">
 			<Title>
 				<v8:item>
