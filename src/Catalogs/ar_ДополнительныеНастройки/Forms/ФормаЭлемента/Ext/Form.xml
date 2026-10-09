@@ -42,31 +42,6 @@
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="7"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="8"/>
 				</InputField>
-				<InputField name="ar_Описание" id="9">
-					<DataPath>Объект.ar_Описание</DataPath>
-					<AutoMaxWidth>false</AutoMaxWidth>
-					<Height>3</Height>
-					<MultiLine>true</MultiLine>
-					<ContextMenu name="ar_ОписаниеКонтекстноеМеню" id="10"/>
-					<ExtendedTooltip name="ar_ОписаниеРасширеннаяПодсказка" id="11"/>
-				</InputField>
-				<CheckBoxField name="ar_Включено" id="12">
-					<DataPath>Объект.ar_Включено</DataPath>
-					<TitleLocation>Right</TitleLocation>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ar_ВключеноКонтекстноеМеню" id="13"/>
-					<ExtendedTooltip name="ar_ВключеноРасширеннаяПодсказка" id="14"/>
-				</CheckBoxField>
-				<InputField name="ar_Ответственный" id="45">
-					<DataPath>Объект.ar_Ответственный</DataPath>
-					<ContextMenu name="ar_ОтветственныйКонтекстноеМеню" id="46"/>
-					<ExtendedTooltip name="ar_ОтветственныйРасширеннаяПодсказка" id="47"/>
-				</InputField>
-				<InputField name="ar_ДатаИзменения" id="48">
-					<DataPath>Объект.ar_ДатаИзменения</DataPath>
-					<ContextMenu name="ar_ДатаИзмененияКонтекстноеМеню" id="49"/>
-					<ExtendedTooltip name="ar_ДатаИзмененияРасширеннаяПодсказка" id="50"/>
-				</InputField>
 				<RadioButtonField name="ВидНастройки" id="15">
 					<DataPath>ВидНастройки</DataPath>
 					<Title>
@@ -159,39 +134,57 @@
 						<Event name="OnChange">ТипЗначенияПриИзменении</Event>
 					</Events>
 				</InputField>
-			</ChildItems>
-		</UsualGroup>
-		<UsualGroup name="ГруппаСкаляр" id="21">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Значение</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Value</v8:content>
-				</v8:item>
-			</Title>
-			<Group>Vertical</Group>
-			<ExtendedTooltip name="ГруппаСкалярРасширеннаяПодсказка" id="22"/>
-			<ChildItems>
-				<InputField name="ЗначениеОтображение" id="23">
-					<DataPath>ЗначениеОтображение</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Значение</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Value</v8:content>
-						</v8:item>
-					</Title>
-					<ContextMenu name="ЗначениеОтображениеКонтекстноеМеню" id="24"/>
-					<ExtendedTooltip name="ЗначениеОтображениеРасширеннаяПодсказка" id="25"/>
-					<Events>
-						<Event name="OnChange">ЗначениеОтображениеПриИзменении</Event>
-					</Events>
+				<UsualGroup name="ГруппаСкаляр" id="21">
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСкалярРасширеннаяПодсказка" id="22"/>
+					<ChildItems>
+						<InputField name="ЗначениеОтображение" id="23">
+							<DataPath>ЗначениеОтображение</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Значение</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Value</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ЗначениеОтображениеКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="ЗначениеОтображениеРасширеннаяПодсказка" id="25"/>
+							<Events>
+								<Event name="OnChange">ЗначениеОтображениеПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<CheckBoxField name="ar_Включено" id="12">
+					<DataPath>Объект.ar_Включено</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ar_ВключеноКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ar_ВключеноРасширеннаяПодсказка" id="14"/>
+				</CheckBoxField>
+				<InputField name="ar_Ответственный" id="45">
+					<DataPath>Объект.ar_Ответственный</DataPath>
+					<ContextMenu name="ar_ОтветственныйКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ar_ОтветственныйРасширеннаяПодсказка" id="47"/>
+				</InputField>
+				<InputField name="ar_ДатаИзменения" id="48">
+					<DataPath>Объект.ar_ДатаИзменения</DataPath>
+					<ContextMenu name="ar_ДатаИзмененияКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ar_ДатаИзмененияРасширеннаяПодсказка" id="50"/>
+				</InputField>
+				<InputField name="ar_Описание" id="9">
+					<DataPath>Объект.ar_Описание</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<Height>3</Height>
+					<VerticalStretch>false</VerticalStretch>
+					<MultiLine>true</MultiLine>
+					<ContextMenu name="ar_ОписаниеКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ar_ОписаниеРасширеннаяПодсказка" id="11"/>
 				</InputField>
 			</ChildItems>
 		</UsualGroup>

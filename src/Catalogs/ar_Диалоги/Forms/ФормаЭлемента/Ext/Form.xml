@@ -10,6 +10,7 @@
 			<v8:content>Dialog</v8:content>
 		</v8:item>
 	</Title>
+	<AutoTitle>false</AutoTitle>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>true</Autofill>
 	</AutoCommandBar>
@@ -26,6 +27,7 @@
 			</Title>
 			<ToolTip/>
 			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
 			<Behavior>Usual</Behavior>
 			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="2"/>
 			<ChildItems>
@@ -38,6 +40,7 @@
 					</Title>
 					<ToolTip/>
 					<Group>Horizontal</Group>
+					<ShowTitle>false</ShowTitle>
 					<Behavior>Usual</Behavior>
 					<ExtendedTooltip name="ГруппаПредметРасширеннаяПодсказка" id="4"/>
 					<ChildItems>
@@ -115,6 +118,7 @@
 				<InputField name="Агент" id="13">
 					<DataPath>Объект.ar_Агент</DataPath>
 					<ReadOnly>true</ReadOnly>
+					<HorizontalStretch>true</HorizontalStretch>
 					<ExtendedTooltip name="АгентРасширеннаяПодсказка" id="14"/>
 								<ContextMenu name="АгентКонтекстноеМеню" id="31"/>
 				</InputField>
