@@ -157,6 +157,7 @@
 			<CommonModule>ar_LLMAgentRunnerCloud</CommonModule>
 			<CommonModule>ar_ТестыLLMAgentRunnerCloud</CommonModule>
 			<CommonModule>ar_ДиагностикаОчистка</CommonModule>
+			<CommonModule>ar_ЛогЗапуска</CommonModule>
 			<CommonModule>ar_СлужебныйЛог</CommonModule>
 			<CommonModule>ar_ОбновлениеРасширения</CommonModule>
 			<CommonModule>ar_ЗапускПриложенияКлиент</CommonModule>
