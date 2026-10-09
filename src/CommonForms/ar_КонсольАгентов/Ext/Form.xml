@@ -472,6 +472,14 @@
 									<CommandName>Form.Command.ПоказатьСозданныеОбъекты</CommandName>
 									<ExtendedTooltip name="КнопкаПоказатьСозданныеОбъектыРасширеннаяПодсказка" id="115"/>
 								</Button>
+								<Button name="КнопкаПоказатьЛогЗапуска" id="432">
+									<CommandName>Form.Command.ПоказатьЛогЗапуска</CommandName>
+									<ExtendedTooltip name="КнопкаПоказатьЛогЗапускаРасширеннаяПодсказка" id="433"/>
+								</Button>
+								<Button name="КнопкаВыгрузитьЛогЗапуска" id="434">
+									<CommandName>Form.Command.ВыгрузитьЛогЗапуска</CommandName>
+									<ExtendedTooltip name="КнопкаВыгрузитьЛогЗапускаРасширеннаяПодсказка" id="435"/>
+								</Button>
 								<Popup name="ГруппаДополнительно" id="292">
 									<Title>
 										<v8:item>
@@ -2511,6 +2519,44 @@
 				</v8:item>
 			</Title>
 			<Action>СнятьОтложениеВыполнить</Action>
+		</Command>
+		<Command name="ПоказатьЛогЗапуска" id="436">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать лог</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show log</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Полный лог выбранного запуска: события, диалог, инструменты, ошибки журнала регистрации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьЛогЗапускаВыполнить</Action>
+		</Command>
+		<Command name="ВыгрузитьЛогЗапуска" id="437">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить лог</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Export log</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить полный лог выбранного запуска в JSON-файл для разбора в другой базе</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьЛогЗапускаВыполнить</Action>
 		</Command>
 	</Commands>
 </Form>

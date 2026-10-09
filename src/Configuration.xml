@@ -55,7 +55,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ar_РольЧитатель</xr:Item>
 			</DefaultRoles>
 			<Vendor>Samolet</Vendor>
-			<Version>0.1.0.448</Version>
+			<Version>0.1.0.450</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation>
 				<v8:item>
@@ -157,6 +157,7 @@
 			<CommonModule>ar_LLMAgentRunnerCloud</CommonModule>
 			<CommonModule>ar_ТестыLLMAgentRunnerCloud</CommonModule>
 			<CommonModule>ar_ДиагностикаОчистка</CommonModule>
+			<CommonModule>ar_ЛогЗапуска</CommonModule>
 			<CommonModule>ar_СлужебныйЛог</CommonModule>
 			<CommonModule>ar_ОбновлениеРасширения</CommonModule>
 			<CommonModule>ar_ЗапускПриложенияКлиент</CommonModule>
