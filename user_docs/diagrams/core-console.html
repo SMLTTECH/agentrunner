@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Как консоль показывает запуски и останавливает их</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper: #f5f5f5; --color-ink: #2d3142; --color-muted: #4f5d75; --color-accent: #eb6c36;
+      --font-sans: 'Geist', system-ui, sans-serif;
+      --font-serif: 'Instrument Serif', 'Noto Serif', serif;
+      --font-mono: 'Geist Mono', ui-monospace, monospace;
+    }
+    body { font-family: var(--font-sans); background: var(--color-paper); color: var(--color-ink);
+      min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 1200px; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-family: var(--font-mono); font-size: 0.66rem; font-weight: 500; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.5rem; }
+    h1 { font-family: var(--font-serif); font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem); font-weight: 400;
+      letter-spacing: -0.02em; line-height: 1.15; color: var(--color-ink); margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 1056px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Последовательность · Консоль агентов</p>
+    <h1>Как консоль показывает запуски и останавливает их</h1>
+    <div class="diagram-container">
+      <svg viewBox="0 0 1056 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="core-console-title core-console-desc">
+        <title id="core-console-title">Как консоль показывает запуски и останавливает их</title>
+        <desc id="core-console-desc">Диаграмма последовательности: консоль периодически получает список запусков, сводку и состояние планировщика через модуль данных с проверкой прав, а остановка запуска идёт через модуль запуска.</desc>
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+          <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#eb6c36"/></marker>
+          <marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2e5aa8"/></marker>
+        </defs>
+        <rect width="100%" height="100%" fill="#f5f5f5"/>
+        <line x1="112" y1="128" x2="112" y2="640" stroke="rgba(45,49,66,0.22)" stroke-width="1" stroke-dasharray="3,3"/>
+        <line x1="320" y1="128" x2="320" y2="640" stroke="rgba(45,49,66,0.22)" stroke-width="1" stroke-dasharray="3,3"/>
+        <line x1="528" y1="128" x2="528" y2="640" stroke="rgba(45,49,66,0.22)" stroke-width="1" stroke-dasharray="3,3"/>
+        <line x1="736" y1="128" x2="736" y2="640" stroke="rgba(45,49,66,0.22)" stroke-width="1" stroke-dasharray="3,3"/>
+        <line x1="944" y1="128" x2="944" y2="640" stroke="rgba(45,49,66,0.22)" stroke-width="1" stroke-dasharray="3,3"/>
+        <rect x="316" y="172" width="8" height="444" fill="rgba(45,49,66,0.06)" stroke="#4f5d75" stroke-width="0.8"/>
+        <rect x="524" y="248" width="8" height="128" fill="rgba(45,49,66,0.06)" stroke="#4f5d75" stroke-width="0.8"/>
+        <rect x="732" y="288" width="8" height="48" fill="rgba(45,49,66,0.06)" stroke="#4f5d75" stroke-width="0.8"/>
+        <rect x="940" y="524" width="8" height="88" fill="rgba(45,49,66,0.06)" stroke="#4f5d75" stroke-width="0.8"/>
+        <rect x="268" y="204" width="524" height="196" rx="4" fill="rgba(45,49,66,0.02)" stroke="rgba(45,49,66,0.22)" stroke-width="1"/>
+        <rect x="268" y="204" width="40" height="16" rx="2" fill="#f5f5f5" stroke="rgba(45,49,66,0.22)" stroke-width="1"/>
+        <text x="288" y="216" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.12em">LOOP</text>
+        <text x="320" y="218" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" letter-spacing="0.04em">[автообновление, каждые 60 с]</text>
+        <line x1="116" y1="176" x2="316" y2="176" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <line x1="324" y1="252" x2="524" y2="252" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <line x1="532" y1="292" x2="732" y2="292" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <line x1="732" y1="332" x2="532" y2="332" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+        <line x1="524" y1="372" x2="324" y2="372" stroke="#eb6c36" stroke-width="1.4" marker-end="url(#arrow-accent)"/>
+        <path d="M324,420 H360 V448 H324" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <line x1="116" y1="488" x2="316" y2="488" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <line x1="324" y1="528" x2="940" y2="528" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <line x1="940" y1="568" x2="740" y2="568" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <line x1="940" y1="608" x2="324" y2="608" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+        <rect x="173" y="157" width="86" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="216" y="166" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">открыть консоль</text>
+        <rect x="349" y="233" width="151" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="424" y="242" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">отбор: период, агент, статус</text>
+        <rect x="569" y="273" width="126" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="632" y="282" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">запрос с проверкой прав</text>
+        <rect x="589" y="313" width="86" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="632" y="322" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">строки запусков</text>
+        <rect x="354" y="353" width="141" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="424" y="362" fill="#eb6c36" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">список · сводка · здоровье</text>
+        <rect x="364" y="429" width="106" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="370" y="438" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="start">живость без сервера</text>
+        <rect x="168" y="469" width="96" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="216" y="478" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">остановить запуск</text>
+        <rect x="589" y="509" width="86" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="632" y="518" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">Отменить(RunId)</text>
+        <rect x="794" y="549" width="91" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="840" y="558" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">статус «Прерван»</text>
+        <rect x="579" y="589" width="106" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="632" y="598" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">остановка запрошена</text>
+        <rect x="24" y="72" width="176" height="56" rx="6" fill="#f5f5f5"/>
+        <rect x="24" y="72" width="176" height="56" rx="6" fill="rgba(79,93,117,0.10)" stroke="#7a8399" stroke-width="1"/>
+        <rect x="32" y="78" width="28" height="12" rx="2" fill="transparent" stroke="#7a8399" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="46" y="87" fill="#7a8399" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">ЧЕЛ</text>
+        <text x="112" y="106" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Оператор</text>
+        <text x="112" y="120" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">администратор · ответственный</text>
+        <rect x="232" y="72" width="176" height="56" rx="6" fill="#f5f5f5"/>
+        <rect x="232" y="72" width="176" height="56" rx="6" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1"/>
+        <rect x="240" y="78" width="28" height="12" rx="2" fill="transparent" stroke="#eb6c36" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="254" y="87" fill="#eb6c36" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">UI</text>
+        <text x="320" y="106" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Консоль агентов</text>
+        <text x="320" y="120" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">ar_КонсольАгентов</text>
+        <rect x="440" y="72" width="176" height="56" rx="6" fill="#f5f5f5"/>
+        <rect x="440" y="72" width="176" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="448" y="78" width="32" height="12" rx="2" fill="transparent" stroke="#2d3142" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="464" y="87" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">ЯДРО</text>
+        <text x="528" y="106" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Данные консоли</text>
+        <text x="528" y="120" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">ar_КонсольДанные</text>
+        <rect x="648" y="72" width="176" height="56" rx="6" fill="#f5f5f5"/>
+        <rect x="648" y="72" width="176" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="656" y="78" width="48" height="12" rx="2" fill="transparent" stroke="#2d3142" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="680" y="87" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">РЕГИСТР</text>
+        <text x="736" y="106" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Журнал запусков</text>
+        <text x="736" y="120" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">ar_Запуски</text>
+        <rect x="856" y="72" width="176" height="56" rx="6" fill="#f5f5f5"/>
+        <rect x="856" y="72" width="176" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="864" y="78" width="32" height="12" rx="2" fill="transparent" stroke="#2d3142" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="880" y="87" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">ЯДРО</text>
+        <text x="944" y="106" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Запуск агента</text>
+        <text x="944" y="120" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">ar_RuntimeЗапуск</text>
+        <line x1="32" y1="652" x2="1024" y2="652" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+        <text x="32" y="668" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" letter-spacing="0.18em">ОБОЗНАЧЕНИЯ</text>
+        <rect x="32" y="680" width="14" height="10" rx="2" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1"/>
+        <text x="52" y="689" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Консоль агентов</text>
+        <rect x="180" y="680" width="14" height="10" rx="2" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <text x="200" y="689" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Модуль ядра</text>
+        <rect x="308" y="680" width="14" height="10" rx="2" fill="rgba(79,93,117,0.10)" stroke="#7a8399" stroke-width="1"/>
+        <text x="328" y="689" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Человек</text>
+        <line x1="408" y1="685" x2="436" y2="685" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <text x="444" y="689" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Вызов</text>
+        <line x1="496" y1="685" x2="524" y2="685" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+        <text x="532" y="689" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Возврат</text>
+        <line x1="592" y1="685" x2="620" y2="685" stroke="#eb6c36" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
+        <text x="628" y="689" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Данные на экран</text>
+
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

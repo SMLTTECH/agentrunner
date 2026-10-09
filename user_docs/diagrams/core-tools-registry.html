@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Как инструмент попадает к модели</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper: #f5f5f5; --color-ink: #2d3142; --color-muted: #4f5d75; --color-accent: #eb6c36;
+      --font-sans: 'Geist', system-ui, sans-serif;
+      --font-serif: 'Instrument Serif', 'Noto Serif', serif;
+      --font-mono: 'Geist Mono', ui-monospace, monospace;
+    }
+    body { font-family: var(--font-sans); background: var(--color-paper); color: var(--color-ink);
+      min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 1200px; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-family: var(--font-mono); font-size: 0.66rem; font-weight: 500; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.5rem; }
+    h1 { font-family: var(--font-serif); font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem); font-weight: 400;
+      letter-spacing: -0.02em; line-height: 1.15; color: var(--color-ink); margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 1064px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Архитектура · Реестр инструментов</p>
+    <h1>Как инструмент попадает к модели</h1>
+    <div class="diagram-container">
+      <svg viewBox="0 0 1064 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="core-tools-registry-title core-tools-registry-desc">
+        <title id="core-tools-registry-title">Как инструмент попадает к модели</title>
+        <desc id="core-tools-registry-desc">Схема: модули ядра и пакеты регистрируют инструменты в реестре, правила доступа выбирают набор агента, описания уходят модели, а поиск по реестру дозагружает недостающие.</desc>
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+          <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#eb6c36"/></marker>
+          <marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2e5aa8"/></marker>
+        </defs>
+        <rect width="100%" height="100%" fill="#f5f5f5"/>
+        <path d="M216,132 H304" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M488,132 H576" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M760,132 H848" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M216,276 H388 Q396,276 396,268 V168" fill="none" stroke="#eb6c36" stroke-width="1.4" marker-end="url(#arrow-accent)"/>
+        <path d="M940,168 V256" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M848,292 H760" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <path d="M576,308 H428 Q420,308 420,300 V168" fill="none" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+        <rect x="227" y="111" width="67" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="260" y="120" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">регистрация</text>
+        <rect x="504" y="111" width="57" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="532" y="120" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">доступные</text>
+        <rect x="768" y="111" width="72" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="804" y="120" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">набор агента</text>
+        <rect x="244" y="255" width="116" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="302" y="264" fill="#eb6c36" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">ЗарегистрироватьПакет</text>
+        <rect x="942" y="207" width="76" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="948" y="216" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="start">tools запроса</text>
+        <rect x="766" y="271" width="76" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="804" y="280" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">ищет · просит</text>
+        <rect x="467" y="287" width="62" height="12" rx="2" fill="#f5f5f5"/>
+        <text x="498" y="296" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle">из реестра</text>
+        <rect x="32" y="96" width="184" height="72" rx="6" fill="#f5f5f5"/>
+        <rect x="32" y="96" width="184" height="72" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="40" y="102" width="32" height="12" rx="2" fill="transparent" stroke="#2d3142" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="56" y="111" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">ЯДРО</text>
+        <text x="124.0" y="132" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Модули инструментов</text>
+        <text x="124.0" y="146" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">ar_Инструменты*</text>
+        <text x="124.0" y="158" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">ядро регистрирует сам</text>
+        <rect x="304" y="96" width="184" height="72" rx="6" fill="#f5f5f5"/>
+        <rect x="304" y="96" width="184" height="72" rx="6" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="1"/>
+        <rect x="312" y="102" width="64" height="12" rx="2" fill="transparent" stroke="#4f5d75" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="344" y="111" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">СПРАВОЧНИК</text>
+        <text x="396.0" y="132" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Реестр инструментов</text>
+        <text x="396.0" y="146" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">ar_Инструменты</text>
+        <text x="396.0" y="158" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">риск · подтверждение</text>
+        <rect x="576" y="96" width="184" height="72" rx="6" fill="#f5f5f5"/>
+        <rect x="576" y="96" width="184" height="72" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="584" y="102" width="32" height="12" rx="2" fill="transparent" stroke="#2d3142" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="600" y="111" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">ЯДРО</text>
+        <text x="668.0" y="132" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Правила доступа агента</text>
+        <text x="668.0" y="146" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">ar_ИнструментыПравилаДоступа</text>
+        <text x="668.0" y="158" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">список + правила</text>
+        <rect x="848" y="96" width="184" height="72" rx="6" fill="#f5f5f5"/>
+        <rect x="848" y="96" width="184" height="72" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="856" y="102" width="32" height="12" rx="2" fill="transparent" stroke="#2d3142" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="872" y="111" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">ЯДРО</text>
+        <text x="940.0" y="132" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Описания для модели</text>
+        <text x="940.0" y="146" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">ar_RuntimeКонтекст</text>
+        <text x="940.0" y="158" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">tool_definitions</text>
+        <rect x="32" y="256" width="184" height="72" rx="6" fill="#f5f5f5"/>
+        <rect x="32" y="256" width="184" height="72" rx="6" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1"/>
+        <rect x="40" y="262" width="32" height="12" rx="2" fill="transparent" stroke="#eb6c36" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="56" y="271" fill="#eb6c36" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">.EPF</text>
+        <text x="124.0" y="292" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Пакет инструментов</text>
+        <text x="124.0" y="306" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">доп. обработка БСП</text>
+        <text x="124.0" y="318" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">см. тему 1</text>
+        <rect x="576" y="256" width="184" height="72" rx="6" fill="#f5f5f5"/>
+        <rect x="576" y="256" width="184" height="72" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="584" y="262" width="37" height="12" rx="2" fill="transparent" stroke="#2d3142" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="602" y="271" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">ИНСТР</text>
+        <text x="668.0" y="292" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Поиск инструментов</text>
+        <text x="668.0" y="306" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">find_tools · describe_tool</text>
+        <text x="668.0" y="318" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">подгрузка описаний</text>
+        <rect x="848" y="256" width="184" height="72" rx="6" fill="#f5f5f5"/>
+        <rect x="848" y="256" width="184" height="72" rx="6" fill="rgba(79,93,117,0.10)" stroke="#7a8399" stroke-width="1"/>
+        <rect x="856" y="262" width="28" height="12" rx="2" fill="transparent" stroke="#7a8399" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="870" y="271" fill="#7a8399" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">LLM</text>
+        <text x="940.0" y="292" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Модель</text>
+        <text x="940.0" y="306" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">выбирает инструмент</text>
+        <line x1="32" y1="364" x2="1032" y2="364" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+        <text x="32" y="380" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" letter-spacing="0.18em">ОБОЗНАЧЕНИЯ</text>
+        <rect x="32" y="392" width="14" height="10" rx="2" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1"/>
+        <text x="52" y="401" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Подключаемый пакет</text>
+        <rect x="200" y="392" width="14" height="10" rx="2" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <text x="220" y="401" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Модуль ядра</text>
+        <rect x="328" y="392" width="14" height="10" rx="2" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="1"/>
+        <text x="348" y="401" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Хранилище</text>
+        <rect x="440" y="392" width="14" height="10" rx="2" fill="rgba(79,93,117,0.10)" stroke="#7a8399" stroke-width="1"/>
+        <text x="460" y="401" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Модель</text>
+        <line x1="536" y1="397" x2="564" y2="397" stroke="#eb6c36" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
+        <text x="572" y="401" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Явная регистрация</text>
+        <line x1="692" y1="397" x2="720" y2="397" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+        <text x="728" y="401" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">По запросу модели</text>
+
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

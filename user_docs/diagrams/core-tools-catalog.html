@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Встроенные инструменты ядра по категориям</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper: #f5f5f5; --color-ink: #2d3142; --color-muted: #4f5d75; --color-accent: #eb6c36;
+      --font-sans: 'Geist', system-ui, sans-serif;
+      --font-serif: 'Instrument Serif', 'Noto Serif', serif;
+      --font-mono: 'Geist Mono', ui-monospace, monospace;
+    }
+    body { font-family: var(--font-sans); background: var(--color-paper); color: var(--color-ink);
+      min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; }
+    .frame { max-width: 1200px; width: 100%; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    .eyebrow { font-family: var(--font-mono); font-size: 0.66rem; font-weight: 500; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.5rem; }
+    h1 { font-family: var(--font-serif); font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem); font-weight: 400;
+      letter-spacing: -0.02em; line-height: 1.15; color: var(--color-ink); margin-bottom: 1.5rem; }
+    svg { width: 100%; min-width: 1032px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Каталог · Встроенные инструменты</p>
+    <h1>Встроенные инструменты ядра по категориям</h1>
+    <div class="diagram-container">
+      <svg viewBox="0 0 1032 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="core-tools-catalog-title core-tools-catalog-desc">
+        <title id="core-tools-catalog-title">Встроенные инструменты ядра по категориям</title>
+        <desc id="core-tools-catalog-desc">Каталог встроенных инструментов ядра: данные и платформа, отчёты, память и настройки, письма, взаимодействие и планирование, поиск по реестру и аварийная запись, с уровнем риска каждого.</desc>
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+          <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#eb6c36"/></marker>
+          <marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2e5aa8"/></marker>
+        </defs>
+        <rect width="100%" height="100%" fill="#f5f5f5"/>
+        <rect x="32" y="96" width="312" height="156" rx="6" fill="#f5f5f5"/>
+        <rect x="32" y="96" width="312" height="156" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="42" y="104" width="42" height="12" rx="2" fill="transparent" stroke="#2d3142" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="63" y="113" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">ЧТЕНИЕ</text>
+        <text x="42" y="136" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif">Данные и платформа</text>
+        <line x1="42" y1="146" x2="334" y2="146" stroke="rgba(45,49,66,0.12)" stroke-width="0.8"/>
+        <text x="42" y="164" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">search_metadata · list_catalogs · list_documents</text>
+        <text x="42" y="179" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">read_object · read_document · query</text>
+        <text x="42" y="194" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">search_text · find_references · aggregate</text>
+        <text x="42" y="209" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">get_object_structure · get_object_history</text>
+        <text x="42" y="224" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">get_recent_changes · get_functional_options</text>
+        <text x="42" y="239" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">get_constants · get_current_context</text>
+        <rect x="360" y="96" width="312" height="156" rx="6" fill="#f5f5f5"/>
+        <rect x="360" y="96" width="312" height="156" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="370" y="104" width="42" height="12" rx="2" fill="transparent" stroke="#2d3142" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="391" y="113" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">ЧТЕНИЕ</text>
+        <text x="370" y="136" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif">Отчёты</text>
+        <line x1="370" y1="146" x2="662" y2="146" stroke="rgba(45,49,66,0.12)" stroke-width="0.8"/>
+        <text x="370" y="164" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">run_report</text>
+        <text x="662" y="164" fill="#7a8399" font-size="9" font-family="'Geist Mono', monospace" text-anchor="end">Чтение</text>
+        <text x="370" y="179" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">get_print_form</text>
+        <text x="662" y="179" fill="#7a8399" font-size="9" font-family="'Geist Mono', monospace" text-anchor="end">Чтение</text>
+        <text x="370" y="194" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace"></text>
+        <text x="370" y="209" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">Прогон варианта отчёта (СКД) и</text>
+        <text x="370" y="224" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">печатная форма документа.</text>
+        <rect x="688" y="96" width="312" height="156" rx="6" fill="#f5f5f5"/>
+        <rect x="688" y="96" width="312" height="156" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="698" y="104" width="42" height="12" rx="2" fill="transparent" stroke="#2d3142" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="719" y="113" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">ПАМЯТЬ</text>
+        <text x="698" y="136" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif">Память и настройки</text>
+        <line x1="698" y1="146" x2="990" y2="146" stroke="rgba(45,49,66,0.12)" stroke-width="0.8"/>
+        <text x="698" y="164" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">remember</text>
+        <text x="990" y="164" fill="#7a8399" font-size="9" font-family="'Geist Mono', monospace" text-anchor="end">Запись</text>
+        <text x="698" y="179" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">recall_memory</text>
+        <text x="990" y="179" fill="#7a8399" font-size="9" font-family="'Geist Mono', monospace" text-anchor="end">Чтение</text>
+        <text x="698" y="194" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">get_settings</text>
+        <text x="990" y="194" fill="#7a8399" font-size="9" font-family="'Geist Mono', monospace" text-anchor="end">Чтение</text>
+        <text x="698" y="209" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">set_setting</text>
+        <text x="990" y="209" fill="#7a8399" font-size="9" font-family="'Geist Mono', monospace" text-anchor="end">Запись · подтверждение</text>
+        <rect x="32" y="276" width="312" height="132" rx="6" fill="#f5f5f5"/>
+        <rect x="32" y="276" width="312" height="132" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="42" y="284" width="42" height="12" rx="2" fill="transparent" stroke="#2d3142" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="63" y="293" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">ПИСЬМА</text>
+        <text x="42" y="316" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif">Коммуникации</text>
+        <line x1="42" y1="326" x2="334" y2="326" stroke="rgba(45,49,66,0.12)" stroke-width="0.8"/>
+        <text x="42" y="344" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">prepare_reconciliation_email</text>
+        <text x="334" y="344" fill="#7a8399" font-size="9" font-family="'Geist Mono', monospace" text-anchor="end">Черновик</text>
+        <text x="42" y="359" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">prepare_payment_reminder_email</text>
+        <text x="334" y="359" fill="#7a8399" font-size="9" font-family="'Geist Mono', monospace" text-anchor="end">Черновик</text>
+        <text x="42" y="374" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">get_invoice_reminder_history</text>
+        <text x="334" y="374" fill="#7a8399" font-size="9" font-family="'Geist Mono', monospace" text-anchor="end">Чтение</text>
+        <rect x="360" y="276" width="312" height="132" rx="6" fill="#f5f5f5"/>
+        <rect x="360" y="276" width="312" height="132" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="370" y="284" width="42" height="12" rx="2" fill="transparent" stroke="#2d3142" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="391" y="293" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">ЗАПУСК</text>
+        <text x="370" y="316" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif">Взаимодействие и план</text>
+        <line x1="370" y1="326" x2="662" y2="326" stroke="rgba(45,49,66,0.12)" stroke-width="0.8"/>
+        <text x="370" y="344" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">ask_user</text>
+        <text x="662" y="344" fill="#7a8399" font-size="9" font-family="'Geist Mono', monospace" text-anchor="end">вопрос · пауза</text>
+        <text x="370" y="359" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">update_plan</text>
+        <text x="662" y="359" fill="#7a8399" font-size="9" font-family="'Geist Mono', monospace" text-anchor="end">план работы</text>
+        <text x="370" y="374" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">wait_for_event</text>
+        <text x="662" y="374" fill="#7a8399" font-size="9" font-family="'Geist Mono', monospace" text-anchor="end">событие · срок</text>
+        <rect x="688" y="276" width="312" height="132" rx="6" fill="#f5f5f5"/>
+        <rect x="688" y="276" width="312" height="132" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <rect x="698" y="284" width="42" height="12" rx="2" fill="transparent" stroke="#2d3142" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="719" y="293" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">РЕЕСТР</text>
+        <text x="698" y="316" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif">Поиск и аварийная запись</text>
+        <line x1="698" y1="326" x2="990" y2="326" stroke="rgba(45,49,66,0.12)" stroke-width="0.8"/>
+        <text x="698" y="344" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">find_tools</text>
+        <text x="990" y="344" fill="#7a8399" font-size="9" font-family="'Geist Mono', monospace" text-anchor="end">Чтение</text>
+        <text x="698" y="359" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">describe_tool</text>
+        <text x="990" y="359" fill="#7a8399" font-size="9" font-family="'Geist Mono', monospace" text-anchor="end">Чтение</text>
+        <text x="698" y="374" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">save_object</text>
+        <text x="990" y="374" fill="#7a8399" font-size="9" font-family="'Geist Mono', monospace" text-anchor="end">Фиксация · подтверждение</text>
+        <rect x="32" y="432" width="968" height="88" rx="6" fill="#f5f5f5"/>
+        <rect x="32" y="432" width="968" height="88" rx="6" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)" stroke-width="1" stroke-dasharray="4,3"/>
+        <rect x="42" y="440" width="42" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.30)" stroke-opacity="0.45" stroke-width="0.8"/>
+        <text x="63" y="449" fill="#7a8399" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">ПАКЕТЫ</text>
+        <text x="42" y="472" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif">Прикладные инструменты — отдельными пакетами</text>
+        <line x1="42" y1="482" x2="990" y2="482" stroke="rgba(45,49,66,0.12)" stroke-width="0.8"/>
+        <text x="42" y="500" fill="#2d3142" font-size="9" font-family="'Geist Mono', monospace">buh_* (бухгалтерия) · files_* (присоединённые файлы) · свои — см. тему «Подключаемые инструменты»</text>
+        <line x1="32" y1="540" x2="1000" y2="540" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+        <text x="32" y="556" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" letter-spacing="0.18em">ОБОЗНАЧЕНИЯ</text>
+        <rect x="32" y="568" width="14" height="10" rx="2" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+        <text x="52" y="577" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Встроенный инструмент</text>
+        <rect x="220" y="568" width="14" height="10" rx="2" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+        <text x="240" y="577" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Подключаемые пакеты</text>
+
+      </svg>
+    </div>
+  </div>
+</body>
+</html>
