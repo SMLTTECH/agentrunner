@@ -576,11 +576,13 @@
 	// контракт для всех LLM-провайдеров (образец: ar_ИнструментыРеестрПоиск.ОписаниеToolFindTools).
 	// agentrunner-48: note - причина пропуска обязательного шага (в обязательном
 	// плане skip без note отклоняется).
+	// agentrunner-66 (спека Б.5): шаги шаблона называются как в плане, ответ -
+	// действующий план.
 	МанифестJSON = "{
 	|  ""type"": ""function"",
 	|  ""function"": {
 	|    ""name"": ""update_plan"",
-	|    ""description"": ""Объявить или обновить план работы по многоэтапной задаче. Вызывай на задачах из нескольких шагов, чтобы оператор видел прогресс. План - твоё намерение: переписывай его, если обстоятельства изменились. В обязательном плане шаг закрывается вызовом одного из его инструментов; пропустить шаг можно только со статусом skipped и непустым note (причина)."",
+	|    ""description"": ""Объявить или обновить план работы по многоэтапной задаче. Вызывай на задачах из нескольких шагов, чтобы оператор видел прогресс. Для шагов шаблона плана используй их заголовки как в плане (не переименовывай их). Пропуск обязательного шага - status = skipped и note с причиной; закрывается шаг вызовом одного из его инструментов. Ответ содержит действующий план с обязательностью шагов и прогрессом - сверяйся с ним."",
 	|    ""parameters"": {
 	|      ""type"": ""object"",
 	|      ""required"": [""steps""],
@@ -590,7 +592,7 @@
 	|          ""items"": {
 	|            ""type"": ""object"",
 	|            ""properties"": {
-	|              ""title"": { ""type"": ""string"", ""description"": ""Краткий заголовок шага плана, до 150 символов."" },
+	|              ""title"": { ""type"": ""string"", ""description"": ""Краткий заголовок шага плана, до 150 символов. Для шагов шаблона - их заголовок без изменений."" },
 	|              ""status"": { ""type"": ""string"", ""enum"": [""pending"", ""in_progress"", ""done"", ""skipped""], ""description"": ""Статус шага. Неизвестное или отсутствующее значение трактуется как pending."" }
 	|            },
 	|            ""required"": [""title""]
@@ -610,8 +612,8 @@
 	Описание = Новый Структура;
 	Описание.Вставить("Имя",              "update_plan");
 	Описание.Вставить("Описание",
-		НСтр("ru = 'Объявить или обновить план работы по многоэтапной задаче. Вызывай на задачах из нескольких шагов, чтобы оператор видел прогресс. План - твоё намерение: переписывай его, если обстоятельства изменились. В обязательном плане шаг закрывается вызовом одного из его инструментов; пропустить шаг можно только через update_plan со статусом skipped и непустым note (причина).';
-		|en = 'Announce or update the work plan for a multi-step task. Call it on tasks with several steps so the operator can see progress. The plan is your intent: rewrite it if circumstances change. In a mandatory plan a step is closed by calling one of its tools; a step can only be skipped via update_plan with status skipped and a non-empty note (the reason).'"));
+		НСтр("ru = 'Объявить или обновить план работы по многоэтапной задаче. Вызывай на задачах из нескольких шагов, чтобы оператор видел прогресс. Для шагов шаблона плана используй их заголовки как в плане (не переименовывай их); пропуск обязательного шага - status = skipped и note с причиной, закрывается шаг вызовом одного из его инструментов. Ответ - действующий план с признаком обязательности шагов и прогрессом: сверяйся с ним, а не со своим списком.';
+		|en = 'Announce or update the work plan for a multi-step task. Call it on tasks with several steps so the operator can see progress. For template plan steps use their titles as they are in the plan (do not rename them); skipping a mandatory step means status = skipped and a note with the reason, and the step is closed by calling one of its tools. The response is the effective plan with per-step required flags and progress: rely on it, not on your own list.'"));
 	Описание.Вставить("КраткоеОписание",
 		НСтр("ru = 'Объявить или обновить план работы';
 		|en = 'Announce or update the work plan'"));
@@ -621,7 +623,9 @@
 	Описание.Вставить("ТребуетApproval",  Ложь);
 	Описание.Вставить("Включён",          Истина);
 	// 1.1.0 - note как причина пропуска обязательного шага (agentrunner-48).
-	Описание.Вставить("Версия",           "1.1.0");
+	// 1.2.0 - заголовки шагов шаблона как в плане, ответ - действующий план
+	//         (agentrunner-66).
+	Описание.Вставить("Версия",           "1.2.0");
 	Описание.Вставить("JSONManifest",     МанифестJSON);
 	Возврат Описание;
 
