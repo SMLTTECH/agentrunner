@@ -130,6 +130,22 @@
 					<Comment>После aosRuntimeКонтекст.ПостроитьКонтекст. Payload: {tokens_estimate, layers}.</Comment>
 				</Properties>
 			</EnumValue>
+			<EnumValue uuid="2df07555-4342-48b1-856d-f883456f3f8f">
+				<Properties>
+					<Name>ContextCompacted</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контекст сжат</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Context compacted</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>agentrunner-65: после компакции контекста (ar_LLMКомпакция.Применить). Payload: {code: context_compacted, compaction_type, estimated_tokens, messages_history, messages_window, compressed_results, summary, summary_removed_total, summary_tools}.</Comment>
+				</Properties>
+			</EnumValue>
 			<EnumValue uuid="2951080b-fae5-4ef8-be92-1ff5739fb3d9">
 				<Properties>
 					<Name>ВызванLLM</Name>
