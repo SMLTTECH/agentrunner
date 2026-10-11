@@ -227,6 +227,22 @@
 											<ContextMenu name="ШапкаШаговКонтекстноеМеню" id="27"/>
 											<ExtendedTooltip name="ШапкаШаговРасширеннаяПодсказка" id="28"/>
 										</LabelField>
+										<LabelField name="ШапкаНадзор" id="247">
+											<DataPath>ШапкаНадзор</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Надзор</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Supervision</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ШапкаНадзорКонтекстноеМеню" id="248"/>
+											<ExtendedTooltip name="ШапкаНадзорРасширеннаяПодсказка" id="249"/>
+										</LabelField>
 										<LabelDecoration name="ДекорацияЕстьСнимок" id="35">
 											<Title formatted="false">
 												<v8:item>
@@ -2125,6 +2141,25 @@
 				</dcsset:appearance>
 			</dcsset:item>
 		</ConditionalAppearance>
+		<Attribute name="ШапкаНадзор" id="232">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Надзор</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Supervision</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ar_Обновить" id="224">
