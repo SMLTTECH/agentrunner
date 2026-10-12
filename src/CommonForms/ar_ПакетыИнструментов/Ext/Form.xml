@@ -155,6 +155,22 @@
 					<ContextMenu name="ar_БезопасныйРежимКонтекстноеМеню" id="35"/>
 					<ExtendedTooltip name="ar_БезопасныйРежимРасширеннаяПодсказка" id="36"/>
 				</CheckBoxField>
+				<InputField name="ar_ОтложенноеИсполнениеТекст" id="62">
+					<DataPath>Список.ar_ОтложенноеИсполнениеТекст</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отложенное исполнение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Deferred execution</v8:content>
+						</v8:item>
+					</Title>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ar_ОтложенноеИсполнениеТекстКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="ar_ОтложенноеИсполнениеТекстРасширеннаяПодсказка" id="64"/>
+				</InputField>
 				<InputField name="ar_КоличествоИнструментов" id="37">
 					<DataPath>Список.ar_КоличествоИнструментов</DataPath>
 					<ContextMenu name="ar_КоличествоИнструментовКонтекстноеМеню" id="38"/>
@@ -190,8 +206,28 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Settings xsi:type="DynamicList">
-				<ManualQuery>false</ManualQuery>
+				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Пакеты.ar_ИдентификаторОбработки КАК ar_ИдентификаторОбработки,
+	Пакеты.ar_Namespace КАК ar_Namespace,
+	Пакеты.ar_ИмяОбъектаОбработки КАК ar_ИмяОбъектаОбработки,
+	Пакеты.ar_ВерсияПакета КАК ar_ВерсияПакета,
+	Пакеты.ar_Статус КАК ar_Статус,
+	Пакеты.ar_БезопасныйРежим КАК ar_БезопасныйРежим,
+	ВЫБОР
+		КОГДА Пакеты.ar_ОтложенноеИсполнение ЕСТЬ NULL
+			ТОГДА &amp;ТекстОтложенногоИсполненияНеизвестно
+		КОГДА Пакеты.ar_ОтложенноеИсполнение
+			ТОГДА &amp;ТекстОтложенногоИсполненияДа
+		ИНАЧЕ &amp;ТекстОтложенногоИсполненияНет
+	КОНЕЦ КАК ar_ОтложенноеИсполнениеТекст,
+	Пакеты.ar_КоличествоИнструментов КАК ar_КоличествоИнструментов,
+	Пакеты.ar_ПричинаОтказа КАК ar_ПричинаОтказа,
+	Пакеты.ar_ДатаРегистрации КАК ar_ДатаРегистрации,
+	Пакеты.ar_Пользователь КАК ar_Пользователь
+ИЗ
+	РегистрСведений.ar_ПакетыИнструментов КАК Пакеты</QueryText>
 				<MainTable>InformationRegister.ar_ПакетыИнструментов</MainTable>
 				<ListSettings/>
 			</Settings>
