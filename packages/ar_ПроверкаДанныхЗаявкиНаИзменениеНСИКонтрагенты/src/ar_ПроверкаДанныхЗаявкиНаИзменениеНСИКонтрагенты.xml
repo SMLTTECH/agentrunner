@@ -6,17 +6,17 @@
 				<xr:ClassId>c3831ec8-d8d5-4f93-8a22-f9bfae07327f</xr:ClassId>
 				<xr:ObjectId>7a475b96-d691-4e4b-8233-f586bf7487ad</xr:ObjectId>
 			</xr:ContainedObject>
-			<xr:GeneratedType name="ExternalDataProcessorObject.ar_ПроверкаДанныхЗаявки" category="Object">
+			<xr:GeneratedType name="ExternalDataProcessorObject.ar_ПроверкаДанныхЗаявкиНаИзменениеНСИКонтрагенты" category="Object">
 				<xr:TypeId>602d0747-3878-4d1e-a805-5097d2a51dbc</xr:TypeId>
 				<xr:ValueId>1180b719-faea-4e95-8458-90d3750144db</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
-			<Name>ar_ПроверкаДанныхЗаявки</Name>
+			<Name>ar_ПроверкаДанныхЗаявкиНаИзменениеНСИКонтрагенты</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Проверка данных заявки</v8:content>
+					<v8:content>Проверка данных заявки на изменение НСИ (контрагенты)</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
