@@ -256,8 +256,8 @@
 				"Предупреждение");
 			ОтказНеВыполнено.Сообщения.Добавить("no_executor_for_action:package_has_no_executor");
 			ОтказНеВыполнено.Сообщения.Добавить(СтрШаблон(
-				НСтр("ru = 'Пакет %1 не умеет исполнять подтверждённые действия — действие не выполнено';
-					|en = 'Package %1 cannot execute approved actions — the action was not executed'"),
+				НСтр("ru = 'Пакет %1 не умеет исполнять подтверждённые действия - действие не выполнено';
+					|en = 'Package %1 cannot execute approved actions - the action was not executed'"),
 				ПредставлениеПакета(ИдентификаторПакета)));
 			Возврат ОтказНеВыполнено;
 		КонецЕсли;
