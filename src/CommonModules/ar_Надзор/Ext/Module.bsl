@@ -829,9 +829,9 @@
 		|что конкретно не сделано или не подтверждено. Не выполняй никаких
 		|действий сам, не предлагай продолжение - только классификация.';
 		|en = 'You are the AgentRunner supervisor module. You are given the goal
-		|an AI agent was supposed to accomplish, its final text answer, the list
-		|of actions it actually performed (tool name + whether a result was
-		|produced), and the agent's answer from the previous pass, if there were
+		|that an AI agent was supposed to accomplish, its final text answer, the
+		|list of actions it actually performed (tool name + whether a result was
+		|produced), and the agent''s answer from the previous pass, if there were
 		|continuations. Classify the outcome as STRICTLY one JSON object with no
 		|text outside the JSON: {""class"": ""выполнено""} - the goal was fully
 		|achieved by actual actions or the answer, INCLUDING a justified negative
