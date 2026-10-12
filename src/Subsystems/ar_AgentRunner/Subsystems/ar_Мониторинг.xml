@@ -29,6 +29,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ar_ДействияАгента</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ar_ОчередьApproval</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ar_СлужебныйЛог</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ar_ОчередьРаспознавания</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

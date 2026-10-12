@@ -187,6 +187,7 @@
 			<CommonModule>ar_ДиалогиСервер</CommonModule>
 			<CommonModule>ar_ПредметыАгентов</CommonModule>
 			<CommonModule>ar_ДиспетчерОчереди</CommonModule>
+			<CommonModule>ar_ОчередьРаспознавания</CommonModule>
 			<HTTPService>ar_AgentsAPI</HTTPService>
 			<HTTPService>ar_RunsAPI</HTTPService>
 			<HTTPService>ar_HealthAPI</HTTPService>
@@ -297,6 +298,7 @@
 			<InformationRegister>ar_ПакетыИнструментов</InformationRegister>
 			<InformationRegister>ar_ЛентаДиалога</InformationRegister>
 			<InformationRegister>ar_ПредметыАгентов</InformationRegister>
+			<InformationRegister>ar_ОчередьРаспознавания</InformationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
