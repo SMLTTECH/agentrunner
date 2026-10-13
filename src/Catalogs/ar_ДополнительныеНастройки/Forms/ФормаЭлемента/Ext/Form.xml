@@ -200,6 +200,23 @@
 								<Value xsi:type="xs:string">Булево</Value>
 							</xr:Value>
 						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Ссылка</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Reference</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Ссылка</Value>
+							</xr:Value>
+						</xr:Item>
 					</ChoiceList>
 					<ContextMenu name="ТипЗначенияКонтекстноеМеню" id="19"/>
 					<ExtendedTooltip name="ТипЗначенияРасширеннаяПодсказка" id="20"/>
@@ -470,6 +487,7 @@
 				<v8:Type>xs:string</v8:Type>
 				<v8:Type>xs:dateTime</v8:Type>
 				<v8:Type>xs:decimal</v8:Type>
+				<v8:TypeSet>cfg:DefinedType.ar_ПрикладнойОбъект</v8:TypeSet>
 				<v8:NumberQualifiers>
 					<v8:Digits>15</v8:Digits>
 					<v8:FractionDigits>2</v8:FractionDigits>
