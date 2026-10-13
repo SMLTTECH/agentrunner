@@ -656,10 +656,10 @@
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Сервис распознавания</v8:content>
+						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>Recognition service</v8:content>
-						</v8:item>
 						</v8:item>
 					</Synonym>
 					<Comment>platform / ragu / sdocster - кто дал текст (заполняется при done); пусто - текст не получен (agentrunner-100)</Comment>
