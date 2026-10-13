@@ -649,6 +649,53 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Resource>
+			<Resource uuid="287e2416-bcbf-4b05-869b-1e2466185e56">
+				<Properties>
+					<Name>ar_Сервис</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сервис распознавания</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Recognition service</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>platform / ragu / sdocster - кто дал текст (заполняется при done); пусто - текст не получен (agentrunner-100)</Comment>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>false</FillFromFillingValue>
+					<FillValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Indexing>DontIndex</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Resource>
 			<Dimension uuid="fa6c8d1b-2e49-4a35-8f0c-9d4e7b2a5f86">
 				<Properties>
 					<Name>ar_Файл</Name>
