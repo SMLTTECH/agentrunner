@@ -262,6 +262,7 @@
 			<Catalog>Организации</Catalog>
 			<Catalog>БанковскиеСчета</Catalog>
 			<Catalog>Пользователи</Catalog>
+			<Catalog>УчетныеЗаписиЭлектроннойПочты</Catalog>
 			<Document>бит_мдм_ЗаявкаНаИзменение</Document>
 			<Enum>ar_УровеньРиска</Enum>
 			<Enum>ar_РежимАвтономии</Enum>

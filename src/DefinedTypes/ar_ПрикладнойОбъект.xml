@@ -22,6 +22,7 @@
 				<v8:Type>cfg:CatalogRef.БанковскиеСчета</v8:Type>
 				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
 				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+				<v8:Type>cfg:CatalogRef.УчетныеЗаписиЭлектроннойПочты</v8:Type>
 			</Type>
 		</Properties>
 	</DefinedType>
