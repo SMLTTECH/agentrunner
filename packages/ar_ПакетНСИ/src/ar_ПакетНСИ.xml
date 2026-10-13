@@ -23,6 +23,8 @@
 			<DefaultForm/>
 			<AuxiliaryForm/>
 		</Properties>
-		<ChildObjects/>
+		<ChildObjects>
+			<Form>ИсправлениеЗаявки</Form>
+		</ChildObjects>
 	</ExternalDataProcessor>
 </MetaDataObject>
