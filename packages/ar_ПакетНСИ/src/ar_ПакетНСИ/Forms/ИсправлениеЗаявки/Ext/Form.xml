@@ -459,7 +459,7 @@
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>v8:ValueStorage</v8:Type>
+				<v8:Type>xs:string</v8:Type>
 			</Type>
 		</Attribute>
 		<Attribute name="МодельИзменена" id="15">
@@ -481,7 +481,7 @@
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>v8:ValueStorage</v8:Type>
+				<v8:Type>xs:string</v8:Type>
 			</Type>
 		</Attribute>
 		<Attribute name="ПояснениеНачальное" id="17">
