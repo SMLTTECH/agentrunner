@@ -762,6 +762,22 @@
 					<Comment/>
 				</Properties>
 			</EnumValue>
+			<EnumValue uuid="4209ca9c-0f0a-483d-b66c-2fc5a19fce29">
+				<Properties>
+					<Name>ТерминальныйИсход</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Терминальный исход инструмента</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Tool terminal outcome</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
 		</ChildObjects>
 	</Enum>
 </MetaDataObject>
