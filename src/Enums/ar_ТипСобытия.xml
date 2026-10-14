@@ -175,7 +175,7 @@
 							<v8:content>Tool called</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>После выполнения tool. Payload: {tool_name, arguments_json, observation, risk_level}.</Comment>
+					<Comment>Событие вызова инструмента ядром. Payload: {code, tool, ...}; состав зависит от code: tool_called (success, risk_level); tool_dispatched (module, implementation, namespace, risk_level, dry_run); idempotent_replay (idempotency_key); approval_precheck_failed (reason).</Comment>
 				</Properties>
 			</EnumValue>
 			<EnumValue uuid="478ca30d-1753-48dc-b5e7-05903321e4f8">
