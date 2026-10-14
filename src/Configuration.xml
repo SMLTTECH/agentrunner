@@ -188,6 +188,7 @@
 			<CommonModule>ar_ПредметыАгентов</CommonModule>
 			<CommonModule>ar_ДиспетчерОчереди</CommonModule>
 			<CommonModule>ar_ОчередьРаспознавания</CommonModule>
+			<CommonModule>ar_ОчередьРаспознаванияФон</CommonModule>
 			<HTTPService>ar_AgentsAPI</HTTPService>
 			<HTTPService>ar_RunsAPI</HTTPService>
 			<HTTPService>ar_HealthAPI</HTTPService>
