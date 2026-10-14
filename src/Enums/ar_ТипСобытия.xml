@@ -730,6 +730,38 @@
 					<Comment/>
 				</Properties>
 			</EnumValue>
+			<EnumValue uuid="4168b408-d6b4-44f3-a76b-2cd95c926e59">
+				<Properties>
+					<Name>ЗапрошенОтветПользователя</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запрошен ответ пользователя</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>User input requested</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="dfdde508-c4a7-43fe-88de-2a942e776d9f">
+				<Properties>
+					<Name>ОшибкаРазбораКритика</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ошибка разбора ответа критика</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Critic response parse error</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
 		</ChildObjects>
 	</Enum>
 </MetaDataObject>
