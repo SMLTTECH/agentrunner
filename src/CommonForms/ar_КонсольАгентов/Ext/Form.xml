@@ -480,6 +480,11 @@
 									<CommandName>Form.Command.ВыгрузитьЛогЗапуска</CommandName>
 									<ExtendedTooltip name="КнопкаВыгрузитьЛогЗапускаРасширеннаяПодсказка" id="435"/>
 								</Button>
+								<Button name="КнопкаОткрытьЗапускПоИдентификатору" id="439">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ОткрытьЗапускПоИдентификатору</CommandName>
+									<ExtendedTooltip name="КнопкаОткрытьЗапускПоИдентификаторуРасширеннаяПодсказка" id="440"/>
+								</Button>
 								<Popup name="ГруппаДополнительно" id="292">
 									<Title>
 										<v8:item>
@@ -694,6 +699,20 @@
 									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СписокЗапусковТекстОжиданияПовтораКонтекстноеМеню" id="264"/>
 									<ExtendedTooltip name="СписокЗапусковТекстОжиданияПовтораРасширеннаяПодсказка" id="265"/>
+								</InputField>
+								<InputField name="СписокЗапусковИдентификаторЗапуска" id="436">
+									<DataPath>СписокЗапусков.ИдентификаторЗапуска</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Идентификатор</v8:content>
+										</v8:item>
+									</Title>
+									<ReadOnly>true</ReadOnly>
+									<Width>37</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="СписокЗапусковИдентификаторЗапускаКонтекстноеМеню" id="437"/>
+									<ExtendedTooltip name="СписокЗапусковИдентификаторЗапускаРасширеннаяПодсказка" id="438"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -2557,6 +2576,15 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВыгрузитьЛогЗапускаВыполнить</Action>
+		</Command>
+		<Command name="ОткрытьЗапускПоИдентификатору" id="438">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть по идентификатору</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьЗапускПоИдентификаторуВыполнить</Action>
 		</Command>
 	</Commands>
 </Form>
