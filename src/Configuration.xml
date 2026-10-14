@@ -55,7 +55,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ar_РольЧитатель</xr:Item>
 			</DefaultRoles>
 			<Vendor>Samolet</Vendor>
-			<Version>0.1.0.491</Version>
+			<Version>0.1.0.492</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation>
 				<v8:item>
@@ -188,6 +188,7 @@
 			<CommonModule>ar_ПредметыАгентов</CommonModule>
 			<CommonModule>ar_ДиспетчерОчереди</CommonModule>
 			<CommonModule>ar_ОчередьРаспознавания</CommonModule>
+			<CommonModule>ar_ОчередьРаспознаванияФон</CommonModule>
 			<HTTPService>ar_AgentsAPI</HTTPService>
 			<HTTPService>ar_RunsAPI</HTTPService>
 			<HTTPService>ar_HealthAPI</HTTPService>
