@@ -238,6 +238,7 @@
 			<CommonModule>ОМ_ar_JSON</CommonModule>
 			<CommonModule>ОМ_ar_ПланЗапуска</CommonModule>
 			<CommonModule>ОМ_ar_Надзор</CommonModule>
+			<CommonModule>ОМ_ar_ПакетНСИ</CommonModule>
 			<DataProcessor>ЮТHTTPServiceRequest</DataProcessor>
 			<DataProcessor>ЮТHTTPОтвет</DataProcessor>
 			<DataProcessor>ЮТHTTPСервисЗапрос</DataProcessor>
