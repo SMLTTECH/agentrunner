@@ -96,7 +96,7 @@
 			<ExtendedTooltip name="ЗамечанияРасширеннаяПодсказка" id="22"/>
 		</InputField>
 		<ButtonGroup name="ГруппаРеквизиты" id="23">
-			<Representation>Compact</Representation>
+			<Representation>Auto</Representation>
 			<ExtendedTooltip name="ГруппаРеквизитыРасширеннаяПодсказка" id="24"/>
 			<ChildItems>
 				<Button name="ИсправитьРеквизиты" id="25">
