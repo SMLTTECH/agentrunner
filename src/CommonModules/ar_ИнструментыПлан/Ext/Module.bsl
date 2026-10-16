@@ -578,11 +578,13 @@
 	// плане skip без note отклоняется).
 	// agentrunner-66 (спека Б.5): шаги шаблона называются как в плане, ответ -
 	// действующий план.
+	// agentrunner-204: причина пропуска принимается на уровне шага
+	// (steps[].note) и на уровне вызова (note); в манифесте описаны оба места.
 	МанифестJSON = "{
 	|  ""type"": ""function"",
 	|  ""function"": {
 	|    ""name"": ""update_plan"",
-	|    ""description"": ""Объявить или обновить план работы по многоэтапной задаче. Вызывай на задачах из нескольких шагов, чтобы оператор видел прогресс. Для шагов шаблона плана используй их заголовки как в плане (не переименовывай их). Пропуск обязательного шага - status = skipped и note с причиной; закрывается шаг вызовом одного из его инструментов. Ответ содержит действующий план с обязательностью шагов и прогрессом - сверяйся с ним."",
+	|    ""description"": ""Объявить или обновить план работы по многоэтапной задаче. Вызывай на задачах из нескольких шагов, чтобы оператор видел прогресс. Для шагов шаблона плана используй их заголовки как в плане (не переименовывай их). Пропуск обязательного шага - status = skipped и причина пропуска в note: у этого шага (steps[].note) или в note вызова; закрывается шаг вызовом одного из его инструментов. Ответ содержит действующий план с обязательностью шагов и прогрессом - сверяйся с ним."",
 	|    ""parameters"": {
 	|      ""type"": ""object"",
 	|      ""required"": [""steps""],
@@ -593,7 +595,8 @@
 	|            ""type"": ""object"",
 	|            ""properties"": {
 	|              ""title"": { ""type"": ""string"", ""description"": ""Краткий заголовок шага плана, до 150 символов. Для шагов шаблона - их заголовок без изменений."" },
-	|              ""status"": { ""type"": ""string"", ""enum"": [""pending"", ""in_progress"", ""done"", ""skipped""], ""description"": ""Статус шага. Неизвестное или отсутствующее значение трактуется как pending."" }
+	|              ""status"": { ""type"": ""string"", ""enum"": [""pending"", ""in_progress"", ""done"", ""skipped""], ""description"": ""Статус шага. Неизвестное или отсутствующее значение трактуется как pending."" },
+	|              ""note"": { ""type"": ""string"", ""description"": ""Причина пропуска этого шага - передавай при status = skipped."" }
 	|            },
 	|            ""required"": [""title""]
 	|          },
@@ -601,7 +604,7 @@
 	|        },
 	|        ""note"": {
 	|          ""type"": ""string"",
-	|          ""description"": ""Комментарий о состоянии работы. Обязателен при пропуске (skipped) обязательного шага плана - причина пропуска.""
+	|          ""description"": ""Комментарий о состоянии работы. Причина пропуска обязательного шага - в note этого шага (steps[].note при status = skipped) или здесь, в note вызова.""
 	|        }
 	|      },
 	|      ""additionalProperties"": false
@@ -612,8 +615,8 @@
 	Описание = Новый Структура;
 	Описание.Вставить("Имя",              "update_plan");
 	Описание.Вставить("Описание",
-		НСтр("ru = 'Объявить или обновить план работы по многоэтапной задаче. Вызывай на задачах из нескольких шагов, чтобы оператор видел прогресс. Для шагов шаблона плана используй их заголовки как в плане (не переименовывай их); пропуск обязательного шага - status = skipped и note с причиной, закрывается шаг вызовом одного из его инструментов. Ответ - действующий план с признаком обязательности шагов и прогрессом: сверяйся с ним, а не со своим списком.';
-		|en = 'Announce or update the work plan for a multi-step task. Call it on tasks with several steps so the operator can see progress. For template plan steps use their titles as they are in the plan (do not rename them); skipping a mandatory step means status = skipped and a note with the reason, and the step is closed by calling one of its tools. The response is the effective plan with per-step required flags and progress: rely on it, not on your own list.'"));
+		НСтр("ru = 'Объявить или обновить план работы по многоэтапной задаче. Вызывай на задачах из нескольких шагов, чтобы оператор видел прогресс. Для шагов шаблона плана используй их заголовки как в плане (не переименовывай их); пропуск обязательного шага - status = skipped и причина пропуска в note этого шага либо в note вызова, закрывается шаг вызовом одного из его инструментов. Ответ - действующий план с признаком обязательности шагов и прогрессом: сверяйся с ним, а не со своим списком.';
+		|en = 'Announce or update the work plan for a multi-step task. Call it on tasks with several steps so the operator can see progress. For template plan steps use their titles as they are in the plan (do not rename them); skipping a mandatory step means status = skipped and a reason in the step note or in the call note, and the step is closed by calling one of its tools. The response is the effective plan with per-step required flags and progress: rely on it, not on your own list.'"));
 	Описание.Вставить("КраткоеОписание",
 		НСтр("ru = 'Объявить или обновить план работы';
 		|en = 'Announce or update the work plan'"));
@@ -625,7 +628,10 @@
 	// 1.1.0 - note как причина пропуска обязательного шага (agentrunner-48).
 	// 1.2.0 - заголовки шагов шаблона как в плане, ответ - действующий план
 	//         (agentrunner-66).
-	Описание.Вставить("Версия",           "1.2.0");
+	// 1.3.0 - причина пропуска принимается и на уровне шага (steps[].note,
+	//         синоним reason); отказ - с заголовками шагов и образцом вызова
+	//         (agentrunner-204).
+	Описание.Вставить("Версия",           "1.3.0");
 	Описание.Вставить("JSONManifest",     МанифестJSON);
 	Возврат Описание;
 
