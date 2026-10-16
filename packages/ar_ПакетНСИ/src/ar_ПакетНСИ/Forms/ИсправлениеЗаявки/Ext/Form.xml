@@ -95,8 +95,9 @@
 			<ContextMenu name="ЗамечанияКонтекстноеМеню" id="21"/>
 			<ExtendedTooltip name="ЗамечанияРасширеннаяПодсказка" id="22"/>
 		</InputField>
-		<ButtonGroup name="ГруппаРеквизиты" id="23">
-			<Representation>Auto</Representation>
+		<UsualGroup name="ГруппаРеквизиты" id="23">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаРеквизитыРасширеннаяПодсказка" id="24"/>
 			<ChildItems>
 				<Button name="ИсправитьРеквизиты" id="25">
@@ -105,7 +106,7 @@
 					<ExtendedTooltip name="ИсправитьРеквизитыРасширеннаяПодсказка" id="26"/>
 				</Button>
 			</ChildItems>
-		</ButtonGroup>
+		</UsualGroup>
 		<InputField name="Пояснение" id="27">
 			<DataPath>Пояснение</DataPath>
 			<Title>
