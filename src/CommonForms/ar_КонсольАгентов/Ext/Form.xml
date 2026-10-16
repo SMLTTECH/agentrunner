@@ -409,11 +409,11 @@
 										<Title formatted="false">
 											<v8:item>
 												<v8:lang>ru</v8:lang>
-												<v8:content>Открыть служебный лог с ошибками за последние сутки</v8:content>
+												<v8:content>Показать запуски с ошибкой за последние сутки</v8:content>
 											</v8:item>
 											<v8:item>
 												<v8:lang>en</v8:lang>
-												<v8:content>Open the service log with errors for the last 24 hours</v8:content>
+												<v8:content>Show runs with errors for the last 24 hours</v8:content>
 											</v8:item>
 										</Title>
 									</ExtendedTooltip>
