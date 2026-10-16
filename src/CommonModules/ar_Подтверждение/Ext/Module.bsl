@@ -2154,6 +2154,11 @@
 		ИначеЕсли ToolName = "set_setting" Тогда
 			РезультатИсполнения = ar_ИнструментыПамять.ИсполнитьУстановкуНастройки(
 				ApprovalId, ActionPayloadJSON);
+		ИначеЕсли ToolName = "remember" Тогда
+			// agentrunner-205 (спека п.2): запись памяти в момент подтверждения -
+			// владелец из arguments (SCHED-09) либо агент запуска по RunId.
+			РезультатИсполнения = ar_ИнструментыПамять.ИсполнитьЗапоминание(
+				ApprovalId, ActionPayloadJSON, ДанныеЗаписи.RunId);
 		Иначе
 			// PKG-09: пакетная маршрутизация (buh_create_invoice_draft,
 			// buh_create_reconciliation_act и любой будущий commit-tool
