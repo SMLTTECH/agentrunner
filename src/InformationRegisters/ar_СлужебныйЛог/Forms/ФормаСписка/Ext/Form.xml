@@ -11,7 +11,15 @@
 		</v8:item>
 	</Title>
 	<AutoTitle>false</AutoTitle>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОбновитьСписок" id="83">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОбновитьСписок</CommandName>
+				<ExtendedTooltip name="ФормаОбновитьСписокРасширеннаяПодсказка" id="84"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
@@ -34,6 +42,112 @@
 					<Group>HorizontalIfPossible</Group>
 					<ExtendedTooltip name="ГруппаОтборовПериодаРасширеннаяПодсказка" id="4"/>
 					<ChildItems>
+						<InputField name="ОтборБыстрыйПериод" id="71">
+							<DataPath>ОтборБыстрыйПериод</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Период</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Period</v8:content>
+								</v8:item>
+							</Title>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>15 минут</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>15 minutes</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">15 минут</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Час</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Hour</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Час</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Сутки</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Day</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Сутки</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Неделя</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Week</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Неделя</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Произвольный</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Custom</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Произвольный</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ОтборБыстрыйПериодКонтекстноеМеню" id="72"/>
+							<ExtendedTooltip name="ОтборБыстрыйПериодРасширеннаяПодсказка" id="73"/>
+							<Events>
+								<Event name="OnChange">ОтборБыстрыйПериодПриИзменении</Event>
+							</Events>
+						</InputField>
 						<InputField name="ОтборПериодНачало" id="5">
 							<DataPath>ОтборПериодНачало</DataPath>
 							<Title>
@@ -204,17 +318,53 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Событие (подстрока)</v8:content>
+									<v8:content>Событие</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>en</v8:lang>
-									<v8:content>Event (substring)</v8:content>
+									<v8:content>Event</v8:content>
 								</v8:item>
 							</Title>
 							<ContextMenu name="ОтборСобытиеКонтекстноеМеню" id="20"/>
 							<ExtendedTooltip name="ОтборСобытиеРасширеннаяПодсказка" id="21"/>
 							<Events>
 								<Event name="OnChange">ОтборСобытиеПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ОтборОбъект" id="74">
+							<DataPath>ОтборОбъект</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Объект</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Object</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ОтборОбъектКонтекстноеМеню" id="75"/>
+							<ExtendedTooltip name="ОтборОбъектРасширеннаяПодсказка" id="76"/>
+							<Events>
+								<Event name="OnChange">ОтборОбъектПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ОтборТекст" id="77">
+							<DataPath>ОтборТекст</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Текст</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Text</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ОтборТекстКонтекстноеМеню" id="78"/>
+							<ExtendedTooltip name="ОтборТекстРасширеннаяПодсказка" id="79"/>
+							<Events>
+								<Event name="OnChange">ОтборТекстПриИзменении</Event>
 							</Events>
 						</InputField>
 						<InputField name="ОтборЗапуск" id="22">
@@ -239,6 +389,20 @@
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
+		<LabelDecoration name="СводкаЗаписей" id="80">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найдено записей</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Found records</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="СводкаЗаписейКонтекстноеМеню" id="81"/>
+			<ExtendedTooltip name="СводкаЗаписейРасширеннаяПодсказка" id="82"/>
+		</LabelDecoration>
 		<Table name="Список" id="25">
 			<DataPath>Список</DataPath>
 			<CommandBarLocation>None</CommandBarLocation>
@@ -257,7 +421,15 @@
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
 			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
-			<ContextMenu name="СписокКонтекстноеМеню" id="26"/>
+			<ContextMenu name="СписокКонтекстноеМеню" id="26">
+				<ChildItems>
+					<Button name="СписокОтборПоОбъектуСтроки" id="85">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОтборПоОбъектуСтроки</CommandName>
+						<ExtendedTooltip name="СписокОтборПоОбъектуСтрокиРасширеннаяПодсказка" id="86"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="27">
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
@@ -428,7 +600,14 @@
 			ИНАЧЕ СлужебныйЛог.ar_Уровень = &amp;УровеньЗаписи
 		КОНЕЦ
 	И (&amp;ИсточникЗаписи = "" ИЛИ СлужебныйЛог.ar_Источник = &amp;ИсточникЗаписи)
-	И СлужебныйЛог.ar_Событие ПОДОБНО &amp;МаскаСобытия СПЕЦСИМВОЛ "~"
+	И ВЫБОР
+			КОГДА &amp;СобытиеСписком
+				ТОГДА СлужебныйЛог.ar_Событие В (&amp;СписокСобытий)
+			ИНАЧЕ &amp;МаскаСобытия = ""
+				ИЛИ СлужебныйЛог.ar_Событие ПОДОБНО &amp;МаскаСобытия СПЕЦСИМВОЛ "~"
+		КОНЕЦ
+	И (&amp;МаскаОбъекта = "" ИЛИ СлужебныйЛог.ar_ОбъектСсылка ПОДОБНО &amp;МаскаОбъекта СПЕЦСИМВОЛ "~")
+	И (&amp;МаскаТекста = "" ИЛИ ПОДСТРОКА(СлужебныйЛог.ar_Текст, 1, 1024) ПОДОБНО &amp;МаскаТекста СПЕЦСИМВОЛ "~")
 	И (&amp;ЗапускЗаписи = "" ИЛИ СлужебныйЛог.ar_RunId = &amp;ЗапускЗаписи)</QueryText>
 				<Parameter>
 					<dcssch:name>НачалоПериода</dcssch:name>
@@ -501,6 +680,39 @@
 					<dcssch:useRestriction>true</dcssch:useRestriction>
 				</Parameter>
 				<Parameter>
+					<dcssch:name>СобытиеСписком</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Событие списком</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:boolean</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>СписокСобытий</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список событий</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+					<dcssch:valueListAllowed>true</dcssch:valueListAllowed>
+				</Parameter>
+				<Parameter>
 					<dcssch:name>МаскаСобытия</dcssch:name>
 					<dcssch:title xsi:type="v8:LocalStringType">
 						<v8:item>
@@ -512,6 +724,42 @@
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
 							<v8:Length>102</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>МаскаОбъекта</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Маска объекта</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>252</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>МаскаТекста</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Маска текста</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
 					</dcssch:valueType>
@@ -647,7 +895,100 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ОтборБыстрыйПериод" id="66">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор быстрый период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтборОбъект" id="67">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>250</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтборТекст" id="68">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор текст</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="ОбновитьСписок" id="69">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Refresh</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перечитать список: пересчитать начало быстрого периода и количество записей в сводке</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Re-read the list: recalculate the quick period start and the record count in the summary</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьСписок</Action>
+		</Command>
+		<Command name="ОтборПоОбъектуСтроки" id="70">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор по объекту строки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Filter by row object</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подставить навигационную ссылку объекта текущей строки в отбор «Объект»</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Put the object URL of the current row into the Object filter</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтборПоОбъектуСтроки</Action>
+		</Command>
+	</Commands>
 	<Parameters>
 		<Parameter name="Уровень">
 			<Type>
@@ -697,6 +1038,33 @@
 				<v8:Type>xs:string</v8:Type>
 				<v8:StringQualifiers>
 					<v8:Length>36</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="Объект">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>250</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="Текст">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="БыстрыйПериод">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
