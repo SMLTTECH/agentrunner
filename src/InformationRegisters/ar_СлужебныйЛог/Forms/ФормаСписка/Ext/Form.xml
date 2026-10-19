@@ -54,6 +54,7 @@
 									<v8:content>Period</v8:content>
 								</v8:item>
 							</Title>
+							<ListChoiceMode>true</ListChoiceMode>
 							<ChoiceList>
 								<xr:Item>
 									<xr:Presentation/>
@@ -709,6 +710,7 @@
 					</dcssch:valueType>
 					<dcssch:value xsi:nil="true"/>
 					<dcssch:useRestriction>true</dcssch:useRestriction>
+					<dcssch:valueListAllowed>true</dcssch:valueListAllowed>
 				</Parameter>
 				<Parameter>
 					<dcssch:name>МаскаСобытия</dcssch:name>
