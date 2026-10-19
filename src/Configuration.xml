@@ -55,7 +55,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ar_РольЧитатель</xr:Item>
 			</DefaultRoles>
 			<Vendor>Samolet</Vendor>
-			<Version>0.1.0.507</Version>
+			<Version>0.1.0.524</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation>
 				<v8:item>
@@ -73,13 +73,13 @@
 			<VendorInformationAddress>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>https://agentrunner.ru/</v8:content>
+					<v8:content>https://github.com/SMLTTECH/agentrunner</v8:content>
 				</v8:item>
 			</VendorInformationAddress>
 			<ConfigurationInformationAddress>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>https://github.com/AI-1C-Expert/agentrunner</v8:content>
+					<v8:content>https://github.com/SMLTTECH/agentrunner</v8:content>
 				</v8:item>
 			</ConfigurationInformationAddress>
 			<InterfaceCompatibilityMode>TaxiEnableVersion8_2</InterfaceCompatibilityMode>

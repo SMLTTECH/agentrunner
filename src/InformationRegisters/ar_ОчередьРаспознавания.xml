@@ -43,7 +43,7 @@
 					<v8:content>Recognition queue</v8:content>
 				</v8:item>
 			</Synonym>
-			<Comment>Очередь предварительного распознавания присоединённых файлов сервисом RAGU (agentrunner-74)</Comment>
+			<Comment>Очередь предварительного распознавания присоединённых файлов</Comment>
 			<UseStandardCommands>true</UseStandardCommands>
 			<EditType>InDialog</EditType>
 			<DefaultRecordForm/>
@@ -356,7 +356,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Идентификатор задания RAGU</v8:content>
+							<v8:content>Идентификатор задания</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
