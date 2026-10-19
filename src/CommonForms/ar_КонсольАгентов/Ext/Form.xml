@@ -672,6 +672,17 @@
 									<ContextMenu name="СписокЗапусковТриггерКонтекстноеМеню" id="92"/>
 									<ExtendedTooltip name="СписокЗапусковТриггерРасширеннаяПодсказка" id="93"/>
 								</InputField>
+								<InputField name="СписокЗапусковПредмет" id="441">
+									<DataPath>СписокЗапусков.Предмет</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Предмет</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СписокЗапусковПредметКонтекстноеМеню" id="442"/>
+									<ExtendedTooltip name="СписокЗапусковПредметРасширеннаяПодсказка" id="443"/>
+								</InputField>
 								<InputField name="СписокЗапусковЖивостьТекст" id="94">
 									<DataPath>СписокЗапусков.ЖивостьТекст</DataPath>
 									<ReadOnly>true</ReadOnly>
@@ -1523,6 +1534,16 @@
 							<v8:Length>160</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Предмет" id="444">
+					<Type>
+						<v8:Type>cfg:DocumentRef.бит_мдм_ЗаявкаНаИзменение</v8:Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+						<v8:Type>cfg:CatalogRef.БанковскиеСчета</v8:Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+						<v8:Type>cfg:CatalogRef.УчетныеЗаписиЭлектроннойПочты</v8:Type>
 					</Type>
 				</Column>
 			</Columns>
