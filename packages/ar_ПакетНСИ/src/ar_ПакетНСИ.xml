@@ -20,10 +20,11 @@
 				</v8:item>
 			</Synonym>
 			<Comment/>
-			<DefaultForm/>
+			<DefaultForm>Инструменты</DefaultForm>
 			<AuxiliaryForm/>
 		</Properties>
 		<ChildObjects>
+			<Form>Инструменты</Form>
 			<Form>ИсправлениеЗаявки</Form>
 			<Form>ПроверкаОчереди</Form>
 		</ChildObjects>

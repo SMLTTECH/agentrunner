@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>true</Autofill>
+		<ChildItems>
+			<Button name="КнопкаЗаполнитьАргументы" id="1">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗаполнитьАргументы</CommandName>
+				<ExtendedTooltip name="КнопкаЗаполнитьАргументыРасширеннаяПодсказка" id="10"/>
+			</Button>
+			<Button name="КнопкаСписокЗаявокНаВизе" id="2">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СписокЗаявокНаВизе</CommandName>
+				<ExtendedTooltip name="КнопкаСписокЗаявокНаВизеРасширеннаяПодсказка" id="11"/>
+			</Button>
+			<Button name="КнопкаЧтениеЗаявки" id="3">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЧтениеЗаявки</CommandName>
+				<ExtendedTooltip name="КнопкаЧтениеЗаявкиРасширеннаяПодсказка" id="12"/>
+			</Button>
+			<Button name="КнопкаПроверкаРеквизитов" id="4">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПроверкаРеквизитов</CommandName>
+				<ExtendedTooltip name="КнопкаПроверкаРеквизитовРасширеннаяПодсказка" id="13"/>
+			</Button>
+			<Button name="КнопкаОфициальныеДанныеЕГР" id="5">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОфициальныеДанныеЕГР</CommandName>
+				<ExtendedTooltip name="КнопкаОфициальныеДанныеЕГРРасширеннаяПодсказка" id="14"/>
+			</Button>
+			<Button name="КнопкаСверкаЗаявки" id="6">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СверкаЗаявки</CommandName>
+				<ExtendedTooltip name="КнопкаСверкаЗаявкиРасширеннаяПодсказка" id="15"/>
+			</Button>
+			<Button name="КнопкаСдачаДанныхФайлов" id="7">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СдачаДанныхФайлов</CommandName>
+				<ExtendedTooltip name="КнопкаСдачаДанныхФайловРасширеннаяПодсказка" id="16"/>
+			</Button>
+			<Button name="КнопкаАктуализацияЗаявки" id="8">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.АктуализацияЗаявки</CommandName>
+				<ExtendedTooltip name="КнопкаАктуализацияЗаявкиРасширеннаяПодсказка" id="17"/>
+			</Button>
+			<Button name="КнопкаРешениеПоВизе" id="9">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.РешениеПоВизе</CommandName>
+				<ExtendedTooltip name="КнопкаРешениеПоВизеРасширеннаяПодсказка" id="18"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="19">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<InputField name="ЗаявкаНСИ" id="21">
+					<DataPath>ЗаявкаНСИ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заявка НСИ</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаявкаНСИКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ЗаявкаНСИРасширеннаяПодсказка" id="23"/>
+					<Events>
+						<Event name="OnChange">ЗаявкаНСИПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="АгентНаименование" id="24">
+					<DataPath>АгентНаименование</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Агент (наименование)</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="АгентНаименованиеКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="АгентНаименованиеРасширеннаяПодсказка" id="26"/>
+				</InputField>
+				<InputField name="Инструмент" id="27">
+					<DataPath>Инструмент</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инструмент</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИнструментКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="ИнструментРасширеннаяПодсказка" id="29"/>
+					<Events>
+						<Event name="OnChange">ИнструментПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ХешМодели" id="30">
+					<DataPath>ХешМодели</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Хеш модели</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ХешМоделиКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ХешМоделиРасширеннаяПодсказка" id="32"/>
+				</InputField>
+				<CheckBoxField name="ПробныйВызов" id="33">
+					<DataPath>ПробныйВызов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пробный вызов (_dry_run)</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПробныйВызовКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ПробныйВызовРасширеннаяПодсказка" id="35"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="АргументыJSON" id="36">
+			<DataPath>АргументыJSON</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аргументы вызова (JSON)</v8:content>
+				</v8:item>
+			</Title>
+			<Height>10</Height>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="АргументыJSONКонтекстноеМеню" id="37"/>
+			<ExtendedTooltip name="АргументыJSONРасширеннаяПодсказка" id="38"/>
+		</InputField>
+		<InputField name="РезультатJSON" id="39">
+			<DataPath>РезультатJSON</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат</v8:content>
+				</v8:item>
+			</Title>
+			<Height>24</Height>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="РезультатJSONКонтекстноеМеню" id="40"/>
+			<ExtendedTooltip name="РезультатJSONРасширеннаяПодсказка" id="41"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ar_ПакетНСИ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ЗаявкаНСИ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявка НСИ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.бит_мдм_ЗаявкаНаИзменение</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АгентНаименование" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Агент (наименование)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>150</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Инструмент" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструмент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АргументыJSON" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аргументы вызова (JSON)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РезультатJSON" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПробныйВызов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пробный вызов (_dry_run)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ХешМодели" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хеш модели</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьАргументы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить аргументы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Построить шаблон аргументов по выбранному инструменту и заявке (правки в поле аргументов будут потеряны)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьАргументыВыполнение</Action>
+		</Command>
+		<Command name="СписокЗаявокНаВизе" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявки на визе агента</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вызвать nsi_pending_visas - заявки НСИ, ждущие визу агента (аргументы: object_kind, limit, include_handed_over)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СписокЗаявокНаВизеВыполнение</Action>
+		</Command>
+		<Command name="ЧтениеЗаявки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Чтение заявки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вызвать nsi_get_request - заявка целиком с model_hash (хеш запоминается для следующих вызовов)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЧтениеЗаявкиВыполнение</Action>
+		</Command>
+		<Command name="ПроверкаРеквизитов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка реквизитов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вызвать nsi_check_requisites - проверка данных заявки обработкой проверки данных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверкаРеквизитовВыполнение</Action>
+		</Command>
+		<Command name="ОфициальныеДанныеЕГР" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Официальные данные ЕГР</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вызвать nsi_official_data - сведения ЕГРЮЛ/ЕГРИП по ИНН заявки через сервис 1С:Контрагент</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОфициальныеДанныеЕГРВыполнение</Action>
+		</Command>
+		<Command name="СверкаЗаявки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сверка заявки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вызвать nsi_verify_request - сверка заявки с вложениями (нужен model_hash из чтения заявки)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СверкаЗаявкиВыполнение</Action>
+		</Command>
+		<Command name="СдачаДанныхФайлов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сдача данных файлов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вызвать nsi_submit_file_data - сдача данных, извлеченных из файлов (шаблон содержит пустой parts)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СдачаДанныхФайловВыполнение</Action>
+		</Command>
+		<Command name="АктуализацияЗаявки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Актуализация заявки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вызвать nsi_actualize_request - заполнение данных «стало» по сведениям ЕГР</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>АктуализацияЗаявкиВыполнение</Action>
+		</Command>
+		<Command name="РешениеПоВизе" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Решение по визе</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вызвать nsi_set_visa_decision - решение по визе агента (decision и comment правятся в аргументах)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РешениеПоВизеВыполнение</Action>
+		</Command>
+	</Commands>
+</Form>
