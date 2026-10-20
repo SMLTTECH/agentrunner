@@ -25,6 +25,7 @@
 		</Properties>
 		<ChildObjects>
 			<Form>ИсправлениеЗаявки</Form>
+			<Form>ПроверкаОчереди</Form>
 		</ChildObjects>
 	</ExternalDataProcessor>
 </MetaDataObject>
