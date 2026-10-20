@@ -8,10 +8,16 @@
 				<CommandName>Form.Command.ОтправитьНаПроверку</CommandName>
 				<ExtendedTooltip name="ФормаОтправитьНаПроверкуРасширеннаяПодсказка" id="2"/>
 			</Button>
+			<Button name="ФормаОткрытьДокументЗаявки" id="75">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОткрытьДокументЗаявки</CommandName>
+				<ExtendedTooltip name="ФормаОткрытьДокументЗаявкиРасширеннаяПодсказка" id="76"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаШапка" id="3">
@@ -698,6 +704,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОтправитьНаПроверкуВыполнение</Action>
+		</Command>
+		<Command name="ОткрытьДокументЗаявки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ заявки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть документ «Заявка на изменение»</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьДокументЗаявкиВыполнение</Action>
 		</Command>
 	</Commands>
 </Form>
