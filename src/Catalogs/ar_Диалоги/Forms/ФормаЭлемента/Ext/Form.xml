@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -11,6 +11,7 @@
 		</v8:item>
 	</Title>
 	<AutoTitle>false</AutoTitle>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 		<ChildItems>
@@ -32,10 +33,9 @@
 					<v8:content>Группа шапка</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip/>
 			<Group>Horizontal</Group>
-			<ShowTitle>false</ShowTitle>
 			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="2"/>
 			<ChildItems>
 				<UsualGroup name="ГруппаПредмет" id="3">
@@ -45,10 +45,9 @@
 							<v8:content>Группа предмет</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip/>
 					<Group>Horizontal</Group>
-					<ShowTitle>false</ShowTitle>
 					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаПредметРасширеннаяПодсказка" id="4"/>
 					<ChildItems>
 						<InputField name="ПредставлениеПредмета" id="5">
@@ -66,17 +65,21 @@
 							</Title>
 							<AutoMaxWidth>false</AutoMaxWidth>
 							<MaxWidth>40</MaxWidth>
+							<ContextMenu name="ПредставлениеПредметаКонтекстноеМеню" id="28"/>
 							<ExtendedTooltip name="ПредставлениеПредметаРасширеннаяПодсказка" id="6"/>
-										<ContextMenu name="ПредставлениеПредметаКонтекстноеМеню" id="28"/>
-				</InputField>
+						</InputField>
 						<Button name="ПерейтиКПредмету" id="7">
 							<Type>UsualButton</Type>
 							<CommandName>Form.Command.ПерейтиКПредмету</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.InputFieldOpen</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
 							<ExtendedTooltip name="ПерейтиКПредметуРасширеннаяПодсказка" id="8"/>
 						</Button>
 					</ChildItems>
 				</UsualGroup>
-				<InputField name="Состояние" id="9">
+				<LabelField name="Состояние" id="9">
 					<DataPath>Объект.ar_Состояние</DataPath>
 					<ReadOnly>true</ReadOnly>
 					<Title>
@@ -89,10 +92,11 @@
 							<v8:content>State</v8:content>
 						</v8:item>
 					</Title>
+					<TextColor>#0000FF</TextColor>
+					<ContextMenu name="СостояниеКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="10"/>
-								<ContextMenu name="СостояниеКонтекстноеМеню" id="29"/>
-				</InputField>
-				<InputField name="ОтветитьДо" id="11">
+				</LabelField>
+				<LabelField name="ОтветитьДо" id="11">
 					<DataPath>Объект.ar_ОтветитьДо</DataPath>
 					<ReadOnly>true</ReadOnly>
 					<Title>
@@ -113,31 +117,45 @@
 							<v8:content>ДФ=dd.MM.yyyy HH:mm</v8:content>
 						</v8:item>
 					</Format>
-					<EditFormat>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ДФ=dd.MM.yyyy HH:mm</v8:content>
-						</v8:item>
-					</EditFormat>
+					<TextColor>#0000FF</TextColor>
+					<ContextMenu name="ОтветитьДоКонтекстноеМеню" id="30"/>
 					<ExtendedTooltip name="ОтветитьДоРасширеннаяПодсказка" id="12"/>
-								<ContextMenu name="ОтветитьДоКонтекстноеМеню" id="30"/>
-				</InputField>
-				<InputField name="Агент" id="13">
+				</LabelField>
+				<LabelField name="Агент" id="13">
 					<DataPath>Объект.ar_Агент</DataPath>
+					<Visible>false</Visible>
 					<ReadOnly>true</ReadOnly>
 					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="АгентКонтекстноеМеню" id="31"/>
 					<ExtendedTooltip name="АгентРасширеннаяПодсказка" id="14"/>
-								<ContextMenu name="АгентКонтекстноеМеню" id="31"/>
-				</InputField>
+				</LabelField>
 			</ChildItems>
 		</UsualGroup>
-		<HTMLDocumentField name="ЛентаHTML" id="15">
-			<DataPath>ЛентаHTML</DataPath>
-			<ReadOnly>true</ReadOnly>
-			<TitleLocation>None</TitleLocation>
-			<VerticalStretch>true</VerticalStretch>
-			<ExtendedTooltip name="ЛентаHTMLРасширеннаяПодсказка" id="16"/>
-		</HTMLDocumentField>
+		<UsualGroup name="ГруппаДиалогСАгентом" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Диалог</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа диалог с агентом</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Collapsible</Behavior>
+			<ExtendedTooltip name="ГруппаДиалогСАгентомРасширеннаяПодсказка" id="37"/>
+			<ChildItems>
+				<HTMLDocumentField name="ЛентаHTML" id="15">
+					<DataPath>ЛентаHTML</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="ЛентаHTMLКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ЛентаHTMLРасширеннаяПодсказка" id="16"/>
+				</HTMLDocumentField>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="ГруппаОтвета" id="17">
 			<Title>
 				<v8:item>
@@ -149,15 +167,16 @@
 					<v8:content>Reply</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip/>
 			<Group>Vertical</Group>
 			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
 			<ExtendedTooltip name="ГруппаОтветаРасширеннаяПодсказка" id="18"/>
 			<ChildItems>
 				<InputField name="ТекстОтвета" id="19">
 					<DataPath>ТекстОтвета</DataPath>
-					<MultiLine>true</MultiLine>
+					<TitleLocation>None</TitleLocation>
 					<Height>3</Height>
+					<MultiLine>true</MultiLine>
 					<ChoiceListButton>true</ChoiceListButton>
 					<InputHint>
 						<v8:item>
@@ -169,8 +188,8 @@
 							<v8:content>Enter a message...</v8:content>
 						</v8:item>
 					</InputHint>
+					<ContextMenu name="ТекстОтветаКонтекстноеМеню" id="32"/>
 					<ExtendedTooltip name="ТекстОтветаРасширеннаяПодсказка" id="20"/>
-								<ContextMenu name="ТекстОтветаКонтекстноеМеню" id="32"/>
 				</InputField>
 				<Button name="Отправить" id="21">
 					<Type>UsualButton</Type>
@@ -281,7 +300,12 @@
 					<v8:content>Open the dialog subject (request, document)</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.InputFieldOpen</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ПерейтиКПредмету</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 		<Command name="ОбновитьЛенту" id="28">
 			<Title>
