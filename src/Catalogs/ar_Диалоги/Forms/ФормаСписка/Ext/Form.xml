@@ -50,6 +50,12 @@
 			<EnableDrag>true</EnableDrag>
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<CommandSet>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Create</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+			</CommandSet>
 			<AutoRefresh>true</AutoRefresh>
 			<AutoRefreshPeriod>30</AutoRefreshPeriod>
 			<Period>
@@ -99,8 +105,8 @@
 			<ChildItems>
 				<InputField name="Диалог" id="14">
 					<DataPath>Список.Description</DataPath>
-					<ReadOnly>true</ReadOnly>
 					<Visible>false</Visible>
+					<ReadOnly>true</ReadOnly>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -373,7 +379,7 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-	<Attribute name="ПредметОтбора" id="62">
+		<Attribute name="ПредметОтбора" id="62">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>

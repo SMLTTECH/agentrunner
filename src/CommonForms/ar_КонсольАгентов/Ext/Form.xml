@@ -446,82 +446,95 @@
 								</v8:item>
 							</ToolTip>
 							<ExtendedTooltip name="ГруппаПанельРасширеннаяПодсказка" id="291"/>
-							<ChildItems>
-								<Button name="КнопкаОткрытьЗапуск" id="102">
-									<Type>CommandBarButton</Type>
-									<CommandName>Form.Command.ОткрытьЗапуск</CommandName>
-									<ExtendedTooltip name="КнопкаОткрытьЗапускРасширеннаяПодсказка" id="103"/>
-								</Button>
-								<Button name="КнопкаОстановитьЗапуск" id="104">
-									<Type>CommandBarButton</Type>
-									<CommandName>Form.Command.ОстановитьЗапуск</CommandName>
-									<ExtendedTooltip name="КнопкаОстановитьЗапускРасширеннаяПодсказка" id="105"/>
-								</Button>
-								<Button name="КнопкаВозобновитьЗапуск" id="106">
-									<Type>CommandBarButton</Type>
-									<CommandName>Form.Command.ВозобновитьЗапуск</CommandName>
-									<ExtendedTooltip name="КнопкаВозобновитьЗапускРасширеннаяПодсказка" id="107"/>
-								</Button>
-								<Button name="КнопкаОткрытьОчередьПодтверждений" id="108">
-									<Type>CommandBarButton</Type>
-									<CommandName>Form.Command.ОткрытьОчередьПодтверждений</CommandName>
-									<ExtendedTooltip name="КнопкаОткрытьОчередьПодтвержденийРасширеннаяПодсказка" id="109"/>
-								</Button>
-								<Button name="КнопкаПоказатьСозданныеОбъекты" id="114">
-									<Type>CommandBarButton</Type>
-									<CommandName>Form.Command.ПоказатьСозданныеОбъекты</CommandName>
-									<ExtendedTooltip name="КнопкаПоказатьСозданныеОбъектыРасширеннаяПодсказка" id="115"/>
-								</Button>
-								<Button name="КнопкаПоказатьЛогЗапуска" id="432">
-									<CommandName>Form.Command.ПоказатьЛогЗапуска</CommandName>
-									<ExtendedTooltip name="КнопкаПоказатьЛогЗапускаРасширеннаяПодсказка" id="433"/>
-								</Button>
-								<Button name="КнопкаВыгрузитьЛогЗапуска" id="434">
-									<CommandName>Form.Command.ВыгрузитьЛогЗапуска</CommandName>
-									<ExtendedTooltip name="КнопкаВыгрузитьЛогЗапускаРасширеннаяПодсказка" id="435"/>
-								</Button>
-								<Button name="КнопкаОткрытьЗапускПоИдентификатору" id="439">
-									<Type>CommandBarButton</Type>
-									<CommandName>Form.Command.ОткрытьЗапускПоИдентификатору</CommandName>
-									<ExtendedTooltip name="КнопкаОткрытьЗапускПоИдентификаторуРасширеннаяПодсказка" id="440"/>
-								</Button>
-								<Popup name="ГруппаДополнительно" id="292">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Дополнительно</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа дополнительно</v8:content>
-										</v8:item>
-									</ToolTip>
-									<ExtendedTooltip name="ГруппаДополнительноРасширеннаяПодсказка" id="293"/>
-									<ChildItems>
-										<Button name="КнопкаОткрытьПользователя" id="112">
-											<Type>CommandBarButton</Type>
-											<CommandName>Form.Command.ОткрытьПользователя</CommandName>
-											<ExtendedTooltip name="КнопкаОткрытьПользователяРасширеннаяПодсказка" id="113"/>
-										</Button>
-										<Button name="КнопкаОткрытьАгента" id="110">
-											<Type>CommandBarButton</Type>
-											<CommandName>Form.Command.ОткрытьАгента</CommandName>
-											<ExtendedTooltip name="КнопкаОткрытьАгентаРасширеннаяПодсказка" id="111"/>
-										</Button>
-									</ChildItems>
-								</Popup>
-							</ChildItems>
 						</CommandBar>
 						<Table name="СписокЗапусков" id="67">
-							<CommandBarLocation>None</CommandBarLocation>
+							<CommandBarLocation>Top</CommandBarLocation>
 							<ReadOnly>true</ReadOnly>
 							<HeightInTableRows>15</HeightInTableRows>
 							<DataPath>СписокЗапусков</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+							</CommandSet>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="СписокЗапусковКонтекстноеМеню" id="68"/>
-							<AutoCommandBar name="СписокЗапусковКоманднаяПанель" id="69"/>
+							<AutoCommandBar name="СписокЗапусковКоманднаяПанель" id="69">
+								<ChildItems>
+									<Button name="КнопкаОткрытьЗапуск" id="102">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОткрытьЗапуск</CommandName>
+										<ExtendedTooltip name="КнопкаОткрытьЗапускРасширеннаяПодсказка" id="103"/>
+									</Button>
+									<Button name="КнопкаОстановитьЗапуск" id="104">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОстановитьЗапуск</CommandName>
+										<ExtendedTooltip name="КнопкаОстановитьЗапускРасширеннаяПодсказка" id="105"/>
+									</Button>
+									<Button name="КнопкаВозобновитьЗапуск" id="106">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ВозобновитьЗапуск</CommandName>
+										<ExtendedTooltip name="КнопкаВозобновитьЗапускРасширеннаяПодсказка" id="107"/>
+									</Button>
+									<Button name="КнопкаОткрытьОчередьПодтверждений" id="108">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОткрытьОчередьПодтверждений</CommandName>
+										<ExtendedTooltip name="КнопкаОткрытьОчередьПодтвержденийРасширеннаяПодсказка" id="109"/>
+									</Button>
+									<Button name="КнопкаПоказатьСозданныеОбъекты" id="114">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПоказатьСозданныеОбъекты</CommandName>
+										<ExtendedTooltip name="КнопкаПоказатьСозданныеОбъектыРасширеннаяПодсказка" id="115"/>
+									</Button>
+									<Button name="КнопкаПоказатьЛогЗапуска" id="432">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПоказатьЛогЗапуска</CommandName>
+										<ExtendedTooltip name="КнопкаПоказатьЛогЗапускаРасширеннаяПодсказка" id="433"/>
+									</Button>
+									<Button name="КнопкаВыгрузитьЛогЗапуска" id="434">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ВыгрузитьЛогЗапуска</CommandName>
+										<ExtendedTooltip name="КнопкаВыгрузитьЛогЗапускаРасширеннаяПодсказка" id="435"/>
+									</Button>
+									<Button name="КнопкаОткрытьЗапускПоИдентификатору" id="439">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОткрытьЗапускПоИдентификатору</CommandName>
+										<ExtendedTooltip name="КнопкаОткрытьЗапускПоИдентификаторуРасширеннаяПодсказка" id="440"/>
+									</Button>
+									<Popup name="ГруппаДополнительно" id="292">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Дополнительно</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа дополнительно</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ГруппаДополнительноРасширеннаяПодсказка" id="293"/>
+										<ChildItems>
+											<Button name="КнопкаОткрытьПользователя" id="112">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ОткрытьПользователя</CommandName>
+												<ExtendedTooltip name="КнопкаОткрытьПользователяРасширеннаяПодсказка" id="113"/>
+											</Button>
+											<Button name="КнопкаОткрытьАгента" id="110">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ОткрытьАгента</CommandName>
+												<ExtendedTooltip name="КнопкаОткрытьАгентаРасширеннаяПодсказка" id="111"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+								</ChildItems>
+							</AutoCommandBar>
 							<ExtendedTooltip name="СписокЗапусковРасширеннаяПодсказка" id="276"/>
 							<SearchStringAddition name="СписокЗапусковСтрокаПоиска" id="70">
 								<AdditionSource>
@@ -602,14 +615,14 @@
 											<v8:content>Старт</v8:content>
 										</v8:item>
 									</Title>
+									<Width>12</Width>
+									<HorizontalStretch>false</HorizontalStretch>
 									<Format>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>ДФ='dd.MM.yyyy HH:mm'</v8:content>
 										</v8:item>
 									</Format>
-									<Width>12</Width>
-									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СписокЗапусковСтартовалВКонтекстноеМеню" id="83"/>
 									<ExtendedTooltip name="СписокЗапусковСтартовалВРасширеннаяПодсказка" id="84"/>
 								</InputField>
@@ -713,13 +726,13 @@
 								</InputField>
 								<InputField name="СписокЗапусковИдентификаторЗапуска" id="436">
 									<DataPath>СписокЗапусков.ИдентификаторЗапуска</DataPath>
+									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Идентификатор</v8:content>
 										</v8:item>
 									</Title>
-									<ReadOnly>true</ReadOnly>
 									<Width>37</Width>
 									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="СписокЗапусковИдентификаторЗапускаКонтекстноеМеню" id="437"/>
@@ -763,27 +776,34 @@
 								</v8:item>
 							</ToolTip>
 							<ExtendedTooltip name="ГруппаКомандыСтрокиАгентыРасширеннаяПодсказка" id="295"/>
-							<ChildItems>
-								<Button name="КнопкаОткрытьАгентаАгенты" id="216">
-									<Type>CommandBarButton</Type>
-									<CommandName>Form.Command.ОткрытьАгентаАгенты</CommandName>
-									<ExtendedTooltip name="КнопкаОткрытьАгентаАгентыРасширеннаяПодсказка" id="217"/>
-								</Button>
-								<Button name="КнопкаОткрытьПрофилиАгента" id="218">
-									<Type>CommandBarButton</Type>
-									<CommandName>Form.Command.ОткрытьПрофилиАгента</CommandName>
-									<ExtendedTooltip name="КнопкаОткрытьПрофилиАгентаРасширеннаяПодсказка" id="219"/>
-								</Button>
-							</ChildItems>
 						</CommandBar>
 						<Table name="СписокАгентов" id="220">
-							<CommandBarLocation>None</CommandBarLocation>
+							<CommandBarLocation>Top</CommandBarLocation>
 							<ReadOnly>true</ReadOnly>
 							<HeightInTableRows>15</HeightInTableRows>
 							<DataPath>СписокАгентов</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+							</CommandSet>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="СписокАгентовКонтекстноеМеню" id="221"/>
-							<AutoCommandBar name="СписокАгентовКоманднаяПанель" id="222"/>
+							<AutoCommandBar name="СписокАгентовКоманднаяПанель" id="222">
+								<ChildItems>
+									<Button name="КнопкаОткрытьАгентаАгенты" id="216">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОткрытьАгентаАгенты</CommandName>
+										<ExtendedTooltip name="КнопкаОткрытьАгентаАгентыРасширеннаяПодсказка" id="217"/>
+									</Button>
+									<Button name="КнопкаОткрытьПрофилиАгента" id="218">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОткрытьПрофилиАгента</CommandName>
+										<ExtendedTooltip name="КнопкаОткрытьПрофилиАгентаРасширеннаяПодсказка" id="219"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
 							<ExtendedTooltip name="СписокАгентовРасширеннаяПодсказка" id="283"/>
 							<SearchStringAddition name="СписокАгентовСтрокаПоиска" id="223">
 								<AdditionSource>
@@ -1540,10 +1560,10 @@
 					<Type>
 						<v8:Type>cfg:DocumentRef.бит_мдм_ЗаявкаНаИзменение</v8:Type>
 						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+						<v8:Type>cfg:CatalogRef.УчетныеЗаписиЭлектроннойПочты</v8:Type>
 						<v8:Type>cfg:CatalogRef.БанковскиеСчета</v8:Type>
 						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
 						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
-						<v8:Type>cfg:CatalogRef.УчетныеЗаписиЭлектроннойПочты</v8:Type>
 					</Type>
 				</Column>
 			</Columns>
