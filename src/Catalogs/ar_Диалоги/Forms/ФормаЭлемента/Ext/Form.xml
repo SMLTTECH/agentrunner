@@ -12,7 +12,14 @@
 	</Title>
 	<AutoTitle>false</AutoTitle>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<Autofill>true</Autofill>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ОбновитьЛенту" id="33">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОбновитьЛенту</CommandName>
+				<ExtendedTooltip name="ОбновитьЛентуРасширеннаяПодсказка" id="34"/>
+			</Button>
+		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
@@ -152,11 +159,22 @@
 					<MultiLine>true</MultiLine>
 					<Height>3</Height>
 					<ChoiceListButton>true</ChoiceListButton>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Введите сообщение...</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Enter a message...</v8:content>
+						</v8:item>
+					</InputHint>
 					<ExtendedTooltip name="ТекстОтветаРасширеннаяПодсказка" id="20"/>
 								<ContextMenu name="ТекстОтветаКонтекстноеМеню" id="32"/>
 				</InputField>
 				<Button name="Отправить" id="21">
 					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
 					<CommandName>Form.Command.ОтправитьСообщение</CommandName>
 					<ExtendedTooltip name="ОтправитьРасширеннаяПодсказка" id="22"/>
 				</Button>
@@ -239,6 +257,7 @@
 					<v8:content>Отправить сообщение в диалог</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Shortcut>Ctrl+Enter</Shortcut>
 			<Action>ОтправитьСообщение</Action>
 		</Command>
 		<Command name="ПерейтиКПредмету" id="27">
@@ -255,10 +274,33 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Открыть предмет диалога</v8:content>
+					<v8:content>Открыть предмет диалога (заявку, документ)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open the dialog subject (request, document)</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПерейтиКПредмету</Action>
+		</Command>
+		<Command name="ОбновитьЛенту" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Refresh</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перечитать ленту и состояние диалога</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьЛенту</Action>
 		</Command>
 	</Commands>
 </Form>
