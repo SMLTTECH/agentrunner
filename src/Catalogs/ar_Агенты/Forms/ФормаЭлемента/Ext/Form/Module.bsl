@@ -1132,10 +1132,11 @@
 	ИначеЕсли Причина = "tool_code_import_forbidden" Тогда
 		Возврат НСтр("ru='Пресет содержит запрещённый перенос кода инструмента (code_implementation). Агент не изменён.';
 			|en='The preset contains a forbidden tool code transfer (code_implementation). The agent was not changed.'");
+	Иначе
+		// invalid_json: битый JSON либо пустой/помеченный на удаление пресет.
+		Возврат НСтр("ru='Пресет не содержит корректный JSON пресета агента. Агент не изменён.';
+			|en='The preset does not contain a valid agent preset JSON. The agent was not changed.'");
 	КонецЕсли;
-
-	Возврат НСтр("ru='Пресет не содержит корректный JSON пресета агента. Агент не изменён.';
-		|en='The preset does not contain a valid agent preset JSON. The agent was not changed.'");
 
 КонецФункции
 
