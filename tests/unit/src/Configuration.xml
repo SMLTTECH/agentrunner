@@ -99,6 +99,10 @@
 			<CommonTemplate>ЮТ_СловарьПодражателя_Люди_МужскиеОтчества_ru</CommonTemplate>
 			<CommonTemplate>ЮТ_СловарьПодражателя_Люди_МужскиеФамилии_ru</CommonTemplate>
 			<CommonTemplate>ЮТMonacoEditor</CommonTemplate>
+			<CommonTemplate>СТ_НСИСценарии</CommonTemplate>
+			<CommonTemplate>СТ_НСИФайлЯндексЕдаСоСчётом</CommonTemplate>
+			<CommonTemplate>СТ_НСИФайлВТБОсновные</CommonTemplate>
+			<CommonTemplate>СТ_НСИФайлГазпромСоСчётом</CommonTemplate>
 			<CommonTemplate>ЮТRegEx1CAddin</CommonTemplate>
 			<CommonTemplate>ЮТWebSocketAddIn</CommonTemplate>
 			<CommonTemplate>ЮТYaxUnitAddIn</CommonTemplate>
@@ -236,6 +240,9 @@
 			<CommonModule>ОМ_ar_Секреты</CommonModule>
 			<CommonModule>ОМ_ar_Константы</CommonModule>
 			<CommonModule>ОМ_ar_JSON</CommonModule>
+			<CommonModule>СТ_НСИОбщий</CommonModule>
+			<CommonModule>СТ_НСИСоздание</CommonModule>
+			<CommonModule>СТ_НСИПроверка</CommonModule>
 			<CommonModule>ОМ_ar_ПланЗапуска</CommonModule>
 			<CommonModule>ОМ_ar_Надзор</CommonModule>
 			<CommonModule>ОМ_ar_ПакетНСИ</CommonModule>
