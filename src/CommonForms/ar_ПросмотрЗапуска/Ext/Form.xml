@@ -863,6 +863,7 @@
 					<ChildItems>
 						<Table name="План" id="194">
 							<CommandBarLocation>None</CommandBarLocation>
+							<ReadOnly>true</ReadOnly>
 							<DataPath>План</DataPath>
 							<Title>
 								<v8:item>
@@ -1004,6 +1005,7 @@
 					<ChildItems>
 						<Table name="ОжидаетПодтверждения" id="136">
 							<CommandBarLocation>Top</CommandBarLocation>
+							<ReadOnly>true</ReadOnly>
 							<DataPath>ОжидаетПодтверждения</DataPath>
 							<Title>
 								<v8:item>
