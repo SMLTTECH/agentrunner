@@ -115,6 +115,7 @@
 				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ar_Агенты</v8:Type>
 			</valueType>
 		</field>
+		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	История.Период КАК ДатаПередачи,
 	История.Объект КАК Заявка,
