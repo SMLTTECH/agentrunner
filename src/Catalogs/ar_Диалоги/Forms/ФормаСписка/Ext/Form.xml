@@ -41,6 +41,68 @@
 				</Button>
 			</ChildItems>
 		</CommandBar>
+		<UsualGroup name="ГруппаОтборов" id="63">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОтборовРасширеннаяПодсказка" id="64"/>
+			<ChildItems>
+				<InputField name="ПользовательОтбора" id="65">
+					<DataPath>ПользовательОтбора</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователь</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>User</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПользовательОтбораКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ПользовательОтбораРасширеннаяПодсказка" id="67"/>
+					<Events>
+						<Event name="OnChange">ПользовательОтбораПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="СостояниеОтбора" id="68">
+					<DataPath>СостояниеОтбора</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>State</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СостояниеОтбораКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="СостояниеОтбораРасширеннаяПодсказка" id="70"/>
+					<Events>
+						<Event name="OnChange">СостояниеОтбораПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПредметОтбора" id="71">
+					<DataPath>ПредметОтбора</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предмет</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Subject</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПредметОтбораКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="ПредметОтбораРасширеннаяПодсказка" id="73"/>
+					<Events>
+						<Event name="OnChange">ПредметОтбораПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<Table name="Список" id="1">
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
@@ -214,36 +276,6 @@
 					<ContextMenu name="ЛентаHTMLКонтекстноеМеню" id="53"/>
 					<ExtendedTooltip name="ЛентаHTMLРасширеннаяПодсказка" id="34"/>
 				</HTMLDocumentField>
-				<UsualGroup name="ГруппаОтвета" id="35">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Ответ</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Reply</v8:content>
-						</v8:item>
-					</Title>
-					<Group>Horizontal</Group>
-					<Behavior>Usual</Behavior>
-					<ExtendedTooltip name="ГруппаОтветаРасширеннаяПодсказка" id="36"/>
-					<ChildItems>
-						<InputField name="ТекстОтвета" id="37">
-							<DataPath>ТекстОтвета</DataPath>
-							<Height>2</Height>
-							<MultiLine>true</MultiLine>
-							<ChoiceListButton>true</ChoiceListButton>
-							<ContextMenu name="ТекстОтветаКонтекстноеМеню" id="51"/>
-							<ExtendedTooltip name="ТекстОтветаРасширеннаяПодсказка" id="38"/>
-						</InputField>
-						<Button name="Отправить" id="39">
-							<Type>UsualButton</Type>
-							<CommandName>Form.Command.ОтправитьСообщение</CommandName>
-							<ExtendedTooltip name="ОтправитьРасширеннаяПодсказка" id="40"/>
-						</Button>
-					</ChildItems>
-				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
@@ -315,7 +347,17 @@
 				ГДЕ
 					Участники.ar_Пользователь = &amp;ТекущийПользователь)))
 	И (НЕ &amp;ОтбиратьПоПредмету
-		ИЛИ Диалоги.ar_Предмет = &amp;Предмет)</QueryText>
+		ИЛИ Диалоги.ar_Предмет = &amp;Предмет)
+	И (НЕ &amp;ОтбиратьПоПользователю
+		ИЛИ Диалоги.Ссылка В
+			(ВЫБРАТЬ
+				Участники.Ссылка
+			ИЗ
+				Справочник.ar_Диалоги.ar_Участники КАК Участники
+			ГДЕ
+				Участники.ar_Пользователь = &amp;ПользовательОтбора))
+	И (НЕ &amp;ОтбиратьПоСостоянию
+		ИЛИ Диалоги.ar_Состояние = &amp;СостояниеОтбора)</QueryText>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>ОжидаетПервым</dcssch:dataPath>
 					<dcssch:field>ОжидаетПервым</dcssch:field>
@@ -364,21 +406,6 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ТекстОтвета" id="43">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Сообщение</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-		</Attribute>
 		<Attribute name="ПредметОтбора" id="62">
 			<Title>
 				<v8:item>
@@ -388,6 +415,36 @@
 			</Title>
 			<Type>
 				<v8:TypeSet>cfg:DefinedType.ar_ПрикладнойОбъект</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ПользовательОтбора" id="74">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь отбора</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Filter user</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СостояниеОтбора" id="75">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние отбора</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Filter state</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ar_СостоянияДиалогов</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>
@@ -410,25 +467,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НачатьДиалог</Action>
-		</Command>
-		<Command name="ОтправитьСообщение" id="44">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Отправить</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Send</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Отправить сообщение в текущий диалог</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ОтправитьСообщение</Action>
 		</Command>
 	</Commands>
 	<Parameters>
