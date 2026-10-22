@@ -2659,6 +2659,10 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Лог выбранного запуска с замаскированными персональными данными</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Selected run log with personal data masked</v8:content>
+				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьЛогЗапускаБезПДнВыполнить</Action>
 		</Command>
@@ -2677,6 +2681,10 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Сохранить лог выбранного запуска с замаскированными персональными данными в JSON-файл</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save the selected run log with personal data masked to a JSON file</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ВыгрузитьЛогЗапускаБезПДнВыполнить</Action>
