@@ -128,6 +128,7 @@
 | [CLA.md](CLA.md) | Соглашение контрибьютора |
 | [.docs/Plan.md](.docs/Plan.md) | План реализации |
 | [.docs/Tasks.md](.docs/Tasks.md) | Бэклог |
+| [Открытие диалогов агента из своего кода](user_docs/topics/otkrytie-dialogov-agenta-iz-vneshnego-koda.md) | Пример интеграции: отбор по заявке НСИ, права, отключённое расширение |
 
 ---
 
