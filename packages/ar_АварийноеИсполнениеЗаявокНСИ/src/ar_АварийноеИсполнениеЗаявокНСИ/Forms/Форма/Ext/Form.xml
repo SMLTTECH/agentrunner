@@ -18,13 +18,13 @@
 			<Group>Horizontal</Group>
 			<ExtendedTooltip name="ГруппаНастроекРасширеннаяПодсказка" id="2"/>
 			<ChildItems>
-				<CheckBoxField name="РежимВключён" id="3">
-					<DataPath>РежимВключён</DataPath>
+				<CheckBoxField name="РежимВключен" id="3">
+					<DataPath>РежимВключен</DataPath>
 					<TitleLocation>Right</TitleLocation>
-					<ContextMenu name="РежимВключёнКонтекстноеМеню" id="4"/>
-					<ExtendedTooltip name="РежимВключёнРасширеннаяПодсказка" id="5"/>
+					<ContextMenu name="РежимВключенКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="РежимВключенРасширеннаяПодсказка" id="5"/>
 					<Events>
-						<Event name="OnChange">РежимВключёнПриИзменении</Event>
+						<Event name="OnChange">РежимВключенПриИзменении</Event>
 					</Events>
 				</CheckBoxField>
 				<InputField name="АгентНаименование" id="6">
@@ -110,11 +110,11 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 		</Attribute>
-		<Attribute name="РежимВключён" id="2">
+		<Attribute name="РежимВключен" id="2">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Режим включён</v8:content>
+					<v8:content>Режим включен</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
