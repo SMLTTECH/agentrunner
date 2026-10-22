@@ -491,16 +491,41 @@
 										<CommandName>Form.Command.ПоказатьСозданныеОбъекты</CommandName>
 										<ExtendedTooltip name="КнопкаПоказатьСозданныеОбъектыРасширеннаяПодсказка" id="115"/>
 									</Button>
-									<Button name="КнопкаПоказатьЛогЗапуска" id="432">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.ПоказатьЛогЗапуска</CommandName>
-										<ExtendedTooltip name="КнопкаПоказатьЛогЗапускаРасширеннаяПодсказка" id="433"/>
-									</Button>
-									<Button name="КнопкаВыгрузитьЛогЗапуска" id="434">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.ВыгрузитьЛогЗапуска</CommandName>
-										<ExtendedTooltip name="КнопкаВыгрузитьЛогЗапускаРасширеннаяПодсказка" id="435"/>
-									</Button>
+									<ButtonGroup name="ГруппаЛог" id="445">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Лог</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Log</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГруппаЛогРасширеннаяПодсказка" id="446"/>
+										<ChildItems>
+											<Button name="КнопкаПоказатьЛогЗапуска" id="432">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПоказатьЛогЗапуска</CommandName>
+												<ExtendedTooltip name="КнопкаПоказатьЛогЗапускаРасширеннаяПодсказка" id="433"/>
+											</Button>
+											<Button name="КнопкаВыгрузитьЛогЗапуска" id="434">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ВыгрузитьЛогЗапуска</CommandName>
+												<ExtendedTooltip name="КнопкаВыгрузитьЛогЗапускаРасширеннаяПодсказка" id="435"/>
+											</Button>
+											<Button name="КнопкаПоказатьЛогЗапускаБезПДн" id="447">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПоказатьЛогЗапускаБезПДн</CommandName>
+												<ExtendedTooltip name="КнопкаПоказатьЛогЗапускаБезПДнРасширеннаяПодсказка" id="448"/>
+											</Button>
+											<Button name="КнопкаВыгрузитьЛогЗапускаБезПДн" id="449">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ВыгрузитьЛогЗапускаБезПДн</CommandName>
+												<ExtendedTooltip name="КнопкаВыгрузитьЛогЗапускаБезПДнРасширеннаяПодсказка" id="450"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
 									<Button name="КнопкаОткрытьЗапускПоИдентификатору" id="439">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.ОткрытьЗапускПоИдентификатору</CommandName>
@@ -2617,6 +2642,52 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВыгрузитьЛогЗапускаВыполнить</Action>
+		</Command>
+		<Command name="ПоказатьЛогЗапускаБезПДн" id="451">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать лог (без ПДн)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show log (no PII)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лог выбранного запуска с замаскированными персональными данными</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Selected run log with personal data masked</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьЛогЗапускаБезПДнВыполнить</Action>
+		</Command>
+		<Command name="ВыгрузитьЛогЗапускаБезПДн" id="452">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить лог (без ПДн)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Export log (no PII)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить лог выбранного запуска с замаскированными персональными данными в JSON-файл</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save the selected run log with personal data masked to a JSON file</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьЛогЗапускаБезПДнВыполнить</Action>
 		</Command>
 		<Command name="ОткрытьЗапускПоИдентификатору" id="438">
 			<Title>
