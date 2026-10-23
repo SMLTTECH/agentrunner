@@ -6,7 +6,7 @@
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
-	
+
 	<ChildItems>
 		<UsualGroup name="ГруппаНастроек" id="1">
 			<Title>
@@ -15,90 +15,159 @@
 					<v8:content>Настройки</v8:content>
 				</v8:item>
 			</Title>
-			<Group>Horizontal</Group>
+			<Group>Vertical</Group>
 			<ExtendedTooltip name="ГруппаНастроекРасширеннаяПодсказка" id="2"/>
 			<ChildItems>
-				<CheckBoxField name="РежимВключен" id="3">
-					<DataPath>РежимВключен</DataPath>
-					<TitleLocation>Right</TitleLocation>
-					<ContextMenu name="РежимВключенКонтекстноеМеню" id="4"/>
-					<ExtendedTooltip name="РежимВключенРасширеннаяПодсказка" id="5"/>
-					<Events>
-						<Event name="OnChange">РежимВключенПриИзменении</Event>
-					</Events>
-				</CheckBoxField>
-				<InputField name="АгентНаименование" id="6">
-					<DataPath>АгентНаименование</DataPath>
-					<ContextMenu name="АгентНаименованиеКонтекстноеМеню" id="7"/>
-					<ExtendedTooltip name="АгентНаименованиеРасширеннаяПодсказка" id="8"/>
-					<Events>
-						<Event name="OnChange">АгентНаименованиеПриИзменении</Event>
-					</Events>
-				</InputField>
-				<InputField name="ЛимитЗаявок" id="9">
-					<DataPath>ЛимитЗаявок</DataPath>
-					<ContextMenu name="ЛимитЗаявокКонтекстноеМеню" id="10"/>
-					<ExtendedTooltip name="ЛимитЗаявокРасширеннаяПодсказка" id="11"/>
-					<Events>
-						<Event name="OnChange">ЛимитЗаявокПриИзменении</Event>
-					</Events>
-				</InputField>
+				<UsualGroup name="ГруппаРежима" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа режима</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаРежимаРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<CheckBoxField name="РежимВключен" id="5">
+							<DataPath>РежимВключен</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<ContextMenu name="РежимВключенКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="РежимВключенРасширеннаяПодсказка" id="7"/>
+							<Events>
+								<Event name="OnChange">РежимВключенПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="ПользовательАгента" id="8">
+							<DataPath>ПользовательАгента</DataPath>
+							<ContextMenu name="ПользовательАгентаКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="ПользовательАгентаРасширеннаяПодсказка" id="10"/>
+							<Events>
+								<Event name="OnChange">ПользовательАгентаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ЛимитЗаявок" id="11">
+							<DataPath>ЛимитЗаявок</DataPath>
+							<ContextMenu name="ЛимитЗаявокКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ЛимитЗаявокРасширеннаяПодсказка" id="13"/>
+							<Events>
+								<Event name="OnChange">ЛимитЗаявокПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВиз" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа виз</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаВизРасширеннаяПодсказка" id="15"/>
+					<ChildItems>
+						<InputField name="ГУИДВизыЭтап1" id="16">
+							<DataPath>ГУИДВизыЭтап1</DataPath>
+							<ContextMenu name="ГУИДВизыЭтап1КонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ГУИДВизыЭтап1РасширеннаяПодсказка" id="18"/>
+							<Events>
+								<Event name="OnChange">ГУИДВизыЭтап1ПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ГУИДВизыЭтап2" id="19">
+							<DataPath>ГУИДВизыЭтап2</DataPath>
+							<ContextMenu name="ГУИДВизыЭтап2КонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ГУИДВизыЭтап2РасширеннаяПодсказка" id="21"/>
+							<Events>
+								<Event name="OnChange">ГУИДВизыЭтап2ПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПрочего" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа прочего</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаПрочегоРасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<InputField name="ДатаНачала" id="24">
+							<DataPath>ДатаНачала</DataPath>
+							<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="26"/>
+							<Events>
+								<Event name="OnChange">ДатаНачалаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<CheckBoxField name="ПисьмоИнициатору" id="27">
+							<DataPath>ПисьмоИнициатору</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<ContextMenu name="ПисьмоИнициаторуКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ПисьмоИнициаторуРасширеннаяПодсказка" id="29"/>
+							<Events>
+								<Event name="OnChange">ПисьмоИнициаторуПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<LabelDecoration name="ПредупреждениеРежима" id="12">
+		<LabelDecoration name="ПредупреждениеРежима" id="30">
 			<Title formatted="false">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Включайте, только когда агент НСИ не работает: при работающем агенте обработка конкурирует с ним за заявки.</v8:content>
 				</v8:item>
 			</Title>
-			<ContextMenu name="ПредупреждениеРежимаКонтекстноеМеню" id="13"/>
-			<ExtendedTooltip name="ПредупреждениеРежимаРасширеннаяПодсказка" id="14"/>
+			<ContextMenu name="ПредупреждениеРежимаКонтекстноеМеню" id="31"/>
+			<ExtendedTooltip name="ПредупреждениеРежимаРасширеннаяПодсказка" id="32"/>
 		</LabelDecoration>
-		<Button name="КнопкаВыполнитьТакт" id="15">
+		<Button name="КнопкаВыполнитьТакт" id="33">
 			<Type>UsualButton</Type>
 			<CommandName>Form.Command.ВыполнитьТактСейчас</CommandName>
-			<ExtendedTooltip name="КнопкаВыполнитьТактРасширеннаяПодсказка" id="16"/>
+			<ExtendedTooltip name="КнопкаВыполнитьТактРасширеннаяПодсказка" id="34"/>
 		</Button>
-		<Button name="КнопкаПоказатьБезЗаписи" id="17">
+		<Button name="КнопкаПоказатьБезЗаписи" id="35">
 			<Type>UsualButton</Type>
 			<CommandName>Form.Command.ПоказатьБезЗаписи</CommandName>
-			<ExtendedTooltip name="КнопкаПоказатьБезЗаписиРасширеннаяПодсказка" id="18"/>
+			<ExtendedTooltip name="КнопкаПоказатьБезЗаписиРасширеннаяПодсказка" id="36"/>
 		</Button>
-		<Table name="ТаблицаРезультата" id="19">
+		<Table name="ТаблицаРезультата" id="37">
 			<DataPath>ТаблицаРезультата</DataPath>
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
-			<ContextMenu name="ТаблицаРезультатаКонтекстноеМеню" id="20"/>
-			<AutoCommandBar name="ТаблицаРезультатаКоманднаяПанель" id="21"/>
-			<SearchStringAddition name="ТаблицаРезультатаСтрокаПоиска" id="22"/>
-			<ViewStatusAddition name="ТаблицаРезультатаСостояниеПросмотра" id="23"/>
-			<SearchControlAddition name="ТаблицаРезультатаУправлениеПоиском" id="24"/>
+			<ContextMenu name="ТаблицаРезультатаКонтекстноеМеню" id="38"/>
+			<AutoCommandBar name="ТаблицаРезультатаКоманднаяПанель" id="39"/>
+			<SearchStringAddition name="ТаблицаРезультатаСтрокаПоиска" id="40"/>
+			<ViewStatusAddition name="ТаблицаРезультатаСостояниеПросмотра" id="41"/>
+			<SearchControlAddition name="ТаблицаРезультатаУправлениеПоиском" id="42"/>
 			<ChildItems>
-				<LabelField name="ТаблицаРезультатаЗаявка" id="25">
+				<LabelField name="ТаблицаРезультатаЗаявка" id="43">
 					<DataPath>ТаблицаРезультата.Заявка</DataPath>
-					<ContextMenu name="ТаблицаРезультатаЗаявкаКонтекстноеМеню" id="26"/>
-					<ExtendedTooltip name="ТаблицаРезультатаЗаявкаРасширеннаяПодсказка" id="27"/>
+					<ContextMenu name="ТаблицаРезультатаЗаявкаКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ТаблицаРезультатаЗаявкаРасширеннаяПодсказка" id="45"/>
 				</LabelField>
-				<LabelField name="ТаблицаРезультатаЭтап" id="28">
+				<LabelField name="ТаблицаРезультатаЭтап" id="46">
 					<DataPath>ТаблицаРезультата.Этап</DataPath>
-					<ContextMenu name="ТаблицаРезультатаЭтапКонтекстноеМеню" id="29"/>
-					<ExtendedTooltip name="ТаблицаРезультатаЭтапРасширеннаяПодсказка" id="30"/>
+					<ContextMenu name="ТаблицаРезультатаЭтапКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ТаблицаРезультатаЭтапРасширеннаяПодсказка" id="48"/>
 				</LabelField>
-				<LabelField name="ТаблицаРезультатаВердикт" id="31">
-					<DataPath>ТаблицаРезультата.Вердикт</DataPath>
-					<ContextMenu name="ТаблицаРезультатаВердиктКонтекстноеМеню" id="32"/>
-					<ExtendedTooltip name="ТаблицаРезультатаВердиктРасширеннаяПодсказка" id="33"/>
+				<LabelField name="ТаблицаРезультатаПроверки" id="49">
+					<DataPath>ТаблицаРезультата.Проверки</DataPath>
+					<ContextMenu name="ТаблицаРезультатаПроверкиКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ТаблицаРезультатаПроверкиРасширеннаяПодсказка" id="51"/>
 				</LabelField>
-				<LabelField name="ТаблицаРезультатаРешение" id="34">
+				<LabelField name="ТаблицаРезультатаРешение" id="52">
 					<DataPath>ТаблицаРезультата.Решение</DataPath>
-					<ContextMenu name="ТаблицаРезультатаРешениеКонтекстноеМеню" id="35"/>
-					<ExtendedTooltip name="ТаблицаРезультатаРешениеРасширеннаяПодсказка" id="36"/>
+					<ContextMenu name="ТаблицаРезультатаРешениеКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ТаблицаРезультатаРешениеРасширеннаяПодсказка" id="54"/>
 				</LabelField>
-				<LabelField name="ТаблицаРезультатаПричина" id="37">
+				<LabelField name="ТаблицаРезультатаПричина" id="55">
 					<DataPath>ТаблицаРезультата.Причина</DataPath>
-					<ContextMenu name="ТаблицаРезультатаПричинаКонтекстноеМеню" id="38"/>
-					<ExtendedTooltip name="ТаблицаРезультатаПричинаРасширеннаяПодсказка" id="39"/>
+					<ContextMenu name="ТаблицаРезультатаПричинаКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ТаблицаРезультатаПричинаРасширеннаяПодсказка" id="57"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -121,22 +190,62 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="АгентНаименование" id="3">
+		<Attribute name="ПользовательАгента" id="3">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Агент НСИ (наименование)</v8:content>
+					<v8:content>Пользователь агента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ГУИДВизыЭтап1" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>GUID визы этапа 1</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:string</v8:Type>
 				<v8:StringQualifiers>
-					<v8:Length>150</v8:Length>
+					<v8:Length>40</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ЛимитЗаявок" id="4">
+		<Attribute name="ГУИДВизыЭтап2" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>GUID визы этапа 2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>40</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаНачала" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата начала</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛимитЗаявок" id="7">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -152,7 +261,18 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ТаблицаРезультата" id="5">
+		<Attribute name="ПисьмоИнициатору" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Письмо инициатору при возврате и отказе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаРезультата" id="9">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -164,6 +284,12 @@
 			</Type>
 			<Columns>
 				<Column name="Заявка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заявка</v8:content>
+						</v8:item>
+					</Title>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
@@ -173,24 +299,42 @@
 					</Type>
 				</Column>
 				<Column name="Этап" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Этап</v8:content>
+						</v8:item>
+					</Title>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
-							<v8:Length>50</v8:Length>
+							<v8:Length>10</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="Вердикт" id="3">
+				<Column name="Проверки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверки</v8:content>
+						</v8:item>
+					</Title>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
-							<v8:Length>100</v8:Length>
+							<v8:Length>0</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
 				<Column name="Решение" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Решение</v8:content>
+						</v8:item>
+					</Title>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
@@ -200,6 +344,12 @@
 					</Type>
 				</Column>
 				<Column name="Причина" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Причина</v8:content>
+						</v8:item>
+					</Title>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
