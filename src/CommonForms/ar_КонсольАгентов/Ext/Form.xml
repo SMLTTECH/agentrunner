@@ -481,17 +481,7 @@
 										<CommandName>Form.Command.ВозобновитьЗапуск</CommandName>
 										<ExtendedTooltip name="КнопкаВозобновитьЗапускРасширеннаяПодсказка" id="107"/>
 									</Button>
-									<Button name="КнопкаОткрытьОчередьПодтверждений" id="108">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.ОткрытьОчередьПодтверждений</CommandName>
-										<ExtendedTooltip name="КнопкаОткрытьОчередьПодтвержденийРасширеннаяПодсказка" id="109"/>
-									</Button>
-									<Button name="КнопкаПоказатьСозданныеОбъекты" id="114">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.ПоказатьСозданныеОбъекты</CommandName>
-										<ExtendedTooltip name="КнопкаПоказатьСозданныеОбъектыРасширеннаяПодсказка" id="115"/>
-									</Button>
-									<ButtonGroup name="ГруппаЛог" id="445">
+									<Popup name="ГруппаЛог" id="445">
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
@@ -502,6 +492,10 @@
 												<v8:content>Log</v8:content>
 											</v8:item>
 										</Title>
+										<Picture>
+											<xr:Ref>StdPicture.EventLog</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
 										<ExtendedTooltip name="ГруппаЛогРасширеннаяПодсказка" id="446"/>
 										<ChildItems>
 											<Button name="КнопкаПоказатьЛогЗапуска" id="432">
@@ -525,7 +519,7 @@
 												<ExtendedTooltip name="КнопкаВыгрузитьЛогЗапускаБезПДнРасширеннаяПодсказка" id="450"/>
 											</Button>
 										</ChildItems>
-									</ButtonGroup>
+									</Popup>
 									<Button name="КнопкаОткрытьЗапускПоИдентификатору" id="439">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.ОткрытьЗапускПоИдентификатору</CommandName>
@@ -546,6 +540,16 @@
 										</ToolTip>
 										<ExtendedTooltip name="ГруппаДополнительноРасширеннаяПодсказка" id="293"/>
 										<ChildItems>
+											<Button name="КнопкаОткрытьОчередьПодтверждений" id="108">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ОткрытьОчередьПодтверждений</CommandName>
+												<ExtendedTooltip name="КнопкаОткрытьОчередьПодтвержденийРасширеннаяПодсказка" id="109"/>
+											</Button>
+											<Button name="КнопкаПоказатьСозданныеОбъекты" id="114">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПоказатьСозданныеОбъекты</CommandName>
+												<ExtendedTooltip name="КнопкаПоказатьСозданныеОбъектыРасширеннаяПодсказка" id="115"/>
+											</Button>
 											<Button name="КнопкаОткрытьПользователя" id="112">
 												<Type>CommandBarButton</Type>
 												<CommandName>Form.Command.ОткрытьПользователя</CommandName>
@@ -619,6 +623,7 @@
 								</InputField>
 								<InputField name="СписокЗапусковПредставлениеПользователя" id="79">
 									<DataPath>СписокЗапусков.ПредставлениеПользователя</DataPath>
+									<Visible>false</Visible>
 									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
@@ -769,8 +774,14 @@
 							<DataPath>СтрокаЗдоровьяПоле</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<TitleLocation>None</TitleLocation>
+							<Width>50</Width>
+							<Hiperlink>true</Hiperlink>
+							<TextColor>#0000CC</TextColor>
 							<ContextMenu name="СтрокаЗдоровьяПолеКонтекстноеМеню" id="98"/>
 							<ExtendedTooltip name="СтрокаЗдоровьяПолеРасширеннаяПодсказка" id="99"/>
+							<Events>
+								<Event name="Click">СтрокаЗдоровьяПолеНажатие</Event>
+							</Events>
 						</LabelField>
 					</ChildItems>
 				</Page>
@@ -1868,7 +1879,7 @@
 			<Type>
 				<v8:Type>xs:string</v8:Type>
 				<v8:StringQualifiers>
-					<v8:Length>250</v8:Length>
+					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
@@ -2696,6 +2707,10 @@
 					<v8:content>Открыть по идентификатору</v8:content>
 				</v8:item>
 			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.SyncContents</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ОткрытьЗапускПоИдентификаторуВыполнить</Action>
 		</Command>
 	</Commands>

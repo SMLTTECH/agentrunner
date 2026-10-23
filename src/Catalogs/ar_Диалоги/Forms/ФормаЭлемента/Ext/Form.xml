@@ -14,13 +14,6 @@
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
-		<ChildItems>
-			<Button name="ОбновитьЛенту" id="33">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.ОбновитьЛенту</CommandName>
-				<ExtendedTooltip name="ОбновитьЛентуРасширеннаяПодсказка" id="34"/>
-			</Button>
-		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
@@ -70,11 +63,8 @@
 						</InputField>
 						<Button name="ПерейтиКПредмету" id="7">
 							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
 							<CommandName>Form.Command.ПерейтиКПредмету</CommandName>
-							<Picture>
-								<xr:Ref>StdPicture.InputFieldOpen</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
 							<ExtendedTooltip name="ПерейтиКПредметуРасширеннаяПодсказка" id="8"/>
 						</Button>
 					</ChildItems>
@@ -144,9 +134,15 @@
 					<v8:content>Группа диалог с агентом</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Group>Vertical</Group>
 			<Behavior>Collapsible</Behavior>
 			<ExtendedTooltip name="ГруппаДиалогСАгентомРасширеннаяПодсказка" id="37"/>
 			<ChildItems>
+				<Button name="ОбновитьЛенту" id="33">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ОбновитьЛенту</CommandName>
+					<ExtendedTooltip name="ОбновитьЛентуРасширеннаяПодсказка" id="34"/>
+				</Button>
 				<HTMLDocumentField name="ЛентаHTML" id="15">
 					<DataPath>ЛентаHTML</DataPath>
 					<ReadOnly>true</ReadOnly>
@@ -160,7 +156,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Ответ</v8:content>
+					<v8:content>Сообщение агенту</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -172,6 +168,48 @@
 			<Representation>StrongSeparation</Representation>
 			<ExtendedTooltip name="ГруппаОтветаРасширеннаяПодсказка" id="18"/>
 			<ChildItems>
+				<UsualGroup name="ГруппаРедактированиеПредмета" id="41">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа редактирование предмета</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа редактирование предмета</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>style:ToolTipBackColor</BackColor>
+					<ExtendedTooltip name="ГруппаРедактированиеПредметаРасширеннаяПодсказка" id="42"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьИнфо" id="38">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>При необходимости перейдите к предмету диалога</v8:content>
+								</v8:item>
+							</Title>
+							<BackColor>style:ToolTipBackColor</BackColor>
+							<ContextMenu name="НадписьИнфоКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="НадписьИнфоРасширеннаяПодсказка" id="40"/>
+						</LabelDecoration>
+						<Button name="ПерейтиКПредметуГиперссылка" id="43">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ПерейтиКПредмету</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Перейти</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ПерейтиКПредметуГиперссылкаРасширеннаяПодсказка" id="44"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
 				<InputField name="ТекстОтвета" id="19">
 					<DataPath>ТекстОтвета</DataPath>
 					<TitleLocation>None</TitleLocation>
@@ -283,7 +321,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Открыть</v8:content>
+					<v8:content>Открыть / внести изменения</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -301,7 +339,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>StdPicture.InputFieldOpen</xr:Ref>
+				<xr:Ref>StdPicture.Change</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ПерейтиКПредмету</Action>
@@ -324,6 +362,10 @@
 					<v8:content>Перечитать ленту и состояние диалога</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ОбновитьЛенту</Action>
 		</Command>
 	</Commands>
