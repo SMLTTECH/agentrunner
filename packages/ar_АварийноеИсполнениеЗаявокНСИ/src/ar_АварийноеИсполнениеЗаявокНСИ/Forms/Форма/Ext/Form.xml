@@ -138,17 +138,24 @@
 			<DataPath>ТаблицаРезультата</DataPath>
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
+			<ReadOnly>true</ReadOnly>
 			<ContextMenu name="ТаблицаРезультатаКонтекстноеМеню" id="38"/>
 			<AutoCommandBar name="ТаблицаРезультатаКоманднаяПанель" id="39"/>
 			<SearchStringAddition name="ТаблицаРезультатаСтрокаПоиска" id="40"/>
 			<ViewStatusAddition name="ТаблицаРезультатаСостояниеПросмотра" id="41"/>
 			<SearchControlAddition name="ТаблицаРезультатаУправлениеПоиском" id="42"/>
 			<ChildItems>
-				<LabelField name="ТаблицаРезультатаЗаявка" id="43">
+				<InputField name="ТаблицаРезультатаЗаявка" id="43">
 					<DataPath>ТаблицаРезультата.Заявка</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заявка</v8:content>
+						</v8:item>
+					</Title>
 					<ContextMenu name="ТаблицаРезультатаЗаявкаКонтекстноеМеню" id="44"/>
 					<ExtendedTooltip name="ТаблицаРезультатаЗаявкаРасширеннаяПодсказка" id="45"/>
-				</LabelField>
+				</InputField>
 				<LabelField name="ТаблицаРезультатаЭтап" id="46">
 					<DataPath>ТаблицаРезультата.Этап</DataPath>
 					<ContextMenu name="ТаблицаРезультатаЭтапКонтекстноеМеню" id="47"/>
@@ -291,11 +298,7 @@
 						</v8:item>
 					</Title>
 					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
+						<v8:Type>cfg:DocumentRef.бит_мдм_ЗаявкаНаИзменение</v8:Type>
 					</Type>
 				</Column>
 				<Column name="Этап" id="2">
