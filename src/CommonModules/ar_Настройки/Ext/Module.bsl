@@ -289,13 +289,15 @@
 			|отправкой: обработка может изменить тему, текст, адресатов или отменить отправку (экспортная
 			|процедура ar_ПриФормированииПисьма(Параметры, Письмо) модуля объекта). Тип значения - «Строка».
 			|Пусто или выключено - имя по умолчанию ar_ПереопределениеУведомлений. Обработки с таким
-			|именем нет или публикация отключена - письма уходят без изменений.';
+			|именем нет или публикация отключена - письма уходят без изменений. Изменение имени действует
+			|в новых сеансах (настройки кэшируются на сеанс).';
 			|en = 'Object name of the additional data processor (the «Additional reports and data processors»
 			|catalog, kind «Additional data processor») that receives every AgentRunner notification letter
 			|before sending: it may change the subject, text, recipients or cancel sending (export procedure
 			|ar_ПриФормированииПисьма(Параметры, Письмо) of the object module). Value type - «String».
 			|Empty or disabled - the default name ar_ПереопределениеУведомлений. No such processor or its
-			|publication is disabled - letters are sent unchanged.'"),
+			|publication is disabled - letters are sent unchanged. A name change applies to new sessions
+			|(settings are cached per session).'"),
 		"ar_ПереопределениеУведомлений"));
 
 	Возврат ТиповыеНастройки;
