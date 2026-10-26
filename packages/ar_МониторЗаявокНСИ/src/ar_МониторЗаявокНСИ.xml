@@ -6,13 +6,13 @@
 				<xr:ClassId>e41aff26-25cf-4bb6-b6c1-3f478a75f374</xr:ClassId>
 				<xr:ObjectId>d2c71d4f-9fbb-4b2d-855b-3bf8785250dc</xr:ObjectId>
 			</xr:ContainedObject>
-			<xr:GeneratedType name="ExternalReportObject.ar_ЗдоровьеЗаявокНСИ" category="Object">
+			<xr:GeneratedType name="ExternalReportObject.ar_МониторЗаявокНСИ" category="Object">
 				<xr:TypeId>06cea921-7dbb-4b6d-b910-563ed96dfc5e</xr:TypeId>
 				<xr:ValueId>338a8c0f-16b1-438f-a3f4-709e7fcd843a</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
-			<Name>ar_ЗдоровьеЗаявокНСИ</Name>
+			<Name>ar_МониторЗаявокНСИ</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -22,7 +22,7 @@
 			<Comment/>
 			<DefaultForm/>
 			<AuxiliaryForm/>
-			<MainDataCompositionSchema>ExternalReport.ar_ЗдоровьеЗаявокНСИ.Template.ОсновнаяСхемаКомпоновкиДанных</MainDataCompositionSchema>
+			<MainDataCompositionSchema>ExternalReport.ar_МониторЗаявокНСИ.Template.ОсновнаяСхемаКомпоновкиДанных</MainDataCompositionSchema>
 			<DefaultSettingsForm/>
 			<AuxiliarySettingsForm/>
 			<DefaultVariantForm/>
