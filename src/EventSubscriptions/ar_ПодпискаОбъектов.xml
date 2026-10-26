@@ -6,13 +6,12 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>AOS: Подписка на запись объектов (горячие типы)</v8:content>
+					<v8:content>AOS: Подписка на запись прикладных объектов</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
 			<Source>
-				<v8:TypeSet>cfg:CatalogObject</v8:TypeSet>
-				<v8:TypeSet>cfg:DocumentObject</v8:TypeSet>
+				<v8:TypeSet>cfg:DefinedType.ar_ПрикладнойОбъектОбъект</v8:TypeSet>
 			</Source>
 			<Event>OnWrite</Event>
 			<Handler>CommonModule.ar_ОбработчикПодписок.ПриЗаписиОбъекта</Handler>
