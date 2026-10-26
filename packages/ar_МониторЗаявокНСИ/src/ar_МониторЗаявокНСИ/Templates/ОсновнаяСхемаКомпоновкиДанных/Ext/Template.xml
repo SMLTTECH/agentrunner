@@ -202,7 +202,7 @@
 				<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 			</v8:NumberQualifiers>
 		</valueType>
-		<value xsi:type="xs:decimal">24</value>
+		<value xsi:type="xs:decimal">72</value>
 		<useRestriction>false</useRestriction>
 	</parameter>
 	<parameter>
@@ -278,7 +278,7 @@
 				<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 			</v8:NumberQualifiers>
 		</valueType>
-		<value xsi:type="xs:decimal">24</value>
+		<value xsi:type="xs:decimal">1</value>
 		<useRestriction>false</useRestriction>
 	</parameter>
 	<parameter>
@@ -301,11 +301,11 @@
 		<useRestriction>false</useRestriction>
 	</parameter>
 	<settingsVariant>
-		<dcsset:name>Основной</dcsset:name>
+		<dcsset:name>Мониторинг заявок НСИ</dcsset:name>
 		<dcsset:presentation xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Основной</v8:content>
+				<v8:content>Мониторинг заявок НСИ</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
@@ -348,7 +348,7 @@
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>ПорогПодтвержденияЧасов</dcscor:parameter>
-					<dcscor:value xsi:type="xs:decimal">24</dcscor:value>
+					<dcscor:value xsi:type="xs:decimal">72</dcscor:value>
 					<dcsset:userSettingID>5dce07c3-e58f-4c73-8173-1686150adb80</dcsset:userSettingID>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
@@ -368,7 +368,7 @@
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>ПорогРаспознаванияЧасов</dcscor:parameter>
-					<dcscor:value xsi:type="xs:decimal">24</dcscor:value>
+					<dcscor:value xsi:type="xs:decimal">1</dcscor:value>
 					<dcsset:userSettingID>1214cefa-fbbc-4683-a084-fa281af362e8</dcsset:userSettingID>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
