@@ -282,6 +282,20 @@
 		<useRestriction>false</useRestriction>
 	</parameter>
 	<parameter>
+		<name>ОшибкиСПоследнегоЗапуска</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ошибки с последнего запуска отчета (нет - за «Период ошибок»)</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">true</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
 		<name>ПериодОшибокЧасов</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
@@ -370,6 +384,11 @@
 					<dcscor:parameter>ПорогРаспознаванияЧасов</dcscor:parameter>
 					<dcscor:value xsi:type="xs:decimal">1</dcscor:value>
 					<dcsset:userSettingID>1214cefa-fbbc-4683-a084-fa281af362e8</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ОшибкиСПоследнегоЗапуска</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					<dcsset:userSettingID>0bba6283-a8f6-4436-8c47-d0eb300e4050</dcsset:userSettingID>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>ПериодОшибокЧасов</dcscor:parameter>
