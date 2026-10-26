@@ -204,6 +204,7 @@
 			<ScheduledJob>ar_ОпросПодписокАгентов</ScheduledJob>
 			<ScheduledJob>ar_ПроверкаВерсии</ScheduledJob>
 			<DefinedType>ar_ПрикладнойОбъект</DefinedType>
+			<DefinedType>ar_ПрикладнойОбъектОбъект</DefinedType>
 			<Constant>ar_ТаймаутLLMПоУмолчанию</Constant>
 			<Constant>ar_МаксШаговПоУмолчанию</Constant>
 			<Constant>ar_ApprovalExpirationЧасов</Constant>
