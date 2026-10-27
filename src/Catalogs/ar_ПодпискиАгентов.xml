@@ -35,7 +35,7 @@
 					<v8:content>Agent subscriptions</v8:content>
 				</v8:item>
 			</Synonym>
-			<Comment>Реестр event-driven подписок агентов на события 1С. META-35.</Comment>
+			<Comment>Реестр event-driven подписок агентов на события 1С. META-35. Активные подписки кэшируются на сеанс (ar_ОбработчикПодписокПовтИсп): изменение подписки в других сеансах действует не позже чем через 20 минут, в своём сеансе - сразу.</Comment>
 			<Hierarchical>false</Hierarchical>
 			<HierarchyType>HierarchyFoldersAndItems</HierarchyType>
 			<LimitLevelCount>false</LimitLevelCount>
@@ -496,7 +496,16 @@
 					<PasswordMode>false</PasswordMode>
 					<Format/>
 					<EditFormat/>
-					<ToolTip/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подписка ставит записанные объекты в очередь агента. Включение, выключение и изменение подписки у уже работающих пользователей вступает в силу в течение 20 минут (кэш сеанса); агент запускается регламентным заданием в течение минуты после записи объекта.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>The subscription queues written objects for the agent. Enabling, disabling or changing it takes effect for users already logged in within 20 minutes (session cache); the agent is started by a scheduled job within a minute after the object is written.</v8:content>
+						</v8:item>
+					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
 					<Mask/>
 					<MultiLine>false</MultiLine>
