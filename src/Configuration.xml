@@ -302,6 +302,7 @@
 			<InformationRegister>ar_ЛентаДиалога</InformationRegister>
 			<InformationRegister>ar_ПредметыАгентов</InformationRegister>
 			<InformationRegister>ar_ОчередьРаспознавания</InformationRegister>
+			<InformationRegister>ar_ОчередьСобытийПодписок</InformationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

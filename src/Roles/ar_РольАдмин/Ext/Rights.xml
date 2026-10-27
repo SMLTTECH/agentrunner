@@ -245,6 +245,17 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.ar_ОчередьСобытийПодписок</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Constant.ar_МастерНастройкиШаг</name>
 		<right>
 			<name>Read</name>
