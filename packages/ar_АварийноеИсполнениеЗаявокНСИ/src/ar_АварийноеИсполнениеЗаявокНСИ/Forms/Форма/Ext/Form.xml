@@ -1,12 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<Autofill>true</Autofill>
+		<ChildItems>
+			<Button name="КнопкаВыполнитьТакт" id="33">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыполнитьТактСейчас</CommandName>
+				<ExtendedTooltip name="КнопкаВыполнитьТактРасширеннаяПодсказка" id="34"/>
+			</Button>
+			<Button name="КнопкаПоказатьБезЗаписи" id="35">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПоказатьБезЗаписи</CommandName>
+				<ExtendedTooltip name="КнопкаПоказатьБезЗаписиРасширеннаяПодсказка" id="36"/>
+			</Button>
+		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
-
 	<ChildItems>
 		<UsualGroup name="ГруппаНастроек" id="1">
 			<Title>
@@ -16,27 +26,60 @@
 				</v8:item>
 			</Title>
 			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаНастроекРасширеннаяПодсказка" id="2"/>
 			<ChildItems>
 				<UsualGroup name="ГруппаРежима" id="3">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа режима</v8:content>
+							<v8:content>Включение ручного режима</v8:content>
 						</v8:item>
 					</Title>
 					<Group>Horizontal</Group>
 					<ExtendedTooltip name="ГруппаРежимаРасширеннаяПодсказка" id="4"/>
 					<ChildItems>
-						<CheckBoxField name="РежимВключен" id="5">
-							<DataPath>РежимВключен</DataPath>
-							<TitleLocation>Right</TitleLocation>
-							<ContextMenu name="РежимВключенКонтекстноеМеню" id="6"/>
-							<ExtendedTooltip name="РежимВключенРасширеннаяПодсказка" id="7"/>
-							<Events>
-								<Event name="OnChange">РежимВключенПриИзменении</Event>
-							</Events>
-						</CheckBoxField>
+						<UsualGroup name="ГруппаВключен" id="65">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа включен</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа включен</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВключенРасширеннаяПодсказка" id="66"/>
+							<ChildItems>
+								<CheckBoxField name="РежимВключен" id="5">
+									<DataPath>РежимВключен</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РежимВключенКонтекстноеМеню" id="6"/>
+									<ExtendedTooltip name="РежимВключенРасширеннаяПодсказка" id="7"/>
+									<Events>
+										<Event name="OnChange">РежимВключенПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<LabelDecoration name="ПредупреждениеРежима" id="30">
+									<TextColor>#0000C7</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Включайте, только когда агент НСИ не работает: при работающем агенте обработка конкурирует с ним за заявки.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПредупреждениеРежимаКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="ПредупреждениеРежимаРасширеннаяПодсказка" id="32"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
 						<InputField name="ПользовательАгента" id="8">
 							<DataPath>ПользовательАгента</DataPath>
 							<ContextMenu name="ПользовательАгентаКонтекстноеМеню" id="9"/>
@@ -55,34 +98,6 @@
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="ГруппаВиз" id="14">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа виз</v8:content>
-						</v8:item>
-					</Title>
-					<Group>Horizontal</Group>
-					<ExtendedTooltip name="ГруппаВизРасширеннаяПодсказка" id="15"/>
-					<ChildItems>
-						<InputField name="ГУИДВизыЭтап1" id="16">
-							<DataPath>ГУИДВизыЭтап1</DataPath>
-							<ContextMenu name="ГУИДВизыЭтап1КонтекстноеМеню" id="17"/>
-							<ExtendedTooltip name="ГУИДВизыЭтап1РасширеннаяПодсказка" id="18"/>
-							<Events>
-								<Event name="OnChange">ГУИДВизыЭтап1ПриИзменении</Event>
-							</Events>
-						</InputField>
-						<InputField name="ГУИДВизыЭтап2" id="19">
-							<DataPath>ГУИДВизыЭтап2</DataPath>
-							<ContextMenu name="ГУИДВизыЭтап2КонтекстноеМеню" id="20"/>
-							<ExtendedTooltip name="ГУИДВизыЭтап2РасширеннаяПодсказка" id="21"/>
-							<Events>
-								<Event name="OnChange">ГУИДВизыЭтап2ПриИзменении</Event>
-							</Events>
-						</InputField>
-					</ChildItems>
-				</UsualGroup>
 				<UsualGroup name="ГруппаПрочего" id="22">
 					<Title>
 						<v8:item>
@@ -91,6 +106,7 @@
 						</v8:item>
 					</Title>
 					<Group>Horizontal</Group>
+					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаПрочегоРасширеннаяПодсказка" id="23"/>
 					<ChildItems>
 						<InputField name="ДатаНачала" id="24">
@@ -104,6 +120,7 @@
 						<CheckBoxField name="ПисьмоИнициатору" id="27">
 							<DataPath>ПисьмоИнициатору</DataPath>
 							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="ПисьмоИнициаторуКонтекстноеМеню" id="28"/>
 							<ExtendedTooltip name="ПисьмоИнициаторуРасширеннаяПодсказка" id="29"/>
 							<Events>
@@ -112,38 +129,84 @@
 						</CheckBoxField>
 					</ChildItems>
 				</UsualGroup>
+				<UsualGroup name="ГруппаВиз" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ГУИД виз для отбора заявок НСИ</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="ГруппаВизРасширеннаяПодсказка" id="15"/>
+					<ChildItems>
+						<InputField name="ГУИДВизыЭтап1" id="16">
+							<DataPath>ГУИДВизыЭтап1</DataPath>
+							<ContextMenu name="ГУИДВизыЭтап1КонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ГУИДВизыЭтап1РасширеннаяПодсказка" id="18">
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Действующий GUID визы этапа 1 (согласование). Заполняется из настройки НСИГУИДВизыЭтап1 справочника «Дополнительные настройки AgentRunner» и доступен только для чтения, пока настройка существует; настройки нет - значение вводится здесь.</v8:content>
+									</v8:item>
+								</ToolTip>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ГУИДВизыЭтап1ПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ГУИДВизыЭтап2" id="19">
+							<DataPath>ГУИДВизыЭтап2</DataPath>
+							<ContextMenu name="ГУИДВизыЭтап2КонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ГУИДВизыЭтап2РасширеннаяПодсказка" id="21">
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Действующий GUID визы этапа 2 (утверждение). Заполняется из настройки НСИГУИДВизыЭтап2 справочника «Дополнительные настройки AgentRunner» и доступен только для чтения, пока настройка существует; настройки нет - значение вводится здесь.</v8:content>
+									</v8:item>
+								</ToolTip>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ГУИДВизыЭтап2ПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<LabelDecoration name="ПредупреждениеРежима" id="30">
-			<Title formatted="false">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Включайте, только когда агент НСИ не работает: при работающем агенте обработка конкурирует с ним за заявки.</v8:content>
-				</v8:item>
-			</Title>
-			<ContextMenu name="ПредупреждениеРежимаКонтекстноеМеню" id="31"/>
-			<ExtendedTooltip name="ПредупреждениеРежимаРасширеннаяПодсказка" id="32"/>
-		</LabelDecoration>
-		<Button name="КнопкаВыполнитьТакт" id="33">
-			<Type>UsualButton</Type>
-			<CommandName>Form.Command.ВыполнитьТактСейчас</CommandName>
-			<ExtendedTooltip name="КнопкаВыполнитьТактРасширеннаяПодсказка" id="34"/>
-		</Button>
-		<Button name="КнопкаПоказатьБезЗаписи" id="35">
-			<Type>UsualButton</Type>
-			<CommandName>Form.Command.ПоказатьБезЗаписи</CommandName>
-			<ExtendedTooltip name="КнопкаПоказатьБезЗаписиРасширеннаяПодсказка" id="36"/>
-		</Button>
 		<Table name="ТаблицаРезультата" id="37">
-			<DataPath>ТаблицаРезультата</DataPath>
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
 			<ReadOnly>true</ReadOnly>
+			<DataPath>ТаблицаРезультата</DataPath>
+			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="ТаблицаРезультатаКонтекстноеМеню" id="38"/>
 			<AutoCommandBar name="ТаблицаРезультатаКоманднаяПанель" id="39"/>
-			<SearchStringAddition name="ТаблицаРезультатаСтрокаПоиска" id="40"/>
-			<ViewStatusAddition name="ТаблицаРезультатаСостояниеПросмотра" id="41"/>
-			<SearchControlAddition name="ТаблицаРезультатаУправлениеПоиском" id="42"/>
+			<ExtendedTooltip name="ТаблицаРезультатаРасширеннаяПодсказка" id="58"/>
+			<SearchStringAddition name="ТаблицаРезультатаСтрокаПоиска" id="40">
+				<AdditionSource>
+					<Item>ТаблицаРезультата</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаРезультатаСтрокаПоискаКонтекстноеМеню" id="59"/>
+				<ExtendedTooltip name="ТаблицаРезультатаСтрокаПоискаРасширеннаяПодсказка" id="60"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаРезультатаСостояниеПросмотра" id="41">
+				<AdditionSource>
+					<Item>ТаблицаРезультата</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаРезультатаСостояниеПросмотраКонтекстноеМеню" id="61"/>
+				<ExtendedTooltip name="ТаблицаРезультатаСостояниеПросмотраРасширеннаяПодсказка" id="62"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаРезультатаУправлениеПоиском" id="42">
+				<AdditionSource>
+					<Item>ТаблицаРезультата</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаРезультатаУправлениеПоискомКонтекстноеМеню" id="63"/>
+				<ExtendedTooltip name="ТаблицаРезультатаУправлениеПоискомРасширеннаяПодсказка" id="64"/>
+			</SearchControlAddition>
 			<ChildItems>
 				<InputField name="ТаблицаРезультатаЗаявка" id="43">
 					<DataPath>ТаблицаРезультата.Заявка</DataPath>
@@ -369,7 +432,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Выполнить такт сейчас</v8:content>
+					<v8:content>Выполнить такт</v8:content>
 				</v8:item>
 			</Title>
 			<Action>ВыполнитьТактСейчас</Action>
