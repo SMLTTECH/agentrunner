@@ -246,6 +246,7 @@
 			<CommonModule>ОМ_ar_ПланЗапуска</CommonModule>
 			<CommonModule>ОМ_ar_Надзор</CommonModule>
 			<CommonModule>ОМ_ar_ПакетНСИ</CommonModule>
+			<CommonModule>ОМ_ar_ОбработчикПодписок</CommonModule>
 			<DataProcessor>ЮТHTTPServiceRequest</DataProcessor>
 			<DataProcessor>ЮТHTTPОтвет</DataProcessor>
 			<DataProcessor>ЮТHTTPСервисЗапрос</DataProcessor>
