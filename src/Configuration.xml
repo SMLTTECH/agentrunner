@@ -194,6 +194,7 @@
 			<HTTPService>ar_RunsAPI</HTTPService>
 			<HTTPService>ar_HealthAPI</HTTPService>
 			<EventSubscription>ar_ПодпискаОбъектов</EventSubscription>
+			<EventSubscription>ar_ПодпискаОбъектовПередЗаписью</EventSubscription>
 			<ScheduledJob>ar_ПланировщикАгентов</ScheduledJob>
 			<ScheduledJob>ar_ВозобновлениеПослеApproval</ScheduledJob>
 			<ScheduledJob>ar_ОчисткаЗависших</ScheduledJob>
