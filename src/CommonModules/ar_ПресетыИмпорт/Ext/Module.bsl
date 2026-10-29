@@ -289,8 +289,10 @@
 		Возврат НСтр("ru = 'Тип пресета не соответствует ""agent_preset"". Пресет не создан.';
 			|en = 'Preset type is not ""agent_preset"". The preset was not created.'");
 	ИначеЕсли Причина = "unsupported_version" Тогда
-		Возврат НСтр("ru = 'Формат файла пресета (ar_preset_version) не поддерживается этой версией AgentRunner. Обновите расширение.';
-			|en = 'The preset file format (ar_preset_version) is not supported by this version of AgentRunner. Update the extension.'");
+		Возврат НСтр("ru = 'Формат файла пресета (ar_preset_version) не поддерживается этой версией AgentRunner.
+			|Обновите расширение.';
+			|en = 'The preset file format (ar_preset_version) is not supported by this version of AgentRunner.
+			|Update the extension.'");
 	ИначеЕсли Причина = "builtin" Тогда
 		Возврат НСтр("ru = 'Встроенный пресет ""%1"" файлом не перезаписывается: он обновляется вместе с расширением.';
 			|en = 'Built-in preset ""%1"" cannot be overwritten by a file: it is updated with the extension.'");
