@@ -1127,8 +1127,10 @@
 		Возврат НСтр("ru='Тип пресета не соответствует ""agent_preset"". Агент не изменён.';
 			|en='Preset type is not ""agent_preset"". The agent was not changed.'");
 	ИначеЕсли Причина = "unsupported_version" Тогда
-		Возврат НСтр("ru='Версия пресета не поддерживается этой версией AgentRunner. Обновите расширение.';
-			|en='Preset version is not supported by this version of AgentRunner. Update the extension.'");
+		Возврат НСтр("ru='Формат файла пресета (ar_preset_version) не поддерживается этой версией AgentRunner.
+			|Обновите расширение.';
+			|en='The preset file format (ar_preset_version) is not supported by this version of AgentRunner.
+			|Update the extension.'");
 	ИначеЕсли Причина = "tool_code_import_forbidden" Тогда
 		Возврат НСтр("ru='Пресет содержит запрещённый перенос кода инструмента (code_implementation). Агент не изменён.';
 			|en='The preset contains a forbidden tool code transfer (code_implementation). The agent was not changed.'");
@@ -4999,8 +5001,10 @@
 		Возврат НСтр("ru='Файл не является пресетом инструментов агента (неверный kind).';
 			|en='File is not an agent tools preset (wrong kind).'");
 	ИначеЕсли Причина = "unsupported_version" Тогда
-		Возврат НСтр("ru='Версия пресета не поддерживается. Обновите конфигурацию.';
-			|en='Preset version is not supported. Update the configuration.'");
+		Возврат НСтр("ru='Формат файла пресета (ar_preset_version) не поддерживается этой версией AgentRunner.
+			|Обновите расширение.';
+			|en='The preset file format (ar_preset_version) is not supported by this version of AgentRunner.
+			|Update the extension.'");
 	ИначеЕсли Причина = "no_tools" Тогда
 		Возврат НСтр("ru='В пресете нет ни одного корректного инструмента.';
 			|en='The preset contains no valid tools.'");

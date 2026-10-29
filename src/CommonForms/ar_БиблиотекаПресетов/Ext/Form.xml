@@ -195,13 +195,23 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Версия</v8:content>
+							<v8:content>Версия пресета</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>Version</v8:content>
+							<v8:content>Preset version</v8:content>
 						</v8:item>
 					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Версия содержимого пресета - ключ version файла пресета; ключ не задан - 1.0.0. Не версия формата файла (ar_preset_version).</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Preset content version - the version key of the preset file; 1.0.0 if the key is missing. Not the file format version (ar_preset_version).</v8:content>
+						</v8:item>
+					</ToolTip>
 					<ContextMenu name="ТаблицаПресетовЭлементВерсияКонтекстноеМеню" id="35"/>
 					<ExtendedTooltip name="ТаблицаПресетовЭлементВерсияРасширеннаяПодсказка" id="36"/>
 				</InputField>
