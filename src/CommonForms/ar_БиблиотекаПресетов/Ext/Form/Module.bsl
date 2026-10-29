@@ -695,8 +695,8 @@
 		Возврат НСтр("ru = 'Тип пресета не соответствует ""agent_preset"". Возможно, это пресет tools (UI-04).';
 		             |en = 'Preset type is not ""agent_preset"". This may be a tools preset (UI-04).'");
 	ИначеЕсли Причина = "unsupported_version" Тогда
-		Возврат НСтр("ru = 'Версия пресета не поддерживается этой версией AgentRunner. Обновите расширение.';
-		             |en = 'Preset version is not supported by this version of AgentRunner. Update the extension.'");
+		Возврат НСтр("ru = 'Формат файла пресета (ar_preset_version) не поддерживается этой версией AgentRunner. Обновите расширение.';
+		             |en = 'The preset file format (ar_preset_version) is not supported by this version of AgentRunner. Update the extension.'");
 	ИначеЕсли Причина = "access_denied" Тогда
 		Возврат НСтр("ru = 'Недостаточно прав для создания агента. Обратитесь к администратору.';
 		             |en = 'Insufficient rights to create an agent. Contact the administrator.'");
