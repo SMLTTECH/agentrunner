@@ -137,6 +137,8 @@
 						</v8:item>
 					</Title>
 					<Group>Horizontal</Group>
+					<Behavior>Collapsible</Behavior>
+					<Collapsed>true</Collapsed>
 					<Representation>None</Representation>
 					<ExtendedTooltip name="ГруппаВизРасширеннаяПодсказка" id="15"/>
 					<ChildItems>
