@@ -262,6 +262,16 @@
 								</Button>
 							</ChildItems>
 						</CommandBar>
+						<LabelDecoration name="ПредупреждениеДиагностики" id="95">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Диагностика идет полным просмотром регистров и на большом регистре может занять минуты.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПредупреждениеДиагностикиКонтекстноеМеню" id="96"/>
+							<ExtendedTooltip name="ПредупреждениеДиагностикиРасширеннаяПодсказка" id="97"/>
+						</LabelDecoration>
 						<Table name="ТаблицаДиагностики" id="70">
 							<DataPath>ТаблицаДиагностики</DataPath>
 							<ReadOnly>true</ReadOnly>
