@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>AgentRunner: обслуживание служебных данных</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Страницы" id="1">
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Page name="СтраницаНастройки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки и такт</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="СтраницаНастройкиРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<CheckBoxField name="РежимВключен" id="5">
+							<DataPath>РежимВключен</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Режим включен</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<TitleLocation>Right</TitleLocation>
+							<ContextMenu name="РежимВключенКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="РежимВключенРасширеннаяПодсказка" id="7"/>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаСроков" id="8">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сроки и порции</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ShowTitle>true</ShowTitle>
+							<ExtendedTooltip name="ГруппаСроковРасширеннаяПодсказка" id="9"/>
+							<ChildItems>
+								<InputField name="ХранитьПроверкиДней" id="10">
+									<DataPath>ХранитьПроверкиДней</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Хранить sess_write_verify, дней</v8:content>
+										</v8:item>
+									</Title>
+									<Width>8</Width>
+									<ContextMenu name="ХранитьПроверкиДнейКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="ХранитьПроверкиДнейРасширеннаяПодсказка" id="12"/>
+								</InputField>
+								<InputField name="ХранитьОтладкуДней" id="13">
+									<DataPath>ХранитьОтладкуДней</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Хранить уровень «Отладка» и sess_*, дней</v8:content>
+										</v8:item>
+									</Title>
+									<Width>8</Width>
+									<ContextMenu name="ХранитьОтладкуДнейКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="ХранитьОтладкуДнейРасширеннаяПодсказка" id="15"/>
+								</InputField>
+								<InputField name="ХранитьЖурналДней" id="16">
+									<DataPath>ХранитьЖурналДней</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Хранить журнал, дней</v8:content>
+										</v8:item>
+									</Title>
+									<Width>8</Width>
+									<ContextMenu name="ХранитьЖурналДнейКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ХранитьЖурналДнейРасширеннаяПодсказка" id="18"/>
+								</InputField>
+								<InputField name="ЗапасСессийДней" id="19">
+									<DataPath>ЗапасСессийДней</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Запас хранения сессий после TTL, дней</v8:content>
+										</v8:item>
+									</Title>
+									<Width>8</Width>
+									<ContextMenu name="ЗапасСессийДнейКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="ЗапасСессийДнейРасширеннаяПодсказка" id="21"/>
+								</InputField>
+								<InputField name="РазмерПорции" id="22">
+									<DataPath>РазмерПорции</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Размер порции, записей</v8:content>
+										</v8:item>
+									</Title>
+									<Width>8</Width>
+									<ContextMenu name="РазмерПорцииКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="РазмерПорцииРасширеннаяПодсказка" id="24"/>
+								</InputField>
+								<InputField name="ПределМинут" id="25">
+									<DataPath>ПределМинут</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Предел такта по расписанию, минут</v8:content>
+										</v8:item>
+									</Title>
+									<Width>8</Width>
+									<ContextMenu name="ПределМинутКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="ПределМинутРасширеннаяПодсказка" id="27"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<CommandBar name="ПанельНастроек" id="28">
+							<ExtendedTooltip name="ПанельНастроекРасширеннаяПодсказка" id="29"/>
+							<ChildItems>
+								<Button name="КнопкаЗаписатьНастройки" id="30">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗаписатьНастройки</CommandName>
+									<ExtendedTooltip name="КнопкаЗаписатьНастройкиРасширеннаяПодсказка" id="31"/>
+								</Button>
+								<Button name="КнопкаПредпросмотр" id="32">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.Предпросмотр</CommandName>
+									<ExtendedTooltip name="КнопкаПредпросмотрРасширеннаяПодсказка" id="33"/>
+								</Button>
+								<Button name="КнопкаВыполнитьТакт" id="34">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ВыполнитьТакт</CommandName>
+									<ExtendedTooltip name="КнопкаВыполнитьТактРасширеннаяПодсказка" id="35"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<LabelDecoration name="ПредупреждениеПредпросмотра" id="36">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Предпросмотр и диагностика идут полным просмотром и на большом регистре могут занять минуты. Предпросмотр берет сохраненные настройки, шаги пересекаются. Ручной такт работает при включенном режиме, предел 5 минут. Удаленные записи не восстанавливаются.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПредупреждениеПредпросмотраКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="ПредупреждениеПредпросмотраРасширеннаяПодсказка" id="38"/>
+						</LabelDecoration>
+						<Table name="ТаблицаПредпросмотра" id="39">
+							<DataPath>ТаблицаПредпросмотра</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<CommandBarLocation>None</CommandBarLocation>
+							<Height>5</Height>
+							<ContextMenu name="ТаблицаПредпросмотраКонтекстноеМеню" id="40"/>
+							<AutoCommandBar name="ТаблицаПредпросмотраКоманднаяПанель" id="41"/>
+							<ExtendedTooltip name="ТаблицаПредпросмотраРасширеннаяПодсказка" id="42"/>
+							<SearchStringAddition name="ТаблицаПредпросмотраСтрокаПоиска" id="43">
+								<AdditionSource>
+									<Item>ТаблицаПредпросмотра</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаПредпросмотраСтрокаПоискаКонтекстноеМеню" id="44"/>
+								<ExtendedTooltip name="ТаблицаПредпросмотраСтрокаПоискаРасширеннаяПодсказка" id="45"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаПредпросмотраСостояниеПросмотра" id="46">
+								<AdditionSource>
+									<Item>ТаблицаПредпросмотра</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаПредпросмотраСостояниеПросмотраКонтекстноеМеню" id="47"/>
+								<ExtendedTooltip name="ТаблицаПредпросмотраСостояниеПросмотраРасширеннаяПодсказка" id="48"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаПредпросмотраУправлениеПоиском" id="49">
+								<AdditionSource>
+									<Item>ТаблицаПредпросмотра</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаПредпросмотраУправлениеПоискомКонтекстноеМеню" id="50"/>
+								<ExtendedTooltip name="ТаблицаПредпросмотраУправлениеПоискомРасширеннаяПодсказка" id="51"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ПредпросмотрШаг" id="52">
+									<DataPath>ТаблицаПредпросмотра.Шаг</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Шаг</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПредпросмотрШагКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="ПредпросмотрШагРасширеннаяПодсказка" id="54"/>
+								</InputField>
+								<InputField name="ПредпросмотрЗаписей" id="55">
+									<DataPath>ТаблицаПредпросмотра.Записей</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Записей</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПредпросмотрЗаписейКонтекстноеМеню" id="56"/>
+									<ExtendedTooltip name="ПредпросмотрЗаписейРасширеннаяПодсказка" id="57"/>
+								</InputField>
+								<InputField name="ПредпросмотрГраница" id="58">
+									<DataPath>ТаблицаПредпросмотра.Граница</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Старше</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПредпросмотрГраницаКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="ПредпросмотрГраницаРасширеннаяПодсказка" id="60"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<InputField name="ИтогТакта" id="61">
+							<DataPath>ИтогТакта</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Итог такта</v8:content>
+								</v8:item>
+							</Title>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>Top</TitleLocation>
+							<MultiLine>true</MultiLine>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>7</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ИтогТактаКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="ИтогТактаРасширеннаяПодсказка" id="63"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаДиагностика" id="64">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Диагностика</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="СтраницаДиагностикаРасширеннаяПодсказка" id="65"/>
+					<ChildItems>
+						<CommandBar name="ПанельДиагностики" id="66">
+							<ExtendedTooltip name="ПанельДиагностикиРасширеннаяПодсказка" id="67"/>
+							<ChildItems>
+								<Button name="КнопкаОбновить" id="68">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ОбновитьДиагностику</CommandName>
+									<ExtendedTooltip name="КнопкаОбновитьРасширеннаяПодсказка" id="69"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<Table name="ТаблицаДиагностики" id="70">
+							<DataPath>ТаблицаДиагностики</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<CommandBarLocation>None</CommandBarLocation>
+							<ContextMenu name="ТаблицаДиагностикиКонтекстноеМеню" id="71"/>
+							<AutoCommandBar name="ТаблицаДиагностикиКоманднаяПанель" id="72"/>
+							<ExtendedTooltip name="ТаблицаДиагностикиРасширеннаяПодсказка" id="73"/>
+							<SearchStringAddition name="ТаблицаДиагностикиСтрокаПоиска" id="74">
+								<AdditionSource>
+									<Item>ТаблицаДиагностики</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаДиагностикиСтрокаПоискаКонтекстноеМеню" id="75"/>
+								<ExtendedTooltip name="ТаблицаДиагностикиСтрокаПоискаРасширеннаяПодсказка" id="76"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаДиагностикиСостояниеПросмотра" id="77">
+								<AdditionSource>
+									<Item>ТаблицаДиагностики</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаДиагностикиСостояниеПросмотраКонтекстноеМеню" id="78"/>
+								<ExtendedTooltip name="ТаблицаДиагностикиСостояниеПросмотраРасширеннаяПодсказка" id="79"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаДиагностикиУправлениеПоиском" id="80">
+								<AdditionSource>
+									<Item>ТаблицаДиагностики</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаДиагностикиУправлениеПоискомКонтекстноеМеню" id="81"/>
+								<ExtendedTooltip name="ТаблицаДиагностикиУправлениеПоискомРасширеннаяПодсказка" id="82"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ДиагностикаРаздел" id="83">
+									<DataPath>ТаблицаДиагностики.Раздел</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Раздел</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДиагностикаРазделКонтекстноеМеню" id="84"/>
+									<ExtendedTooltip name="ДиагностикаРазделРасширеннаяПодсказка" id="85"/>
+								</InputField>
+								<InputField name="ДиагностикаПоказатель" id="86">
+									<DataPath>ТаблицаДиагностики.Показатель</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Показатель</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДиагностикаПоказательКонтекстноеМеню" id="87"/>
+									<ExtendedTooltip name="ДиагностикаПоказательРасширеннаяПодсказка" id="88"/>
+								</InputField>
+								<InputField name="ДиагностикаЗначение" id="89">
+									<DataPath>ТаблицаДиагностики.Значение</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Значение</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДиагностикаЗначениеКонтекстноеМеню" id="90"/>
+									<ExtendedTooltip name="ДиагностикаЗначениеРасширеннаяПодсказка" id="91"/>
+								</InputField>
+								<InputField name="ДиагностикаПримечание" id="92">
+									<DataPath>ТаблицаДиагностики.Примечание</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Примечание</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДиагностикаПримечаниеКонтекстноеМеню" id="93"/>
+									<ExtendedTooltip name="ДиагностикаПримечаниеРасширеннаяПодсказка" id="94"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="95">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ar_ОбслуживаниеСлужебныхДанных</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="РежимВключен" id="96">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим включен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ХранитьПроверкиДней" id="97">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хранить проверки дней</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ХранитьОтладкуДней" id="98">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хранить отладку дней</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ХранитьЖурналДней" id="99">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хранить журнал дней</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗапасСессийДней" id="100">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запас сессий дней</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РазмерПорции" id="101">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Размер порции</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПределМинут" id="102">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предел минут</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогТакта" id="103">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итог такта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаПредпросмотра" id="104">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица предпросмотра</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Шаг" id="105">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Записей" id="106">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Граница" id="107">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТаблицаДиагностики" id="108">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица диагностики</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Раздел" id="109">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Показатель" id="110">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="111">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Примечание" id="112">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьНастройки" id="113">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаписатьНастройки</Action>
+		</Command>
+		<Command name="Предпросмотр" id="114">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предпросмотр</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПоказатьПредпросмотр</Action>
+		</Command>
+		<Command name="ВыполнитьТакт" id="115">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить такт</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыполнитьТакт</Action>
+		</Command>
+		<Command name="ОбновитьДиагностику" id="116">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОбновитьДиагностику</Action>
+		</Command>
+	</Commands>
+</Form>
