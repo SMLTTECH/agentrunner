@@ -1381,7 +1381,7 @@
 	НастройкиАудит.Добавить(НастройкаЧисло("ar_СлужебныйЛогХранитьОтладкуДней",
 		НСтр("ru='Хранить отладочные записи лога (дней)'; en='Debug log retention (days)'"),
 		НСтр("ru='Короткий срок для уровня «Отладка» и событий debug_*, sess_*. Разбирать запуск нужно в этот срок.';
-			|en='Short retention for the Debug level and debug_*, sess_* events. Investigate a run within this period.'"),
+			|en='Short retention for the Debug level and debug_*, sess_* events. Review a run within this period.'"),
 		ar_Константы.СлужебныйЛогХранитьОтладкуДней()));
 	НастройкиАудит.Добавить(НастройкаЧисло("ar_СессияХранитьПослеЗакрытияДней",
 		НСтр("ru='Хранить закрытые сессии (дней)'; en='Closed session retention (days)'"),
