@@ -21,7 +21,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Настройки и такт</v8:content>
+							<v8:content>Настройки и очистка</v8:content>
 						</v8:item>
 					</Title>
 					<Group>Vertical</Group>
@@ -32,7 +32,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Режим включен</v8:content>
+									<v8:content>Режим включен (только очистка ar_Сессии)</v8:content>
 								</v8:item>
 							</Title>
 							<CheckBoxType>Auto</CheckBoxType>
@@ -40,53 +40,17 @@
 							<ContextMenu name="РежимВключенКонтекстноеМеню" id="6"/>
 							<ExtendedTooltip name="РежимВключенРасширеннаяПодсказка" id="7"/>
 						</CheckBoxField>
-						<UsualGroup name="ГруппаСроков" id="8">
+						<UsualGroup name="ГруппаСессий" id="116">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Сроки и порции</v8:content>
+									<v8:content>Очистка ar_Сессии</v8:content>
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
 							<ShowTitle>true</ShowTitle>
-							<ExtendedTooltip name="ГруппаСроковРасширеннаяПодсказка" id="9"/>
+							<ExtendedTooltip name="ГруппаСессийРасширеннаяПодсказка" id="117"/>
 							<ChildItems>
-								<InputField name="ХранитьПроверкиДней" id="10">
-									<DataPath>ХранитьПроверкиДней</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Хранить sess_write_verify, дней</v8:content>
-										</v8:item>
-									</Title>
-									<Width>8</Width>
-									<ContextMenu name="ХранитьПроверкиДнейКонтекстноеМеню" id="11"/>
-									<ExtendedTooltip name="ХранитьПроверкиДнейРасширеннаяПодсказка" id="12"/>
-								</InputField>
-								<InputField name="ХранитьОтладкуДней" id="13">
-									<DataPath>ХранитьОтладкуДней</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Хранить уровень «Отладка» и sess_*, дней</v8:content>
-										</v8:item>
-									</Title>
-									<Width>8</Width>
-									<ContextMenu name="ХранитьОтладкуДнейКонтекстноеМеню" id="14"/>
-									<ExtendedTooltip name="ХранитьОтладкуДнейРасширеннаяПодсказка" id="15"/>
-								</InputField>
-								<InputField name="ХранитьЖурналДней" id="16">
-									<DataPath>ХранитьЖурналДней</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Хранить журнал, дней</v8:content>
-										</v8:item>
-									</Title>
-									<Width>8</Width>
-									<ContextMenu name="ХранитьЖурналДнейКонтекстноеМеню" id="17"/>
-									<ExtendedTooltip name="ХранитьЖурналДнейРасширеннаяПодсказка" id="18"/>
-								</InputField>
 								<InputField name="ЗапасСессийДней" id="19">
 									<DataPath>ЗапасСессийДней</DataPath>
 									<Title>
@@ -99,17 +63,17 @@
 									<ContextMenu name="ЗапасСессийДнейКонтекстноеМеню" id="20"/>
 									<ExtendedTooltip name="ЗапасСессийДнейРасширеннаяПодсказка" id="21"/>
 								</InputField>
-								<InputField name="РазмерПорции" id="22">
-									<DataPath>РазмерПорции</DataPath>
+								<InputField name="РазмерПорцииСессий" id="22">
+									<DataPath>РазмерПорцииСессий</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Размер порции, записей</v8:content>
+											<v8:content>Размер порции сессий, записей</v8:content>
 										</v8:item>
 									</Title>
 									<Width>8</Width>
-									<ContextMenu name="РазмерПорцииКонтекстноеМеню" id="23"/>
-									<ExtendedTooltip name="РазмерПорцииРасширеннаяПодсказка" id="24"/>
+									<ContextMenu name="РазмерПорцииСессийКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="РазмерПорцииСессийРасширеннаяПодсказка" id="24"/>
 								</InputField>
 								<InputField name="ПределМинут" id="25">
 									<DataPath>ПределМинут</DataPath>
@@ -123,6 +87,56 @@
 									<ContextMenu name="ПределМинутКонтекстноеМеню" id="26"/>
 									<ExtendedTooltip name="ПределМинутРасширеннаяПодсказка" id="27"/>
 								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаЖурнала" id="118">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выгрузка и очистка ar_СлужебныйЛог</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ShowTitle>true</ShowTitle>
+							<ExtendedTooltip name="ГруппаЖурналаРасширеннаяПодсказка" id="119"/>
+							<ChildItems>
+								<InputField name="ЗаписейВФайлеЖурнала" id="120">
+									<DataPath>ЗаписейВФайлеЖурнала</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Записей в файле журнала</v8:content>
+										</v8:item>
+									</Title>
+									<Width>8</Width>
+									<ContextMenu name="ЗаписейВФайлеЖурналаКонтекстноеМеню" id="121"/>
+									<ExtendedTooltip name="ЗаписейВФайлеЖурналаРасширеннаяПодсказка" id="122"/>
+								</InputField>
+								<InputField name="ОставлятьЗаписейЧасов" id="123">
+									<DataPath>ОставлятьЗаписейЧасов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Оставлять записи журнала, часов</v8:content>
+										</v8:item>
+									</Title>
+									<Width>8</Width>
+									<ContextMenu name="ОставлятьЗаписейЧасовКонтекстноеМеню" id="124"/>
+									<ExtendedTooltip name="ОставлятьЗаписейЧасовРасширеннаяПодсказка" id="125"/>
+								</InputField>
+								<CheckBoxField name="ВыгружатьОтладку" id="126">
+									<DataPath>ВыгружатьОтладку</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгружать debug_*</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<TitleLocation>Right</TitleLocation>
+									<ContextMenu name="ВыгружатьОтладкуКонтекстноеМеню" id="127"/>
+									<ExtendedTooltip name="ВыгружатьОтладкуРасширеннаяПодсказка" id="128"/>
+								</CheckBoxField>
 							</ChildItems>
 						</UsualGroup>
 						<CommandBar name="ПанельНастроек" id="28">
@@ -143,13 +157,24 @@
 									<CommandName>Form.Command.ВыполнитьТакт</CommandName>
 									<ExtendedTooltip name="КнопкаВыполнитьТактРасширеннаяПодсказка" id="35"/>
 								</Button>
+								<Button name="КнопкаВыгрузитьЖурнал" id="136">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ВыгрузитьЖурнал</CommandName>
+									<ExtendedTooltip name="КнопкаВыгрузитьЖурналРасширеннаяПодсказка" id="137"/>
+								</Button>
+								<Button name="КнопкаОтменитьВыгрузку" id="138">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ОтменитьВыгрузку</CommandName>
+									<Enabled>false</Enabled>
+									<ExtendedTooltip name="КнопкаОтменитьВыгрузкуРасширеннаяПодсказка" id="139"/>
+								</Button>
 							</ChildItems>
 						</CommandBar>
 						<LabelDecoration name="ПредупреждениеПредпросмотра" id="36">
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Предпросмотр и диагностика идут полным просмотром и на большом регистре могут занять минуты. Предпросмотр берет сохраненные настройки, шаги пересекаются. Ручной такт работает при включенном режиме, предел 5 минут. Удаленные записи не восстанавливаются.</v8:content>
+									<v8:content>Предпросмотр и диагностика идут полным просмотром и на большом регистре могут занять минуты; предпросмотр ничего не удаляет. Кнопка «Выгрузить и очистить регистр сведений ar_СлужебныйЛог» пишет файлы в выбранный каталог и заменяет регистр оставляемыми записями, удаленное не восстанавливается. Ручная очистка ar_Сессии работает при включенном режиме, предел 5 минут.</v8:content>
 								</v8:item>
 							</Title>
 							<ContextMenu name="ПредупреждениеПредпросмотраКонтекстноеМеню" id="37"/>
@@ -193,7 +218,7 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Шаг</v8:content>
+											<v8:content>Действие</v8:content>
 										</v8:item>
 									</Title>
 									<ContextMenu name="ПредпросмотрШагКонтекстноеМеню" id="53"/>
@@ -215,7 +240,7 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Старше</v8:content>
+											<v8:content>Граница</v8:content>
 										</v8:item>
 									</Title>
 									<ContextMenu name="ПредпросмотрГраницаКонтекстноеМеню" id="59"/>
@@ -223,22 +248,36 @@
 								</InputField>
 							</ChildItems>
 						</Table>
-						<InputField name="ИтогТакта" id="61">
-							<DataPath>ИтогТакта</DataPath>
+						<InputField name="ХодВыгрузки" id="140">
+							<DataPath>ХодВыгрузки</DataPath>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Итог такта</v8:content>
+									<v8:content>Ход выгрузки</v8:content>
+								</v8:item>
+							</Title>
+							<ReadOnly>true</ReadOnly>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ХодВыгрузкиКонтекстноеМеню" id="141"/>
+							<ExtendedTooltip name="ХодВыгрузкиРасширеннаяПодсказка" id="142"/>
+						</InputField>
+						<InputField name="Итог" id="61">
+							<DataPath>Итог</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Итог</v8:content>
 								</v8:item>
 							</Title>
 							<ReadOnly>true</ReadOnly>
 							<TitleLocation>Top</TitleLocation>
 							<MultiLine>true</MultiLine>
 							<AutoMaxWidth>false</AutoMaxWidth>
-							<Height>7</Height>
+							<Height>10</Height>
 							<HorizontalStretch>true</HorizontalStretch>
-							<ContextMenu name="ИтогТактаКонтекстноеМеню" id="62"/>
-							<ExtendedTooltip name="ИтогТактаРасширеннаяПодсказка" id="63"/>
+							<ContextMenu name="ИтогКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="ИтогРасширеннаяПодсказка" id="63"/>
 						</InputField>
 					</ChildItems>
 				</Page>
@@ -373,59 +412,11 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="ХранитьПроверкиДней" id="97">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Хранить проверки дней</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>5</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="ХранитьОтладкуДней" id="98">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Хранить отладку дней</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>5</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="ХранитьЖурналДней" id="99">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Хранить журнал дней</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>5</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
-			</Type>
-		</Attribute>
 		<Attribute name="ЗапасСессийДней" id="100">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Запас сессий дней</v8:content>
+					<v8:content>Запас хранения сессий после TTL, дней</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -437,11 +428,11 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="РазмерПорции" id="101">
+		<Attribute name="РазмерПорцииСессий" id="101">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Размер порции</v8:content>
+					<v8:content>Размер порции сессий, записей</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -457,7 +448,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Предел минут</v8:content>
+					<v8:content>Предел такта по расписанию, минут</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -469,11 +460,69 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ИтогТакта" id="103">
+		<Attribute name="ЗаписейВФайлеЖурнала" id="113">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Итог такта</v8:content>
+					<v8:content>Записей в файле журнала</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОставлятьЗаписейЧасов" id="114">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оставлять записи журнала, часов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыгружатьОтладку" id="115">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгружать debug_*</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Итог" id="103">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ХодВыгрузки" id="116">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ход выгрузки</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -597,10 +646,28 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Выполнить такт</v8:content>
+					<v8:content>Очистить регистр сведений ar_Сессии</v8:content>
 				</v8:item>
 			</Title>
 			<Action>ВыполнитьТакт</Action>
+		</Command>
+		<Command name="ВыгрузитьЖурнал" id="117">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить и очистить регистр сведений ar_СлужебныйЛог</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыгрузитьЖурнал</Action>
+		</Command>
+		<Command name="ОтменитьВыгрузку" id="118">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить выгрузку</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОтменитьВыгрузку</Action>
 		</Command>
 		<Command name="ОбновитьДиагностику" id="116">
 			<Title>
