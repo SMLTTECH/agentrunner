@@ -179,6 +179,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Constant.ar_МаксРазмерРезультатаПакета</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Constant.ar_ПорогОжиданияApprovalСек</name>
 		<right>
 			<name>Read</name>
@@ -230,6 +241,17 @@
 		</right>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ar_СессияХранитьПослеЗакрытияДней</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -363,6 +385,17 @@
 	</object>
 	<object>
 		<name>Constant.ar_ВерсияРасширенияБД</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ar_СлужебныйЛогХранитьОтладкуДней</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -787,6 +820,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Constant.ar_ОтладочныеЗаписи</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Constant.ar_МаксШаговПоУмолчанию</name>
 		<right>
 			<name>Read</name>
@@ -992,6 +1036,17 @@
 		</right>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ar_СлужебныйЛогХранитьДней</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
 			<value>true</value>
 		</right>
 	</object>

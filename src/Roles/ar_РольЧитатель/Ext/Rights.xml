@@ -48,6 +48,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Constant.ar_МаксРазмерРезультатаПакета</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Constant.ar_ПорогОжиданияApprovalСек</name>
 		<right>
 			<name>Read</name>
@@ -67,6 +74,13 @@
 	</object>
 	<object>
 		<name>Constant.ar_ТаймаутLLMПоУмолчанию</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ar_СессияХранитьПослеЗакрытияДней</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -108,6 +122,13 @@
 		<name>Subsystem.ar_AgentRunner</name>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ar_СлужебныйЛогХранитьОтладкуДней</name>
+		<right>
+			<name>Read</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -211,6 +232,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Constant.ar_ОтладочныеЗаписи</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Constant.ar_МаксШаговПоУмолчанию</name>
 		<right>
 			<name>Read</name>
@@ -268,6 +296,13 @@
 		<name>Catalog.ar_Диалоги.Command.МоиВопросы</name>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ar_СлужебныйЛогХранитьДней</name>
+		<right>
+			<name>Read</name>
 			<value>true</value>
 		</right>
 	</object>

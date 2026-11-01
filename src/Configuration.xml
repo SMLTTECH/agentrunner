@@ -204,6 +204,7 @@
 			<ScheduledJob>ar_ОбновлениеПамятиAuto</ScheduledJob>
 			<ScheduledJob>ar_ОпросПодписокАгентов</ScheduledJob>
 			<ScheduledJob>ar_ПроверкаВерсии</ScheduledJob>
+			<ScheduledJob>ar_ОчисткаСлужебногоЛога</ScheduledJob>
 			<DefinedType>ar_ПрикладнойОбъект</DefinedType>
 			<DefinedType>ar_ПрикладнойОбъектОбъект</DefinedType>
 			<Constant>ar_ТаймаутLLMПоУмолчанию</Constant>
@@ -236,6 +237,11 @@
 			<Constant>ar_ПорогПрогрессивнойВыдачи</Constant>
 			<Constant>ar_КомпакцияСжатиеДней</Constant>
 			<Constant>ar_КомпакцияУдалениеДней</Constant>
+			<Constant>ar_ОтладочныеЗаписи</Constant>
+			<Constant>ar_СлужебныйЛогХранитьДней</Constant>
+			<Constant>ar_СлужебныйЛогХранитьОтладкуДней</Constant>
+			<Constant>ar_СессияХранитьПослеЗакрытияДней</Constant>
+			<Constant>ar_МаксРазмерРезультатаПакета</Constant>
 			<CommonForm>ar_БиблиотекаПресетов</CommonForm>
 			<CommonForm>ar_КонсольАгентов</CommonForm>
 			<CommonForm>ar_МастерНастройки</CommonForm>
