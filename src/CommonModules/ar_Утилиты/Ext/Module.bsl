@@ -1168,6 +1168,15 @@
 		Возврат НСтр(
 			"ru = 'Запуск уже выполняется.';
 			|en = 'The run is already in progress.'");
+	ИначеЕсли Причина = "subject_captured" Тогда
+		// agentrunner-314: предмет прерванного запуска уже взят другим запуском агента.
+		Возврат НСтр(
+			"ru = 'Документ уже обрабатывается другим запуском этого агента.';
+			|en = 'The document is already being processed by another run of this agent.'");
+	ИначеЕсли Причина = "subject_captured_by_queue_peer" Тогда
+		Возврат НСтр(
+			"ru = 'Документ уже обрабатывается другим агентом этой очереди.';
+			|en = 'The document is already being processed by another agent of this queue.'");
 	ИначеЕсли Причина = "run_not_found" Тогда
 		// Граничный случай: запись удалена между открытием формы и нажатием кнопки.
 		Возврат НСтр(
