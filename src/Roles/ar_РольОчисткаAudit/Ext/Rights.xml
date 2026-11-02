@@ -56,6 +56,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Constant.ar_РазрешитьОчисткуAudit</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Constant.ar_КомпакцияAuditДней</name>
 		<right>
 			<name>Read</name>
