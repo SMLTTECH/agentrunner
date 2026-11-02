@@ -4,6 +4,17 @@
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
 	<object>
+		<name>Constant.ar_ПорогПрогрессивнойВыдачи</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.ar_ПодпискиАгентов</name>
 		<right>
 			<name>Read</name>
@@ -106,6 +117,13 @@
 		</right>
 	</object>
 	<object>
+		<name>HTTPService.ar_RunsAPI.URLTemplate.v1_runs_id_events.Method.get</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Constant.ar_ApprovalExpirationЧасов</name>
 		<right>
 			<name>Read</name>
@@ -168,6 +186,13 @@
 		</right>
 	</object>
 	<object>
+		<name>HTTPService.ar_AgentsAPI.URLTemplate.v1_agents_id_trigger.Method.post</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.ar_Запуски</name>
 		<right>
 			<name>Read</name>
@@ -190,6 +215,13 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.ar_Адаптеры</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Constant.ar_ПорогОжиданияApprovalСек</name>
 		<right>
 			<name>Read</name>
@@ -197,6 +229,13 @@
 		</right>
 		<right>
 			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>HTTPService.ar_RunsAPI.URLTemplate.v1_runs_id.Method.get</name>
+		<right>
+			<name>Use</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -256,6 +295,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Constant.ar_РазрешитьТулыВРежимеКод</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Constant.ar_HeartbeatПорогСек</name>
 		<right>
 			<name>Read</name>
@@ -267,11 +313,32 @@
 		</right>
 	</object>
 	<object>
+		<name>CommonForm.ar_Диалог</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.ar_ОчередьСобытийПодписок</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
 		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ar_КомпакцияСжатиеДней</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>CommonForm.ar_ФормаПросмотраPrompt</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -377,6 +444,35 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.ar_ПрофильКонфигурации</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ar_ОбновлениеНеНапоминатьДо</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>CommonForm.ar_ПросмотрДействия</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Subsystem.ar_AgentRunner</name>
 		<right>
 			<name>View</name>
@@ -402,6 +498,20 @@
 		</right>
 		<right>
 			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ar_КомпакцияУдалениеДней</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.ar_ПресетыВстроенные</name>
+		<right>
+			<name>Use</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -453,6 +563,13 @@
 		</right>
 		<right>
 			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>CommonForm.ar_КонсольАгентов</name>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -655,6 +772,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Constant.ar_МаксСуммарныхЗапусков</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.ar_ПакетыИнструментов</name>
 		<right>
 			<name>Read</name>
@@ -670,9 +798,38 @@
 		</right>
 	</object>
 	<object>
+		<name>DataProcessor.ar_ТестТулов</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ar_РазрешитьОчисткуAudit</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Subsystem.ar_AgentRunner.Subsystem.ar_Конструктор</name>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>HTTPService.ar_HealthAPI.URLTemplate.v1_health.Method._get</name>
+		<right>
+			<name>Use</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -754,6 +911,24 @@
 		</right>
 	</object>
 	<object>
+		<name>CommonForm.ar_ПроизводительностьИнструментов</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ar_МаксРазмерОтветаHTTP</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.ar_ПамятьАгента</name>
 		<right>
 			<name>Read</name>
@@ -820,7 +995,36 @@
 		</right>
 	</object>
 	<object>
+		<name>CommonForm.ar_ОчередьПодтверждений</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ar_МаксОдновременныхЗапусковАгента</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Constant.ar_ОтладочныеЗаписи</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ar_ComplianceРежим</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -849,6 +1053,20 @@
 		</right>
 		<right>
 			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>CommonForm.ar_ФормаВводаКлюча</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>CommonForm.ar_Настройки</name>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -948,6 +1166,20 @@
 		</right>
 	</object>
 	<object>
+		<name>CommonForm.ar_БиблиотекаПресетов</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>CommonForm.ar_ПросмотрЗапуска</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Constant.ar_ВключитьCriticLLM</name>
 		<right>
 			<name>Read</name>
@@ -968,6 +1200,31 @@
 			<name>Update</name>
 			<value>true</value>
 		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ar_ЗамерятьВсеИнструменты</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Constant.ar_ПорогПредупрежденияПланировщикаСек</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>CommonForm.ar_ПакетыИнструментов</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1025,6 +1282,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Constant.ar_МаксДействийПоУмолчанию</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.ar_Сессии</name>
 		<right>
 			<name>Read</name>
@@ -1047,6 +1315,13 @@
 		</right>
 		<right>
 			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>CommonForm.ar_МастерНастройки</name>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
