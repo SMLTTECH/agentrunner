@@ -1,0 +1,24 @@
+{
+    "filter": {
+        "extensions": ["tests", "YAxUnit"],
+        "modules": [],
+        "tests": [],
+        "suites": [],
+        "tags": [],
+        "contexts": null
+    },
+    "reports": [
+        { "format": "jUnit", "path": "Q:\\ba\\YAxUnit\\reports\\junit.xml" },
+        { "format": "JSON", "path": "Q:\\ba\\YAxUnit\\reports\\report.json" }
+    ],
+    "closeAfterTests": true,
+    "showReport": false,
+    "exitCode": "Q:\\ba\\YAxUnit\\reports\\exitcode.txt",
+    "workspacePath": "Q:\\ba\\YAxUnit",
+    "logging": {
+        "file": "Q:\\ba\\YAxUnit\\reports\\tests.log",
+        "console": false,
+        "enable": true,
+        "level": "info"
+    }
+}
