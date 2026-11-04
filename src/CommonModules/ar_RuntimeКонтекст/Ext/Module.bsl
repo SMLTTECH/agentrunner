@@ -511,25 +511,29 @@
 				|вызовом одного из его инструментов; закрыв шаг, сразу переходи к следующему.
 				|Пропустить шаг можно только через update_plan (status = skipped, note =
 				|причина пропуска). Итоговый ответ и инструменты следующих шагов не
-				|принимаются, пока текущий шаг не закрыт.';
+				|принимаются, пока текущий шаг не закрыт. Свои пункты в план не
+				|добавляются - в update_plan повторяй заголовки шагов дословно.';
 				|en = 'The work plan is mandatory (see the current step below). Each step is
 				|closed by calling one of its tools; after closing a step, move straight to
 				|the next one. A step can only be skipped via update_plan (status = skipped,
 				|note = the reason). The final answer and tools of later steps are not
-				|accepted until the current step is closed.'");
+				|accepted until the current step is closed. Your own items are not added to
+				|the plan - repeat the step titles verbatim in update_plan.'");
 		Иначе
 			// agentrunner-20: второй вариант инструкции - модель сопровождает
 			// готовый план, заголовки надо повторять дословно (слияние пунктов
-			// в ar_ПланЗапуска.Применить идёт по заголовку).
+			// в ar_ПланЗапуска.Применить идёт по заголовку). agentrunner-366:
+			// состав плана из шаблона задан - свои пункты не добавляются, шаги
+			// шаблона не снимаются (ненужный шаг - skipped).
 			Инструкция = НСтр(
 				"ru = 'План работы задан заранее (см. текущий план ниже). Отмечай
 				|статусы пунктов через update_plan, повторяя заголовки дословно.
-				|План - твоё намерение, а не жёсткая схема: добавляй, меняй
-				|или снимай пункты, если этого требует задача.';
+				|Свои пункты в план не добавляются; ненужный пункт отметь
+				|status = skipped.';
 				|en = 'The work plan is given in advance (see the current plan
 				|below). Update item statuses via update_plan, repeating the
-				|titles verbatim. The plan is your intent, not a rigid scheme:
-				|add, change or drop items if the task requires it.'");
+				|titles verbatim. Your own items are not added to the plan; mark
+				|an unneeded item status = skipped.'");
 		КонецЕсли;
 	Иначе
 		// PLAN-15: план объявляется ВСЕГДА, в том числе на простых однозначных
