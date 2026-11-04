@@ -237,6 +237,7 @@
 			<CommonModule>ОМ_ar_Планировщик</CommonModule>
 			<CommonModule>ОМ_ar_Расписание</CommonModule>
 			<CommonModule>ОМ_ar_Утилиты</CommonModule>
+			<CommonModule>ОМ_ar_ЛогЗапуска</CommonModule>
 			<CommonModule>ОМ_ar_Секреты</CommonModule>
 			<CommonModule>ОМ_ar_Константы</CommonModule>
 			<CommonModule>ОМ_ar_JSON</CommonModule>
