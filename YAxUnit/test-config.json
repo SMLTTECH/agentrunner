@@ -1,0 +1,24 @@
+{
+    "filter": {
+        "extensions": ["tests", "YAxUnit"],
+        "modules": [],
+        "tests": [],
+        "suites": [],
+        "tags": [],
+        "contexts": null
+    },
+    "reports": [
+        { "format": "jUnit", "path": "D:\\ba\\dev\\agentrunner\\YAxUnit\\reports\\junit.xml" },
+        { "format": "JSON", "path": "D:\\ba\\dev\\agentrunner\\YAxUnit\\reports\\report.json" }
+    ],
+    "closeAfterTests": true,
+    "showReport": false,
+    "exitCode": "D:\\ba\\dev\\agentrunner\\YAxUnit\\reports\\exitcode.txt",
+    "workspacePath": "D:\\ba\\dev\\agentrunner\\YAxUnit",
+    "logging": {
+        "file": "D:\\ba\\dev\\agentrunner\\YAxUnit\\reports\\tests.log",
+        "console": false,
+        "enable": true,
+        "level": "info"
+    }
+}
