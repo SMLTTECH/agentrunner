@@ -163,6 +163,7 @@
 			</SearchControlAddition>
 			<Events>
 				<Event name="OnActivateRow">СписокПриАктивацииСтроки</Event>
+				<Event name="BeforeAddRow">СписокПередНачаломДобавления</Event>
 			</Events>
 			<ChildItems>
 				<InputField name="Диалог" id="14">
