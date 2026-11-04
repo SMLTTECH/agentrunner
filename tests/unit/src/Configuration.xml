@@ -226,6 +226,7 @@
 			<CommonModule>ОМ_ar_ИнструментыПравилаДоступа</CommonModule>
 			<CommonModule>ОМ_ar_Подтверждение</CommonModule>
 			<CommonModule>ОМ_ar_ИнструментыДиспетчер</CommonModule>
+			<CommonModule>ОМ_ar_ИнструментыПакеты</CommonModule>
 			<CommonModule>ОМ_ar_LLMДиспетчер</CommonModule>
 			<CommonModule>ОМ_ar_LLMКонтракт</CommonModule>
 			<CommonModule>ОМ_ar_RuntimeПарсер</CommonModule>
