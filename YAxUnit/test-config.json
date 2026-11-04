@@ -8,15 +8,15 @@
         "contexts": null
     },
     "reports": [
-        { "format": "jUnit", "path": "Q:\\ba\\YAxUnit\\reports\\junit.xml" },
-        { "format": "JSON", "path": "Q:\\ba\\YAxUnit\\reports\\report.json" }
+        { "format": "jUnit", "path": "D:\\ba\\dev\\agentrunner\\YAxUnit\\reports\\junit.xml" },
+        { "format": "JSON", "path": "D:\\ba\\dev\\agentrunner\\YAxUnit\\reports\\report.json" }
     ],
     "closeAfterTests": true,
     "showReport": false,
-    "exitCode": "Q:\\ba\\YAxUnit\\reports\\exitcode.txt",
-    "workspacePath": "Q:\\ba\\YAxUnit",
+    "exitCode": "D:\\ba\\dev\\agentrunner\\YAxUnit\\reports\\exitcode.txt",
+    "workspacePath": "D:\\ba\\dev\\agentrunner\\YAxUnit",
     "logging": {
-        "file": "Q:\\ba\\YAxUnit\\reports\\tests.log",
+        "file": "D:\\ba\\dev\\agentrunner\\YAxUnit\\reports\\tests.log",
         "console": false,
         "enable": true,
         "level": "info"
