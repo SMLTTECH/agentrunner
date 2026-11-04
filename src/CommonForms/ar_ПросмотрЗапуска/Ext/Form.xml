@@ -1802,7 +1802,7 @@
 				</Column>
 			</Columns>
 		</Attribute>
-		<Attribute name="РазметкаПлана" id="140">
+		<Attribute name="РазметкаПлана" id="234">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1821,7 +1821,7 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ПоследовательностьСобытияПлана" id="141">
+		<Attribute name="ПоследовательностьСобытияПлана" id="235">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
