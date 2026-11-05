@@ -1,0 +1,58 @@
+{
+    "ДымовыеТесты": {
+        "Использовать": true,
+        "ОткрытиеФорм": {
+            "Использовать": true,
+            "Новый": false,
+            "НоваяГруппа": false,
+            "Существующий": false,
+            "СуществующаяГруппа": false,
+            "Скопированный": false,
+            "СкопированнаяГруппа": false,
+            "Список": false,
+            "Выбор": false,
+            "ВыборГруппы": false,
+            "Основная": false,
+            "Настройки": false,
+            "Варианты": false,
+            "ОбычныеФормы": false,
+            "ОбщиеФормы": false,
+            "Перечисления": false,
+            "Отчеты": false,
+            "РегистрыСведений": false,
+            "РегистрыНакопления": false,
+            "РегистрыБухгалтерии": false,
+            "ПланыСчетов": false,
+            "ПланыВидовХарактеристик": false,
+            "Справочники": {
+                "бит_СтатьиБюджета": { "Существующий": true, "Список": true },
+                "бит_Бюджеты": { "Существующий": true, "Список": true }
+            },
+            "Документы": {
+                "бит_ФормаВводаБюджета": { "Существующий": true, "Список": true }
+            },
+            "Обработки": {
+            }
+        }
+    },
+    "filter": {
+        "extensions": ["Smoke"],
+        "modules": [],
+        "tests": [],
+        "suites": [],
+        "tags": [],
+        "contexts": null
+    },
+    "reports": [
+        { "format": "jUnit", "path": "Q:\\ba\\YAxUnit\\reports\\smoke-my-junit.xml" }
+    ],
+    "closeAfterTests": true,
+    "showReport": false,
+    "exitCode": "Q:\\ba\\YAxUnit\\reports\\smoke-my-exitcode.txt",
+    "logging": {
+        "file": "Q:\\ba\\YAxUnit\\reports\\smoke-my.log",
+        "console": false,
+        "enable": true,
+        "level": "info"
+    }
+}
