@@ -148,6 +148,33 @@
 							<ContextMenu name="ШапкаПредметКонтекстноеМеню" id="251"/>
 							<ExtendedTooltip name="ШапкаПредметРасширеннаяПодсказка" id="252"/>
 						</InputField>
+						<CommandBar name="ГруппаКомандыДиалогов" id="261">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Команды диалогов</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Dialog commands</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ГруппаКомандыДиалоговРасширеннаяПодсказка" id="266"/>
+							<ChildItems>
+								<Button name="КнопкаДиалогЗапуска" id="262">
+									<Type>CommandBarButton</Type>
+									<Visible>false</Visible>
+									<CommandName>Form.Command.ar_ОткрытьДиалог</CommandName>
+									<ExtendedTooltip name="КнопкаДиалогЗапускаРасширеннаяПодсказка" id="263"/>
+								</Button>
+								<Button name="КнопкаДиалогПоПредмету" id="264">
+									<Type>CommandBarButton</Type>
+									<Visible>false</Visible>
+									<CommandName>Form.Command.ar_ОткрытьДиалогПоПредмету</CommandName>
+									<ExtendedTooltip name="КнопкаДиалогПоПредметуРасширеннаяПодсказка" id="265"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
 						<UsualGroup name="ГруппаРабота" id="238">
 							<Title>
 								<v8:item>
@@ -2177,6 +2204,36 @@
 				<v8:Type>cfg:CatalogRef.УчетныеЗаписиЭлектроннойПочты</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="ДиалогПоПредмету" id="236">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Диалог по предмету</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Subject dialog</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ar_Диалоги</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДиалоговПоПредметуНесколько" id="237">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Диалогов по предмету несколько</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Multiple subject dialogs</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ar_Обновить" id="224">
@@ -2196,24 +2253,47 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Открыть диалог</v8:content>
+					<v8:content>Диалог запуска</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Open dialog</v8:content>
+					<v8:content>Run dialog</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Переписка запуска: вопросы агента и ответы</v8:content>
+					<v8:content>Переписка этого запуска: вопросы агента и ответы</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Run conversation: agent questions and answers</v8:content>
+					<v8:content>This run's conversation: agent questions and answers</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ar_ОткрытьДиалог</Action>
+		</Command>
+		<Command name="ar_ОткрытьДиалогПоПредмету" id="226">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Диалог по предмету</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Subject dialog</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переписка по предмету запуска (например, по заявке): сообщения пакета и ответы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Conversation about the run's subject (e.g. a request): package messages and replies</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ar_ОткрытьДиалогПоПредмету</Action>
 		</Command>
 		<Command name="ar_ПоказатьПромпт" id="134">
 			<Title>
