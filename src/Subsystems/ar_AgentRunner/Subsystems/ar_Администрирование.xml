@@ -27,7 +27,6 @@
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ar_ПравилаМаскированияПДн</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ar_LLMПровайдеры</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ar_ПереопределенияОбъектов</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ar_ТестЦикла</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ar_ПресетыВстроенные</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ar_ДополнительныеНастройки</xr:Item>
 			</Content>

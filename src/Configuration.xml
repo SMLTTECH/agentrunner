@@ -55,7 +55,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ar_РольЧитатель</xr:Item>
 			</DefaultRoles>
 			<Vendor>Samolet</Vendor>
-			<Version>0.2.0.023</Version>
+			<Version>0.2.0.024</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation>
 				<v8:item>
@@ -125,7 +125,6 @@
 			<CommonModule>ar_RuntimeКонтекст</CommonModule>
 			<CommonModule>ar_RuntimeПарсер</CommonModule>
 			<CommonModule>ar_RuntimeЦикл</CommonModule>
-			<CommonModule>ar_RuntimeЦиклПрото</CommonModule>
 			<CommonModule>ar_Планировщик</CommonModule>
 			<CommonModule>ar_Секреты</CommonModule>
 			<CommonModule>ar_СнимокМигратор</CommonModule>
@@ -147,7 +146,6 @@
 			<CommonModule>ar_ПравилаКритик</CommonModule>
 			<CommonModule>ar_HTTPСервисПомощник</CommonModule>
 			<CommonModule>ar_ТестыHTTPСервисов</CommonModule>
-			<CommonModule>ar_ТестыФинансыНаДанных</CommonModule>
 			<CommonModule>ar_ИнструментыВзаимодействие</CommonModule>
 			<CommonModule>ar_ИнструментыОтчёты</CommonModule>
 			<CommonModule>ar_ИнструментыАварийный</CommonModule>
@@ -183,7 +181,6 @@
 			<CommonModule>ar_Уведомления</CommonModule>
 			<CommonModule>ar_ПланЗапуска</CommonModule>
 			<CommonModule>ar_ИнструментыПлан</CommonModule>
-			<CommonModule>ar_ТестыPLAN</CommonModule>
 			<CommonModule>ar_ДиалогиСервер</CommonModule>
 			<CommonModule>ar_ПредметыАгентов</CommonModule>
 			<CommonModule>ar_ДиспетчерОчереди</CommonModule>
@@ -289,7 +286,6 @@
 			<Enum>ar_СостоянияДиалогов</Enum>
 			<Enum>ar_ОснованияУчастияВДиалоге</Enum>
 			<Enum>ar_ВидыСообщенийДиалога</Enum>
-			<DataProcessor>ar_ТестЦикла</DataProcessor>
 			<DataProcessor>ar_ПресетыВстроенные</DataProcessor>
 			<DataProcessor>ar_ТестТулов</DataProcessor>
 			<InformationRegister>ar_Запуски</InformationRegister>
