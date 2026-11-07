@@ -330,8 +330,6 @@
 		<Metadata name="CommonModule.ar_RuntimeПарсер.Module" id="680b3b60-0c96-4913-a72a-866f76cdd2ad.0" configVersion="5af20b539802cd2ea0381bbe46cf796375b379be"/>
 		<Metadata name="CommonModule.ar_RuntimeЦикл" id="cf6b4335-474e-4746-8dbd-efeecb36c9ba" configVersion="1cd2748588ce9ac265386fcb06f0a18b3698710c"/>
 		<Metadata name="CommonModule.ar_RuntimeЦикл.Module" id="cf6b4335-474e-4746-8dbd-efeecb36c9ba.0" configVersion="b8c919055262c073c7739c54575e68f28128be7f"/>
-		<Metadata name="CommonModule.ar_RuntimeЦиклПрото" id="ed1b4146-8da0-4696-a38c-9e27bba873e0" configVersion="542a0e01371c1878f0f72d763130379f2cdbbf2c"/>
-		<Metadata name="CommonModule.ar_RuntimeЦиклПрото.Module" id="ed1b4146-8da0-4696-a38c-9e27bba873e0.0" configVersion="d43dc9304dde1ab9c082360a07145afbe7c811f0"/>
 		<Metadata name="CommonModule.ar_АдаптерБП" id="2b364090-71d4-4ca3-b917-ec22b111fa4a" configVersion="6a6494db77255384c63d8c06de36a9c716b861e2"/>
 		<Metadata name="CommonModule.ar_АдаптерБП.Module" id="2b364090-71d4-4ca3-b917-ec22b111fa4a.0" configVersion="b3f3221ed4ef133e615ca232354bc4cc1732d824"/>
 		<Metadata name="CommonModule.ar_АдаптерЗаполнения" id="024f1ad4-326e-462c-9068-5fdaa48aa70a" configVersion="9c179e9885a05f88c1c0d7a50e33d9407da9e127"/>
@@ -444,10 +442,6 @@
 		<Metadata name="CommonModule.ar_ТестыHTTPСервисов.Module" id="3697cb24-8cd7-4467-a42e-578b60dc2af1.0" configVersion="c9df38b01dbbfae2fc50d91fd7a63f2ea9d85a17"/>
 		<Metadata name="CommonModule.ar_ТестыLLMAgentRunnerCloud" id="28976ce2-ba7b-44df-bdfd-11ab58093c7f" configVersion="361b6a12749d847f1d2cc257985f86be99912a8c"/>
 		<Metadata name="CommonModule.ar_ТестыLLMAgentRunnerCloud.Module" id="28976ce2-ba7b-44df-bdfd-11ab58093c7f.0" configVersion="f00ad675168cec67d5a9e2abdb5fb74591fb0be3"/>
-		<Metadata name="CommonModule.ar_ТестыPLAN" id="44b1623c-9c5a-4dce-ac62-57c71d552f3a" configVersion="79938ebf646515c28544d498a6d58fb1a0c73c7b"/>
-		<Metadata name="CommonModule.ar_ТестыPLAN.Module" id="44b1623c-9c5a-4dce-ac62-57c71d552f3a.0" configVersion="297a86a0cb8b87074f8a67ef0dd7d1ad51c59bd2"/>
-		<Metadata name="CommonModule.ar_ТестыФинансыНаДанных" id="50b76218-88a3-4c66-affe-d7b0a09091b8" configVersion="dd07cda29a71eb6cca7fddb412194308511c0768"/>
-		<Metadata name="CommonModule.ar_ТестыФинансыНаДанных.Module" id="50b76218-88a3-4c66-affe-d7b0a09091b8.0" configVersion="9a0bd6047c7860dbaac7c30f7c620c2d4712b34b"/>
 		<Metadata name="CommonModule.ar_Токены" id="8dcd9b8b-e2f6-4735-aba1-97d7f9256688" configVersion="5115ff0d0005a26d8551fac688a27bac43d1d23d"/>
 		<Metadata name="CommonModule.ar_Токены.Module" id="8dcd9b8b-e2f6-4735-aba1-97d7f9256688.0" configVersion="9c7e7038f19ce40cc6aeb05713eccf549a266045"/>
 		<Metadata name="CommonModule.ar_Уведомления" id="f2f6b969-ba43-40ac-82cb-7aea3d6f7a8d" configVersion="26ba0667a9ed9d34c36c3ed9e26c3a6382a57cca"/>
@@ -570,11 +564,6 @@
 		<Metadata name="DataProcessor.ar_ТестТулов.Form.Форма.Form" id="32b7d50b-c883-4428-8f45-219991fc3626.0" configVersion="70e7b288107a600c32783c9100658ef0b5d52d20"/>
 		<Metadata name="DataProcessor.ar_ТестТулов.ManagerModule" id="8e4d469a-3050-4062-bbc4-95d4302edc8c.2" configVersion="cb5200aa6306a59562a1cc38cb2cf5ea553d975a"/>
 		<Metadata name="DataProcessor.ar_ТестТулов.ObjectModule" id="8e4d469a-3050-4062-bbc4-95d4302edc8c.0" configVersion="0b2ea6d390cb2e917a76204f0a14656f089a239e"/>
-		<Metadata name="DataProcessor.ar_ТестЦикла" id="464a3373-2ea0-4905-8f84-c0122b00bf8f" configVersion="cf8fe8e76e710c326f99be6eeb21a27695455505"/>
-		<Metadata name="DataProcessor.ar_ТестЦикла.Form.ФормаОбработки" id="eec1885d-d66f-4104-9d00-6a4ed07fd9e8" configVersion="fcdc27cc9335149b2952fb5b9da055a44f9605c2"/>
-		<Metadata name="DataProcessor.ar_ТестЦикла.Form.ФормаОбработки.Form" id="eec1885d-d66f-4104-9d00-6a4ed07fd9e8.0" configVersion="337f168ddbf6cb139b1f8d96bacf43ded1f06b3f"/>
-		<Metadata name="DataProcessor.ar_ТестЦикла.ManagerModule" id="464a3373-2ea0-4905-8f84-c0122b00bf8f.2" configVersion="96f10685995978d285b7110ad48995b8d4cb3f62"/>
-		<Metadata name="DataProcessor.ar_ТестЦикла.ObjectModule" id="464a3373-2ea0-4905-8f84-c0122b00bf8f.0" configVersion="9355e419ffe9b68d5e54d6262fad93758a8a2629"/>
 		<Metadata name="DefinedType.ar_ПрикладнойОбъект" id="838ddd11-51b0-4bc5-bbdc-00f8a052421c" configVersion="0a9607867dcc757539c857f767bd4cb7f0413f0c"/>
 		<Metadata name="Document.бит_мдм_ЗаявкаНаИзменение" id="e075639d-c886-4384-b3fd-b42098a0b6ad" configVersion="3b9ab94a04ba69cb4fb028c461324ab6f1b74ffc"/>
 		<Metadata name="Enum.ar_ВердиктНадзора" id="886ee457-6c6d-4190-a08f-068680e5bacf" configVersion="f33525f6fb4d9d8d0c51a929005d852df42f6175">
