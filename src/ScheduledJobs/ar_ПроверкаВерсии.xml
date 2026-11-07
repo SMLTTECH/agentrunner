@@ -14,7 +14,7 @@
 				</v8:item>
 			</Synonym>
 			<Comment/>
-			<MethodName>CommonModule.ar_ПроверкаОбновлений.ПроверитьВерсию</MethodName>
+			<MethodName>CommonModule.ar_ПроверкаОбновлений.ПроверитьВерсиюРегламентнымЗаданием</MethodName>
 			<Description>AgentRunner Проверка версии</Description>
 			<Key>ar_ПроверкаВерсии</Key>
 			<Use>true</Use>
