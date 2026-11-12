@@ -409,16 +409,49 @@
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Сколько запусков подходит под отбор. Список показывает не все - только последние по дате старта; чтобы увидеть остальные, сузьте отбор.</v8:content>
+											<v8:content>Сколько запусков подходит под отбор. В список выводятся последние по дате старта - не больше, чем задано в поле «Показывать»; чтобы увидеть остальные, увеличьте его или сузьте отбор.</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>en</v8:lang>
-											<v8:content>Number of runs matching the filter. The list shows only the latest by start date; narrow the filter to see the rest.</v8:content>
+											<v8:content>Number of runs matching the filter. The list shows the latest by start date, no more than set in the Show field; increase it or narrow the filter to see the rest.</v8:content>
 										</v8:item>
 									</ToolTip>
 									<ContextMenu name="СводкаОтобраноПолеКонтекстноеМеню" id="458"/>
 									<ExtendedTooltip name="СводкаОтобраноПолеРасширеннаяПодсказка" id="459"/>
 								</LabelField>
+								<InputField name="ОтборКоличествоЗаписей" id="461">
+									<DataPath>ОтборКоличествоЗаписей</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Показывать</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Show</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сколько последних по дате старта запусков выводить в список (от 1 до 10 000, по умолчанию 200).</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>How many latest runs by start date to show in the list (1 to 10,000, default 200).</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>6</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
+									<MaxValue xsi:type="xs:decimal">10000</MaxValue>
+									<ContextMenu name="ОтборКоличествоЗаписейКонтекстноеМеню" id="462"/>
+									<ExtendedTooltip name="ОтборКоличествоЗаписейРасширеннаяПодсказка" id="463"/>
+									<Events>
+										<Event name="OnChange">ОтборКоличествоЗаписейПриИзменении</Event>
+									</Events>
+								</InputField>
 								<LabelField name="СводкаРаботаютПоле" id="55">
 									<DataPath>СводкаРаботаютПоле</DataPath>
 									<ReadOnly>true</ReadOnly>
@@ -1892,6 +1925,22 @@
 					<v8:Length>60</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтборКоличествоЗаписей" id="464">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор количество записей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
 		<Attribute name="СводкаОтобраноПоле" id="460">
