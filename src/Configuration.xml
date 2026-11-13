@@ -187,6 +187,7 @@
 			<CommonModule>ar_ОчередьРаспознавания</CommonModule>
 			<CommonModule>ar_ОчередьРаспознаванияФон</CommonModule>
 			<CommonModule>ar_ОбработчикПодписокПовтИсп</CommonModule>
+			<CommonModule>ar_ЗапросыАгентам</CommonModule>
 			<HTTPService>ar_AgentsAPI</HTTPService>
 			<HTTPService>ar_RunsAPI</HTTPService>
 			<HTTPService>ar_HealthAPI</HTTPService>
