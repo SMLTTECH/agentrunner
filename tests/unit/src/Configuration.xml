@@ -252,6 +252,11 @@
 			<CommonModule>ОМ_ar_ПроверкаДанныхЗаявкиНаИзменениеНСИКонтрагенты</CommonModule>
 			<CommonModule>ОМ_ar_ОбработчикПодписок</CommonModule>
 			<CommonModule>ОМ_ar_ДиспетчерОчереди</CommonModule>
+			<CommonModule>ОМ_ar_КонтрактМетаданных</CommonModule>
+			<CommonModule>ОМ_ar_Хуки</CommonModule>
+			<CommonModule>ОМ_ar_Уведомления</CommonModule>
+			<CommonModule>ОМ_ar_ОчисткаДанных</CommonModule>
+			<CommonModule>ОМ_ar_ОбновлениеРасширения</CommonModule>
 			<DataProcessor>ЮТHTTPServiceRequest</DataProcessor>
 			<DataProcessor>ЮТHTTPОтвет</DataProcessor>
 			<DataProcessor>ЮТHTTPСервисЗапрос</DataProcessor>
