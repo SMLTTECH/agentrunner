@@ -22,6 +22,7 @@
 				<v8:Type>cfg:CatalogObject.БанковскиеСчета</v8:Type>
 				<v8:Type>cfg:CatalogObject.Организации</v8:Type>
 				<v8:Type>cfg:CatalogObject.Пользователи</v8:Type>
+				<v8:Type>cfg:CatalogObject.ДоговорыКонтрагентов</v8:Type>
 				<v8:Type>cfg:CatalogObject.УчетныеЗаписиЭлектроннойПочты</v8:Type>
 			</Type>
 		</Properties>
