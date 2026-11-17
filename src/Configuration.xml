@@ -270,6 +270,7 @@
 			<Catalog>БанковскиеСчета</Catalog>
 			<Catalog>Пользователи</Catalog>
 			<Catalog>УчетныеЗаписиЭлектроннойПочты</Catalog>
+			<Catalog>ДоговорыКонтрагентов</Catalog>
 			<Document>бит_мдм_ЗаявкаНаИзменение</Document>
 			<Enum>ar_УровеньРиска</Enum>
 			<Enum>ar_РежимАвтономии</Enum>
