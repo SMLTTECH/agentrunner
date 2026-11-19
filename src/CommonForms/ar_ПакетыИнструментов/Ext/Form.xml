@@ -117,6 +117,9 @@
 				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="57"/>
 				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="58"/>
 			</SearchControlAddition>
+			<Events>
+				<Event name="OnGetDataAtServer">СписокПриПолученииДанныхНаСервере</Event>
+			</Events>
 			<ChildItems>
 				<InputField name="ar_Пространство" id="22">
 					<DataPath>Список.ar_Namespace</DataPath>
@@ -176,10 +179,21 @@
 					<ContextMenu name="ar_КоличествоИнструментовКонтекстноеМеню" id="38"/>
 					<ExtendedTooltip name="ar_КоличествоИнструментовРасширеннаяПодсказка" id="39"/>
 				</InputField>
-				<InputField name="ar_ПричинаОтказа" id="40">
-					<DataPath>Список.ar_ПричинаОтказа</DataPath>
-					<ContextMenu name="ar_ПричинаОтказаКонтекстноеМеню" id="41"/>
-					<ExtendedTooltip name="ar_ПричинаОтказаРасширеннаяПодсказка" id="42"/>
+				<InputField name="ar_ПричинаОтказаТекст" id="40">
+					<DataPath>Список.ar_ПричинаОтказаТекст</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Причина отказа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Rejection reason</v8:content>
+						</v8:item>
+					</Title>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ar_ПричинаОтказаТекстКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ar_ПричинаОтказаТекстРасширеннаяПодсказка" id="42"/>
 				</InputField>
 				<InputField name="ar_ДатаРегистрации" id="43">
 					<DataPath>Список.ar_ДатаРегистрации</DataPath>
@@ -223,7 +237,7 @@
 		ИНАЧЕ &amp;ТекстОтложенногоИсполненияНет
 	КОНЕЦ КАК ar_ОтложенноеИсполнениеТекст,
 	Пакеты.ar_КоличествоИнструментов КАК ar_КоличествоИнструментов,
-	Пакеты.ar_ПричинаОтказа КАК ar_ПричинаОтказа,
+	Пакеты.ar_ПричинаОтказа КАК ar_ПричинаОтказаТекст,
 	Пакеты.ar_ДатаРегистрации КАК ar_ДатаРегистрации,
 	Пакеты.ar_Пользователь КАК ar_Пользователь
 ИЗ
