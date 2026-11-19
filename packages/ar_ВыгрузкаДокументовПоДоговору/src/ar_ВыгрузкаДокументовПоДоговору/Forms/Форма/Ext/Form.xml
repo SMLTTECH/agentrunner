@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выгрузка документов по договору</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапки" id="1">
+			<Group>Horizontal</Group>
+			<Representation>NormalCollapse</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкиРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛевая" id="3">
+					<Group>Vertical</Group>
+					<Representation>NormalCollapse</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛеваяРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<InputField name="НомерДоговора" id="5">
+							<DataPath>НомерДоговора</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер договора</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Регистрационный номер договора, например Д-15/2026</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>16</Width>
+							<MaxWidth>16</MaxWidth>
+							<ContextMenu name="НомерДоговораКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="НомерДоговораРасширеннаяПодсказка" id="7"/>
+						</InputField>
+						<InputField name="Договор" id="8">
+							<DataPath>Договор</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<ClearButton>true</ClearButton>
+							<Events>
+								<Event name="OnChange">ДоговорПриИзменении</Event>
+							</Events>
+							<ContextMenu name="ДоговорКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="10"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПравая" id="11">
+					<Group>Vertical</Group>
+					<Representation>NormalCollapse</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="12"/>
+					<ChildItems>
+						<InputField name="Проект" id="13">
+							<DataPath>Проект</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ПроектКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ПроектРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<InputField name="Каталог" id="16">
+							<DataPath>Каталог</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<ClearButton>true</ClearButton>
+							<OpenButton>true</OpenButton>
+							<Events>
+								<Event name="StartChoice">КаталогНачалоВыбора</Event>
+							</Events>
+							<ContextMenu name="КаталогКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="КаталогРасширеннаяПодсказка" id="18">
+								<Tooltip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Каталог, в который сохраняются файлы; запоминается для следующего запуска</v8:content>
+									</v8:item>
+								</Tooltip>
+							</ExtendedTooltip>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<CommandBar name="ПанельДействий" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель действий</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ПанельДействийРасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<Button name="КнопкаНайтиДоговор" id="21">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.НайтиДоговор</CommandName>
+					<ExtendedTooltip name="КнопкаНайтиДоговорРасширеннаяПодсказка" id="22"/>
+				</Button>
+				<Button name="КнопкаНайтиДокументы" id="23">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.НайтиДокументы</CommandName>
+					<ExtendedTooltip name="КнопкаНайтиДокументыРасширеннаяПодсказка" id="24"/>
+				</Button>
+				<Button name="КнопкаСохранить" id="25">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.Сохранить</CommandName>
+					<ExtendedTooltip name="КнопкаСохранитьРасширеннаяПодсказка" id="26"/>
+				</Button>
+				<Button name="КнопкаОтменитьВыгрузку" id="27">
+					<Type>CommandBarButton</Type>
+					<Enabled>false</Enabled>
+					<CommandName>Form.Command.ОтменитьВыгрузку</CommandName>
+					<ExtendedTooltip name="КнопкаОтменитьВыгрузкуРасширеннаяПодсказка" id="28"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<UsualGroup name="ГруппаПрогресса" id="29">
+			<Group>Horizontal</Group>
+			<Representation>NormalCollapse</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПрогрессаРасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<ProgressBarField name="ИндикаторВыгрузки" id="31">
+					<DataPath>ПрогрессВыгрузки</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>14</Width>
+					<ContextMenu name="ИндикаторВыгрузкиКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ИндикаторВыгрузкиРасширеннаяПодсказка" id="33"/>
+				</ProgressBarField>
+				<LabelField name="ХодВыгрузки" id="34">
+					<DataPath>ХодВыгрузки</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="ХодВыгрузкиКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ХодВыгрузкиРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ТаблицаДокументов" id="37">
+			<DataPath>Документы</DataPath>
+			<Height>12</Height>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<CommandBarLocation>None</CommandBarLocation>
+			<ReadOnly>false</ReadOnly>
+			<ContextMenu name="ТаблицаДокументовКонтекстноеМеню" id="38"/>
+			<AutoCommandBar name="ТаблицаДокументовКоманднаяПанель" id="39"/>
+			<ExtendedTooltip name="ТаблицаДокументовРасширеннаяПодсказка" id="40"/>
+			<SearchStringAddition name="ТаблицаДокументовСтрокаПоиска" id="41">
+				<AdditionSource>
+					<Item>ТаблицаДокументов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаДокументовСтрокаПоискаКонтекстноеМеню" id="42"/>
+				<ExtendedTooltip name="ТаблицаДокументовСтрокаПоискаРасширеннаяПодсказка" id="43"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаДокументовСостояниеПросмотра" id="44">
+				<AdditionSource>
+					<Item>ТаблицаДокументов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаДокументовСостояниеПросмотраКонтекстноеМеню" id="45"/>
+				<ExtendedTooltip name="ТаблицаДокументовСостояниеПросмотраРасширеннаяПодсказка" id="46"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаДокументовУправлениеПоиском" id="47">
+				<AdditionSource>
+					<Item>ТаблицаДокументов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаДокументовУправлениеПоискомКонтекстноеМеню" id="48"/>
+				<ExtendedTooltip name="ТаблицаДокументовУправлениеПоискомРасширеннаяПодсказка" id="49"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="ДокументыСохранять" id="50">
+					<DataPath>Документы.Сохранять</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДокументыСохранятьКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ДокументыСохранятьРасширеннаяПодсказка" id="52"/>
+				</CheckBoxField>
+				<InputField name="ДокументыВид" id="53">
+					<DataPath>Документы.Вид</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>View</EditMode>
+					<ContextMenu name="ДокументыВидКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ДокументыВидРасширеннаяПодсказка" id="55"/>
+				</InputField>
+				<InputField name="ДокументыНомер" id="56">
+					<DataPath>Документы.Номер</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>View</EditMode>
+					<Width>14</Width>
+					<ContextMenu name="ДокументыНомерКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="ДокументыНомерРасширеннаяПодсказка" id="58"/>
+				</InputField>
+				<InputField name="ДокументыДата" id="59">
+					<DataPath>Документы.Дата</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>View</EditMode>
+					<Width>11</Width>
+					<ContextMenu name="ДокументыДатаКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ДокументыДатаРасширеннаяПодсказка" id="61"/>
+				</InputField>
+				<InputField name="ДокументыЗаголовок" id="62">
+					<DataPath>Документы.Заголовок</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>View</EditMode>
+					<ContextMenu name="ДокументыЗаголовокКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="ДокументыЗаголовокРасширеннаяПодсказка" id="64"/>
+				</InputField>
+				<InputField name="ДокументыЧислоФайлов" id="65">
+					<DataPath>Документы.ЧислоФайлов</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>View</EditMode>
+					<Width>7</Width>
+					<ContextMenu name="ДокументыЧислоФайловКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ДокументыЧислоФайловРасширеннаяПодсказка" id="67"/>
+				</InputField>
+				<InputField name="ДокументыРазмерФайлов" id="68">
+					<DataPath>Документы.РазмерФайлов</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>View</EditMode>
+					<Width>10</Width>
+					<ContextMenu name="ДокументыРазмерФайловКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="ДокументыРазмерФайловРасширеннаяПодсказка" id="70"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Table name="ТаблицаПропущенных" id="71">
+			<DataPath>Пропущенные</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропущенные файлы</v8:content>
+				</v8:item>
+			</Title>
+			<Height>4</Height>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<CommandBarLocation>None</CommandBarLocation>
+			<ContextMenu name="ТаблицаПропущенныхКонтекстноеМеню" id="72"/>
+			<AutoCommandBar name="ТаблицаПропущенныхКоманднаяПанель" id="73"/>
+			<ExtendedTooltip name="ТаблицаПропущенныхРасширеннаяПодсказка" id="74"/>
+			<SearchStringAddition name="ТаблицаПропущенныхСтрокаПоиска" id="75">
+				<AdditionSource>
+					<Item>ТаблицаПропущенных</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаПропущенныхСтрокаПоискаКонтекстноеМеню" id="76"/>
+				<ExtendedTooltip name="ТаблицаПропущенныхСтрокаПоискаРасширеннаяПодсказка" id="77"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаПропущенныхСостояниеПросмотра" id="78">
+				<AdditionSource>
+					<Item>ТаблицаПропущенных</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаПропущенныхСостояниеПросмотраКонтекстноеМеню" id="79"/>
+				<ExtendedTooltip name="ТаблицаПропущенныхСостояниеПросмотраРасширеннаяПодсказка" id="80"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаПропущенныхУправлениеПоиском" id="81">
+				<AdditionSource>
+					<Item>ТаблицаПропущенных</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаПропущенныхУправлениеПоискомКонтекстноеМеню" id="82"/>
+				<ExtendedTooltip name="ТаблицаПропущенныхУправлениеПоискомРасширеннаяПодсказка" id="83"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ПропущенныеФайл" id="84">
+					<DataPath>Пропущенные.Файл</DataPath>
+					<EditMode>View</EditMode>
+					<ContextMenu name="ПропущенныеФайлКонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="ПропущенныеФайлРасширеннаяПодсказка" id="86"/>
+				</InputField>
+				<InputField name="ПропущенныеДокумент" id="87">
+					<DataPath>Пропущенные.Документ</DataPath>
+					<EditMode>View</EditMode>
+					<ContextMenu name="ПропущенныеДокументКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="ПропущенныеДокументРасширеннаяПодсказка" id="89"/>
+				</InputField>
+				<InputField name="ПропущенныеПричина" id="90">
+					<DataPath>Пропущенные.Причина</DataPath>
+					<EditMode>View</EditMode>
+					<ContextMenu name="ПропущенныеПричинаКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="ПропущенныеПричинаРасширеннаяПодсказка" id="92"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<LabelField name="Итог" id="93">
+			<DataPath>Итог</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<ContextMenu name="ИтогКонтекстноеМеню" id="94"/>
+			<ExtendedTooltip name="ИтогРасширеннаяПодсказка" id="95"/>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ar_ВыгрузкаДокументовПоДоговору</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="НомерДоговора" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер договора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>30</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Договор" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВнутренниеДокументы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Проект" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Проекты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Каталог" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрогрессВыгрузки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прогресс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ХодВыгрузки" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ход выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Итог" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Документы" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Сохранять" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сохранять</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Вид" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Документ" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВнутренниеДокументы</v8:Type>
+						<v8:Type>cfg:CatalogRef.ИсходящиеДокументы</v8:Type>
+						<v8:Type>cfg:CatalogRef.ВходящиеДокументы</v8:Type>
+						<v8:Type>cfg:DocumentRef.ВходящееПисьмо</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Номер" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Дата" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Заголовок" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заголовок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЧислоФайлов" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файлов</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="РазмерФайлов" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Размер, байт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПутьПапки" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Путь папки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Пропущенные" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропущенные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Файл" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файл</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Документ" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Причина" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Причина</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НайтиДоговор" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти договор по регистрационному номеру</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НайтиДоговор</Action>
+		</Command>
+		<Command name="НайтиДокументы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти документы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать документы по договору и проекту</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НайтиДокументы</Action>
+		</Command>
+		<Command name="Сохранить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить файлы отмеченных документов в каталог</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сохранить</Action>
+		</Command>
+		<Command name="ОтменитьВыгрузку" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прервать текущую выгрузку; следующие порции не запускаются</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменитьВыгрузку</Action>
+		</Command>
+	</Commands>
+</Form>
