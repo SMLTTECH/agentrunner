@@ -1348,8 +1348,10 @@
 		Возврат ПредставлениеНеактивнойКарточкиПакета(Параметр);
 	ИначеЕсли Префикс = "package_not_active" Тогда
 		Возврат СтрШаблон(
-			НСтр("ru='Пакет инструмента не активен (статус: %1). Регистрация или переподтверждение пакета в форме «Пакеты инструментов» вернёт доступность.';
-				|en='The tool package is not active (status: %1). Registering or re-confirming the package in the ""Tool packages"" form will restore availability.'"),
+			НСтр("ru='Пакет инструмента не активен (статус: %1).
+				|Регистрация или переподтверждение пакета в форме «Пакеты инструментов» вернёт доступность.';
+				|en='The tool package is not active (status: %1).
+				|Registering or re-confirming the package in the ""Tool packages"" form will restore availability.'"),
 			Параметр);
 	КонецЕсли;
 
@@ -1372,24 +1374,34 @@
 
 	Если КодКарточки = "card_publication_disabled" Тогда
 		Возврат НСтр(
-			"ru='Карточка пакета в «Дополнительных отчетах и обработках» отключена (публикация «Отключена»). Включите публикацию и переподтвердите пакет в форме «Пакеты инструментов».';
-			|en='The package card in ""Additional reports and data processors"" is disabled (publication ""Disabled""). Enable the publication and re-confirm the package in the ""Tool packages"" form.'");
+			"ru='Карточка пакета в «Дополнительных отчетах и обработках» отключена (публикация «Отключена»).
+			|Включите публикацию и переподтвердите пакет в форме «Пакеты инструментов».';
+			|en='The package card in ""Additional reports and data processors"" is disabled (publication ""Disabled"").
+			|Enable the publication and re-confirm the package in the ""Tool packages"" form.'");
 	ИначеЕсли КодКарточки = "card_deletion_mark" Тогда
 		Возврат НСтр(
-			"ru='Карточка пакета в «Дополнительных отчетах и обработках» помечена на удаление. Снимите пометку и переподтвердите пакет в форме «Пакеты инструментов».';
-			|en='The package card in ""Additional reports and data processors"" is marked for deletion. Clear the deletion mark and re-confirm the package in the ""Tool packages"" form.'");
+			"ru='Карточка пакета в «Дополнительных отчетах и обработках» помечена на удаление.
+			|Снимите пометку и переподтвердите пакет в форме «Пакеты инструментов».';
+			|en='The package card in ""Additional reports and data processors"" is marked for deletion.
+			|Clear the deletion mark and re-confirm the package in the ""Tool packages"" form.'");
 	ИначеЕсли КодКарточки = "card_not_found" Тогда
 		Возврат НСтр(
-			"ru='Карточка пакета не найдена в «Дополнительных отчетах и обработках» (удалена). Загрузите пакет заново и установите его в форме «Пакеты инструментов».';
-			|en='The package card was not found in ""Additional reports and data processors"" (deleted). Upload the package again and install it in the ""Tool packages"" form.'");
+			"ru='Карточка пакета не найдена в «Дополнительных отчетах и обработках» (удалена).
+			|Загрузите пакет заново и установите его в форме «Пакеты инструментов».';
+			|en='The package card was not found in ""Additional reports and data processors"" (deleted).
+			|Upload the package again and install it in the ""Tool packages"" form.'");
 	ИначеЕсли КодКарточки = "card_no_toolpack_marker" Тогда
 		Возврат НСтр(
-			"ru='Карточка пакета в «Дополнительных отчетах и обработках» не содержит команды ar_ToolPack: пакет собран не по контракту tools.';
-			|en='The package card in ""Additional reports and data processors"" has no ar_ToolPack command: the package does not follow the tools contract.'");
+			"ru='Карточка пакета в «Дополнительных отчетах и обработках» не содержит команды ar_ToolPack:
+			|пакет собран не по контракту tools.';
+			|en='The package card in ""Additional reports and data processors"" has no ar_ToolPack command:
+			|the package does not follow the tools contract.'");
 	ИначеЕсли КодКарточки = "card_state_unknown" Тогда
 		Возврат НСтр(
-			"ru='Состояние карточки пакета не удалось проверить (сбой запроса). Повторите действие позже.';
-			|en='Failed to check the package card state (query error). Try again later.'");
+			"ru='Состояние карточки пакета не удалось проверить (сбой запроса).
+			|Повторите действие позже.';
+			|en='Failed to check the package card state (query error).
+			|Try again later.'");
 	КонецЕсли;
 
 	Возврат СтрШаблон(
