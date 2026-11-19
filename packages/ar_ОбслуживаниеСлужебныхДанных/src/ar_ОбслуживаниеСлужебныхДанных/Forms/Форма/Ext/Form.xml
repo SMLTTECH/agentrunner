@@ -32,7 +32,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Режим включен (только очистка ar_Сессии)</v8:content>
+									<v8:content>Режим включен (очистка ar_Сессии и ar_СобытияЗапуска по расписанию)</v8:content>
 								</v8:item>
 							</Title>
 							<CheckBoxType>Auto</CheckBoxType>
@@ -86,6 +86,55 @@
 									<Width>8</Width>
 									<ContextMenu name="ПределМинутКонтекстноеМеню" id="26"/>
 									<ExtendedTooltip name="ПределМинутРасширеннаяПодсказка" id="27"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСобытий" id="143">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Очистка ar_СобытияЗапуска (завершенные запуски)</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ShowTitle>true</ShowTitle>
+							<ExtendedTooltip name="ГруппаСобытийРасширеннаяПодсказка" id="144"/>
+							<ChildItems>
+								<InputField name="СрокХраненияСобытийДней" id="145">
+									<DataPath>СрокХраненияСобытийДней</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Срок хранения событий, дней (0 - не очищать)</v8:content>
+										</v8:item>
+									</Title>
+									<Width>8</Width>
+									<ContextMenu name="СрокХраненияСобытийДнейКонтекстноеМеню" id="146"/>
+									<ExtendedTooltip name="СрокХраненияСобытийДнейРасширеннаяПодсказка" id="147"/>
+								</InputField>
+								<InputField name="СжатиеВызововМоделиДней" id="148">
+									<DataPath>СжатиеВызововМоделиДней</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сжимать вызовы модели старше, дней (0 - не сжимать)</v8:content>
+										</v8:item>
+									</Title>
+									<Width>8</Width>
+									<ContextMenu name="СжатиеВызововМоделиДнейКонтекстноеМеню" id="149"/>
+									<ExtendedTooltip name="СжатиеВызововМоделиДнейРасширеннаяПодсказка" id="150"/>
+								</InputField>
+								<InputField name="РазмерПорцииСобытий" id="151">
+									<DataPath>РазмерПорцииСобытий</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Размер порции событий, записей</v8:content>
+										</v8:item>
+									</Title>
+									<Width>8</Width>
+									<ContextMenu name="РазмерПорцииСобытийКонтекстноеМеню" id="152"/>
+									<ExtendedTooltip name="РазмерПорцииСобытийРасширеннаяПодсказка" id="153"/>
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
@@ -174,7 +223,7 @@
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Предпросмотр и диагностика идут полным просмотром и на большом регистре могут занять минуты; предпросмотр ничего не удаляет. Кнопка «Выгрузить и очистить регистр сведений ar_СлужебныйЛог» пишет файлы в выбранный каталог и заменяет регистр оставляемыми записями, удаленное не восстанавливается. Ручная очистка ar_Сессии работает при включенном режиме, предел 5 минут.</v8:content>
+									<v8:content>Предпросмотр и диагностика идут полным просмотром и на большом регистре могут занять минуты; предпросмотр ничего не удаляет. Кнопка «Выгрузить и очистить регистр сведений ar_СлужебныйЛог» пишет файлы в выбранный каталог и заменяет регистр оставляемыми записями, удаленное не восстанавливается. Ручная очистка ar_Сессии и ar_СобытияЗапуска работает при включенном режиме, предел 5 минут; события удаляются и сжимаются только у завершенных запусков.</v8:content>
 								</v8:item>
 							</Title>
 							<ContextMenu name="ПредупреждениеПредпросмотраКонтекстноеМеню" id="37"/>
@@ -622,6 +671,54 @@
 				</Column>
 			</Columns>
 		</Attribute>
+		<Attribute name="СрокХраненияСобытийДней" id="117">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок хранения событий, дней</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СжатиеВызововМоделиДней" id="118">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сжимать вызовы модели старше, дней</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РазмерПорцииСобытий" id="119">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Размер порции событий, записей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ЗаписатьНастройки" id="113">
@@ -646,7 +743,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Очистить регистр сведений ar_Сессии</v8:content>
+					<v8:content>Очистить регистры сведений ar_Сессии и ar_СобытияЗапуска</v8:content>
 				</v8:item>
 			</Title>
 			<Action>ВыполнитьТакт</Action>
