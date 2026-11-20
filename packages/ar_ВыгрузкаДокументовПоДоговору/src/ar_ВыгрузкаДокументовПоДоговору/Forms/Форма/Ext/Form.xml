@@ -47,16 +47,16 @@
 							<ContextMenu name="НомерДоговораКонтекстноеМеню" id="6"/>
 							<ExtendedTooltip name="НомерДоговораРасширеннаяПодсказка" id="7"/>
 						</InputField>
-						<InputField name="Договор" id="8">
-							<DataPath>Договор</DataPath>
-							<ChoiceButton>true</ChoiceButton>
-							<ClearButton>true</ClearButton>
-							<Events>
-								<Event name="OnChange">ДоговорПриИзменении</Event>
-							</Events>
-							<ContextMenu name="ДоговорКонтекстноеМеню" id="9"/>
-							<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="10"/>
-						</InputField>
+							<InputField name="Договор" id="8">
+								<DataPath>Договор</DataPath>
+								<ChoiceButton>true</ChoiceButton>
+								<ClearButton>true</ClearButton>
+								<ContextMenu name="ДоговорКонтекстноеМеню" id="9"/>
+								<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="10"/>
+								<Events>
+									<Event name="OnChange">ДоговорПриИзменении</Event>
+								</Events>
+							</InputField>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаПравая" id="11">
@@ -77,18 +77,18 @@
 							<ChoiceButton>true</ChoiceButton>
 							<ClearButton>true</ClearButton>
 							<OpenButton>true</OpenButton>
-							<Events>
-								<Event name="StartChoice">КаталогНачалоВыбора</Event>
-							</Events>
 							<ContextMenu name="КаталогКонтекстноеМеню" id="17"/>
 							<ExtendedTooltip name="КаталогРасширеннаяПодсказка" id="18">
-								<Tooltip>
+								<Title formatted="false">
 									<v8:item>
 										<v8:lang>ru</v8:lang>
 										<v8:content>Каталог, в который сохраняются файлы; запоминается для следующего запуска</v8:content>
 									</v8:item>
-								</Tooltip>
+								</Title>
 							</ExtendedTooltip>
+							<Events>
+								<Event name="StartChoice">КаталогНачалоВыбора</Event>
+							</Events>
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
