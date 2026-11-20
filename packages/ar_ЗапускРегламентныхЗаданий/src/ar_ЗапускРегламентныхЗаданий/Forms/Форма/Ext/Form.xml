@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Запуск регламентных заданий AgentRunner</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="Подсказка" id="1">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнение синхронное: форма отвечает после каждого задания, отдельные задания (опрос подписок, сжатие аудита, проверка версии) могут идти десятки секунд. Ручной запуск не стартует агентов в фоне: в базах без фоновых заданий старт агентов невозможен. Колонки «Включено» и «Последний запуск» показывают состояние платформенного задания и ручной запуск не отражают — итог ручного запуска пишется в служебный лог AgentRunner (Настройки AgentRunner, события sched_manual_run).</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПодсказкаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПодсказкаРасширеннаяПодсказка" id="3"/>
+		</LabelDecoration>
+		<CommandBar name="ПанельЗапуска" id="4">
+			<ExtendedTooltip name="ПанельЗапускаРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<Button name="КнопкаВыполнитьВыбранные" id="6">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.ВыполнитьВыбранные</CommandName>
+					<ExtendedTooltip name="КнопкаВыполнитьВыбранныеРасширеннаяПодсказка" id="7"/>
+				</Button>
+				<Button name="КнопкаОбновитьСписок" id="8">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ОбновитьСписок</CommandName>
+					<ExtendedTooltip name="КнопкаОбновитьСписокРасширеннаяПодсказка" id="9"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<Table name="ТаблицаЗаданий" id="10">
+			<CommandBarLocation>None</CommandBarLocation>
+			<HeightInTableRows>11</HeightInTableRows>
+			<DataPath>Задания</DataPath>
+			<ContextMenu name="ТаблицаЗаданийКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="ТаблицаЗаданийКоманднаяПанель" id="12"/>
+			<ExtendedTooltip name="ТаблицаЗаданийРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="ТаблицаЗаданийСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>ТаблицаЗаданий</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаЗаданийСтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ТаблицаЗаданийСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаЗаданийСостояниеПросмотра" id="17">
+				<AdditionSource>
+					<Item>ТаблицаЗаданий</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаЗаданийСостояниеПросмотраКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ТаблицаЗаданийСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаЗаданийУправлениеПоиском" id="20">
+				<AdditionSource>
+					<Item>ТаблицаЗаданий</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаЗаданийУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ТаблицаЗаданийУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="ЗаданияОтметка" id="23">
+					<DataPath>Задания.Отметка</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отметка</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗаданияОтметкаКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ЗаданияОтметкаРасширеннаяПодсказка" id="25"/>
+				</CheckBoxField>
+				<InputField name="ЗаданияНазвание" id="26">
+					<DataPath>Задания.Название</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задание</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаданияНазваниеКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ЗаданияНазваниеРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<CheckBoxField name="ЗаданияВключено" id="29">
+					<DataPath>Задания.Включено</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Включено</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗаданияВключеноКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ЗаданияВключеноРасширеннаяПодсказка" id="31"/>
+				</CheckBoxField>
+				<InputField name="ЗаданияРасписание" id="32">
+					<DataPath>Задания.Расписание</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расписание</v8:content>
+						</v8:item>
+					</Title>
+					<Width>14</Width>
+					<ContextMenu name="ЗаданияРасписаниеКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ЗаданияРасписаниеРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="ЗаданияПоследнийЗапуск" id="35">
+					<DataPath>Задания.ПоследнийЗапуск</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Последний запуск</v8:content>
+						</v8:item>
+					</Title>
+					<Width>18</Width>
+					<ContextMenu name="ЗаданияПоследнийЗапускКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ЗаданияПоследнийЗапускРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="ЗаданияРезультат" id="38">
+					<DataPath>Задания.Результат</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаданияРезультатКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ЗаданияРезультатРасширеннаяПодсказка" id="40"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ar_ЗапускРегламентныхЗаданий</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Задания" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Имя" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Отметка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отметка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Название" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Включено" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Включено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Расписание" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расписание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПоследнийЗапуск" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Последний запуск</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Результат" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьВыбранные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить выбранные</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыполнитьВыбранные</Action>
+		</Command>
+		<Command name="ОбновитьСписок" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОбновитьСписок</Action>
+		</Command>
+	</Commands>
+</Form>
