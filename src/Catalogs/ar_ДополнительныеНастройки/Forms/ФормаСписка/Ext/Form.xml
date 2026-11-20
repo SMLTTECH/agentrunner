@@ -30,9 +30,6 @@
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
-	<Events>
-		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
-	</Events>
 	<ChildItems>
 		<Table name="Список" id="3">
 			<CommandBarLocation>None</CommandBarLocation>
