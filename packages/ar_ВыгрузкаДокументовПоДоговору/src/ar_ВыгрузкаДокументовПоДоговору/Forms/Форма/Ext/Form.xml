@@ -87,6 +87,7 @@
 								</Title>
 							</ExtendedTooltip>
 							<Events>
+								<Event name="OnChange">КаталогПриИзменении</Event>
 								<Event name="StartChoice">КаталогНачалоВыбора</Event>
 							</Events>
 						</InputField>
