@@ -192,14 +192,12 @@
 				<InputField name="ДокументыВид" id="53">
 					<DataPath>Документы.Вид</DataPath>
 					<ReadOnly>true</ReadOnly>
-					<EditMode>View</EditMode>
 					<ContextMenu name="ДокументыВидКонтекстноеМеню" id="54"/>
 					<ExtendedTooltip name="ДокументыВидРасширеннаяПодсказка" id="55"/>
 				</InputField>
 				<InputField name="ДокументыНомер" id="56">
 					<DataPath>Документы.Номер</DataPath>
 					<ReadOnly>true</ReadOnly>
-					<EditMode>View</EditMode>
 					<Width>14</Width>
 					<ContextMenu name="ДокументыНомерКонтекстноеМеню" id="57"/>
 					<ExtendedTooltip name="ДокументыНомерРасширеннаяПодсказка" id="58"/>
@@ -207,7 +205,6 @@
 				<InputField name="ДокументыДата" id="59">
 					<DataPath>Документы.Дата</DataPath>
 					<ReadOnly>true</ReadOnly>
-					<EditMode>View</EditMode>
 					<Width>11</Width>
 					<ContextMenu name="ДокументыДатаКонтекстноеМеню" id="60"/>
 					<ExtendedTooltip name="ДокументыДатаРасширеннаяПодсказка" id="61"/>
@@ -215,14 +212,12 @@
 				<InputField name="ДокументыЗаголовок" id="62">
 					<DataPath>Документы.Заголовок</DataPath>
 					<ReadOnly>true</ReadOnly>
-					<EditMode>View</EditMode>
 					<ContextMenu name="ДокументыЗаголовокКонтекстноеМеню" id="63"/>
 					<ExtendedTooltip name="ДокументыЗаголовокРасширеннаяПодсказка" id="64"/>
 				</InputField>
 				<InputField name="ДокументыЧислоФайлов" id="65">
 					<DataPath>Документы.ЧислоФайлов</DataPath>
 					<ReadOnly>true</ReadOnly>
-					<EditMode>View</EditMode>
 					<Width>7</Width>
 					<ContextMenu name="ДокументыЧислоФайловКонтекстноеМеню" id="66"/>
 					<ExtendedTooltip name="ДокументыЧислоФайловРасширеннаяПодсказка" id="67"/>
@@ -230,7 +225,6 @@
 				<InputField name="ДокументыРазмерФайлов" id="68">
 					<DataPath>Документы.РазмерФайлов</DataPath>
 					<ReadOnly>true</ReadOnly>
-					<EditMode>View</EditMode>
 					<Width>10</Width>
 					<ContextMenu name="ДокументыРазмерФайловКонтекстноеМеню" id="69"/>
 					<ExtendedTooltip name="ДокументыРазмерФайловРасширеннаяПодсказка" id="70"/>
@@ -278,19 +272,16 @@
 			<ChildItems>
 				<InputField name="ПропущенныеФайл" id="84">
 					<DataPath>Пропущенные.Файл</DataPath>
-					<EditMode>View</EditMode>
 					<ContextMenu name="ПропущенныеФайлКонтекстноеМеню" id="85"/>
 					<ExtendedTooltip name="ПропущенныеФайлРасширеннаяПодсказка" id="86"/>
 				</InputField>
 				<InputField name="ПропущенныеДокумент" id="87">
 					<DataPath>Пропущенные.Документ</DataPath>
-					<EditMode>View</EditMode>
 					<ContextMenu name="ПропущенныеДокументКонтекстноеМеню" id="88"/>
 					<ExtendedTooltip name="ПропущенныеДокументРасширеннаяПодсказка" id="89"/>
 				</InputField>
 				<InputField name="ПропущенныеПричина" id="90">
 					<DataPath>Пропущенные.Причина</DataPath>
-					<EditMode>View</EditMode>
 					<ContextMenu name="ПропущенныеПричинаКонтекстноеМеню" id="91"/>
 					<ExtendedTooltip name="ПропущенныеПричинаРасширеннаяПодсказка" id="92"/>
 				</InputField>
