@@ -129,6 +129,7 @@
 			</ChildItems>
 		</CommandBar>
 		<UsualGroup name="ГруппаПрогресса" id="29">
+			<Visible>false</Visible>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -233,6 +234,7 @@
 			</ChildItems>
 		</Table>
 		<Table name="ТаблицаПропущенных" id="71">
+			<Visible>false</Visible>
 			<DataPath>Пропущенные</DataPath>
 			<Title>
 				<v8:item>
