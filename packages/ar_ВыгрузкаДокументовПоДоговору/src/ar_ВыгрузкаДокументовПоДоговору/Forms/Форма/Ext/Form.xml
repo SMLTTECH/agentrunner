@@ -18,13 +18,13 @@
 	<ChildItems>
 		<UsualGroup name="ГруппаШапки" id="1">
 			<Group>Horizontal</Group>
-			<Representation>NormalCollapse</Representation>
+			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаШапкиРасширеннаяПодсказка" id="2"/>
 			<ChildItems>
 				<UsualGroup name="ГруппаЛевая" id="3">
 					<Group>Vertical</Group>
-					<Representation>NormalCollapse</Representation>
+					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаЛеваяРасширеннаяПодсказка" id="4"/>
 					<ChildItems>
@@ -61,7 +61,7 @@
 				</UsualGroup>
 				<UsualGroup name="ГруппаПравая" id="11">
 					<Group>Vertical</Group>
-					<Representation>NormalCollapse</Representation>
+					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="12"/>
 					<ChildItems>
@@ -129,7 +129,7 @@
 		</CommandBar>
 		<UsualGroup name="ГруппаПрогресса" id="29">
 			<Group>Horizontal</Group>
-			<Representation>NormalCollapse</Representation>
+			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаПрогрессаРасширеннаяПодсказка" id="30"/>
 			<ChildItems>
